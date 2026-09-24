@@ -1,0 +1,205 @@
+Survey information
+
+This survey collects financial data from businesses' end-year accounts, including turnover, wages and salaries, purchases of goods and services, stocks and capital expenditure, and captures an understanding of the detailed structure, conduct and performance of your business in the United Kingdom (UK).
+
+Please be advised that the exact questions you will be asked, and level of detail under each section, will be specific to the industry in which your business is assigned and the type of form you have received. You are required to answer the questions set out within the survey. An example of the generic questions included across each of the sections of the survey are provided in these pages.
+Things to consider when completing the survey
+
+    All monetary answers should be given to the nearest £ thousand (for example, a total turnover of £56,345 should be entered as £56,000).
+
+    There is initial guidance and additional guidance available for each question on all paper and electronic questionnaires as follows:
+        paper versions - attached to the back or end of the form
+        electronic questionnaires - by clicking the twisty button under each answer box
+
+    You are asked to exclude any activity outside the UK lasting for more than one year - except all installation activities outside the UK, which should be included regardless of the length of period of the work carried out.
+
+    You are asked to include any work done in connection with overseas contracts where employees travel abroad regularly for short periods, while any overseas activity that is deemed to be capital expenditure in that country should be excluded.
+
+Survey questions
+Section A: Return period
+
+This section asks about the period for which your business will be reporting.
+
+Your return period should cover the year 2025. If no figures are available for that period, your return should relate to a business year that ends between 6 April 2025 and 5 April 2026.
+
+If you have been selected to return via the new electronic questionnaire, you will be asked the following:
+
+Are you able to report figures for the period 01 January 2025 to 31 December 2025?
+
+a) Yes, I can report for this period
+b) No, I need to report for a different period
+
+Alternatively, you will be asked to input the dates of the 12-month period that you are reporting.
+
+If you only traded for part of the year, provide the dates for the period in which you were trading.
+Section B: Income
+
+This section asks for information regarding your business's income. This includes questions about total turnover and environmental turnover.
+
+It requires figures for business activity within Great Britain (GB). Exclude Northern Ireland (NI) business activity.
+
+For the reporting period, what was your business's total turnover?
+
+    Report GB figures. An informed estimate is acceptable. Refer to the 'additional guidance' for more information.
+
+Does your business produce goods or services that protect the environment?
+
+a) Yes
+b) No
+
+If you answer Yes to the above, then:
+
+Of Total turnover, approximately what percentage related to the production of environmental goods or services?
+
+a) 75-100%
+b) 50-74%
+c) 25-49%
+d) 10-24%
+e) 0-9%
+Section C: Expenditure
+
+This section asks for information regarding your business's expenditure.
+
+This includes:
+
+    employment costs
+    costs of energy, goods, materials, and services
+    rates, duties, levies, and taxes paid to the government
+    total amounts received in subsidies from UK government sources, and the EU
+
+This section requires figures for business activity within GB. Exclude NI business activity.
+
+For the reporting period, what was your business's expenditure on employment costs?
+
+    Report GB figures
+
+    Wages and salaries are defined as the total compensation in cash or in-kind payable to all employees. State the amount paid before deductions but less any amounts for which you are reimbursed from government sources
+
+For the reporting period, what was your business's expenditure on materials, goods, services, and energy products?
+
+    Report GB figures
+
+    State the net full delivered cost of purchases made during the period of this return whether they were used or not or resold during that period
+
+For the reporting period, what was your business's expenditure on rates, duties, levies, and taxes paid to the government?
+
+    Report GB figures
+
+    You should only include the value for the rates, duties, levies, and taxes listed below if your business paid these directly to government or statutory bodies/regulators. Do not include these taxes if they were paid as part of your purchase of goods, materials, and services
+
+For the reporting period, what was your business's total amounts received in subsidies from UK government sources, and the EU?
+
+    Report GB figures
+
+    These are amounts receivable from UK government bodies or the EU to reduce the price of products (goods or services) sold into a market environment
+
+Section D: Value of stocks held
+
+This section asks for information regarding the value of stocks held by your business.
+
+    Inventories should be valued on the basis used in your financial statements that is, based on UK GAAP (Generally Accepted Accounting Principles) or International GAAP.
+    Where long-term contract balances are included in stocks, they should be recorded net of progress payments.
+    Where the outcome of the contract is known with reasonable certainty and a proportion of the contract income has been recognised as turnover, progress payments should be disregarded.
+    Value of stocks held includes Work in Progress but excludes VAT, consignment stock, stock you do not hold title to and progress payments on long-term contracts.
+
+This section requires figures for business activity within the UK.
+Note:
+
+Work in Progress consists of goods and services that have been partially processed, fabricated, or assembled by the producer but that are not usually sold or turned over to others without further processing. These products include Work in Progress belonging to the unit, even if the products in question are in the possession of third parties.
+
+Equally, products held by the unit which belong to third parties are excluded, as are partially completed structures for which the ultimate owner is deemed to have taken ownership, either by the existence of a contract of sale or purchase or because the production is for own use.
+
+For the reporting period, what was your business's total value of all stocks held?
+
+    Report UK figures
+
+    The figures for the beginning and end of the period should be on the same basis in terms of valuation and business units covered
+
+Section E: Capital assets
+
+This section asks you to provide the total value of acquisitions and proceeds from the disposal of capital assets that are used repeatedly to facilitate production, or provide services, for more than one year.
+
+This section requires figures for business activity within the UK.
+Note:
+
+Information requested may not always be found on a register of capital assets, and should include all assets of any value, even if this is below your Asset Register threshold.
+
+For the reporting period, what was your business's total value of capital assets acquired and disposed of?
+
+    Report UK figures
+
+    Report the total value of acquisitions and proceeds from the disposal of capital assets that are used repeatedly to facilitate production, or provide services, for more than one year
+
+    Information requested may not always be found on a register of capital assets, and should include all assets of any value, even if this is below your Asset Register threshold
+
+Section F: International trade in services
+
+This section asks for information regarding your business's international exports and imports of services. This includes income and expenditure.
+
+This section requires figures for business activity within the UK.
+
+For the reporting period, what was your business's income from services provided to individuals, enterprises, or other organisations based outside the UK?
+
+For the reporting period, what was your business's expenditure on services provided by individuals, enterprises, or other organisations based outside the UK?
+
+    The UK is defined as England, Scotland, Wales, and Northern Ireland. It does not include the Channel Islands or the Isle of Man.
+
+    A subsidiary or parent of your company situated in another country is regarded as an international resident, hence transactions in services with these entities should be regarded as international trade in services.
+
+Section G: International trade in goods
+
+This section asks for information regarding your business's international exports and imports of goods.
+
+This section requires figures for business activity within the UK.
+
+For the reporting period, did your business export goods to individuals, enterprises, or other organisations based outside the UK?
+
+a) Yes
+b) No
+
+For the reporting period, did your business import goods from individuals, enterprises, or other organisations based outside the UK?
+
+a) Yes
+b) No
+
+    The UK is defined as England, Scotland, Wales, and Northern Ireland. It does not include the Channel Islands or the Isle of Man.
+
+    A subsidiary or parent of your company situated in another country is regarded as an international resident, hence transactions in goods with these entities should be regarded as international trade in goods.
+
+Section H: Research and Development
+
+This section asks for information regarding your business's Research and Development (R&D).
+
+This section requires answers based on business activity within the UK.
+
+R&D covers three types of activity:
+
+    Basic research
+    Applied research
+    Experimental development
+
+R&D comprises creative and systematic work undertaken in order to increase the stock of knowledge, and in order to devise new applications of available knowledge. R&D activity must have elements of all these five criteria:
+
+1) Novel - To be aimed at new findings
+2) Creative - To be based on original, not obvious, concepts and hypotheses
+3) Uncertain - To be uncertain about the final outcome
+4) Systematic - To be planned and budgeted
+5) Transferable/reproducible - To lead to results that could possibly be reproduced
+
+Did your business carry out any in-house Research and Development for the reporting period, or intend to do so in the next reporting period?
+
+a) Yes
+b) No
+
+Base your answer on business activity within the UK.
+
+Please provide any further details that will help us understand your figures and tell an industry story.
+
+    Explain any changes in your figures from your previous return, if applicable. If you provide comments, we are less likely to contact you with data queries.
+
+How we use your data
+
+    The statistics produced help to improve the overall quality of national accounts and the measurement of gross domestic product (GDP).
+    In addition to the national accounts, the ABS is also used by the Scottish Government and Welsh Government in the compilation of both regional country specific Input-Output tables and Indices of Production.
+    It also provides a major contribution to the Blue Book, which is produced annually by our National Accounts team and used to inform HM Treasury in managing economic policy.
+
