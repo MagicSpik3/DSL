@@ -1,35 +1,38 @@
 flowchart TD
-  start["start"]
-  are_you_able_to_report_figures_for_the_period_01_january_2025_to_31_december_2025["Are you able to report figures for the period 01 January 2025 to 31 December 2025?"]
-  for_the_reporting_period_what_was_your_business_s_total_turnover["For the reporting period, what was your business's total turnover?"]
-  does_your_business_produce_goods_or_services_that_protect_the_environment["Does your business produce goods or services that protect the environment?"]
-  of_total_turnover_approximately_what_percentage_related_to_the_production_of_environmental_goods_or_services["Of Total turnover, approximately what percentage related to the production of environmental goods or services?"]
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_employment_costs["For the reporting period, what was your business's expenditure on employment costs?"]
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_materials_goods_services_and_energy_products["For the reporting period, what was your business's expenditure on materials, goods, services, and energy products?"]
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_rates_duties_levies_and_taxes_paid_to_the_government["For the reporting period, what was your business's expenditure on rates, duties, levies, and taxes paid to the government?"]
-  for_the_reporting_period_what_was_your_business_s_total_amounts_received_in_subsidies_from_uk_government_sources_and_the_eu["For the reporting period, what was your business's total amounts received in subsidies from UK government sources, and the EU?"]
-  for_the_reporting_period_what_was_your_business_s_total_value_of_all_stocks_held["For the reporting period, what was your business's total value of all stocks held?"]
-  for_the_reporting_period_what_was_your_business_s_total_value_of_capital_assets_acquired_and_disposed_of["For the reporting period, what was your business's total value of capital assets acquired and disposed of?"]
-  for_the_reporting_period_what_was_your_business_s_income_from_services_provided_to_individuals_enterprises_or_other_organisations_based_outside_the_uk["For the reporting period, what was your business's income from services provided to individuals, enterprises, or other organisations based outside the UK?"]
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_services_provided_by_individuals_enterprises_or_other_organisations_based_outside_the_uk["For the reporting period, what was your business's expenditure on services provided by individuals, enterprises, or other organisations based outside the UK?"]
-  for_the_reporting_period_did_your_business_export_goods_to_individuals_enterprises_or_other_organisations_based_outside_the_uk["For the reporting period, did your business export goods to individuals, enterprises, or other organisations based outside the UK?"]
-  for_the_reporting_period_did_your_business_import_goods_from_individuals_enterprises_or_other_organisations_based_outside_the_uk["For the reporting period, did your business import goods from individuals, enterprises, or other organisations based outside the UK?"]
-  did_your_business_carry_out_any_in_house_research_and_development_for_the_reporting_period_or_intend_to_do_so_in_the_next_reporting_period["Did your business carry out any in-house Research and Development for the reporting period, or intend to do so in the next reporting period?"]
-  end((END))
-  start --> are_you_able_to_report_figures_for_the_period_01_january_2025_to_31_december_2025
-  are_you_able_to_report_figures_for_the_period_01_january_2025_to_31_december_2025 --> for_the_reporting_period_what_was_your_business_s_total_turnover
-  for_the_reporting_period_what_was_your_business_s_total_turnover --> does_your_business_produce_goods_or_services_that_protect_the_environment
-  does_your_business_produce_goods_or_services_that_protect_the_environment -->|does_your_business_produce_goods_or_services_that_protect_the_environment == TRUE| of_total_turnover_approximately_what_percentage_related_to_the_production_of_environmental_goods_or_services
-  does_your_business_produce_goods_or_services_that_protect_the_environment --> for_the_reporting_period_what_was_your_business_s_expenditure_on_employment_costs
-  of_total_turnover_approximately_what_percentage_related_to_the_production_of_environmental_goods_or_services --> for_the_reporting_period_what_was_your_business_s_expenditure_on_employment_costs
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_employment_costs --> for_the_reporting_period_what_was_your_business_s_expenditure_on_materials_goods_services_and_energy_products
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_materials_goods_services_and_energy_products --> for_the_reporting_period_what_was_your_business_s_expenditure_on_rates_duties_levies_and_taxes_paid_to_the_government
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_rates_duties_levies_and_taxes_paid_to_the_government --> for_the_reporting_period_what_was_your_business_s_total_amounts_received_in_subsidies_from_uk_government_sources_and_the_eu
-  for_the_reporting_period_what_was_your_business_s_total_amounts_received_in_subsidies_from_uk_government_sources_and_the_eu --> for_the_reporting_period_what_was_your_business_s_total_value_of_all_stocks_held
-  for_the_reporting_period_what_was_your_business_s_total_value_of_all_stocks_held --> for_the_reporting_period_what_was_your_business_s_total_value_of_capital_assets_acquired_and_disposed_of
-  for_the_reporting_period_what_was_your_business_s_total_value_of_capital_assets_acquired_and_disposed_of --> for_the_reporting_period_what_was_your_business_s_income_from_services_provided_to_individuals_enterprises_or_other_organisations_based_outside_the_uk
-  for_the_reporting_period_what_was_your_business_s_income_from_services_provided_to_individuals_enterprises_or_other_organisations_based_outside_the_uk --> for_the_reporting_period_what_was_your_business_s_expenditure_on_services_provided_by_individuals_enterprises_or_other_organisations_based_outside_the_uk
-  for_the_reporting_period_what_was_your_business_s_expenditure_on_services_provided_by_individuals_enterprises_or_other_organisations_based_outside_the_uk --> for_the_reporting_period_did_your_business_export_goods_to_individuals_enterprises_or_other_organisations_based_outside_the_uk
-  for_the_reporting_period_did_your_business_export_goods_to_individuals_enterprises_or_other_organisations_based_outside_the_uk --> for_the_reporting_period_did_your_business_import_goods_from_individuals_enterprises_or_other_organisations_based_outside_the_uk
-  for_the_reporting_period_did_your_business_import_goods_from_individuals_enterprises_or_other_organisations_based_outside_the_uk --> did_your_business_carry_out_any_in_house_research_and_development_for_the_reporting_period_or_intend_to_do_so_in_the_next_reporting_period
-  did_your_business_carry_out_any_in_house_research_and_development_for_the_reporting_period_or_intend_to_do_so_in_the_next_reporting_period --> end
+  %% Shorter node ids, long labels preserved for readability
+  S[start]
+  Q1["Are you able to report figures for the period<br>01 Jan 2025 to 31 Dec 2025?"]
+  Q2["For the reporting period,<br>what was your business's total turnover?"]
+  Q3["Does your business produce goods or services<br>that protect the environment?"]
+  Q3a["Of total turnover, approximately what percentage<br>related to environmental goods or services?"]
+  Q4["For the reporting period,<br>what was your business's expenditure on employment costs?"]
+  Q5["For the reporting period,<br>what was your business's expenditure on materials,<br>goods, services, and energy products?"]
+  Q6["For the reporting period,<br>what was your business's expenditure on rates,<br>duties, levies, and taxes paid to government?"]
+  Q7["For the reporting period,<br>what was your business's total amounts received<br>in subsidies from UK government sources and the EU?"]
+  Q8["For the reporting period,<br>what was your business's total value of all stocks held?"]
+  Q9["For the reporting period,<br>what was your business's total value of capital assets<br>acquired and disposed of?"]
+  Q10["For the reporting period,<br>what was your business's income from services provided<br>to parties based outside the UK?"]
+  Q11["For the reporting period,<br>what was your business's expenditure on services provided<br>by parties based outside the UK?"]
+  Q12["For the reporting period,<br>did your business export goods to parties based outside the UK?"]
+  Q13["For the reporting period,<br>did your business import goods from parties based outside the UK?"]
+  Q14["Did your business carry out any in-house<br>R&D for the reporting period, or intend to in the next period?"]
+  END((END))
+
+  %% Flow
+  S --> Q1
+  Q1 --> Q2
+  Q2 --> Q3
+  Q3 -->|Yes| Q3a
+  Q3 -->|No| Q4
+  Q3a --> Q4
+  Q4 --> Q5
+  Q5 --> Q6
+  Q6 --> Q7
+  Q7 --> Q8
+  Q8 --> Q9
+  Q9 --> Q10
+  Q10 --> Q11
+  Q11 --> Q12
+  Q12 --> Q13
+  Q13 --> Q14
+  Q14 --> END
