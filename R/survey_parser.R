@@ -120,3 +120,67 @@ compile_parsed_survey <- function(parsed, id = slugify(basename(parsed$path))) {
   states[[length(states) + 1L]] <- survey_state("end", terminal = TRUE)
   survey(id, variables, states, "start")
 }
+
+parsed_question_table <- function(parsed) {
+  data.frame(
+    id = vapply(parsed$questions, `[[`, character(1), "id"),
+    type = vapply(parsed$questions, `[[`, character(1), "type"),
+    section = vapply(parsed$questions, `[[`, character(1), "section"),
+    prompt = vapply(parsed$questions, `[[`, character(1), "prompt"),
+    source_line = vapply(parsed$questions, `[[`, integer(1), "source_line"),
+    depends_on = vapply(parsed$questions, function(question) {
+      if (is.null(question$depends_on)) "" else question$depends_on
+    }, character(1)),
+    stringsAsFactors = FALSE
+  )
+}
+
+write_parsed_survey <- function(parsed, output_dir = "structured", name = "survey") {
+  dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+  saveRDS(parsed, file.path(output_dir, paste0(name, ".rds")))
+  write.table(parsed_question_table(parsed), file.path(output_dir, paste0(name, "_questions.tsv")),
+    sep = "\t", row.names = FALSE, quote = TRUE, fileEncoding = "UTF-8")
+  invisible(parsed)
+}
+
+mermaid_state_machine <- function(definition) {
+  lines <- c("flowchart TD")
+  variables <- setNames(definition$variables, vapply(definition$variables, `[[`, character(1), "id"))
+  for (state in definition$states) {
+    label <- if (isTRUE(state$terminal)) {
+      "END"
+    } else if (!is.null(state$question) && state$question %in% names(variables)) {
+      variables[[state$question]]$prompt
+    } else {
+      state$id
+    }
+    label <- gsub("\"", "'", label, fixed = TRUE)
+    shape <- if (isTRUE(state$terminal)) sprintf("%s((%s))", state$id, label) else sprintf("%s[\"%s\"]", state$id, label)
+    lines <- c(lines, paste0("  ", shape))
+  }
+  for (state in definition$states) {
+    for (transition in state$transitions) {
+      label <- if (identical(transition$when, "TRUE")) "" else paste0("|", transition$when, "|")
+      lines <- c(lines, sprintf("  %s -->%s %s", state$id, label, transition$target))
+    }
+  }
+  paste(lines, collapse = "\n")
+}
+
+write_state_machine <- function(definition, output_dir = "state_machine", name = definition$id) {
+  dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+  audit <- audit_survey(definition)
+  saveRDS(definition, file.path(output_dir, paste0(name, ".rds")))
+  writeLines(mermaid_state_machine(definition), file.path(output_dir, paste0(name, ".mmd")), useBytes = TRUE)
+  audit_lines <- c(
+    paste0("survey: ", definition$id),
+    paste0("ok: ", audit$ok),
+    paste0("reachable_states: ", length(audit$reachable)),
+    if (length(audit$errors)) c("errors:", paste0("- ", audit$errors)) else "errors: none",
+    if (length(audit$warnings)) c("warnings:", paste0("- ", audit$warnings)) else "warnings: none"
+  )
+  writeLines(audit_lines, file.path(output_dir, paste0(name, "_audit.txt")), useBytes = TRUE)
+  invisible(audit)
+}
+
+`%||%` <- function(left, right) if (is.null(left) || !length(left)) right else left

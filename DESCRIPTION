@@ -1,0 +1,15 @@
+Package: surveyDSL
+Type: Package
+Title: A Declarative Survey Definition and State Machine Prototype
+Version: 0.1.0
+Author: Mark London
+Maintainer: Mark London <marklondon75@gmail.com>
+Description: Provides a dependency-free prototype for representing survey variables,
+    guarded state transitions, response validation, free-text parsing, and coherence audits.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LazyData: true
+Suggests:
+    knitr
