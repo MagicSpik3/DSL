@@ -9,7 +9,7 @@ Description: Provides a dependency-free prototype for representing survey variab
 License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 LazyData: true
 Suggests:
     knitr
+Config/roxygen2/version: 8.1.0
