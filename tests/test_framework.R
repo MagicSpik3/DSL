@@ -63,4 +63,74 @@ stopifnot(file.exists(file.path(temp_structured, "test_survey.rds")))
 stopifnot(file.exists(file.path(temp_structured, "test_survey_questions.tsv")))
 stopifnot(file.exists(file.path(temp_state_machine, "test_survey.mmd")))
 stopifnot(file.exists(file.path(temp_state_machine, "test_survey_audit.txt")))
+
+child_demo <- survey(
+  "child_demo",
+  variables = list(
+    survey_variable("NCHILD", "number", "How many children do you have?"),
+    survey_variable("NAME1", "text", "What is your first child's name?")
+  ),
+  states = list(
+    survey_state("start", transitions = list(
+      survey_transition("NCHILD_QUESTION")
+    )),
+    survey_state("NCHILD_QUESTION", question = "NCHILD", transitions = list(
+      survey_transition("has_children", when = "NCHILD > 0"),
+      survey_transition("end", when = "NCHILD == 0")
+    )),
+    survey_state("has_children", question = "NAME1", transitions = list(
+      survey_transition("end")
+    )),
+    survey_state("end", terminal = TRUE)
+  ),
+  start = "start"
+)
+
+bad_row <- data.frame(
+  NCHILD = 0,
+  CHILDNAME1 = "Alice",
+  stringsAsFactors = FALSE
+)
+issues <- audit_survey_responses(child_demo, bad_row)
+stopifnot(length(issues) == 1L)
+stopifnot(any(grepl("no children|NCHILD|child", issues[[1L]]$message, ignore.case = TRUE)))
+
+household_rows <- data.frame(
+  OSGRIDREF = c("4291970560570", "4291970560570", "4291970560571", "4291970560571"),
+  AREA = c("1803", "1803", "1803", "1803"),
+  ADDRESS = c("4", "4", "5", "5"),
+  NCHILD = c(0, 0, 1, 0),
+  NAME1 = c("Alice", "Bob", "Charlie", "Dana"),
+  stringsAsFactors = FALSE
+)
+key <- survey_household_key(household_rows)
+stopifnot(identical(key, c("4291970560570|1803|4", "4291970560570|1803|4", "4291970560571|1803|5", "4291970560571|1803|5")))
+report <- survey_response_issue_matrix(child_demo, household_rows)
+stopifnot(identical(report$household_key, key))
+stopifnot(identical(report$household_member_index, c(1L, 2L, 1L, 2L)))
+
+no_child_but_spouse_name <- survey_row_routing_issues(child_demo, list(
+  NCHILD = 0,
+  NAME2 = "JEAN OLIVER"
+))
+stopifnot(!length(no_child_but_spouse_name))
+
+simplified_household <- data.frame(
+  OSGRIDREF = c("1100000001", "1100000001", "1100000001", "1100000001", "1100000001"),
+  AREA = c("01", "01", "01", "01", "01"),
+  ADDRESS = c("100", "100", "100", "100", "100"),
+  Person = 1:5,
+  PNAM = c("Adult A", "Adult B", "Adult C", "Teen A", "Child A"),
+  AGE = c(48L, 47L, 29L, 16L, 14L),
+  RELTOHRP = c("respondent", "partner", "adult child", "dependent child", "dependent child"),
+  NCHILD = c(2L, 2L, 1L, 0L, 0L),
+  NDEPC = c(1L, 1L, 0L, 0L, 0L),
+  NNDEPC = c(0L, 0L, 1L, 0L, 0L),
+  stringsAsFactors = FALSE
+)
+key <- survey_household_key(simplified_household)
+stopifnot(identical(key, rep("1100000001|01|100", 5L)))
+stopifnot(identical(unique(key), "1100000001|01|100"))
+stopifnot(identical(length(unique(simplified_household$PNAM)), 5L))
+
 cat("survey DSL smoke tests passed\n")
