@@ -1,0 +1,7 @@
+able_to_report,total_turnover,produces_env_goods_services,pct_env_turnover,employment_costs,materials_expenditure,rates_taxes,subsidies_received,stocks_value,capital_assets_value,income_export_services,expenditure_import_services,exported_goods,imported_goods,inhouse_rnd
+Yes,100000,Yes,20,30000,20000,5000,0,10000,5000,0,0,Yes,No,No
+No,50000,No,15,15000,8000,2000,1000,2000,0,0,0,No,No,No
+Yes,250000,No,,60000,40000,10000,5000,20000,15000,10000,5000,No,Yes,Yes
+Yes,0,Yes,0,0,0,0,0,0,0,0,0,No,No,No
+No,120000,Yes,30,40000,25000,8000,2000,15000,7000,0,0,No,No,No
+Yes,75000,No,12,20000,10000,3000,0,5000,2500,0,0,No,No,No
