@@ -1,0 +1,129 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 5 of 20
+  v1["SamJob: When we interviewed you on RStartDat you were working / about to start work as a ROccT . Is this still your main job?"]
+  v2["SamEmp: And are you still working for the same employer?"]
+  v3["PerNoWk: In the last two years, have you had any periods of unemployment or reduced pay?"]
+  v4["EverWk: Have you ever had a paid job, apart from casual or holiday work?"]
+  v5["CasWrk: May I just check, have you ever done any casual or holiday work?"]
+  v6["DtJbL: When did you leave your last paid job?"]
+  v7["NumJob: How many jobs, for pay or profit, do you have?"]
+  v8["PreA: The following questions refer to your main job."]
+  v9["PreL: The following questions refer to your most recent main job."]
+  v10["SameJob: I need to check whether your details are the same as at the last time we called. Thinking of the seven days ending Sunday the n / thinking of your last job, are these statements still correct…"]
+  v11["DVSame: Derived – No difference to job"]
+  v12["IndD: What did the firm/ organisation you worked for mainly make or do at the place where you worked ?"]
+  v13["Sectr2: What kind of non-private organisation is it?"]
+  v14["OccT: What was your main job in the week ending Sunday the DATE ?"]
+  v15["OccD: What did you mainly do in your job?"]
+  v16["SVise: In your job, did you have formal responsibility for supervising the work of other employees?"]
+  v17["SViseDsc: Please describe the type of responsibility you have for supervising the work of other employees."]
+  v18["EmpN: How many people worked for your employer at the place where you worked?"]
+  v19["SemN: How many people did you employ/are employed in this business?"]
+  v20["OneTen: - 1 to 10 employees in respondents business and is not in the same job as the previous wave"]
+  v21["FtPtWk: In your main job were you working..."]
+  v22["WkHrs: How many hours per week do you usually work in your main job? Please exclude meal breaks."]
+  v23["WkHrsIr: On average, about how many hours per week do you work, excluding meal breaks?"]
+  v24["SPaReas: Penflag=1 AND DVILO3A=1 AND PersProx=1 over SPa and working, except proxies"]
+  v25["SPAReasO: Please specify other reason not mentioned."]
+  v26["WrkRed: Have your working patterns changed in the past year?"]
+  v27["WrkCha: You stated that your work patterns have changed, are you currently using any of the following arrangements?"]
+  v28["WrkUse: Penflag=1 AND DVILO3A=1 AND PersProx=1 over SPa and working, except proxies"]
+  v29["EmpStY: In which year did you start working continuously for your current employer?"]
+  v30["SEmpStY: In which year did you start working continuously as a self-employed person if DVILO4a = 1 - currently at work AND Stat = 2 ; start your most recent period of self-employment? DVILO4a <> 1- if not currently at work AND Stat = 2 at last job"]
+  v31["PermJb: What type of contract do you hold in your main job?"]
+  v32["PNoWk: Looking back at the time since you finished continuous full-time education, have you had any periods of six months or more when you were not in paid work, either because you could not find a job or were not looking for paid work?"]
+  v33["PNoWkLn: About how many years in total have you been out of paid work since you finished full-time education?"]
+  v34["EdAttn1: Do you have any educational qualifications for which you received a certificate?"]
+  v35["EdAttn2: Do you have any professional, vocational or other work-related qualifications for which you received a certificate?"]
+  v36["EdAttn3: Was your highest qualification..."]
+  v37["BType1: Now, thinking of your main/second/third NumJob > 1 job, which one of these best describes your employment situation in this job …"]
+  v38["BDirNI1: In this job, are your National Insurance contributions deducted at source?"]
+  v39["BOwn1: Do you own part of this business?"]
+  v40["BAccsA1: In this business, are annual accounts prepared?"]
+  v41["BAccsB1: Do you prepare annual business accounts?"]
+  v42["BAccBeg1: What is the most recent period for which accounts have been prepared?"]
+  v43["BAccBegM1: If BaccBeg1 = Response year has been entered"]
+  v44["BProfit1: What was your if BType= 2,5 / your share in the if BType = 3,4 profit or loss figure shown on these accounts for this period? It would be helpful if you could refer to a document, such as the annual accounts, or the Notice of Tax Assessment from HM Revenue and Customs."]
+  v45["BPrfLoss1: Did the answer in the previous question refer to profit or loss?"]
+  v1 -.->|SamJob = 1 AND RStat = 1 If respondent is in the same job and was an employee at previous wave| v2
+  v4 -->|EverWk= No| v5
+  route141_from_page_4["from page_4 - route141"]
+  route141_from_page_4 -.->|route141| v7
+  route142_from_page_4["from page_4 - route142"]
+  route142_from_page_4 -.->|route142| v7
+  route143_from_page_4["from page_4 - route143"]
+  route143_from_page_4 -.->|route143| v7
+  v4 -.->|DVILO3a = InEmp OR EverWk = yes| v7
+  v7 -->|NumJob > 1 respondent has more than one job| v8
+  v4 -->|EverWk = 1 respondent is not currently working, but has ever worked| v9
+  v4 -.->|RIndD = Response AND RPersProx = 1 OR EverWk = 1 AND DTJbL < 2 years ago - respondent is currently working or has ever worked and answered section at previous wave| v10
+  v6 -.->|RIndD = Response AND RPersProx = 1 OR EverWk = 1 AND DTJbL < 2 years ago - respondent is currently working or has ever worked and answered section at previous wave| v10
+  route149_from_page_4["from page_4 - route149"]
+  route149_from_page_4 -.->|route149| v12
+  v4 -.->|DVILO3a = InEmp OR EverWk = yes If currently in employment or has ever worked| v12
+  v10 -.->|same job as at previous wave SameJob = 1 , or currently not working but left job less than 2 years ago feed forward previous wave responses| v12
+  v10 -.->|Stat = 1 AND SameJob <> 5 If respondent is an employee and the supervision status has changed| v16
+  v16 -->|SVise = 1 respondent is a supervisor| v17
+  v10 -.->|Stat = 1 AND SameJob <> 6 respondent is an employee and is not in the same job as the previous wave| v18
+  v10 -.->|Stat = 2 AND SameJob <> 6 AND Solo = 2 If respondent is self employed and not in the same job as the previous wave and does not work alone| v19
+  v4 -.->|Wrking = 1 OR EverWk = 1 respondent is currently working or has ever worked| v21
+  route157_from_page_4["from page_4 - route157"]
+  route157_from_page_4 -.->|route157| v22
+  route158_from_page_4["from page_4 - route158"]
+  route158_from_page_4 -.->|route158| v22
+  route159_from_page_4["from page_4 - route159"]
+  route159_from_page_4 -.->|route159| v22
+  route160_from_page_4["from page_4 - route160"]
+  route160_from_page_4 -.->|route160| v22
+  v22 -->|WkHrs = 96 respondent works variable or irregular hours| v23
+  route162_from_page_1["from page_1 - route162"]
+  route162_from_page_1 -.->|route162| v26
+  route163_from_page_4["from page_4 - route163"]
+  route163_from_page_4 -.->|route163| v26
+  route164_from_page_4["from page_4 - route164"]
+  route164_from_page_4 -.->|route164| v26
+  v26 -->|WrkRed = 1| v27
+  route166_from_page_4["from page_4 - route166"]
+  route166_from_page_4 -.->|route166| v28
+  route167_from_page_1["from page_1 - route167"]
+  route167_from_page_1 -.->|route167| v31
+  route168_from_page_1["from page_1 - route168"]
+  route168_from_page_1 -.->|route168| v32
+  route169_from_page_1["from page_1 - route169"]
+  route169_from_page_1 -.->|route169| v32
+  route170_from_page_4["from page_4 - route170"]
+  route170_from_page_4 -.->|route170| v32
+  v4 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v32
+  v32 -->|PNoWk = 1 respondent has had a period of 6 months or more out of paid work| v33
+  v34 -.->|EdAttn1 = 1 OR EdAttn2 = 1 respondent has qualifications| v36
+  v35 -.->|EdAttn1 = 1 OR EdAttn2 = 1 respondent has qualifications| v36
+  route175_from_page_4["from page_4 - route175"]
+  route175_from_page_4 -.->|route175| v37
+  route176_from_page_4["from page_4 - route176"]
+  route176_from_page_4 -.->|route176| v37
+  v37 -.->|BType1 = 2 OR 3 respondent is a director| v38
+  v37 -->|BType1 = 3 respondent is a director of a company| v39
+  v37 -.->|BType1 =2, 4 or BType1=3 AND BOwn1 =1 respondent is the sole director or a partner or a director who owns part of the business| v40
+  v39 -.->|BType1 =2, 4 or BType1=3 AND BOwn1 =1 respondent is the sole director or a partner or a director who owns part of the business| v40
+  v37 -->|BType1 = 5 respondent has answered with ‘other self-employed’| v41
+  v40 -.->|BAccsA1 = 1 or BAccsB1 = 1 accounts are prepared| v42
+  v41 -.->|BAccsA1 = 1 or BAccsB1 = 1 accounts are prepared| v42
+  v42 -->|BaccBeg1 = Response year has been entered| v43
+  v40 -.->|BAccsA1 = 1 OR BAccsB1 = 1 accounts are prepared| v44
+  v41 -.->|BAccsA1 = 1 OR BAccsB1 = 1 accounts are prepared| v44
+  v44 -->|BProfit1 >0 respondent has given a profit or loss amount| v45
+  route188_to_page_6["route188 -> go to page_6"]
+  v37 -.->|route188| route188_to_page_6
+  route189_to_page_6["route189 -> go to page_6"]
+  v37 -.->|route189| route189_to_page_6
+  route190_to_page_6["route190 -> go to page_6"]
+  v39 -.->|route190| route190_to_page_6
+  route192_to_page_6["route192 -> go to page_6"]
+  v37 -.->|route192| route192_to_page_6
+  route193_to_page_6["route193 -> go to page_6"]
+  v37 -.->|route193| route193_to_page_6
+  route194_to_page_6["route194 -> go to page_6"]
+  v37 -.->|route194| route194_to_page_6
+  route310_to_page_9["route310 -> go to page_9"]
+  v13 -.->|route310| route310_to_page_9

@@ -1,0 +1,279 @@
+flowchart LR
+  %% Page 6 of 12
+  v1["ActPPYrSt: What year did you start making contributions into your ActPPName pension?"]
+  v2["ActPPAmtPer: The next questions are about your usual monthly contribution to your ActPPName pension. Would it be easier for you to give this either as..."]
+  v3["ActPPAmt: How much is your usual monthly contribution to your ActPPName pension after tax?"]
+  v4["ActPPPer: What is your usual contribution to your ActPPName pension as a percentage of your salary?"]
+  v5["ActPPIntro: The next questions are about the value of your ActPPName pension. It would be helpful to look at a recent pension statement if you have one."]
+  v6["ActPPVal: What is the current value of your ActPPName pension?"]
+  v7["ActPPValb: About how much do you estimate the current value of your ActPPName pension to be?"]
+  v8["ActPPValOt: You've told us you've got ActPPNum personal pensions."]
+  v9["ActPPValbOt: About how much do you estimate the total current value of your remaining personal pension pot s to be?"]
+  v10["DVActNum: Derived variable: Number of active pension schemes"]
+  v11["ActOutro: Thank you. That is the end of the questions about pensions that you have been contributing to."]
+  v12["PUnIntro: Next I am going to ask you some questions about pension schemes you have stopped contributing to and haven't withdrawn money from yet."]
+  v13["PUnPrev: At the last interview, we recorded that you had savings in the following scheme s that you had stopped contributing to."]
+  v14["PUnNum: Apart from the pensions we've just mentioned, how many more of these pension schemes do you have If PUnPrev = 1 to 6 / How many of these pension schemes do you have?"]
+  v15["PUnNmSc: Derived variable: Number of preserved pension schemes"]
+  v16["PUnHigh: Now, I'm going to ask you about your four highest value pension schemes. Please include both the pensions you told me about from the last interview and the other pension scheme s you have just told me about in your answers. If PUnPrev = 1-6 and PUnNum > 0"]
+  v17["PunRot: Now I am going to ask you some more details about these pensions."]
+  v18["PUnName: If 1 rotated pension is chosen at PUnPrev, and PUnNmSc = 1 then PUnName is auto-populated with the pension name from PUnPrev and the question is not asked."]
+  v19["PUnYrStop: What year did you stop making payments into your PUnName pension?"]
+  v20["PUnTyp: Is your PUnName pension…"]
+  v21["PUnEPSec: Was the employer that your PUnName pension is related to…"]
+  v22["PUnEPTyp: Now I am going to ask you which type of employer pension you have. There are two main types:"]
+  v23["PUnVal: What is the current value of your PUnName pension?"]
+  v24["PUnValb: About how much do you estimate of the current value of the pension pot to be?"]
+  v25["PUnYrSt: What year did you start making payments into your PUnName pension?"]
+  v26["PUnInc: How much annual gross income, before deductions, do you expect to get from your PUnName pension when you retire?"]
+  v27["PUnIncb: About how much do you estimate the annual gross income, before deductions, from your PUnName pension to be when you retire?"]
+  v28["PUnAge: From what age can you access your pension?"]
+  v29["PUnOutro: Thank you. That is the end of the questions about pensions that you have stopped paying into and have not received any money from."]
+  v30["PinPIntro: Next I am going to ask you some questions about the pensions you receive regular payments from. I would also like to know about any additional pension schemes from which you may have received income in the past. If SBPInPNow = 1 ;"]
+  v31["PinPNum: How many different pension schemes have you received money from? This can be in the form of a regular income or as lump sums."]
+  v32["PinPWho: Is this a pension of your own, or one that you receive from a former spouse or partner? if PinPNum = 1 ;"]
+  v33["PinPQHigh: Now I'm going to ask you about your 6 highest value pension schemes that you have received money from."]
+  v34["PinPName: What is the name of the highest / second … sixth highest value PinPNum >1 pension scheme that you have received money from?"]
+  v35["PinPOwSp: Is this PinPName pension one of your own or one that you receive from a former spouse or partner?"]
+  v36["PinPTyp: Is this PinPName pension that you receive…"]
+  v37["PinPEPSec: Was the employer that your/this PinPName pension is related to…"]
+  v38["PinPEPTyp: Now I am going to ask you which type of employer pension is this. There are two main types:"]
+  v39["PinPReg: Is the money that you receive from this pension...."]
+  v40["PinPHow: In order to receive this regular income, have you…"]
+  v41["PInPAgeStop: At what age did you/your former spouse or partner stop paying into this PinPName pension?"]
+  v42["PinPAgeRec: And at what age did you first receive money from this pension?"]
+  v43["PinPAccVal: Before any money was received from your/this PinPName pension, what was the value of this pension pot?"]
+  v44["PinPAccValB: About how much would you estimate the value of your/this PinPName pension pot to have been, before any money was received from it?"]
+  v45["PinPAmt: How much do you usually receive each month from your/this PinPName pension after tax is deducted?"]
+  v46["PinPAmtB: About how much would you estimate you receive each month from your/this PinPName pension after tax?"]
+  v47["PinPLumpNum: You said that you have received lump sum payments from this pension. How many of these have you received?"]
+  v48["PinPSumTot: How much in total have you received in lump sums from your/this PinPName pension? This should be the net figure, after tax, if tax was paid"]
+  v49["PinPSumTotB: About how much would you estimate you have received in total in lump sums from this pension, after tax if applicable ?"]
+  v50["PinPSum2Yr: And how much have you received in lump sums from this PinPName pension in the last 2 years? This should be the net figure, after tax, if tax was paid"]
+  v51["PinPSum2B: About how much would you estimate you have received in the last 2 years in lump sums from this pension, after tax if applicable ?"]
+  v52["PinPSumTax: Were any of your withdrawals from your/this PinPName pension greater than the tax free limit?"]
+  v53["PinPLumpMost: What have you done with the money you received from your/this PInPName pension lump sum s ?"]
+  v54["PinPRemVal: What is the current value of the remaining part of your/this pension pot?"]
+  v55["PinPRemVB: About how much would you estimate is the value of the remaining part of your/this pension pot?"]
+  v56["PinPRemHow: What do you expect to do with the remaining money in this pension pot?"]
+  v57["PinPHowOth: Please give details of how you intend to use this remaining part of your/this pension pot."]
+  v58["PinPDBInc: How much annual income do you expect to get from your/this PinPName pension when you retire?"]
+  v59["PinPDBIncB: About how much do you estimate you will receive in annual income from your/this PinPName pension when you retire?"]
+  v60["PinPDBAge: At what age do you expect to start receiving this regular income from this pension?"]
+  v61["PinPDBYrs: Approximately how many years did you/your former spouse or partner contribue to your/this PinPName pension?"]
+  v62["PInPEnd: Ask at the end of each loop"]
+  v63["PinPOutro: Thank you. That is the end of the questions about the pensions that you have received money from."]
+  v64["PPaIntro: Next I am going to ask you some questions about pensions that you are expecting from a previous spouse or partner; we would like to know the number of pension schemes and their value."]
+  v65["PPaNum: Thinking about the pensions to which your former spouse or partner contributed, how many pensions of this type do you expect to receive?"]
+  v66["PPaHigh: Now, I'm going to ask you about your three highest value pension schemes from a previous spouse or partner."]
+  v67["PPaPayTyp: Are you expecting lump sum payments or a regular income from your highest / second highest / third highest value ActPPNum >1 previous spouse or partner pension scheme in the future?"]
+  v68["PPaLuSAmt: How much do you expect to get in total as a lump sum? Lump sum payment refers to any sized lump sum, whether it is tax-free or not."]
+  v69["PPaLuSb: Can you give me an estimate of the total lump sum that you expect to receive from this pension?"]
+  v70["PpaInc: How much regular income do you expect to receive from this pension scheme in the future?"]
+  v71["PPaIncF: How often do you expect to receive payments from this pension scheme?"]
+  v72["PPaIncFOt: PLEASE SPECIFY ‘OTHER’ FREQUENCY OF PAYMENT"]
+  v73["PPaIncb: Can you give me an estimate of the amount you expect to receive monthly from this pension scheme when you retire?"]
+  v74["PPaAge: From what age can you expect to receive this money?"]
+  v75["PPaOutro: Thank you. That is the end of the questions about pensions from a previous partner."]
+  route332_to_page_5["route332 -> go to page_5"]
+  v11 -.->|route332| route332_to_page_5
+  route339_to_page_5["route339 -> go to page_5"]
+  v11 -.->|route339| route339_to_page_5
+  route352_to_page_5["route352 -> go to page_5"]
+  v11 -.->|route352| route352_to_page_5
+  route358_to_page_5["route358 -> go to page_5"]
+  v11 -.->|route358| route358_to_page_5
+  route364_from_page_5["from page_5 - route364"]
+  route364_from_page_5 -.->|route364| v1
+  route365_from_page_5["from page_5 - route365"]
+  route365_from_page_5 -.->|route365| v2
+  v2 -->|ActPPAmtPer = 1| v3
+  v2 -->|ActPPAmtPer = 2| v4
+  route368_from_page_5["from page_5 - route368"]
+  route368_from_page_5 -.->|route368| v5
+  route369_from_page_5["from page_5 - route369"]
+  route369_from_page_5 -.->|route369| v6
+  v7 -.->|ActPPVal = DK/RF, go to ActPPValb| v6
+  route371_from_page_5["from page_5 - route371"]
+  route371_from_page_5 -.->|route371| v6
+  v8 -.->|ActPPVal = response and ActPPNum>=3, go to ActPPValOt| v6
+  v11 -.->|ActPPVal = response and ActPPNum = 1 or 2, go to ActOutro| v6
+  v6 -.->|ActPPVal = DK/RF respondent does not know current value of their pension pot| v7
+  route375_from_page_5["from page_5 - route375"]
+  route375_from_page_5 -.->|route375| v7
+  v11 -.->|ActPPNum = 1, go to ActOutro| v7
+  route377_from_page_5["from page_5 - route377"]
+  route377_from_page_5 -.->|route377| v7
+  v8 -.->|ActPPNum>=3, go to ActPPValOt| v7
+  route379_from_page_5["from page_5 - route379"]
+  route379_from_page_5 -.->|route379| v8
+  v11 -.->|ActPPValOt = response, go to ActOutro| v8
+  v9 -.->|ActPPValOt = DK/RF, go to ActPPValbOt| v8
+  v8 -.->|ActPPValOt = DK/RF respondent does not know current value of their remaining pension pots| v9
+  route383_from_page_5["from page_5 - route383"]
+  route383_from_page_5 -.->|route383| v11
+  v12 -.->|switchboard SBPUn = 1 go to PUnIntro Preserved untouched section| v11
+  route385_from_page_5["from page_5 - route385"]
+  route385_from_page_5 -.->|route385| v14
+  v13 -.->|PUnPrev 1 to 6 PUnNmSc = PUnPrev + PUnNum| v15
+  v14 -.->|PUnPrev 1 to 6 PUnNmSc = PUnPrev + PUnNum| v15
+  v15 -->|PUnNmSc >4| v16
+  v13 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v17
+  v14 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v17
+  v16 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v17
+  v15 -->|PUnNmSc >= 1 for each past scheme| v18
+  v15 -->|PUnNmSc >= 1 for each past scheme| v19
+  v15 -->|PUnNmSc >= 1 for each past scheme| v20
+  v24 -.->|PUnVal = DK/RF then go to PUnValb| v23
+  v25 -.->|PUnVal = answer AND PUnEPTyp1 = 3 go to PUnYrSt| v23
+  v28 -.->|PUnVal = answer AND PUnEPTyp1 = 1 go to PUnAge| v23
+  v22 -.->|PUnEPTyp = 2,3 respondent is not receiving a pension from the scheme at the moment, and either type of pension is workplace or pension is a second type defined benefit or hybrid or scheme| v25
+  v22 -.->|PUnEPTyp = 2,3 pension is a Second type defined benefit or hybrid scheme and they are not receiving a pension from the scheme at the moment| v26
+  v28 -.->|PUnInc = answer go to PUnAge| v26
+  v27 -.->|PUnInc = DK/RF go to PUnIncb| v26
+  v26 -.->|PUnInc = DK/RF| v27
+  v15 -->|PUnNmSc >= 1 for each past scheme| v28
+  v15 -.->|no more loops PUnNmSc=1 then PUnOutro| v28
+  v29 -.->|no more loops PUnNmSc=1 then PUnOutro| v28
+  v18 -.->|need more loops PUnNmSc=2 or more then go to PUnName| v28
+  route407_from_page_5["from page_5 - route407"]
+  route407_from_page_5 -.->|route407| v30
+  route408_from_page_5["from page_5 - route408"]
+  route408_from_page_5 -.->|route408| v30
+  route409_from_page_5["from page_5 - route409"]
+  route409_from_page_5 -.->|route409| v31
+  route410_from_page_5["from page_5 - route410"]
+  route410_from_page_5 -.->|route410| v31
+  route411_from_page_5["from page_5 - route411"]
+  route411_from_page_5 -.->|route411| v32
+  route412_from_page_5["from page_5 - route412"]
+  route412_from_page_5 -.->|route412| v32
+  v31 -.->|PinPNum <= 6 go to PinPName| v32
+  v34 -.->|PinPNum <= 6 go to PinPName| v32
+  v33 -.->|PinPNum > 6 go to PinPQHigh| v32
+  v31 -->|PinPNum > 6| v33
+  v32 -.->|PinPWho = 1,2 go to PinPTyp| v33
+  v36 -.->|PinPWho = 1,2 go to PinPTyp| v33
+  v35 -.->|PinPWho = 3 go to PinPOwSp| v33
+  v31 -->|PinPNum >= 1| v34
+  v32 -.->|PinPWho = 1,2 go to PinPTyp| v34
+  v36 -.->|PinPWho = 1,2 go to PinPTyp| v34
+  v35 -.->|PinPWho = 3 go to PinPOwSp| v34
+  v32 -->|PinPWho = 3 If respondent has both own and spouse pension| v35
+  v31 -->|PinPNum >=1 For each past scheme| v36
+  v37 -.->|PinPTyp = 1 go to PinPEPSec| v36
+  v39 -.->|PinPTyp = 2 go to PinPReg| v36
+  v36 -->|PinPTyp = 1 employer pension| v37
+  v36 -->|PinPTyp = 1 respondent has an employer pension scheme from their own or spouse employer| v38
+  v31 -->|PinPNum >= 1| v39
+  v38 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v39
+  v36 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v39
+  v32 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v39
+  v35 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v39
+  v40 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v39
+  v41 -.->|PinPReg =1 AND PinPEPTyp = 2 OR PinPEPTyp = 4 or PinPWho = 2 or PinPOwSp = 2 go to PinPAgeStop| v39
+  v31 -->|PinPNum >= 1| v41
+  v31 -->|PinPNum >= 1| v42
+  v39 -.->|PinPAccVal > 0 and PinPReg = 1 or 3 go to PinPAmt.| v43
+  v45 -.->|PinPAccVal > 0 and PinPReg = 1 or 3 go to PinPAmt.| v43
+  v47 -.->|PinPAccVal > 0 and PinPReg = 2 go to PinPLumpNum| v43
+  v44 -.->|PinPAccVal = DK go to PinPAccValB| v43
+  v43 -->|PinPAccVal = DK| v44
+  v39 -.->|PinPReg = 1 or 3 go to PinPAmt.| v44
+  v45 -.->|PinPReg = 1 or 3 go to PinPAmt.| v44
+  v47 -.->|PinPReg = 2 go to PinPLumpNum| v44
+  v39 -.->|PinPReg = 1,3 respondent receives regular pension payment| v45
+  v63 -.->|PinPAmt > 0 and PinPReg = 1 go to PinPOutro| v45
+  v47 -.->|PinPAmt > 0 and PinPReg = 3 go to PinPLumpNum| v45
+  v46 -.->|PinPAmt = DK go to PinPAmtB| v45
+  v45 -->|PinPAmt = DK| v46
+  v39 -.->|PinPReg = 1 go to PinPOutro| v46
+  v63 -.->|PinPReg = 1 go to PinPOutro| v46
+  v47 -.->|PinPReg = 3 go to PinPLumpNum| v46
+  v39 -.->|PinPReg = 2,3 respondent has received a lump sum| v47
+  v39 -.->|PinPReg = 2,3 respondent has received a lump sum| v48
+  v50 -.->|PinPSumTot > 0 go to PinPSum2Yr| v48
+  v49 -.->|PinPSumTot = DK go to PinPSumTotB| v48
+  v48 -->|PinPSumTot = DK total withdrawals are DK| v49
+  v39 -.->|PinPReg = 2,3 respondent has received a lump sum| v50
+  v52 -.->|PinPSum2Yr >= 0 go to PinPSumTax| v50
+  v51 -.->|PinPSum2Yr = DK go to PinPSum2B| v50
+  v50 -->|PinPSum2Yr = DK lump sum amount in last 2 years is DK| v51
+  v39 -.->|PinPReg = 2,3 respondent has received a lump sum| v52
+  v38 -.->|PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 go to PinPLumpMost| v52
+  v36 -.->|PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 go to PinPLumpMost| v52
+  v53 -.->|PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 go to PinPLumpMost| v52
+  v58 -.->|PinPReg = 2 AND PinPEPTyp = 2 go to PinPDBInc| v52
+  v63 -.->|PinPReg = 2 AND PinPEPtyp = 4 go to PinPOutro| v52
+  v39 -.->|PinPReg = 2,3 AND PinPEPTyp = 1,3 ORPinPTyp = 2 – respondent has taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme| v53
+  v38 -.->|PinPReg = 2,3 AND PinPEPTyp = 1,3 ORPinPTyp = 2 – respondent has taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme| v53
+  v40 -.->|PinPReg = 2 OR PinPHow = 3,4 go to PinPRemVal| v53
+  v54 -.->|PinPReg = 2 OR PinPHow = 3,4 go to PinPRemVal| v53
+  v63 -.->|PinPReg = 3 and PinPHow <> 3,4 go to PinPOutro| v53
+  v38 -.->|PinPEPtyp = 3 AND PinPRemVal = 0 AND PinPReg = 2 go to PinPDBInc| v54
+  v39 -.->|PinPEPtyp = 3 AND PinPRemVal = 0 AND PinPReg = 2 go to PinPDBInc| v54
+  v58 -.->|PinPEPtyp = 3 AND PinPRemVal = 0 AND PinPReg = 2 go to PinPDBInc| v54
+  v63 -.->|PinPEptyp <> 3 AND PinPRemVal = 0 AND PinPReg = 3 go to PinPOutro| v54
+  v56 -.->|PinPRemVal > 0 and PinPReg = 2 go to PinPRemHow| v54
+  v55 -.->|PinPRemVal = DK go to PinPRemVB| v54
+  v54 -->|PinPRemVal = DK respondent does not know the current value of the retained part of their pension| v55
+  v39 -.->|PinPRemVB > 0 AND PinPReg = 2 go to PinPRemHow| v55
+  v56 -.->|PinPRemVB > 0 AND PinPReg = 2 go to PinPRemHow| v55
+  v63 -.->|PinPRemVB > 0 AND PinPReg <> 2 go to PinPOutro| v55
+  v38 -.->|PinPEPtyp = 3 AND PinPRemVB = 0 AND PinPReg = 2 go to PinPDBInc| v55
+  v58 -.->|PinPEPtyp = 3 AND PinPRemVB = 0 AND PinPReg = 2 go to PinPDBInc| v55
+  v39 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v56
+  v38 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v56
+  v36 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v56
+  v54 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v56
+  v55 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v56
+  v58 -.->|PinPEPtyp = 3 and PinPRemHow = 1, 2 or 3 go to PinPDBInc| v56
+  v63 -.->|PinPEPTyp <> 3 and PinPRemHow = 1,2 or 3 go to PinPOutro| v56
+  v57 -.->|PinPRemHow = 4 go to PinPHowOth| v56
+  v56 -->|PinPRemHow = 4 respondent intends to use their remaining pension pot another way| v57
+  v38 -.->|PinPEPTyp = 3 go to PinPDBINc| v57
+  v58 -.->|PinPEPTyp = 3 go to PinPDBINc| v57
+  v63 -.->|PinPEPtyp <> 3 go to PinPOutro| v57
+  v39 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v58
+  v38 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v58
+  v59 -.->|PinPDBInc = DK go to PinPDBIncB| v58
+  v58 -->|PinPDBInc = DK respondent does not know expected income| v59
+  v39 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v60
+  v38 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v60
+  v39 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v61
+  v38 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v61
+  v31 -.->|PinPNum > 1 Go to PinPEnd| v61
+  v62 -.->|PinPNum > 1 Go to PinPEnd| v61
+  v63 -.->|PinPNum = 1 go to PinPOutro| v61
+  v31 -.->|PinPNum > 1 and LOOP number is less than PinPNum go to PinPName| v62
+  v34 -.->|PinPNum > 1 and LOOP number is less than PinPNum go to PinPName| v62
+  v63 -.->|PinPNum > 1 and LOOP number = PinPNum go to PinPOutro| v62
+  route513_from_page_5["from page_5 - route513"]
+  route513_from_page_5 -.->|route513| v63
+  route514_from_page_5["from page_5 - route514"]
+  route514_from_page_5 -.->|route514| v63
+  route515_from_page_5["from page_5 - route515"]
+  route515_from_page_5 -.->|route515| v63
+  v64 -.->|switchboard SBPPa = 1 go to PPAIntro Previous Spouse or Partner Pensions section| v63
+  route517_from_page_5["from page_5 - route517"]
+  route517_from_page_5 -.->|route517| v64
+  v64 -->|PPaIntro = 1| v65
+  v65 -->|PPaNum >3| v66
+  v65 -->|PPaNum >0| v67
+  v68 -.->|PPaPayTyp = 1 go to PPaLuSAmt| v67
+  v70 -.->|PPaPayTyp = 2 go to PPaInc| v67
+  v67 -.->|PPaPayTyp=1,3| v68
+  v70 -.->|PPaLuSAmt > 0 AND PPaPayTyp = 3 go to PPaInc| v68
+  v74 -.->|PPaLuSAmt > 0 AND PPaPayTyp = 1 go to PPaAge| v68
+  v69 -.->|PPaLuSAmt = DK/RF go to PPaLuSb| v68
+  v67 -.->|PPaPayTyp = 3 go to PpaInc| v69
+  v70 -.->|PPaPayTyp = 3 go to PpaInc| v69
+  v74 -.->|PpaPayTyp = 1 go to PpaAge| v69
+  v67 -.->|PpaPayTyp = 2,3| v70
+  v71 -.->|PpaInc > £0 go to PpaIncF| v70
+  v73 -.->|PpaInc = DK/RF go to PpaIncb| v70
+  v74 -.->|PPaIncF = 1,2,3 go to PPaAge| v71
+  v71 -->|PPaIncF = 4 respondent expects other frequency of paymnet| v72
+  v65 -->|PPaNum >= 1| v74
+  route536_from_page_5["from page_5 - route536"]
+  route536_from_page_5 -.->|route536| v75

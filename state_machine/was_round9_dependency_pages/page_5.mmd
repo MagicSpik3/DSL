@@ -1,0 +1,275 @@
+flowchart LR
+  %% Page 5 of 12
+  v1["OthName: Ask if OtherBen = 2"]
+  v2["BenLettr: Ask for each benefit reported at WAgeBen, DisBen, PenBen, KidBen, SocFund, OtherBen – not asked if LALType = 1"]
+  v3["BankStmt: Ask if BenLettr = 2"]
+  v4["BenAmt: Ask for each benefit reported at WAgeBen, DisBen, PenBen, KidBen, SocFund, OtherBen – not asked if LALType = 1"]
+  v5["BenAmtDK: Ask if BenAmt = DK"]
+  v6["BenPd: Ask if BenAmt > 0"]
+  v7["JSAType: There are two types of Jobseeker’s Allowance. Is your allowance…"]
+  v8["ESAType: There are two types of Employment Support Allowance. Is your allowance…"]
+  v9["CaPer: Who is the person you care for that qualifies you for the Carer’s Allowance?"]
+  v10["WHRePCar: Who do you receive the daily living component of Personal Independence Payment for?"]
+  v11["WHRePMob: Who do you receive the mobility component of Personal Independence Payment for?"]
+  v12["WHReDCar: Who do you receive the care component of Disability Living Allowance for?"]
+  v13["WHReDMob: Who do you receive the mobility component of Disability Living Allowance for?"]
+  v14["WhoRec: Who do you receive Attendance Allowance for?"]
+  v15["GetCA: Is there anyone getting Carer’s Allowance for looking after you?"]
+  v16["PComp: Is there anyone getting Carer’s Allowance for looking after you?"]
+  v17["CBTax: Can I check, do you or someone else in the household pay a high income Child Benefit tax charge on the Child Benefit you receive?"]
+  v18["CBTaxAmt: How much was this last time?"]
+  v19["CBTaxPD: How long a period did this cover?"]
+  v20["ExtBenAmt: How much was the extended payment of Housing Benefit/ rent rebate?"]
+  v21["GovPay: Are the DWP paying directly for any of the following things?"]
+  v22["GovBen: And which benefit has been reduced, as a result?"]
+  v23["GovAmt: How much in total is the DWP paying for this / these things per week?"]
+  v24["GovBefor: Just now, you said you received ^LDWP benefit last time. Was that.."]
+  v25["SFRepay: Are you at present making any repayments on any Budgeting loans / Advances or Local Authority loans?"]
+  v26["RepayAmt: How much in total do you repay, per week?"]
+  v27["SFInc: Just now you said you received list of amounts for each of Income Support, JSA, ESA, Universal Credit, Pension Credit benefit last time. Was that…"]
+  v28["ComBAm: You have stated that you receive some benefits in combination. How much did you get altogether last time?"]
+  v29["LoanNum: You said earlier that you had a budgeting loan or budgeting advance from DWP and a loan or grant from your Local Authority if Country = Wales OR Country = England AND DWPloan IN SocFund AND LAloan IN SocFund / a budgeting loan or budgeting advance from DWP if Country = Wales OR Country = England OR Country = Scotland AND DWPloan IN SocFund / a loan or grant from your Local Authority if Country = Wales OR Country = England AND LAloan IN SocFund / a budgeting loan or budgeting advance from DWP and a loan or grant from your Local Authority, including a Crisis Grant or Community Care Grant from the Scottish Welfare Fund if Country = Scotland AND DWPloan IN SocFund AND LAloan IN SocFund / a loan or grant from your Local Authority, including a Crisis Grant or Community Care Grant from the Scottish Welfare Fund if Country = Scotland AND LAloan IN SocFund"]
+  v30["LoanAmt: About how much did you borrow?"]
+  v31["ComBPd: How long does this cover?"]
+  v32["TtBPrx: If 97 IN WAgeBen OR 97 IN DisBen OR 97 IN PenBen OR 97 IN KidBen OR 97 IN SocFund OR 97 IN OtherBen - respondent selected one of these/ more than one of these, but I don’t know which option for the benefits given."]
+  v33["OPenInt: The next section is about attitudes towards saving for retirement."]
+  v34["OUnder: Remind respondent of the scale if necessary: from 1 'Strongly agree' to 5 'Strongly disagree’"]
+  v35["OAccess: REMIND RESPONDENT OF THE SCALE IF NECESSARY: FROM 1 'STRONGLY AGREE' TO 5 'STRONGLY DISAGREE’"]
+  v36["MorSavRe: Which of these pension saving options would enable you to save more for retirement…"]
+  v37["OSaferet: * Which of these options do you think would be the safest way to save for retirement..."]
+  v38["OMakeMost: * And which one do you think could potentially make the most of your money…"]
+  v39["OTrustN: * Which of these would you trust for advice about saving for retirement…"]
+  v40["SBIntro: Now I'm going to ask some questions about any pension arrangements you have, these may be from employment or personal pension arrangements. Please note that here we are excluding the state retirement pension."]
+  v41["SBActNow: Are you, your employer if DVILO3a= InEmp AND Stat = Employee or anyone else on your behalf currently making regular contributions to any pension schemes?"]
+  v42["SBPUn: Have you, an employer or anyone else contributed to any other if SBActNow = 1 pension schemes in the past that you have not yet received any money from?"]
+  v43["SBPinPNow: Are you currently receiving any regular pension payments? Again do not consider State Pension payments in your response if DVAge >54"]
+  v44["SBPinPPast: Have you ever received any money from a pension scheme? other than the State Pension if PenBen = ‘State Retirement Pension' This could have been in the form of regular payments or as lump sum."]
+  v45["SBPPa: Excluding the pensions you are in receipt of, do if SBPinPNow = 1 OR SBPinPPast = 1 ; Do if SBPinPNow = 2 AND SBPinPPast = 2 you expect to receive a pension from any schemes that someone else has contributed to? This could be from a previous spouse or partner even if they currently live in another household."]
+  v46["SBOutro: Thank you, with this information I can tailor the rest of the section to questions about:"]
+  v47["SBOutroCheck: SIGNAL: If SBOutro = 2 No - Signal text ‘Please go back and change the information, then change SBOutro to Yes’"]
+  v48["SBOutroNo: Thank you - based on your circumstances there is no need to ask any more pension-related questions."]
+  v49["ActIntro: Next I am going to ask you some questions about pension schemes you or someone on your behalf are currently contributing to."]
+  v50["ActTyp: Thinking about the pensions you or someone on your behalf are currently contributing to, do you have..."]
+  v51["ActEPNum: How many employer or workplace pensions are you, an employer or someone on your behalf currently contributing to? if SBActNow = Yes"]
+  v52["ActEPHigh: Now, I'm going to ask you about your two highest value employer pension schemes."]
+  v53["ActEPName: What is the name of your highest / second highest ActEPNum >1 value employer pension scheme?"]
+  v54["ActEPJb: Is your ActEPName pension related to your main job as main job name if occt = response or second job?"]
+  v55["ActEPSec: Is the employer that your ActEPName pension is related to…"]
+  v56["ActEPTyp: Now I am going to ask you which type of employer pension you have. There are two main types:"]
+  v57["ActEPIntro: The next questions are about the value of your ActEPName pension. It would be helpful to look at a recent pension statement if you have one."]
+  v58["ActEPDBYrSt: What year did you start making contributions to your ActEPName pension?"]
+  v59["ActEPAge: From what age can you access your ActEPName pension?"]
+  v60["ActEPJbAmt: As the value of your pension is related to your income, I would like to know what is your annual gross income, before deductions, for the job your ActEPName pension relates to?"]
+  v61["ActEPJbAmtb: About how much would you estimate your annual gross income is before all deductions, for the job that your ActEPName pension relates to?"]
+  v62["ActEPAcFrYN: Do you know the fraction or percentage of your salary that will be added to your final ActEPName pension for each year’s service? This can usually be found on your pension statements."]
+  v63["ActEPAcFr: What is the fraction or percentage of your salary that will be added to your final ActEPName pension for each year’s service?"]
+  v64["ActEPAcFrOt: ENTER DETAILS OF OTHER FRACTION OR PERCENTAGE"]
+  v65["ActEPInc: How much gross annual income do you expect to get from your ActEPName pension when you retire?"]
+  v66["ActEPIncb: About how much do you estimate your annual gross income to be from your ActEPName pension when you retire?"]
+  v67["ActEPVal: What is the current value of your ActEPName pension?"]
+  v68["ActEPValb: About how much do you estimate the current value of your ActEPName pension to be?"]
+  v69["ActEPDCYrSt: What year did you start making contributions into your ActEPName pension?"]
+  v70["ActEPAmtPer: The next questions are about your usual monthly contribution to your ActEPName pension."]
+  v71["ActEPAmt: How much is your usual monthly contribution to your ActEPName pension after tax?"]
+  v72["ActEPPer: What is your usual contribution to your ActEPName pension as a percentage of your salary?"]
+  v73["ActPPNum: How many personal pension schemes are you or someone on your behalf currently contributing to?"]
+  v74["ActPPHigh: Now, I'm going to ask you about your two highest value schemes."]
+  v75["ActPPName: What is the name of your highest / second highest ActPPNum >1 value personal pension scheme?"]
+  route248_to_page_4["route248 -> go to page_4"]
+  v3 -.->|route248| route248_to_page_4
+  route249_from_page_4["from page_4 - route249"]
+  route249_from_page_4 -.->|route249| v1
+  v4 -->|BenAmt = DK| v5
+  v4 -->|BenAmt > 0| v6
+  route252_from_page_4["from page_4 - route252"]
+  route252_from_page_4 -.->|route252| v6
+  route253_from_page_4["from page_4 - route253"]
+  route253_from_page_4 -.->|route253| v6
+  route254_from_page_4["from page_4 - route254"]
+  route254_from_page_4 -.->|route254| v7
+  route255_from_page_4["from page_4 - route255"]
+  route255_from_page_4 -.->|route255| v8
+  route256_from_page_4["from page_4 - route256"]
+  route256_from_page_4 -.->|route256| v9
+  route257_from_page_4["from page_4 - route257"]
+  route257_from_page_4 -.->|route257| v14
+  route258_from_page_4["from page_4 - route258"]
+  route258_from_page_4 -.->|route258| v15
+  route259_from_page_4["from page_4 - route259"]
+  route259_from_page_4 -.->|route259| v16
+  route260_from_page_4["from page_4 - route260"]
+  route260_from_page_4 -.->|route260| v17
+  v17 -->|CBTax = 1| v18
+  v18 -->|CBTaxAmt > 0| v19
+  route263_from_page_4["from page_4 - route263"]
+  route263_from_page_4 -.->|route263| v20
+  v25 -->|SFRepay = 1| v26
+  v25 -->|SFRepay = 1 respondent is at present making any repayments on any Budgeting loans/ Advances or Local Authority Loans| v27
+  v5 -.->|any value of BenAmtDK = 1 - Ask if benefit was paid in combination with another and cannot establish a separate amount| v28
+  v5 -.->|any value of BenAmtDK = 1 benefit was paid in combination with another and cannot establish a separate amount| v31
+  route268_from_page_2["from page_2 - route268"]
+  route268_from_page_2 -.->|route268| v33
+  route269_from_page_1["from page_1 - route269"]
+  route269_from_page_1 -.->|route269| v33
+  route270_from_page_3["from page_3 - route270"]
+  route270_from_page_3 -.->|route270| v33
+  route271_from_page_2["from page_2 - route271"]
+  route271_from_page_2 -.->|route271| v34
+  route272_from_page_1["from page_1 - route272"]
+  route272_from_page_1 -.->|route272| v34
+  route273_from_page_3["from page_3 - route273"]
+  route273_from_page_3 -.->|route273| v34
+  route274_from_page_2["from page_2 - route274"]
+  route274_from_page_2 -.->|route274| v36
+  route275_from_page_1["from page_1 - route275"]
+  route275_from_page_1 -.->|route275| v36
+  route276_from_page_3["from page_3 - route276"]
+  route276_from_page_3 -.->|route276| v36
+  route277_from_page_2["from page_2 - route277"]
+  route277_from_page_2 -.->|route277| v37
+  route278_from_page_1["from page_1 - route278"]
+  route278_from_page_1 -.->|route278| v37
+  route279_from_page_3["from page_3 - route279"]
+  route279_from_page_3 -.->|route279| v37
+  route280_from_page_2["from page_2 - route280"]
+  route280_from_page_2 -.->|route280| v38
+  route281_from_page_1["from page_1 - route281"]
+  route281_from_page_1 -.->|route281| v38
+  route282_from_page_3["from page_3 - route282"]
+  route282_from_page_3 -.->|route282| v38
+  route283_from_page_2["from page_2 - route283"]
+  route283_from_page_2 -.->|route283| v39
+  route284_from_page_1["from page_1 - route284"]
+  route284_from_page_1 -.->|route284| v39
+  route285_from_page_3["from page_3 - route285"]
+  route285_from_page_3 -.->|route285| v39
+  v43 -->|SBPinPNow = No| v44
+  v41 -.->|SBOutro = 1 AND switchboard SBActNow = 1 go to ActIntro Active Pensions section| v46
+  v49 -.->|SBOutro = 1 AND switchboard SBActNow = 1 go to ActIntro Active Pensions section| v46
+  v47 -.->|SBOutro = 2 go to SBOutroCheck| v46
+  v46 -->|SBOutro = 2 No| v47
+  v51 -.->|ActTyp=1, go to ActEPNum| v50
+  v73 -.->|ActTyp=2, go to ActPPNum| v50
+  v50 -.->|ActTyp=1,3| v51
+  v53 -.->|ActEPNum =1 or 2, go to ActEPName| v51
+  v52 -.->|ActEPNum > 2, go to ActEPHigh| v51
+  v51 -->|ActEPNum >2| v52
+  v51 -->|ActEPNum >=1| v53
+  v53 -.->|ActEPName = response AND DVilo3a = in employment| v54
+  route299_from_page_3["from page_3 - route299"]
+  route299_from_page_3 -.->|route299| v54
+  v56 -.->|ActEPJb=1, go to ActEPTyp| v54
+  v55 -.->|ActEPJb=2or 3, go to ActEPSec| v54
+  v53 -->|ActEPName = response| v55
+  v51 -->|ActEPNum >=1| v56
+  v51 -.->|ActEPNum >=1 AND ActEPTyp <> 4 or ActEPSec = 1 or ActEPSec= 2| v57
+  v56 -.->|ActEPNum >=1 AND ActEPTyp <> 4 or ActEPSec = 1 or ActEPSec= 2| v57
+  v55 -.->|ActEPNum >=1 AND ActEPTyp <> 4 or ActEPSec = 1 or ActEPSec= 2| v57
+  v67 -.->|ActEPTyp = 1,3,4 go to ActEPVal those who answer 3 here go through all the variables rather than just one set| v57
+  v58 -.->|ActEPTyp = 2 go to ActEPDBYrSt| v57
+  v54 -.->|ActEPTyp = 4 and ActEPJb = 1 and Sectr2 = 2,3,4,6,8 , go to ActEPDBYrSt| v57
+  route310_from_page_3["from page_3 - route310"]
+  route310_from_page_3 -.->|route310| v57
+  v56 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v58
+  v55 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v58
+  v56 -.->|ActEPTyp = 2,3 OR IF ActEPTyp = 4 AND ActEPSec = 2| v59
+  v55 -.->|ActEPTyp = 2,3 OR IF ActEPTyp = 4 AND ActEPSec = 2| v59
+  v56 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2 AND ActEPJb= 3| v60
+  v55 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2 AND ActEPJb= 3| v60
+  v54 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2 AND ActEPJb= 3| v60
+  v62 -.->|ActEPJbAmt = response, go to ActEPAcFrYN| v60
+  v61 -.->|ActEPJbAmt = DK/RF, go to ActEPJbAmtb| v60
+  v71 -.->|ActEPAmt = DK/RF| v61
+  v56 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v62
+  v55 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v62
+  v62 -->|ActEPAcFrYN= 1| v63
+  v64 -.->|ActEPAcFr=6, go to ActEPAcFrOt| v63
+  v63 -->|ActEPAcFr = 6| v64
+  v56 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v65
+  v55 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v65
+  v51 -.->|ActEPInc = response and ActEPNum=2, go to ActEPName| v65
+  v53 -.->|ActEPInc = response and ActEPNum=2, go to ActEPName| v65
+  v50 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 3, go to ActPPNum| v65
+  v73 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 3, go to ActPPNum| v65
+  route332_from_page_6["from page_6 - route332"]
+  route332_from_page_6 -.->|route332| v65
+  v66 -.->|ActEPInc = DK or RF, go to ActEPIncb| v65
+  v65 -.->|ActEPInc= DK/RF| v66
+  v51 -.->|ActEPNum=2, go to ActEPName| v66
+  v53 -.->|ActEPNum=2, go to ActEPName| v66
+  v50 -.->|ActEPNum>2 and ActTyp = 3, go to ActPPNum| v66
+  v73 -.->|ActEPNum>2 and ActTyp = 3, go to ActPPNum| v66
+  route339_from_page_6["from page_6 - route339"]
+  route339_from_page_6 -.->|route339| v66
+  v56 -.->|ActEPTyp= 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v67
+  v55 -.->|ActEPTyp= 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v67
+  v69 -.->|ActEPVal = response, go to ActEPDCYrSt| v67
+  v68 -.->|ActEPVal = DK/RF, go to ActEPValb| v67
+  v67 -.->|ActEPVal = DK/RF| v68
+  v56 -.->|ActEPTyp = 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v70
+  v55 -.->|ActEPTyp = 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v70
+  v70 -->|ActEPAmtPer = 1| v71
+  v51 -.->|ActEPAmt = response and ActEPNum = 2, go to ActEPName| v71
+  v53 -.->|ActEPAmt = response and ActEPNum = 2, go to ActEPName| v71
+  v50 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v71
+  v73 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v71
+  route352_from_page_6["from page_6 - route352"]
+  route352_from_page_6 -.->|route352| v71
+  v70 -->|ActEPAmtPer = 2| v72
+  v51 -.->|ActEPPer = response and ActEPNum = 2, go to ActEPName| v72
+  v53 -.->|ActEPPer = response and ActEPNum = 2, go to ActEPName| v72
+  v50 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v72
+  v73 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v72
+  route358_from_page_6["from page_6 - route358"]
+  route358_from_page_6 -.->|route358| v72
+  v50 -.->|ActTyp = 2 or 3| v73
+  v75 -.->|ActPPNum =1 or 2, go to ActPPName| v73
+  v74 -.->|ActPPNum > 2, go to ActPPHigh| v73
+  v73 -->|ActPPNum>2| v74
+  v73 -->|ActPPNum>= 1| v75
+  route364_to_page_6["route364 -> go to page_6"]
+  v73 -.->|route364| route364_to_page_6
+  route365_to_page_6["route365 -> go to page_6"]
+  v73 -.->|route365| route365_to_page_6
+  route368_to_page_6["route368 -> go to page_6"]
+  v73 -.->|route368| route368_to_page_6
+  route369_to_page_6["route369 -> go to page_6"]
+  v73 -.->|route369| route369_to_page_6
+  route371_to_page_6["route371 -> go to page_6"]
+  v73 -.->|route371| route371_to_page_6
+  route375_to_page_6["route375 -> go to page_6"]
+  v73 -.->|route375| route375_to_page_6
+  route377_to_page_6["route377 -> go to page_6"]
+  v75 -.->|route377| route377_to_page_6
+  route379_to_page_6["route379 -> go to page_6"]
+  v73 -.->|route379| route379_to_page_6
+  route383_to_page_6["route383 -> go to page_6"]
+  v42 -.->|route383| route383_to_page_6
+  route385_to_page_6["route385 -> go to page_6"]
+  v42 -.->|route385| route385_to_page_6
+  route407_to_page_6["route407 -> go to page_6"]
+  v43 -.->|route407| route407_to_page_6
+  route408_to_page_6["route408 -> go to page_6"]
+  v44 -.->|route408| route408_to_page_6
+  route409_to_page_6["route409 -> go to page_6"]
+  v43 -.->|route409| route409_to_page_6
+  route410_to_page_6["route410 -> go to page_6"]
+  v44 -.->|route410| route410_to_page_6
+  route411_to_page_6["route411 -> go to page_6"]
+  v43 -.->|route411| route411_to_page_6
+  route412_to_page_6["route412 -> go to page_6"]
+  v44 -.->|route412| route412_to_page_6
+  route513_to_page_6["route513 -> go to page_6"]
+  v43 -.->|route513| route513_to_page_6
+  route514_to_page_6["route514 -> go to page_6"]
+  v44 -.->|route514| route514_to_page_6
+  route515_to_page_6["route515 -> go to page_6"]
+  v45 -.->|route515| route515_to_page_6
+  route517_to_page_6["route517 -> go to page_6"]
+  v45 -.->|route517| route517_to_page_6
+  route536_to_page_6["route536 -> go to page_6"]
+  v45 -.->|route536| route536_to_page_6
+  route537_to_page_7["route537 -> go to page_7"]
+  v43 -.->|route537| route537_to_page_7
+  route538_to_page_7["route538 -> go to page_7"]
+  v44 -.->|route538| route538_to_page_7

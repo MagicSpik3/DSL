@@ -1,0 +1,88 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 18 of 20
+  v1["LIRGfYr1: In which year did you receive the highest/second highest/third highest value gift?"]
+  v2["LIRGfVal1: And what was the total value, at that time, of the highest/second highest/third highest value gift, after tax and other deductions?"]
+  v3["LIRGfValB1: About how much would you estimate was the value of the highest/second highest/third highest value gift at that time after tax and other deductions ?"]
+  v4["GGift: In the last two years, have you given any goods or any cash GIFTS worth £500 or more? Please do not include money given via a trust fund."]
+  v5["GGfTo: To whom did you give these gifts?"]
+  v6["IGGfWho1: Who did you give the highest/ second highest/ third highest total value of gifts to over the last two years?"]
+  v7["IGGfVal1: What is the total value of the goods and cash gifts that you have given to response at IGGfWho1 in the last two years?"]
+  v8["IGGfVB1: About how much would you estimate is the value of the goods or cash gifts that you have given to response at IGGfWho1 in the last two years?"]
+  v9["IGGfUse1: What was done with any cash gifts you gave to ^LGGSource ?"]
+  v10["LGGift: * And now thinking back further than the last two years, apart from this gift/ these gifts, have you personally ever given a gift of money, property or goods worth £500 or more?"]
+  v11["LGGiftNo: How many gifts worth £500 or more did you give in this earlier period, that is before DATE 2 YEARS AGO ?"]
+  v12["LIGGfYr1: In which year did you give the highest/ second highest/ third highest value gift?"]
+  v13["LIGGfVal1: And what was the total value, at that time, of the highest/ second highest/ third highest value gift you gave, after tax and other deductions?"]
+  v14["LIGGfValB1: About how much would you estimate was the value of the highest/ second highest/ third highest value gift at that time, after tax and other deductions?"]
+  v15["RLoan: Now I would like to ask you about loans from family or friends. In the last two years, have you received a cash loan of £500 or more from family or friends? Please do not include any loans that you reported earlier in the Loans section"]
+  v16["RLnFrom: From whom did you receive these cash loans?"]
+  v17["IRLnWho1: Who gave you the highest/ second highest/ third highest total value of loans over the last two years?"]
+  v18["IRLnVal1: What is the total value of the cash loans you received from ^LRLSource in the last two years?"]
+  v19["IRLnVB1: About how much would you estimate is the value of the cash loans you received from IRLnWho1 in the last two years?"]
+  v20["IRLnUse1: What did you do with the money loaned to you by response at IRLnWho1 ?"]
+  v21["IRLnPyBk1: Do you intend to pay back some or all of the loan s you have received from response at IRLnWho1 ?"]
+  v22["IRLnPBkAm1: How much of the loan/ loans from response at IRLnWho1 do you intend to pay back?"]
+  v23["GLoan: In the last two years, have you given a cash loan of £500 or more to family or friends?"]
+  v24["GLnTo: To whom did you give these cash loans?"]
+  v25["IGLnWho1: Who did you give the Highest/ Second Highest/ Third Highest total value of loans to over the last two years?"]
+  v26["IGLnVal1: What is the total value of the money you loaned to response at IGLnWho1 in the last two years?"]
+  v27["IGLnVB1: About how much would you estimate is the value of the money you loaned to response at IGLnWho1 in the last two years?"]
+  v28["IGLnUse1: What was done with the money you loaned to response at IGLnWho1 ?"]
+  v29["IGLnPyBk1: Do you expect to receive back some or all of the money you loaned to ^LGLSource, IGLnWho1 ?"]
+  v30["IGLnPBkAm1: How much of the money you loaned to ^LGLSource, IGLnWho1 do you expect to receive back?"]
+  v31["TIntro: Earlier we talked about unit trusts, investment trusts and other types of financial products."]
+  v32["TSett: EXCLUDE: TRUSTS SET UP ON BEHALF OF SOMEONE ELSE IF THE RESPONDENT'S OWN ASSETS WERE NOT PUT INTO THE TRUST AT ANY STAGE."]
+  v33["TSNum1: How many separate trusts do you currently have assets in?"]
+  v34["TSNew: In the last two years, have you set up a new trust?"]
+  v35["TSNum2: In total, how many separate trusts do you currently have assets in?"]
+  v36["TCont1: I am going to ask some questions about this trust if TSNum1 = 1 / these trusts if TSNum1 = 2 / the two trusts that you have the most assets in if TSNum1 > 2 ."]
+  v37["TJnt: Thinking of the first / second most valuable trust, if Count1 > 1 can / Can if Count1 = 1 I just check, does the trust contain only your own assets or was it set up jointly with another person in this household or with someone else?"]
+  v38["TPs1: With which other person or people in this household did you set this trust up?"]
+  v39["TAcc1: Would you be able to withdraw these assets for your own use in the future if you wanted to?"]
+  v40["TBen: Who are the beneficiaries of the trust?"]
+  v41["TVal1: Now thinking about the current value of the trust, what is the approximate current value of your share of the assets in the trust after paying off any debts?"]
+  v42["TValB1: How much would you estimate is the current net value of your share of the assets?"]
+  v43["TDup1: Have you already included any of the assets in this trust when answering other questions in this interview?"]
+  v44["TDupA1: Does that include all of the assets in the trust or just some?"]
+  route840_from_page_17["from page_17 - route840"]
+  route840_from_page_17 -.->|route840| v1
+  route841_from_page_17["from page_17 - route841"]
+  route841_from_page_17 -.->|route841| v2
+  v4 -->|GGift = 1 - respondent has given any goods or any cash gifts worth £500 or more| v5
+  v4 -->|GGift = 1| v6
+  v5 -.->|GGfTo =1,2,3,4,5,6,7 - respondent gave goods or cash gifts worth £500 or more in the last two years| v7
+  v7 -.->|IGGfVal1 = DK/RF - respondent does not know value of gift given| v8
+  v4 -->|GGift = 1 - respondent given cash gifts worth £500 or more in the last two years| v9
+  v10 -->|LGGift =1| v11
+  v11 -->|LGGiftNo >= 1| v12
+  v11 -->|LGGiftNo >= 1| v13
+  v15 -->|RLoan = 1 - respondent has received loans| v16
+  v15 -->|RLoan = 1 - respondent has received a cash loan of £500 or more| v17
+  v16 -.->|RLnFrom = 1,2,3,4,5,6,7 - has received cash loan from someone| v18
+  v18 -.->|IRLnVal1 = DK/RF - respondent does not know value of the cash loan received| v19
+  v16 -.->|RLnFrom = 1,2,3,4,5,6,7 - respondent has received money for any of the uses shown on the card| v20
+  v16 -.->|RLnFrom = 1,2,3,4,5,6,7 - respondent has a loan| v21
+  v23 -->|GLoan = 1| v24
+  v23 -->|GLoan = 1 - respondent has given a cash loan of £500 or more| v25
+  v24 -.->|GLnTo = 1,2,3,4,5,6,7 - has loaned money to someone| v26
+  v26 -.->|IGLnVal1 = DK/RF - respondent does not know value of the cash loan given| v27
+  v24 -.->|GLnTo =1,2,3,4,5,6,7 - has loaned money to someone| v28
+  v24 -.->|GLnTo =1,2,3,4,5,6,7 - has loaned money to someone| v29
+  v32 -->|TSett = 1 - respondents assets have been put into a trust| v33
+  v32 -.->|TSett = 1 OR RTSett = 1- respondent had assets before or has assets now| v36
+  v33 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v37
+  v35 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v37
+  v37 -->|TJnt = 2 - trust is held jointly with someone in this household| v38
+  v33 -.->|TSNum1 >=1 OR TSNum2 >= 1 - respondent has one or more trusts| v39
+  v35 -.->|TSNum1 >=1 OR TSNum2 >= 1 - respondent has one or more trusts| v39
+  v33 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v40
+  v35 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v40
+  v33 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v41
+  v35 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v41
+  v41 -.->|TVal1 = DK/RF - respondent does not know value of trust| v42
+  v41 -.->|TVal1 OR TValB1 = Response - respondent has given a value| v43
+  v42 -.->|TVal1 OR TValB1 = Response - respondent has given a value| v43
+  v43 -->|TDup1 = 1 - respondent included assets in the trust elsewhere in the interview| v44
+  route877_to_page_19["route877 -> go to page_19"]
+  v44 -.->|route877| route877_to_page_19

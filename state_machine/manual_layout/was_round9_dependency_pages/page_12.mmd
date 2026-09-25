@@ -1,0 +1,101 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 12 of 20
+  v1["FSInVlb: About how much would you estimate is in your own savings or deposit account s at present?"]
+  v2["FSOsHav: May I just check, is your joint SAVING or DEPOSIT account held with a bank or other organisation overseas? / are any of your joint or your own SAVING or DEPOSIT accounts held with a bank or other organisation overseas?"]
+  v3["FSOsVlb: About how much would you estimate you currently have in your savings or deposit account s held with a bank or other organisation overseas?"]
+  v4["ISAs: FISA"]
+  v5["FCISAv: How much do you have in your cash ISA s at present?"]
+  v6["FCISAb: About how much would you estimate you currently have in your cash ISA s ?"]
+  v7["FIISAv: How much do you have in your investment ISA s at present?"]
+  v8["FIISAb: About how much would you estimate you currently have in your investment ISA s ?"]
+  v9["FKISAv: How much do you have in your ISA s at present?"]
+  v10["FKISAb: About how much would you estimate you currently have in your ISA s ?"]
+  v11["FNSavTyp: Thinking now about your National Savings and Investments, which of these types of product do you have…"]
+  v12["FNSVal: How much do you currently have invested in all of these National Savings products?"]
+  v13["FNSVb: How much would you estimate you have invested in all of these National Savings products?"]
+  v14["FInvest: Now thinking of your investments, which of these types do you have…"]
+  v15["FundTyp: Are your investment funds managed or self-managed?"]
+  v16["FundVal: What is the total value of all of your investment funds?FOR JOINT INVESTMENTS, SPLIT VALUE BETWEEN RESPONDENTS. CHECK THAT ALL INVESTMENTS OF THIS TYPE HAVE BEEN COVERED BEFORE ENTERING TOTAL IN ANSWER FIELD. ENTER AMOUNT IN £s"]
+  v17["FundValb: How much would you estimate is the total value of your investment funds?"]
+  v18["ShareTyp: Which of the following shares or equities do you have…"]
+  v19["FShUKV: If you chose to sell all of your shares in listed or unlisted UK companies, about how much would they be worth?"]
+  v20["FShUKVb: How much would you estimate your shares in listed or unlisted UK companies are worth?"]
+  v21["FShOSV: If you chose to sell your shares in foreign companies, about how much would they be worth?"]
+  v22["FShOSVb: FShOSV = DK/RF"]
+  v23["FEShaV: If you chose to sell your employee shares about how much would they be worth?"]
+  v24["FEShVb: How much would you estimate your employee shares are worth, in total?"]
+  v25["FEOptV: If you chose to exercise your employee share options, what is your estimate of the value of your gain - this is the difference between the option price and the market price times the number of shares involved?"]
+  v26["FEOpVb: How much would you estimate the gain from exercising your employee share options would be?"]
+  v27["FGilts: You said earlier that you had some bonds and gilts. Which of the following types of bonds or gilts do you have…"]
+  v28["FGltUKV: What is the current value of your UK bonds and gilts?"]
+  v29["FGUKVb: How much would you estimate is the current value of your bonds and gilts?"]
+  v30["FGltFoV: What is the current value of your foreign corporate and government bonds?"]
+  v31["FGFoVb: How much would you estimate is the current value of your foreign bonds?"]
+  v32["DKInvest: How much would you estimate is the total value of your investment products?"]
+  v33["FLProd: You said earlier that you have a friendly society or endowment policy or an investment with a life insurance element. Which of the following products do you have…"]
+  v34["FLfEnV: What is the current value of your endowment or regular premium policy?"]
+  v35["FLfEnVb: How much would you estimate the current value of your endowment or regular premium policy is?"]
+  v36["FLfSiV: What is the current value of your single premium policy or investment bonds?"]
+  v37["FLfSiVb: How much would you estimate the current value of your single premium policy or investment bonds is?"]
+  v38["FLfFSV: What is the current value of your Friendly Society Tax Exempt Savings Plan?"]
+  v39["FLfFSVb: How much would you estimate the current value of your Friendly Society Tax Exempt Savings Plan is?"]
+  v40["FLfTeV: What is the current value of your insurance policy that will pay a lump sum at a specified date?"]
+  v41["FLfTeVb: How much would you estimate the current value of your insurance policy that will pay a lump sum at a specified date is?"]
+  v42["CashTyp: Now thinking of the currency or cash you mentioned earlier, which of the following do you have…"]
+  v43["CashVal: What is the total value of your UK Pounds held in cash?"]
+  v44["CashValB: How much would you estimate the total value of your UK Pounds held in cash is?"]
+  v45["CurrVal: What is the total value, in pounds sterling, of your foreign currency?"]
+  route589_from_page_11["from page_11 - route589"]
+  route589_from_page_11 -.->|route589| v1
+  route590_from_page_11["from page_11 - route590"]
+  route590_from_page_11 -.->|route590| v2
+  v2 -->|FSOsHav = 1| v3
+  route592_from_page_11["from page_11 - route592"]
+  route592_from_page_11 -.->|route592| v4
+  v5 -.->|FCISAv = DK/RF| v6
+  v7 -.->|FIISAv = DK/RF| v8
+  v9 -.->|FKISAv = DK/RF| v10
+  route596_from_page_11["from page_11 - route596"]
+  route596_from_page_11 -.->|route596| v11
+  route597_from_page_11["from page_11 - route597"]
+  route597_from_page_11 -.->|route597| v12
+  v12 -.->|FNSVal = DK/RF| v13
+  route599_from_page_11["from page_11 - route599"]
+  route599_from_page_11 -.->|route599| v14
+  v14 -->|FInvest = 1| v15
+  v14 -->|FInvest = 1| v16
+  v16 -.->|FundVal = DK/RF| v17
+  v14 -->|FInvest = 2| v18
+  v18 -->|ShareTyp = 1| v19
+  v19 -.->|FShUKV = DK/RF| v20
+  v18 -->|ShareTyp = 2| v21
+  v18 -->|Sharetyp = 3| v23
+  v23 -.->|FEShaV = DK/RF| v24
+  v18 -->|ShareTyp = 4| v25
+  v25 -.->|FEOptV = DK/RF| v26
+  v14 -->|FInvest = 3| v27
+  v27 -.->|FGilts = 1, 3| v28
+  v28 -.->|FGltUKV = DK/RF| v29
+  v27 -.->|FGilts = 2,4| v30
+  v30 -.->|FGltFoV = DK/RF| v31
+  v14 -->|FInvest = 4| v32
+  route617_from_page_11["from page_11 - route617"]
+  route617_from_page_11 -.->|route617| v33
+  v33 -->|FLProd = 1| v34
+  v34 -.->|FLfEnV = DK/RF| v35
+  v33 -->|FLProd = 2| v36
+  v36 -.->|FLfSiV = DK/RF| v37
+  v33 -->|FLProd = 3| v38
+  v38 -.->|FLfFSV = DK/RF| v39
+  v33 -->|FLProd = 4| v40
+  v40 -.->|FLfTeV = DK/RF| v41
+  route626_from_page_11["from page_11 - route626"]
+  route626_from_page_11 -.->|route626| v42
+  v42 -->|CashTyp = 1| v43
+  v43 -.->|CashVal = DK/RF| v44
+  v42 -->|CashTyp = 2| v45
+  route630_to_page_13["route630 -> go to page_13"]
+  v45 -.->|route630| route630_to_page_13
+  route631_to_page_13["route631 -> go to page_13"]
+  v42 -.->|route631| route631_to_page_13

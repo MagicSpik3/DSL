@@ -1,0 +1,104 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 2 of 20
+  v1["JntEldB: ENTER PERSON NUMBER OF THE ELDEST JOINT HOUSEHOLDER"]
+  v2["DVHRPNum: Derived"]
+  v3["Relate4: End of RELATIONSHIP GRID loop"]
+  v4["HCoBa: In which country were you born?"]
+  v5["HCoBb: What is the other country?"]
+  v6["HCoBc: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v7["HCoB: Derived variable"]
+  v8["CryFth: Ask if DVAge>=16"]
+  v9["CryFSpc: What is the other country?"]
+  v10["CryFFrm: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v11["CryMth: Ask if DVAge>=16"]
+  v12["CryMSpc: What is the other country?"]
+  v13["CryMFrm: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v14["HseType: Is this house or bungalow …"]
+  v15["FltTyp: Is this flat or maisonette …"]
+  v16["Ten1__1: How do you own or rent this accommodation?"]
+  v17["HBedrm: How many bedrooms do you have in this accommodation?"]
+  v18["RentExpAm: How much is your usual household rent? Please give this amount before any housing benefit is deducted."]
+  v19["RentExpPR: How often do you pay this amount?"]
+  v20["RentExpSP: Specify period rent covers"]
+  v21["LLord: Ten1 = 4,5 - respondent rents or lives there rent-free"]
+  v22["RentHol: Do you have a rent holiday?"]
+  v23["RentHoWk: For how many weeks a year do you have a rent holiday?"]
+  v24["HHown: Which of the following best describes how you came to own this property outright? Have you…"]
+  v25["CTAmt: How much Council Tax do you or your household currently pay?"]
+  v26["CTInstal: Was that the payment for the year, or was it an instalment?"]
+  v27["CTTime: How many instalments are there over the whole year?"]
+  v28["CTRG2: Have you received the Council Tax Rebate grant which has been introduced for households due to rising energy bills?"]
+  v29["MethElec: Added 2210"]
+  v30["OtherElec: Added 2210"]
+  v31["HIntro: The next questions are about the value of your property"]
+  v32["HShare: Can I just check, do you share the ownership of this property with anyone other than a member of this household?"]
+  v33["HShareP: Approximately what percentage do you and other members of this household own?"]
+  v34["HPrice: Respondent lives at a new address or not owner occupier at previous wave; and buying with the help of a mortgage or paying part rent and part mortgage and owns address outright and not inherited property or is buying it with the help of a mortgage or loan or pays part rent and part mortgage"]
+  v35["HPriceB: About how much would you estimate that you and other members of this household paid?"]
+  v36["HCash: When you purchased this property, did you receive money from person to help with the purchase? Do not include loans or mortgages from financial institutions."]
+  v37["HGift: Was the money you received a gift, was it loaned to you, or was it part gift and part loan?"]
+  v38["HGfWho: PROMPT AS NECESSARY - CODE ALL THAT APPLY"]
+  v39["HValue: About how much would you expect to get for your current home if you sold it today , before paying off any outstanding mortgage or loan on the property if Ten1 = 2,3 ?"]
+  v40["HValB: About how much would you estimate that your home would be worth if you sold it today?"]
+  v41["MIntro: The next questions are about any mortgages that you have on this property."]
+  v42["MNumbN: How many mortgages or loans do you currently have outstanding on this property including any extensions or ‘top-ups’ you have taken out ?"]
+  v43["MW2Chk: Last time we interviewed you, we recorded that you had RMNumb mortgage s of the following type s ."]
+  v44["MExtn: In the last two years, have you increased your borrowing by taking out an extension or top-up on an existing mortgage? Please do not include any money received through equity release schemes."]
+  v45["MExtRs: Which of the following items was the extra borrowing for…"]
+  route25_from_page_1["from page_1 - route25"]
+  route25_from_page_1 -.->|route25| v1
+  v4 -->|HCoBa = 997 respondent was born in another country not listed above| v5
+  v4 -.->|HCoBa = 997 AND HCoBb <> empty| v6
+  v5 -.->|HCoBa = 997 AND HCoBb <> empty| v6
+  route29_from_page_1["from page_1 - route29"]
+  route29_from_page_1 -.->|route29| v8
+  v8 -->|CryFth = 997 respondent’s father was born in another country not listed above| v9
+  v8 -.->|CryFth = 997 AND CryFSpc <> empty| v10
+  v9 -.->|CryFth = 997 AND CryFSpc <> empty| v10
+  route33_from_page_1["from page_1 - route33"]
+  route33_from_page_1 -.->|route33| v11
+  v11 -->|CryMth = 997 respondent’s mother was born in another country not listed above| v12
+  v11 -.->|CryMth = 997 AND CryMSpc <> empty| v13
+  v12 -.->|CryMth = 997 AND CryMSpc <> empty| v13
+  route37_from_page_1["from page_1 - route37"]
+  route37_from_page_1 -.->|route37| v18
+  route38_from_page_1["from page_1 - route38"]
+  route38_from_page_1 -.->|route38| v19
+  v19 -->|RentExpPr = 97 rent period is other| v20
+  v21 -.->|LLord=1 or 2 - Respondents rents from LA or HA| v22
+  v22 -->|RentHol = 1 respondent takes a rent holiday| v23
+  route42_from_page_1["from page_1 - route42"]
+  route42_from_page_1 -.->|route42| v24
+  route43_from_page_1["from page_1 - route43"]
+  route43_from_page_1 -.->|route43| v24
+  v25 -->|CTAmt > 0 - respondent has given a council tax amount| v26
+  v26 -->|CTInstal= Instalment respondent pays for their council tax in instalments| v27
+  v29 -->|METHELEC = OTHER| v30
+  route47_from_page_1["from page_1 - route47"]
+  route47_from_page_1 -.->|route47| v31
+  route48_from_page_1["from page_1 - route48"]
+  route48_from_page_1 -.->|route48| v32
+  v32 -->|HShare = 1 respondent shares ownership of this property with someone outside the household| v33
+  v34 -.->|HPrice= DK/RF respondent does not know how much they paid| v35
+  v36 -->|HCash = 1 received money to help with the purchase| v37
+  v36 -->|HCash = 1 received money to help with the purchase| v38
+  route53_from_page_1["from page_1 - route53"]
+  route53_from_page_1 -.->|route53| v39
+  v39 -.->|HValue = DK/RF respondent does not know amount to expect if they sold their home today| v40
+  route55_from_page_1["from page_1 - route55"]
+  route55_from_page_1 -.->|route55| v41
+  v43 -.->|RMNumb>0 and MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v44
+  v44 -->|MExtn = 1 respondent has taken out an extension or top-up on an existing mortgage| v45
+  route58_to_page_3["route58 -> go to page_3"]
+  v42 -.->|route58| route58_to_page_3
+  route59_to_page_3["route59 -> go to page_3"]
+  v43 -.->|route59| route59_to_page_3
+  route62_to_page_3["route62 -> go to page_3"]
+  v42 -.->|route62| route62_to_page_3
+  route65_to_page_3["route65 -> go to page_3"]
+  v42 -.->|route65| route65_to_page_3
+  route67_to_page_3["route67 -> go to page_3"]
+  v42 -.->|route67| route67_to_page_3
+  route82_to_page_3["route82 -> go to page_3"]
+  v42 -.->|route82| route82_to_page_3

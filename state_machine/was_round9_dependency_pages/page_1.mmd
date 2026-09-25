@@ -1,0 +1,172 @@
+flowchart LR
+  %% Page 1 of 12
+  v1["Benefits74: Saving Attitudes and Behaviour89"]
+  v2["Retirement89: Attitudes to saving for retirement89"]
+  v3["ISAs131: National Savings & Investments134"]
+  v4["Insurances142: Currency & Cash145"]
+  v5["Cryptocurrency147: Other financial assets148"]
+  v6["Loans172: Household Bills179"]
+  v7["Bankruptcy180: Other income exc. Earnings and Benefits 181"]
+  v8["Inheritance197: Inheritances received197"]
+  v9["Trusts209: Questions for settlers who have put their own assets into a trust 209"]
+  v10["Health215: Status of parents217"]
+  v11["Ten1: How do you own or rent first line of address ?"]
+  v12["StartDat: ENTER DATE INTERVIEW WITH THIS HOUSEHOLD WAS STARTED"]
+  v13["DateChk: IS THIS:"]
+  v14["IntrType: ENTER WHETHER A TELEPHONE OR FACE TO FACE INTERVIEW"]
+  v15["CurStat: RName or KITE Name"]
+  v16["MovedWth: Did this person move to the same new address/household as another person already coded?"]
+  v17["CountRes: ENTER COUNTRY WHERE NOW RESIDENT"]
+  v18["KnowDet: Which details are known of where this person has moved?"]
+  v19["Add1: What is the first line of the new address, please include the house number or name, and the name of the street or road?"]
+  v20["Add2: What is the second line of the new address?"]
+  v21["Add3: If Add2 = Response - entered a second line of address"]
+  v22["Add4: If Add3 = Response - entered a third line of address"]
+  v23["PstTwn: And in which town is the new address?"]
+  v24["PostCd: If you know it, what is the postcode for this new address?"]
+  v25["SurePstC: CODE FOR CERTAINTY OF CORRECT POSTCODE"]
+  v26["TeleNumb: PLEASE ENTER TELEPHONE NUMBER, INCLUDING STD CODE"]
+  v27["EmailAdd: PLEASE ENTER EMAIL ADDRESS"]
+  v28["HldStat: Derived:"]
+  v29["SurNme: Ask if RSurNme OR KITE RSurname = empty - i.e. if new cohort"]
+  v30["CorrNam: IS THIS NAME CORRECT?"]
+  v31["UpdatNam: Can I have the correct full name please?"]
+  v32["MoreNme: Is there anyone else who classes this residence as their main residence?"]
+  v33["DteofBth: What is your date of birth?"]
+  v34["June15: Is the 15th of June the actual date or an estimate?"]
+  v35["AgeIf: What was your age last birthday?"]
+  v36["DVage: Derived"]
+  v37["xMarSta: What is your legal marital status?"]
+  v38["MarChk: Is your husband /wife / civil partner a member of the household?"]
+  v39["LivWth12: May I just check, are you living with someone in this household as a couple?"]
+  v40["FtEd: Are you presently in full-time education?"]
+  v41["FtEd19: Are you presently in full-time education?"]
+  v42["QualChk: Which of the following best describes the qualification that you are currently working towards? Is it ..."]
+  v43["HiHNum: You have told me that the following people jointly own or rent the accommodation. Who has the highest income from earnings, benefits, pensions and any other sources?"]
+  v44["JntEldA: ENTER PERSON NUMBER OF THE ELDEST JOINT HOUSEHOLDER FROM THOSE WITH THE SAME HIGHEST INCOME:"]
+  v45["JntEldB: ENTER PERSON NUMBER OF THE ELDEST JOINT HOUSEHOLDER"]
+  v46["DVHRPNum: Derived"]
+  v47["Relate4: End of RELATIONSHIP GRID loop"]
+  v48["HCoBa: In which country were you born?"]
+  v49["HCoBb: What is the other country?"]
+  v50["HCoBc: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v51["HCoB: Derived variable"]
+  v52["CryFth: Ask if DVAge>=16"]
+  v53["CryFSpc: What is the other country?"]
+  v54["CryFFrm: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v55["CryMth: Ask if DVAge>=16"]
+  v56["CryMSpc: What is the other country?"]
+  v57["CryMFrm: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v58["HseType: Is this house or bungalow …"]
+  v59["FltTyp: Is this flat or maisonette …"]
+  v60["Ten1__1: How do you own or rent this accommodation?"]
+  v61["HBedrm: How many bedrooms do you have in this accommodation?"]
+  v62["RentExpAm: How much is your usual household rent? Please give this amount before any housing benefit is deducted."]
+  v63["RentExpPR: How often do you pay this amount?"]
+  v64["RentExpSP: Specify period rent covers"]
+  v65["LLord: Ten1 = 4,5 - respondent rents or lives there rent-free"]
+  v66["RentHol: Do you have a rent holiday?"]
+  v67["RentHoWk: For how many weeks a year do you have a rent holiday?"]
+  v68["HHown: Which of the following best describes how you came to own this property outright? Have you…"]
+  v69["CTAmt: How much Council Tax do you or your household currently pay?"]
+  v70["CTInstal: Was that the payment for the year, or was it an instalment?"]
+  v71["CTTime: How many instalments are there over the whole year?"]
+  v72["CTRG2: Have you received the Council Tax Rebate grant which has been introduced for households due to rising energy bills?"]
+  v73["MethElec: Added 2210"]
+  v74["OtherElec: Added 2210"]
+  v75["HIntro: The next questions are about the value of your property"]
+  v15 -.->|CurStat = 3,4,5 - respondent moved| v16
+  v15 -->|CurStat = 8 - respondent now resident abroad| v17
+  v15 -.->|CurStat = 3,4 - a member of the household has moved within GB and details are known| v18
+  v18 -.->|KnowDet = 1- address of mover known| v19
+  v18 -.->|KnowDet = 1- address of mover known| v20
+  v20 -->|Add2 = Response - entered a second line of address| v21
+  v21 -->|Add3 = Response - entered a third line of address| v22
+  v18 -->|KnowDet = 1 - address of mover known| v22
+  v18 -->|KnowDet = 1 - address of mover known| v23
+  v18 -->|KnowDet = 1 - address of mover known| v24
+  v18 -->|KnowDet = 1 - address of mover known| v25
+  v18 -->|KnowDet = 2 - telephone number of mover known| v26
+  v18 -->|KnowDet = 3 - email address of mover known| v27
+  v15 -.->|Curstat = 2, HldStat = 1| v28
+  v30 -->|CorrNam = 2 - respondent’s name is incorrect| v31
+  v33 -->|DteofBth = 15.06| v34
+  v33 -.->|DteofBth = DK/RF does not know OR refuse date of birth| v35
+  v36 -->|DVAge>=16 respondent is aged 16 or over| v37
+  v37 -.->|XMARSTA = 2,6 respondent is married and living with husband/wife or in a legally recognised Civil Partnership| v38
+  v36 -.->|DVAge >= 16 AND MarSta <> 2,6 more than 1 person in household and respondent is aged 16 or over and not married and living with husband/wife or in a legally recognised Civil Partnership| v39
+  v36 -.->|DVAge>3 AND <19 - aged over 3 and under 19 years| v40
+  v36 -->|DVAge = 19 - respondent is 19 years old| v41
+  v40 -->|FtEd = 1 - in full time education| v42
+  v43 -->|HiHNum = 17 - two or more joint householders have the same income| v44
+  v43 -.->|HiHNum = DK/RF - joint householders do not know or refuse to say who has the greatest income| v45
+  v48 -->|HCoBa = 997 respondent was born in another country not listed above| v49
+  v48 -.->|HCoBa = 997 AND HCoBb <> empty| v50
+  v49 -.->|HCoBa = 997 AND HCoBb <> empty| v50
+  v36 -->|DVAge>=16| v52
+  v52 -->|CryFth = 997 respondent’s father was born in another country not listed above| v53
+  v52 -.->|CryFth = 997 AND CryFSpc <> empty| v54
+  v53 -.->|CryFth = 997 AND CryFSpc <> empty| v54
+  v36 -->|DVAge>=16| v55
+  v55 -->|CryMth = 997 respondent’s mother was born in another country not listed above| v56
+  v55 -.->|CryMth = 997 AND CryMSpc <> empty| v57
+  v56 -.->|CryMth = 997 AND CryMSpc <> empty| v57
+  v11 -.->|Ten1 = 3,4 - respondent has shared ownership or pays rent| v62
+  v11 -.->|Ten1 = 3,4 - respondent has shared ownership or pays rent| v63
+  v63 -->|RentExpPr = 97 rent period is other| v64
+  v65 -.->|LLord=1 or 2 - Respondents rents from LA or HA| v66
+  v66 -->|RentHol = 1 respondent takes a rent holiday| v67
+  v28 -.->|HldStat = 2 AND Ten1 = 1 respondent lives at a new address ONLY and they own the accommodation outright| v68
+  v11 -.->|HldStat = 2 AND Ten1 = 1 respondent lives at a new address ONLY and they own the accommodation outright| v68
+  v69 -->|CTAmt > 0 - respondent has given a council tax amount| v70
+  v70 -->|CTInstal= Instalment respondent pays for their council tax in instalments| v71
+  v73 -->|METHELEC = OTHER| v74
+  v11 -.->|Ten1=1,2 or 3 respondent owns the address outright or is buying it with the help of a mortgage or loan or pays part rent and part mortgage| v75
+  route48_to_page_2["route48 -> go to page_2"]
+  v11 -.->|route48| route48_to_page_2
+  route53_to_page_2["route53 -> go to page_2"]
+  v11 -.->|route53| route53_to_page_2
+  route55_to_page_2["route55 -> go to page_2"]
+  v11 -.->|route55| route55_to_page_2
+  route118_to_page_3["route118 -> go to page_3"]
+  v36 -.->|route118| route118_to_page_3
+  route119_to_page_3["route119 -> go to page_3"]
+  v14 -.->|route119| route119_to_page_3
+  route121_to_page_3["route121 -> go to page_3"]
+  v36 -.->|route121| route121_to_page_3
+  route122_to_page_3["route122 -> go to page_3"]
+  v14 -.->|route122| route122_to_page_3
+  route162_to_page_3["route162 -> go to page_3"]
+  v36 -.->|route162| route162_to_page_3
+  route167_to_page_3["route167 -> go to page_3"]
+  v40 -.->|route167| route167_to_page_3
+  route168_to_page_3["route168 -> go to page_3"]
+  v40 -.->|route168| route168_to_page_3
+  route169_to_page_3["route169 -> go to page_3"]
+  v36 -.->|route169| route169_to_page_3
+  route269_to_page_5["route269 -> go to page_5"]
+  v36 -.->|route269| route269_to_page_5
+  route272_to_page_5["route272 -> go to page_5"]
+  v36 -.->|route272| route272_to_page_5
+  route275_to_page_5["route275 -> go to page_5"]
+  v36 -.->|route275| route275_to_page_5
+  route278_to_page_5["route278 -> go to page_5"]
+  v36 -.->|route278| route278_to_page_5
+  route281_to_page_5["route281 -> go to page_5"]
+  v36 -.->|route281| route281_to_page_5
+  route284_to_page_5["route284 -> go to page_5"]
+  v36 -.->|route284| route284_to_page_5
+  route545_to_page_7["route545 -> go to page_7"]
+  v36 -.->|route545| route545_to_page_7
+  route546_to_page_7["route546 -> go to page_7"]
+  v33 -.->|route546| route546_to_page_7
+  route551_to_page_7["route551 -> go to page_7"]
+  v39 -.->|route551| route551_to_page_7
+  route552_to_page_7["route552 -> go to page_7"]
+  v37 -.->|route552| route552_to_page_7
+  route574_to_page_7["route574 -> go to page_7"]
+  v39 -.->|route574| route574_to_page_7
+  route575_to_page_7["route575 -> go to page_7"]
+  v37 -.->|route575| route575_to_page_7
+  route734_to_page_9["route734 -> go to page_9"]
+  v11 -.->|route734| route734_to_page_9

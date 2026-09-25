@@ -1,0 +1,109 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 14 of 20
+  v1["UDebtLU: And how much is your share of any outstanding mortgages or loans secured on the other areas of land in the UK?"]
+  v2["UDebtBLU: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v3["UValOS: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v4["UValBOS: What would you estimate the amount your share of this land or property overseas is worth?"]
+  v5["UDebtOS: And how much is your share of any outstanding mortgages or loans secured on the land or property overseas?"]
+  v6["UDebtBOS: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v7["UGdVBOS: Thinking about the items this property/these properties that you own/ are owned by you or other members of your household, what would you estimate the replacement value of your share of the household contents is?"]
+  v8["UValOR: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v9["UValBOR: What would you estimate the amount your share of this other items of real estate is worth?"]
+  v10["UDebtOR: And how much is your share of any outstanding mortgages or loans secured on the other items of real estate?"]
+  v11["UDebtBOR: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v12["DCIntr: I’d now like to ask you a few questions about any credit commitments you might have."]
+  v13["DCards: Do you have any credit or charge cards for which you are the main cardholder?"]
+  v14["DNumber: How many credit or charge accounts do you have for which you are the main cardholder?"]
+  v15["DWhichCard1: credit card s , or"]
+  v16["DSituationN1: Thinking about the latest statement s for your first/second/x remaining… credit/charge card s …"]
+  v17["DPurchase1: Since you paid the last balance in full, have you used the card s for any purchases, or is the current balance zero?"]
+  v18["DNam1: ALTHOUGH THE ACCOUNT MAY HAVE ADDITIONAL CARDHOLDERS, LEGALLY ANY DEBT IS ONLY HELD BY ONE PERSON THE MAIN CARDHOLDER ."]
+  v19["DAmount1: Can you tell me, what is the current balance on this/these credit/charge card s ?"]
+  v20["DAmtBand1: About how much would you estimate the amount currently on this/these credit/charge card s is?"]
+  v21["DAmSince1: How much have you spent on this/these card s since your last repayment?"]
+  v22["DAmSinBand1: About how much would you estimate you have spent on this/these card s since your last repayment?"]
+  v23["DAmtMth1: About how much would you estimate your typical monthly repayment amount for this/these credit/charge card s is?"]
+  v24["D12beh1: Ccharge or credit card 1/2/3/4/5"]
+  v25["DMOanyN: Are you currently paying for anything in instalments, including paying later in one lump sum, that you have bought from any of the following mail order or online accounts…"]
+  v26["DMOanyNo: What other purchases are you paying instalments on?"]
+  v27["DMOnum: How many purchases are you paying instalments on?"]
+  v28["DMOins1: Thinking of your first/second/remaining purchase s …"]
+  v29["DMOest1: About how much would you estimate of the size of each instalment you pay on this purchase/these purchases ?"]
+  v30["DMOoft1: How often are the instalments due?"]
+  v31["DMOoftO1: PLEASE ENTER OTHER PERIOD INSTALMENTS ARE DUE"]
+  v32["DMOwhnY1: When do you expect to have paid off the balance on this purchase/these purchases ?"]
+  v33["DMOwhnM1: ENTER THE MONTH EXPECTS TO PAY OFF PURCHASE BALANCE"]
+  v34["DMOwest1: About how many instalments would you estimate you have left to pay on the balance of this purchase/these purchases ?"]
+  v35["DMOint1: Are you currently paying interest on some or all of the outstanding balance for this purchase/these purchases ?"]
+  v36["DMObeh1: Have you been able to keep up with the repayments for the instalments on this purchase/these purchases or are you 2 or more consecutive payments behind?"]
+  v37["DMOowe1: How much do you owe on missed or overdue payments on this purchase/these purchases ?"]
+  v38["DMObal1: What is the total outstanding balance on this purchase/these purchases ?"]
+  v39["DMoShar1: Are the instalments for this purchase held jointly with anyone else?"]
+  v40["DMoNAM1: May I just check with whom this purchase is shared?"]
+  v41["DHPany: Are you currently paying for any of these items where you arranged with the shop or supplier to pay in instalments…"]
+  v42["DHPnum: Thinking of all of your credit agreements, how many do you have?"]
+  v43["DHPins1: Thinking of your first/second/ remaining credit agreement, how much are the standard payments on this agreement?"]
+  v44["DHPest1: How much would you estimate you pay for each instalment as part of this agreement/these agreements ?"]
+  v45["DHPoft1: How often are the instalments due?"]
+  route671_from_page_13["from page_13 - route671"]
+  route671_from_page_13 -.->|route671| v1
+  v1 -.->|UDebtLU = DK/RF| v2
+  route673_from_page_13["from page_13 - route673"]
+  route673_from_page_13 -.->|route673| v3
+  v3 -.->|UValOS = DK/RF| v4
+  route675_from_page_13["from page_13 - route675"]
+  route675_from_page_13 -.->|route675| v5
+  v5 -.->|UDebtOS = DK/RF| v6
+  route677_from_page_13["from page_13 - route677"]
+  route677_from_page_13 -.->|route677| v7
+  route678_from_page_13["from page_13 - route678"]
+  route678_from_page_13 -.->|route678| v8
+  v8 -.->|UValOR = DK/RF| v9
+  route680_from_page_13["from page_13 - route680"]
+  route680_from_page_13 -.->|route680| v10
+  v10 -.->|UDebtOR = DK/RF| v11
+  v13 -->|DCards = 1 has credit or charge cards| v14
+  v14 -->|DNumber >= 1 respondent currently has credit or charge cards or accounts| v15
+  v14 -->|DNumber >= 1 respondent currently has credit or charge cards or accounts| v16
+  v16 -->|DSituationN1 = 1 full balance was repaid at the latest bill| v17
+  v16 -.->|DSituationN1 = 2,5,DK OR DPurchase = 1 respondent has an amount still outstanding or account not their responsibility| v18
+  v18 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v19
+  v16 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v19
+  v19 -->|DAmount1 = DK| v20
+  v17 -->|DPurchase1 = 1 - Credit or Charge Card Account has been used for additional purchases since repayment| v21
+  v21 -->|DAmSince1 = DK - respondent does not know the amount outstanding| v22
+  v18 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v23
+  v16 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v23
+  v18 -.->|DNam1 = 1 AND DSituationN1 = 2 OR DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v24
+  v16 -.->|DNam1 = 1 AND DSituationN1 = 2 OR DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v24
+  v25 -->|DMOanyN= 3 - respondent reports other instalment purchase| v26
+  v25 -.->|DMOanyN = 1,2,3 - respondent is paying in instalments| v27
+  v27 -->|DMOnum > 0 - respondent is paying instalments on one or more purchase| v28
+  v28 -.->|DMOins1 = DK/RF - respondent does not know the standard repayment amount| v29
+  v27 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v30
+  v30 -->|DMOoft1 = 7 - their instalments are due at other frequency| v31
+  v27 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v32
+  v32 -->|DMOwhnY1 = Response - year has been given| v33
+  v32 -.->|DMOwhnY1 = DK/RF OR DMOwhnM1 = DK/RF - respondent does not know when they will pay off the purchase balance| v34
+  v33 -.->|DMOwhnY1 = DK/RF OR DMOwhnM1 = DK/RF - respondent does not know when they will pay off the purchase balance| v34
+  v27 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v35
+  v27 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v36
+  v36 -->|DMObeh1 = 2 - respondent is two or more consecutive payments behind| v37
+  v36 -->|DMObeh1 = 2 - respondent is two or more consecutive payments behind| v38
+  v27 -->|DMOnum > 0 - respondent is paying instalments on one or more purchase| v39
+  v39 -->|DmoShar1 =1 - respondent has a shared purchase| v40
+  v41 -.->|DHPany = 1-7| v42
+  v42 -->|DHPnum > 0 - respondent has an instalment agreement| v43
+  v43 -.->|DHPins1 = DK/RF - respondent does not know how much standard payments are| v44
+  v42 -->|DHPnum > 0 - respondent has an instalment agreement| v45
+  route716_to_page_15["route716 -> go to page_15"]
+  v45 -.->|route716| route716_to_page_15
+  route717_to_page_15["route717 -> go to page_15"]
+  v45 -.->|route717| route717_to_page_15
+  route721_to_page_15["route721 -> go to page_15"]
+  v42 -.->|route721| route721_to_page_15
+  route722_to_page_15["route722 -> go to page_15"]
+  v42 -.->|route722| route722_to_page_15
+  route725_to_page_15["route725 -> go to page_15"]
+  v42 -.->|route725| route725_to_page_15

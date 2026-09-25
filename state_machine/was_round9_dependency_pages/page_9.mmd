@@ -1,0 +1,166 @@
+flowchart LR
+  %% Page 9 of 12
+  v1["DAmSinBand1: About how much would you estimate you have spent on this/these card s since your last repayment?"]
+  v2["DAmtMth1: About how much would you estimate your typical monthly repayment amount for this/these credit/charge card s is?"]
+  v3["D12beh1: Ccharge or credit card 1/2/3/4/5"]
+  v4["DMOanyN: Are you currently paying for anything in instalments, including paying later in one lump sum, that you have bought from any of the following mail order or online accounts…"]
+  v5["DMOanyNo: What other purchases are you paying instalments on?"]
+  v6["DMOnum: How many purchases are you paying instalments on?"]
+  v7["DMOins1: Thinking of your first/second/remaining purchase s …"]
+  v8["DMOest1: About how much would you estimate of the size of each instalment you pay on this purchase/these purchases ?"]
+  v9["DMOoft1: How often are the instalments due?"]
+  v10["DMOoftO1: PLEASE ENTER OTHER PERIOD INSTALMENTS ARE DUE"]
+  v11["DMOwhnY1: When do you expect to have paid off the balance on this purchase/these purchases ?"]
+  v12["DMOwhnM1: ENTER THE MONTH EXPECTS TO PAY OFF PURCHASE BALANCE"]
+  v13["DMOwest1: About how many instalments would you estimate you have left to pay on the balance of this purchase/these purchases ?"]
+  v14["DMOint1: Are you currently paying interest on some or all of the outstanding balance for this purchase/these purchases ?"]
+  v15["DMObeh1: Have you been able to keep up with the repayments for the instalments on this purchase/these purchases or are you 2 or more consecutive payments behind?"]
+  v16["DMOowe1: How much do you owe on missed or overdue payments on this purchase/these purchases ?"]
+  v17["DMObal1: What is the total outstanding balance on this purchase/these purchases ?"]
+  v18["DMoShar1: Are the instalments for this purchase held jointly with anyone else?"]
+  v19["DMoNAM1: May I just check with whom this purchase is shared?"]
+  v20["DHPany: Are you currently paying for any of these items where you arranged with the shop or supplier to pay in instalments…"]
+  v21["DHPnum: Thinking of all of your credit agreements, how many do you have?"]
+  v22["DHPins1: Thinking of your first/second/ remaining credit agreement, how much are the standard payments on this agreement?"]
+  v23["DHPest1: How much would you estimate you pay for each instalment as part of this agreement/these agreements ?"]
+  v24["DHPoft1: How often are the instalments due?"]
+  v25["DHPoftO1: PLEASE ENTER OTHER PERIOD HIRE PURCHASE INSTALMENTS ARE DUE"]
+  v26["DHPwhnY1: When do you expect this agreement/these agreements to be repaid?"]
+  v27["DHPwhnM1: ENTER THE MONTH EXPECTS CREDIT AGREEMENT TO BE REPAID"]
+  v28["DHPwest1: How many instalments would you estimate that you have left to pay on the balance of this agreement/these agreements ?"]
+  v29["DHPint1: Is this agreement/these agreements interest free?"]
+  v30["DHPbeh1: Have you been able to keep up with the repayments for this agreement or are you 2 or more consecutive payments behind?"]
+  v31["DHPowe1: How much do you now owe on missed or overdue payments?"]
+  v32["DHPbal1: What is the total outstanding balance on this this agreement/these agreements ?"]
+  v33["DHPShar1: Is this agreement held jointly with anyone else?"]
+  v34["DHPNAM1: May I just check with whom this agreement is shared?"]
+  v35["DLOld: Last time we interviewed you on RStartDat , we recorded that you had RDLnum 1,2… loan s apart from any mortgage or loans secured on a property."]
+  v36["DLONm: Derived variable : Number of previous wave loans still being active"]
+  v37["DLany: Excluding the loan you have just told me about if DLONm > 0 / And if DLONm = 0 are you currently repaying any other loans of the following types:"]
+  v38["DLNNm: In total, how many of these new loans do you have?"]
+  v39["DLNum: Derived variable"]
+  v40["OIntrol: I am now going to ask you some questions about your 1,2… largest loans."]
+  v41["DLType1: Thinking of your first/second/third loan, what type of loan is it?"]
+  v42["DSLamt1: What is the outstanding balance of your student loan?"]
+  v43["DSLest1: About how much would you estimate is the outstanding balance of your student loan?"]
+  v44["DLwhy: Did you take out this loan for any of the following reasons?"]
+  v45["DLSec1: Thinking of your first, second, third/ Remaining Number remaining loan s , is this loan secured against the value of your home or other assets?"]
+  v46["DLins1: How much are the standard repayments on this loan? If this is a joint loan, please only confirm your share of the loan."]
+  v47["DLest1: About how much would you estimate is the amount of the instalments you are paying on this loan?"]
+  v48["DLoft1: How often are the instalments due?"]
+  v49["DLoftOt1: PLEASE ENTER OTHER PERIOD INSTALMENTS ARE DUE"]
+  v50["DLwhnY1: When do you expect this loan to be repaid?"]
+  v51["DLwhnM1: If DLwhnY1 = response - year has been entered"]
+  v52["DLwest1: About how much would you estimate is the number of instalments you have left to pay on this loan?"]
+  v53["DLint1: Is this loan interest free at the moment?"]
+  v54["DLbeh1: Have you been able to keep up with the repayments for this loan, or are you 2 or more consecutive payments behind?"]
+  v55["DLowe1: How much do you now owe on missed or overdue payments?"]
+  v56["DLbal1: What is the total outstanding balance on this loan?"]
+  v57["DLShar1: Is this loan held jointly with anyone else?"]
+  v58["NwLn: And apart from the loans you have already told us about, /And can I just check, do you have any loans outstanding which you have not yet begun to repay e.g. loans which you are not yet repaying due to the repayments period having not yet begun ?"]
+  v59["NwLnNo: If NwLn = 1- respondent has loans outstanding which they have not begun to repay"]
+  v60["OIntrom: I am now going to ask you some questions about your 1,2… largest loans for which you have not yet started making repayments."]
+  v61["DnewLType1: Thinking of your first, second, third/remaining loan, what type of loan is it?"]
+  v62["DNewLOwe1: How much do you owe in total on this loan?"]
+  v63["DNewLOweB1: About how much would you estimate is the total amount you owe as part of this loan?"]
+  v64["DNewLShar1: Is this loan held jointly with anyone else?"]
+  v65["DHBany: Ask HRP"]
+  v66["DHBamt: Could you tell me how much in total you owe on the missed or overdue payments for TYPE OF BILL ?"]
+  v67["DHBest: About how much would you estimate you owe on the missed or overdue payments for TYPE OF BILL ?"]
+  v68["DBurd: * Thinking about the overdraft s /credit card s /store card s / credit agreement s /loan s /bill payments you have just told me about, to what extent is keeping up with the repayment of them and any interest payments a financial burden to you? Would you say it was…"]
+  v69["XInsol: I would now like to ask you whether you have entered into any formal insolvency proceedings or into a Debt Management Plan DMP in the last year? By formal insolvency proceedings, I mean bankruptcy, Debt Relief Order DRO , or an Individual Voluntary Arrangement IVA ."]
+  v70["XIntyp: If respondent has entered some sort of insolvency proceedings"]
+  v71["XInCse: If respondent has entered some sort of insolvency proceedings"]
+  v72["OtIncIntro: Now we are going to ask some more questions about your income."]
+  v73["RentIncPay: Apart from income from your business es you have already told us about, are if any income from business reported >0 ; Are else you currently receiving any rent from property, including business property or subletting?"]
+  v74["RentIncTy: Is this rent from..."]
+  v75["RentIncLdg: How much rent do you receive each month from boarders or lodgers, before deducting income tax but after deducting all allowable expenses?"]
+  route691_from_page_8["from page_8 - route691"]
+  route691_from_page_8 -.->|route691| v1
+  route692_from_page_8["from page_8 - route692"]
+  route692_from_page_8 -.->|route692| v2
+  route693_from_page_8["from page_8 - route693"]
+  route693_from_page_8 -.->|route693| v2
+  route694_from_page_8["from page_8 - route694"]
+  route694_from_page_8 -.->|route694| v3
+  route695_from_page_8["from page_8 - route695"]
+  route695_from_page_8 -.->|route695| v3
+  v4 -->|DMOanyN= 3 - respondent reports other instalment purchase| v5
+  v4 -.->|DMOanyN = 1,2,3 - respondent is paying in instalments| v6
+  v6 -->|DMOnum > 0 - respondent is paying instalments on one or more purchase| v7
+  v7 -.->|DMOins1 = DK/RF - respondent does not know the standard repayment amount| v8
+  v6 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v9
+  v9 -->|DMOoft1 = 7 - their instalments are due at other frequency| v10
+  v6 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v11
+  v11 -->|DMOwhnY1 = Response - year has been given| v12
+  v11 -.->|DMOwhnY1 = DK/RF OR DMOwhnM1 = DK/RF - respondent does not know when they will pay off the purchase balance| v13
+  v12 -.->|DMOwhnY1 = DK/RF OR DMOwhnM1 = DK/RF - respondent does not know when they will pay off the purchase balance| v13
+  v6 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v14
+  v6 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v15
+  v15 -->|DMObeh1 = 2 - respondent is two or more consecutive payments behind| v16
+  v15 -->|DMObeh1 = 2 - respondent is two or more consecutive payments behind| v17
+  v6 -->|DMOnum > 0 - respondent is paying instalments on one or more purchase| v18
+  v18 -->|DmoShar1 =1 - respondent has a shared purchase| v19
+  v20 -.->|DHPany = 1-7| v21
+  v21 -->|DHPnum > 0 - respondent has an instalment agreement| v22
+  v22 -.->|DHPins1 = DK/RF - respondent does not know how much standard payments are| v23
+  v21 -->|DHPnum > 0 - respondent has an instalment agreement| v24
+  v24 -->|DHPoft1 = 7 - instalments are due at another frequency| v25
+  v24 -.->|NOT DHPoft1 = 7, DK/RF| v26
+  v26 -->|DHPwhnY1 = Response - respondent knows how often instalments are due and they do not have the frequency of ‘other’| v27
+  v26 -.->|DHPOft = 7 OR DHPwhnY1 = DK/RF OR DHPwhnM1 = DK/RF - respondent does not know how often instalments are due or they have the frequency of ‘other’| v28
+  v27 -.->|DHPOft = 7 OR DHPwhnY1 = DK/RF OR DHPwhnM1 = DK/RF - respondent does not know how often instalments are due or they have the frequency of ‘other’| v28
+  v21 -->|DHPnum > 0 - respondent has an instalment agreement| v29
+  v21 -->|DHPnum > 0 - respondent has an instalment agreement| v30
+  v30 -->|DHPbeh1 = 2 - respondent is two or more consecutive payments behind| v31
+  v30 -->|DHPbeh1 = 2 - respondent is two or more consecutive payments behind| v32
+  v21 -->|DHPnum > 0 - respondent has an instalment agreement| v33
+  v33 -.->|DHPShar1 =1 OR DHPShar2 =1 - respondent has a shared purchase| v34
+  v37 -->|DLany = 1 - respondent has another loan| v38
+  v39 -->|DLNum > 0 - respondent has one loan or more| v40
+  v39 -->|DLNum > 0 - respondent has one loan or more| v41
+  v41 -.->|DLType1 = 2, 3 - respondent has a student loan| v42
+  v42 -.->|DSLamt1 = DK/RF - respondent does not know the outstanding balance on their student loan| v43
+  v39 -.->|DLNUm > 0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v44
+  v41 -.->|DLNUm > 0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v44
+  route734_from_page_1["from page_1 - route734"]
+  route734_from_page_1 -.->|route734| v45
+  v41 -.->|Ten1 = 1,2,3 AND DLType1 = 1,5,6 - respondent’s home is owned outright or they are buying with the help of a mortgage and they have a personal loan, a cash loan, or another type of loan.| v45
+  v39 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v46
+  v41 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v46
+  v39 -.->|DLNum>0 AND DLType1 <> 2,3 AND DLins1 = DK/RF - respondent has a NEW loan but it is NOT a student loan and they do not know the standard repayment amount| v47
+  v41 -.->|DLNum>0 AND DLType1 <> 2,3 AND DLins1 = DK/RF - respondent has a NEW loan but it is NOT a student loan and they do not know the standard repayment amount| v47
+  v46 -.->|DLNum>0 AND DLType1 <> 2,3 AND DLins1 = DK/RF - respondent has a NEW loan but it is NOT a student loan and they do not know the standard repayment amount| v47
+  v39 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v48
+  v41 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v48
+  v48 -->|DLoft1 = 7 - instalments are another frequency| v49
+  v39 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v50
+  v41 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v50
+  v50 -->|DLwhnY1 = response - year has been entered| v51
+  v51 -.->|DLwhnY = DK/RF OR DLwhnM1 = DK/RF - respondent does not know when they expect the loan to be repaid| v52
+  v39 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v53
+  v41 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v53
+  v39 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v54
+  v41 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v54
+  v54 -->|DLbeh1 = 2 - respondent is getting behind with repayments| v55
+  v54 -->|DLbeh1 = 2 - respondent is getting behind with repayments| v56
+  v39 -->|DLNum > 0 - respondent has one or more loan| v57
+  v58 -.->|NwLn = 1- respondent has loans outstanding which they have not begun to repay| v59
+  v59 -->|NwLnNo > 0 - respondent has a NEW loan| v60
+  v59 -->|NwLnNo > 0 - respondent has a NEW loan| v61
+  v59 -->|NwLnNo > 0 - respondent has a NEW loan| v62
+  v59 -->|NwLnNo > 0| v64
+  v65 -.->|DHBAny = 10-20 - respondent is behind with any bill| v66
+  v66 -.->|DHBamt = DK/RF - respondent does not know how much they are overdue| v67
+  route762_from_page_2["from page_2 - route762"]
+  route762_from_page_2 -.->|route762| v68
+  route763_from_page_7["from page_7 - route763"]
+  route763_from_page_7 -.->|route763| v68
+  route764_from_page_7["from page_7 - route764"]
+  route764_from_page_7 -.->|route764| v68
+  v69 -->|XInsol = 1| v70
+  v69 -->|XInsol = 1| v71
+  v73 -->|rentIncPay=1 - receives income from rent| v74
+  v74 -.->|RentIncTy = 1,3 - rent received from a border or lodger at this address or both| v75
+  route769_to_page_10["route769 -> go to page_10"]
+  v74 -.->|route769| route769_to_page_10

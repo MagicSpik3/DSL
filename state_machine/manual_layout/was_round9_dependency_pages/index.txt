@@ -1,0 +1,26 @@
+survey: was_round9
+page_size: 75
+page_count: 20
+font_size: 14px
+pages: 20
+files:
+- page_1: page_1.mmd (44 variables)
+- page_2: page_2.mmd (45 variables)
+- page_3: page_3.mmd (44 variables)
+- page_4: page_4.mmd (45 variables)
+- page_5: page_5.mmd (45 variables)
+- page_6: page_6.mmd (44 variables)
+- page_7: page_7.mmd (45 variables)
+- page_8: page_8.mmd (44 variables)
+- page_9: page_9.mmd (45 variables)
+- page_10: page_10.mmd (45 variables)
+- page_11: page_11.mmd (44 variables)
+- page_12: page_12.mmd (45 variables)
+- page_13: page_13.mmd (44 variables)
+- page_14: page_14.mmd (45 variables)
+- page_15: page_15.mmd (45 variables)
+- page_16: page_16.mmd (44 variables)
+- page_17: page_17.mmd (45 variables)
+- page_18: page_18.mmd (44 variables)
+- page_19: page_19.mmd (45 variables)
+- page_20: page_20.mmd (45 variables)

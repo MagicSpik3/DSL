@@ -1,0 +1,194 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 9 of 20
+  v1["ActEPIntro: The next questions are about the value of your ActEPName pension. It would be helpful to look at a recent pension statement if you have one."]
+  v2["ActEPDBYrSt: What year did you start making contributions to your ActEPName pension?"]
+  v3["ActEPAge: From what age can you access your ActEPName pension?"]
+  v4["ActEPJbAmt: As the value of your pension is related to your income, I would like to know what is your annual gross income, before deductions, for the job your ActEPName pension relates to?"]
+  v5["ActEPJbAmtb: About how much would you estimate your annual gross income is before all deductions, for the job that your ActEPName pension relates to?"]
+  v6["ActEPAcFrYN: Do you know the fraction or percentage of your salary that will be added to your final ActEPName pension for each year’s service? This can usually be found on your pension statements."]
+  v7["ActEPAcFr: What is the fraction or percentage of your salary that will be added to your final ActEPName pension for each year’s service?"]
+  v8["ActEPAcFrOt: ENTER DETAILS OF OTHER FRACTION OR PERCENTAGE"]
+  v9["ActEPInc: How much gross annual income do you expect to get from your ActEPName pension when you retire?"]
+  v10["ActEPIncb: About how much do you estimate your annual gross income to be from your ActEPName pension when you retire?"]
+  v11["ActEPVal: What is the current value of your ActEPName pension?"]
+  v12["ActEPValb: About how much do you estimate the current value of your ActEPName pension to be?"]
+  v13["ActEPDCYrSt: What year did you start making contributions into your ActEPName pension?"]
+  v14["ActEPAmtPer: The next questions are about your usual monthly contribution to your ActEPName pension."]
+  v15["ActEPAmt: How much is your usual monthly contribution to your ActEPName pension after tax?"]
+  v16["ActEPPer: What is your usual contribution to your ActEPName pension as a percentage of your salary?"]
+  v17["ActPPNum: How many personal pension schemes are you or someone on your behalf currently contributing to?"]
+  v18["ActPPHigh: Now, I'm going to ask you about your two highest value schemes."]
+  v19["ActPPName: What is the name of your highest / second highest ActPPNum >1 value personal pension scheme?"]
+  v20["ActPPYrSt: What year did you start making contributions into your ActPPName pension?"]
+  v21["ActPPAmtPer: The next questions are about your usual monthly contribution to your ActPPName pension. Would it be easier for you to give this either as..."]
+  v22["ActPPAmt: How much is your usual monthly contribution to your ActPPName pension after tax?"]
+  v23["ActPPPer: What is your usual contribution to your ActPPName pension as a percentage of your salary?"]
+  v24["ActPPIntro: The next questions are about the value of your ActPPName pension. It would be helpful to look at a recent pension statement if you have one."]
+  v25["ActPPVal: What is the current value of your ActPPName pension?"]
+  v26["ActPPValb: About how much do you estimate the current value of your ActPPName pension to be?"]
+  v27["ActPPValOt: You've told us you've got ActPPNum personal pensions."]
+  v28["ActPPValbOt: About how much do you estimate the total current value of your remaining personal pension pot s to be?"]
+  v29["DVActNum: Derived variable: Number of active pension schemes"]
+  v30["ActOutro: Thank you. That is the end of the questions about pensions that you have been contributing to."]
+  v31["PUnIntro: Next I am going to ask you some questions about pension schemes you have stopped contributing to and haven't withdrawn money from yet."]
+  v32["PUnPrev: At the last interview, we recorded that you had savings in the following scheme s that you had stopped contributing to."]
+  v33["PUnNum: Apart from the pensions we've just mentioned, how many more of these pension schemes do you have If PUnPrev = 1 to 6 / How many of these pension schemes do you have?"]
+  v34["PUnNmSc: Derived variable: Number of preserved pension schemes"]
+  v35["PUnHigh: Now, I'm going to ask you about your four highest value pension schemes. Please include both the pensions you told me about from the last interview and the other pension scheme s you have just told me about in your answers. If PUnPrev = 1-6 and PUnNum > 0"]
+  v36["PunRot: Now I am going to ask you some more details about these pensions."]
+  v37["PUnName: If 1 rotated pension is chosen at PUnPrev, and PUnNmSc = 1 then PUnName is auto-populated with the pension name from PUnPrev and the question is not asked."]
+  v38["PUnYrStop: What year did you stop making payments into your PUnName pension?"]
+  v39["PUnTyp: Is your PUnName pension…"]
+  v40["PUnEPSec: Was the employer that your PUnName pension is related to…"]
+  v41["PUnEPTyp: Now I am going to ask you which type of employer pension you have. There are two main types:"]
+  v42["PUnVal: What is the current value of your PUnName pension?"]
+  v43["PUnValb: About how much do you estimate of the current value of the pension pot to be?"]
+  v44["PUnYrSt: What year did you start making payments into your PUnName pension?"]
+  v45["PUnInc: How much annual gross income, before deductions, do you expect to get from your PUnName pension when you retire?"]
+  route292_to_page_8["route292 -> go to page_8"]
+  v17 -.->|route292| route292_to_page_8
+  route304_from_page_8["from page_8 - route304"]
+  route304_from_page_8 -.->|route304| v1
+  route305_from_page_8["from page_8 - route305"]
+  route305_from_page_8 -.->|route305| v1
+  route306_from_page_8["from page_8 - route306"]
+  route306_from_page_8 -.->|route306| v1
+  v11 -.->|ActEPTyp = 1,3,4 go to ActEPVal those who answer 3 here go through all the variables rather than just one set| v1
+  v2 -.->|ActEPTyp = 2 go to ActEPDBYrSt| v1
+  route309_from_page_8["from page_8 - route309"]
+  route309_from_page_8 -.->|route309| v1
+  route310_from_page_5["from page_5 - route310"]
+  route310_from_page_5 -.->|route310| v1
+  route311_from_page_8["from page_8 - route311"]
+  route311_from_page_8 -.->|route311| v2
+  route312_from_page_8["from page_8 - route312"]
+  route312_from_page_8 -.->|route312| v2
+  route313_from_page_8["from page_8 - route313"]
+  route313_from_page_8 -.->|route313| v3
+  route314_from_page_8["from page_8 - route314"]
+  route314_from_page_8 -.->|route314| v3
+  route315_from_page_8["from page_8 - route315"]
+  route315_from_page_8 -.->|route315| v4
+  route316_from_page_8["from page_8 - route316"]
+  route316_from_page_8 -.->|route316| v4
+  route317_from_page_8["from page_8 - route317"]
+  route317_from_page_8 -.->|route317| v4
+  v6 -.->|ActEPJbAmt = response, go to ActEPAcFrYN| v4
+  v5 -.->|ActEPJbAmt = DK/RF, go to ActEPJbAmtb| v4
+  v15 -.->|ActEPAmt = DK/RF| v5
+  route321_from_page_8["from page_8 - route321"]
+  route321_from_page_8 -.->|route321| v6
+  route322_from_page_8["from page_8 - route322"]
+  route322_from_page_8 -.->|route322| v6
+  v6 -->|ActEPAcFrYN= 1| v7
+  v8 -.->|ActEPAcFr=6, go to ActEPAcFrOt| v7
+  v7 -->|ActEPAcFr = 6| v8
+  route326_from_page_8["from page_8 - route326"]
+  route326_from_page_8 -.->|route326| v9
+  route327_from_page_8["from page_8 - route327"]
+  route327_from_page_8 -.->|route327| v9
+  route328_from_page_8["from page_8 - route328"]
+  route328_from_page_8 -.->|route328| v9
+  route329_from_page_8["from page_8 - route329"]
+  route329_from_page_8 -.->|route329| v9
+  route330_from_page_8["from page_8 - route330"]
+  route330_from_page_8 -.->|route330| v9
+  v17 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 3, go to ActPPNum| v9
+  v30 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 1, go to ActOutro| v9
+  v10 -.->|ActEPInc = DK or RF, go to ActEPIncb| v9
+  v9 -.->|ActEPInc= DK/RF| v10
+  route335_from_page_8["from page_8 - route335"]
+  route335_from_page_8 -.->|route335| v10
+  route336_from_page_8["from page_8 - route336"]
+  route336_from_page_8 -.->|route336| v10
+  route337_from_page_8["from page_8 - route337"]
+  route337_from_page_8 -.->|route337| v10
+  v17 -.->|ActEPNum>2 and ActTyp = 3, go to ActPPNum| v10
+  v30 -.->|ActEPNum>2 and ActTyp = 1, go to ActOutro| v10
+  route340_from_page_8["from page_8 - route340"]
+  route340_from_page_8 -.->|route340| v11
+  route341_from_page_8["from page_8 - route341"]
+  route341_from_page_8 -.->|route341| v11
+  v13 -.->|ActEPVal = response, go to ActEPDCYrSt| v11
+  v12 -.->|ActEPVal = DK/RF, go to ActEPValb| v11
+  v11 -.->|ActEPVal = DK/RF| v12
+  route345_from_page_8["from page_8 - route345"]
+  route345_from_page_8 -.->|route345| v14
+  route346_from_page_8["from page_8 - route346"]
+  route346_from_page_8 -.->|route346| v14
+  v14 -->|ActEPAmtPer = 1| v15
+  route348_from_page_8["from page_8 - route348"]
+  route348_from_page_8 -.->|route348| v15
+  route349_from_page_8["from page_8 - route349"]
+  route349_from_page_8 -.->|route349| v15
+  route350_from_page_8["from page_8 - route350"]
+  route350_from_page_8 -.->|route350| v15
+  v17 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v15
+  v30 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about thir second employer pension, and ActTyp = 1, go to ActOutro| v15
+  v14 -->|ActEPAmtPer = 2| v16
+  route354_from_page_8["from page_8 - route354"]
+  route354_from_page_8 -.->|route354| v16
+  route355_from_page_8["from page_8 - route355"]
+  route355_from_page_8 -.->|route355| v16
+  route356_from_page_8["from page_8 - route356"]
+  route356_from_page_8 -.->|route356| v16
+  v17 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v16
+  v30 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about thir second employer pension, and ActTyp = 1, go to ActOutro| v16
+  route359_from_page_8["from page_8 - route359"]
+  route359_from_page_8 -.->|route359| v17
+  v19 -.->|ActPPNum =1 or 2, go to ActPPName| v17
+  v18 -.->|ActPPNum > 2, go to ActPPHigh| v17
+  v17 -->|ActPPNum>2| v18
+  v17 -->|ActPPNum>= 1| v19
+  v17 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v20
+  v17 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v21
+  v21 -->|ActPPAmtPer = 1| v22
+  v21 -->|ActPPAmtPer = 2| v23
+  v17 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v24
+  v17 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v25
+  v26 -.->|ActPPVal = DK/RF, go to ActPPValb| v25
+  v17 -.->|ActPPVal = response and ActPPNum>=3, go to ActPPValOt| v25
+  v27 -.->|ActPPVal = response and ActPPNum>=3, go to ActPPValOt| v25
+  v30 -.->|ActPPVal = response and ActPPNum = 1 or 2, go to ActOutro| v25
+  v25 -.->|ActPPVal = DK/RF respondent does not know current value of their pension pot| v26
+  v17 -.->|ActPPNum = 1, go to ActOutro| v26
+  v30 -.->|ActPPNum = 1, go to ActOutro| v26
+  v19 -.->|ActPPNum = 2, go to ActPPName| v26
+  v27 -.->|ActPPNum>=3, go to ActPPValOt| v26
+  v17 -->|ActPPNum > 2 respondent has one or more personal pension schemes| v27
+  v30 -.->|ActPPValOt = response, go to ActOutro| v27
+  v28 -.->|ActPPValOt = DK/RF, go to ActPPValbOt| v27
+  v27 -.->|ActPPValOt = DK/RF respondent does not know current value of their remaining pension pots| v28
+  route383_from_page_8["from page_8 - route383"]
+  route383_from_page_8 -.->|route383| v30
+  v31 -.->|switchboard SBPUn = 1 go to PUnIntro Preserved untouched section| v30
+  route385_from_page_8["from page_8 - route385"]
+  route385_from_page_8 -.->|route385| v33
+  v32 -.->|PUnPrev 1 to 6 PUnNmSc = PUnPrev + PUnNum| v34
+  v33 -.->|PUnPrev 1 to 6 PUnNmSc = PUnPrev + PUnNum| v34
+  v34 -->|PUnNmSc >4| v35
+  v32 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v36
+  v33 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v36
+  v35 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v36
+  v34 -->|PUnNmSc >= 1 for each past scheme| v37
+  v34 -->|PUnNmSc >= 1 for each past scheme| v38
+  v34 -->|PUnNmSc >= 1 for each past scheme| v39
+  v43 -.->|PUnVal = DK/RF then go to PUnValb| v42
+  v44 -.->|PUnVal = answer AND PUnEPTyp1 = 3 go to PUnYrSt| v42
+  route397_from_page_10["from page_10 - route397"]
+  route397_from_page_10 -.->|route397| v42
+  v41 -.->|PUnEPTyp = 2,3 respondent is not receiving a pension from the scheme at the moment, and either type of pension is workplace or pension is a second type defined benefit or hybrid or scheme| v44
+  v41 -.->|PUnEPTyp = 2,3 pension is a Second type defined benefit or hybrid scheme and they are not receiving a pension from the scheme at the moment| v45
+  route400_from_page_10["from page_10 - route400"]
+  route400_from_page_10 -.->|route400| v45
+  route401_from_page_10["from page_10 - route401"]
+  route401_from_page_10 -.->|route401| v45
+  route402_to_page_10["route402 -> go to page_10"]
+  v45 -.->|route402| route402_to_page_10
+  route403_to_page_10["route403 -> go to page_10"]
+  v34 -.->|route403| route403_to_page_10
+  route404_to_page_10["route404 -> go to page_10"]
+  v34 -.->|route404| route404_to_page_10
+  route406_to_page_10["route406 -> go to page_10"]
+  v37 -.->|route406| route406_to_page_10

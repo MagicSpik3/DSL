@@ -1,0 +1,215 @@
+flowchart LR
+  %% Page 3 of 12
+  v1["EthW: Which one best describes your White If EthWa=1 ; Mixed If EthWa =2 ; Asian If EthWa =3 ; Black If EthWa =4 ; Other If EthWa =5 ethnic group or background?"]
+  v2["EthSa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v3["EthS: Which one best describes your White If EthSa =1 ; Mixed If EthSa =2 ; Asian If EthSa =3 ; Black If EthSa =4 ; Other If EthSa =5 ethnic group or background?"]
+  v4["EthOth: Please can you describe your ethnic group?"]
+  v5["Eth02: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v6["DVEthnic: Derived variable"]
+  v7["SIDFtFQn: For respondent name please use showcard number ."]
+  v8["SIDTelQn: I will now read out a list of terms people sometimes use to describe how they think of themselves."]
+  v9["ReligE: What is your religion?"]
+  v10["ReligW: What is your religion?"]
+  v11["ReligS: What is your religion?"]
+  v12["ReligSpec: Please describe your Religion."]
+  v13["ReligO: Press <Space bar> to enter the coding frame"]
+  v14["DVRelig: Derived variable using ReligE, ReligS and ReligW"]
+  v15["SubWelpre: Next I would like to ask you five questions about your feelings on aspects"]
+  v16["Subpre2: For each of these questions I'd like you to give an answer on a scale of nought to 10, where nought is 'not at all' and 10 is 'completely'."]
+  v17["TrustOth: On a scale where nought is 'do not trust at all' and 10 is 'trust completely', to what extent would you say that you trust other people?"]
+  v18["SchemeET: Can I just check, were you on a government scheme for employment training?"]
+  v19["JbAway: Even though you were not doing paid work or employment training in the week ending Sunday the DATE , did you have a job or business that you were away from and that you expect to return to ?"]
+  v20["OwnBus: Did you do any unpaid work in that week ending Sunday the DATE for any business that you own?"]
+  v21["RelBus: ....or that a relative owns?"]
+  v22["StartJ: If you had been offered a job in the week ending Sunday the DATE , would you be able to start before Sunday second DATE – 2 weeks later?"]
+  v23["LKTime: How long have you been looking for paid work or a place on a government training scheme or an additional or replacement job ?"]
+  v24["YInAct: What was the main reason you did not seek any work or government training scheme in the week ending Sunday the DATE if Looked=2 ; would not be able to start before second DATE if StartJ=2 ?"]
+  v25["DVILO3a: Whether employed incl unpaid family workers"]
+  v26["DVILO4a: Whether employed incl unpaid family workers"]
+  v27["WkBetw: Can I just check, have you had a paid job either as an employee or self-employed in the last two years?"]
+  v28["MRecJb: When we interviewed you on RStartDat you were working/ about to start work as a ROccT . Is this your most recent job either as an employee or as self-employed?"]
+  v29["SamJob: When we interviewed you on RStartDat you were working / about to start work as a ROccT . Is this still your main job?"]
+  v30["SamEmp: And are you still working for the same employer?"]
+  v31["PerNoWk: In the last two years, have you had any periods of unemployment or reduced pay?"]
+  v32["EverWk: Have you ever had a paid job, apart from casual or holiday work?"]
+  v33["CasWrk: May I just check, have you ever done any casual or holiday work?"]
+  v34["DtJbL: When did you leave your last paid job?"]
+  v35["NumJob: How many jobs, for pay or profit, do you have?"]
+  v36["PreA: The following questions refer to your main job."]
+  v37["PreL: The following questions refer to your most recent main job."]
+  v38["SameJob: I need to check whether your details are the same as at the last time we called. Thinking of the seven days ending Sunday the n / thinking of your last job, are these statements still correct…"]
+  v39["DVSame: Derived – No difference to job"]
+  v40["IndD: What did the firm/ organisation you worked for mainly make or do at the place where you worked ?"]
+  v41["Sectr2: What kind of non-private organisation is it?"]
+  v42["OccT: What was your main job in the week ending Sunday the DATE ?"]
+  v43["OccD: What did you mainly do in your job?"]
+  v44["SVise: In your job, did you have formal responsibility for supervising the work of other employees?"]
+  v45["SViseDsc: Please describe the type of responsibility you have for supervising the work of other employees."]
+  v46["EmpN: How many people worked for your employer at the place where you worked?"]
+  v47["SemN: How many people did you employ/are employed in this business?"]
+  v48["OneTen: - 1 to 10 employees in respondents business and is not in the same job as the previous wave"]
+  v49["FtPtWk: In your main job were you working..."]
+  v50["WkHrs: How many hours per week do you usually work in your main job? Please exclude meal breaks."]
+  v51["WkHrsIr: On average, about how many hours per week do you work, excluding meal breaks?"]
+  v52["SPaReas: Penflag=1 AND DVILO3A=1 AND PersProx=1 over SPa and working, except proxies"]
+  v53["SPAReasO: Please specify other reason not mentioned."]
+  v54["WrkRed: Have your working patterns changed in the past year?"]
+  v55["WrkCha: You stated that your work patterns have changed, are you currently using any of the following arrangements?"]
+  v56["WrkUse: Penflag=1 AND DVILO3A=1 AND PersProx=1 over SPa and working, except proxies"]
+  v57["EmpStY: In which year did you start working continuously for your current employer?"]
+  v58["SEmpStY: In which year did you start working continuously as a self-employed person if DVILO4a = 1 - currently at work AND Stat = 2 ; start your most recent period of self-employment? DVILO4a <> 1- if not currently at work AND Stat = 2 at last job"]
+  v59["PermJb: What type of contract do you hold in your main job?"]
+  v60["PNoWk: Looking back at the time since you finished continuous full-time education, have you had any periods of six months or more when you were not in paid work, either because you could not find a job or were not looking for paid work?"]
+  v61["PNoWkLn: About how many years in total have you been out of paid work since you finished full-time education?"]
+  v62["EdAttn1: Do you have any educational qualifications for which you received a certificate?"]
+  v63["EdAttn2: Do you have any professional, vocational or other work-related qualifications for which you received a certificate?"]
+  v64["EdAttn3: Was your highest qualification..."]
+  v65["BType1: Now, thinking of your main/second/third NumJob > 1 job, which one of these best describes your employment situation in this job …"]
+  v66["BDirNI1: In this job, are your National Insurance contributions deducted at source?"]
+  v67["BOwn1: Do you own part of this business?"]
+  v68["BAccsA1: In this business, are annual accounts prepared?"]
+  v69["BAccsB1: Do you prepare annual business accounts?"]
+  v70["BAccBeg1: What is the most recent period for which accounts have been prepared?"]
+  v71["BAccBegM1: If BaccBeg1 = Response year has been entered"]
+  v72["BProfit1: What was your if BType= 2,5 / your share in the if BType = 3,4 profit or loss figure shown on these accounts for this period? It would be helpful if you could refer to a document, such as the annual accounts, or the Notice of Tax Assessment from HM Revenue and Customs."]
+  v73["BPrfLoss1: Did the answer in the previous question refer to profit or loss?"]
+  v74["BALand: Does your company own land or buildings for use in the business?"]
+  v75["BVal1: If you sold your if BType= 2,5 / your share in the if BType = 3,4 business today, including any debts or liabilities, about how much would you get?"]
+  route112_from_page_2["from page_2 - route112"]
+  route112_from_page_2 -.->|route112| v1
+  v2 -.->|EthSa = 1,2,3,4,5| v3
+  route114_from_page_2["from page_2 - route114"]
+  route114_from_page_2 -.->|route114| v4
+  v1 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v4
+  v3 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v4
+  route117_from_page_2["from page_2 - route117"]
+  route117_from_page_2 -.->|route117| v7
+  route118_from_page_1["from page_1 - route118"]
+  route118_from_page_1 -.->|route118| v7
+  route119_from_page_1["from page_1 - route119"]
+  route119_from_page_1 -.->|route119| v7
+  route120_from_page_2["from page_2 - route120"]
+  route120_from_page_2 -.->|route120| v8
+  route121_from_page_1["from page_1 - route121"]
+  route121_from_page_1 -.->|route121| v8
+  route122_from_page_1["from page_1 - route122"]
+  route122_from_page_1 -.->|route122| v8
+  route123_from_page_2["from page_2 - route123"]
+  route123_from_page_2 -.->|route123| v9
+  route124_from_page_2["from page_2 - route124"]
+  route124_from_page_2 -.->|route124| v10
+  route125_from_page_2["from page_2 - route125"]
+  route125_from_page_2 -.->|route125| v11
+  v9 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v12
+  v11 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v12
+  v10 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v12
+  route129_from_page_2["from page_2 - route129"]
+  route129_from_page_2 -.->|route129| v15
+  route130_from_page_2["from page_2 - route130"]
+  route130_from_page_2 -.->|route130| v16
+  route131_from_page_2["from page_2 - route131"]
+  route131_from_page_2 -.->|route131| v17
+  v18 -->|SchemeET = 2 respondent not in paid work and not on a government scheme| v19
+  v19 -.->|JbAway = 2,3 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job| v20
+  v19 -.->|JbAway = 2 AND OwnBus = 2 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job and not doing unpaid work in own business| v21
+  v20 -.->|JbAway = 2 AND OwnBus = 2 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job and not doing unpaid work in own business| v21
+  v19 -.->|Looked = 1,3 OR JbAway = 3 respondent looked for work in the last 4 weeks or is waiting to take up a job| v22
+  v19 -.->|Looked = 1,3 OR JbAway = 3 respondent looked for work in the last 4 weeks or is waiting to take up a job| v23
+  v22 -.->|Looked = 2 OR StartJ = 2 respondent has not looked for a job in the last 4 weeks or is not available to start work in the next 2 weeks or waiting to take up a job but is not available to start work in the next 2 weeks| v24
+  v29 -.->|SamJob = 1 AND RStat = 1 If respondent is in the same job and was an employee at previous wave| v30
+  v32 -->|EverWk= No| v33
+  v19 -.->|Wrking = 1 or JbAway = 1 or OwnBus = 1 respondent is currently working| v35
+  v20 -.->|Wrking = 1 or JbAway = 1 or OwnBus = 1 respondent is currently working| v35
+  v25 -.->|DVILO3a = InEmp OR EverWk = yes| v35
+  v32 -.->|DVILO3a = InEmp OR EverWk = yes| v35
+  v35 -->|NumJob > 1 respondent has more than one job| v36
+  v32 -->|EverWk = 1 respondent is not currently working, but has ever worked| v37
+  v32 -.->|RIndD = Response AND RPersProx = 1 OR EverWk = 1 AND DTJbL < 2 years ago - respondent is currently working or has ever worked and answered section at previous wave| v38
+  v34 -.->|RIndD = Response AND RPersProx = 1 OR EverWk = 1 AND DTJbL < 2 years ago - respondent is currently working or has ever worked and answered section at previous wave| v38
+  v25 -.->|DVILO3a = InEmp OR EverWk = yes If currently in employment or has ever worked| v40
+  v32 -.->|DVILO3a = InEmp OR EverWk = yes If currently in employment or has ever worked| v40
+  v38 -.->|same job as at previous wave SameJob = 1 , or currently not working but left job less than 2 years ago feed forward previous wave responses| v40
+  v38 -.->|Stat = 1 AND SameJob <> 5 If respondent is an employee and the supervision status has changed| v44
+  v44 -->|SVise = 1 respondent is a supervisor| v45
+  v38 -.->|Stat = 1 AND SameJob <> 6 respondent is an employee and is not in the same job as the previous wave| v46
+  v38 -.->|Stat = 2 AND SameJob <> 6 AND Solo = 2 If respondent is self employed and not in the same job as the previous wave and does not work alone| v47
+  v32 -.->|Wrking = 1 OR EverWk = 1 respondent is currently working or has ever worked| v49
+  v19 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v50
+  v18 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v50
+  v20 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v50
+  v21 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v50
+  v50 -->|WkHrs = 96 respondent works variable or irregular hours| v51
+  route162_from_page_1["from page_1 - route162"]
+  route162_from_page_1 -.->|route162| v54
+  v25 -.->|DvAge >= 60 AND Penflag=0 AND DVILO3A=1 AND PersProx=1 aged 60+ but under SPa, and still in some form of employment, except proxies| v54
+  route164_from_page_2["from page_2 - route164"]
+  route164_from_page_2 -.->|route164| v54
+  v54 -->|WrkRed = 1| v55
+  v26 -->|DVILO4a = 1| v56
+  route167_from_page_1["from page_1 - route167"]
+  route167_from_page_1 -.->|route167| v59
+  route168_from_page_1["from page_1 - route168"]
+  route168_from_page_1 -.->|route168| v60
+  route169_from_page_1["from page_1 - route169"]
+  route169_from_page_1 -.->|route169| v60
+  v25 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v60
+  v32 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v60
+  v60 -->|PNoWk = 1 respondent has had a period of 6 months or more out of paid work| v61
+  v62 -.->|EdAttn1 = 1 OR EdAttn2 = 1 respondent has qualifications| v64
+  v63 -.->|EdAttn1 = 1 OR EdAttn2 = 1 respondent has qualifications| v64
+  v19 -.->|Wrking = 1 OR JbAway = 1 OR OwnBus = 1 respondent is currently working| v65
+  v20 -.->|Wrking = 1 OR JbAway = 1 OR OwnBus = 1 respondent is currently working| v65
+  v65 -.->|BType1 = 2 OR 3 respondent is a director| v66
+  v65 -->|BType1 = 3 respondent is a director of a company| v67
+  v65 -.->|BType1 =2, 4 or BType1=3 AND BOwn1 =1 respondent is the sole director or a partner or a director who owns part of the business| v68
+  v67 -.->|BType1 =2, 4 or BType1=3 AND BOwn1 =1 respondent is the sole director or a partner or a director who owns part of the business| v68
+  v65 -->|BType1 = 5 respondent has answered with ‘other self-employed’| v69
+  v68 -.->|BAccsA1 = 1 or BAccsB1 = 1 accounts are prepared| v70
+  v69 -.->|BAccsA1 = 1 or BAccsB1 = 1 accounts are prepared| v70
+  v70 -->|BaccBeg1 = Response year has been entered| v71
+  v68 -.->|BAccsA1 = 1 OR BAccsB1 = 1 accounts are prepared| v72
+  v69 -.->|BAccsA1 = 1 OR BAccsB1 = 1 accounts are prepared| v72
+  v72 -->|BProfit1 >0 respondent has given a profit or loss amount| v73
+  v65 -.->|BType1 = 2 or 3 respondent is a director of or has own business| v74
+  v65 -.->|BType1<>1 AND NOT BOwn1 = 2 respondent is self-employed except where do not own any of business| v75
+  v67 -.->|BType1<>1 AND NOT BOwn1 = 2 respondent is self-employed except where do not own any of business| v75
+  route191_to_page_4["route191 -> go to page_4"]
+  v75 -.->|route191| route191_to_page_4
+  route192_to_page_4["route192 -> go to page_4"]
+  v65 -.->|route192| route192_to_page_4
+  route193_to_page_4["route193 -> go to page_4"]
+  v65 -.->|route193| route193_to_page_4
+  route194_to_page_4["route194 -> go to page_4"]
+  v65 -.->|route194| route194_to_page_4
+  route203_to_page_4["route203 -> go to page_4"]
+  v26 -.->|route203| route203_to_page_4
+  route204_to_page_4["route204 -> go to page_4"]
+  v26 -.->|route204| route204_to_page_4
+  route205_to_page_4["route205 -> go to page_4"]
+  v22 -.->|route205| route205_to_page_4
+  route206_to_page_4["route206 -> go to page_4"]
+  v26 -.->|route206| route206_to_page_4
+  route207_to_page_4["route207 -> go to page_4"]
+  v26 -.->|route207| route207_to_page_4
+  route211_to_page_4["route211 -> go to page_4"]
+  v26 -.->|route211| route211_to_page_4
+  route215_to_page_4["route215 -> go to page_4"]
+  v26 -.->|route215| route215_to_page_4
+  route221_to_page_4["route221 -> go to page_4"]
+  v26 -.->|route221| route221_to_page_4
+  route270_to_page_5["route270 -> go to page_5"]
+  v24 -.->|route270| route270_to_page_5
+  route273_to_page_5["route273 -> go to page_5"]
+  v24 -.->|route273| route273_to_page_5
+  route276_to_page_5["route276 -> go to page_5"]
+  v24 -.->|route276| route276_to_page_5
+  route279_to_page_5["route279 -> go to page_5"]
+  v24 -.->|route279| route279_to_page_5
+  route282_to_page_5["route282 -> go to page_5"]
+  v24 -.->|route282| route282_to_page_5
+  route285_to_page_5["route285 -> go to page_5"]
+  v24 -.->|route285| route285_to_page_5
+  route299_to_page_5["route299 -> go to page_5"]
+  v25 -.->|route299| route299_to_page_5
+  route310_to_page_5["route310 -> go to page_5"]
+  v41 -.->|route310| route310_to_page_5

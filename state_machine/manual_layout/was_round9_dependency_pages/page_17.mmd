@@ -1,0 +1,81 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 17 of 20
+  v1["CoroExp: Ask 1 person per household"]
+  v2["CoroAbility: Ask 1 person per household"]
+  v3["CoroSav: Ask 1 person per household"]
+  v4["IncrCoroSav: What is the main reason for your household accessible savings increasing?"]
+  v5["IncrOthSav: Ask if IncrCoroSav = 5"]
+  v6["DecrCoroSav: What is the main reason for your household accessible savings decreasing?"]
+  v7["DecrOthSav: Ask if DecrCoroSav = 8"]
+  v8["CoroExpSav: Ask 1 person per household"]
+  v9["SelectAd: Ask for each dependent child"]
+  v10["CaCTF: Ask for each child born on or after 01/09/2002 unless refused at SelectAd"]
+  v11["CaJISA: Now I am going to ask some questions about Junior ISAs. A Junior ISA or Junior Individual Savings Account is a tax efficient account designed for adults to save and invest on behalf of their children. This type of ISA has been available since November 2011. However, it has been possible to transfer your child's Child Trust Fund into a Junior ISA since April 2015."]
+  v12["CaCtV: How much is currently in his/ her Child Trust Fund if CaCTF=1 /Junior ISA CaJISA=1 ?"]
+  v13["CaCTvB: How much would you estimate is currently in his/her Child Trust Fund if CaCTF=1 /Junior ISA CaJISA=1 ?"]
+  v14["CaType1: What type of Child Trust Fund does Child’s name have?"]
+  v15["CaOpen: Was the account opened by…"]
+  v16["CaType2: What type of Junior ISA does Child’s name have?"]
+  v17["CaContr: Apart from Child Trust Fund vouchers received from the Government , during the last 2 years who contributed to the Child Trust Fund/Junior ISA ?"]
+  v18["CaContram1: How much did the parent s inside the household/the parent s outside the household/child’s grandparent s / other relative s /friend s of the family/the other people put into child's name account in the last 2 years?"]
+  v19["CaContramb1: How much would you estimate the parent s inside the household/the parent s outside the household/child’s grandparent s / other relative s /friend s of the family/the other people put into Child’s name account in the last 2 years?"]
+  v20["CaExtra: QRelGrid.QTRelTo.QRelTo SelectAd .RFrom LChInc = StChild AND Cacontr = CAParl - child’s parent is inside of the household"]
+  v21["CaSav: Aside from the Child Trust Fund/Junior ISA , does Child’s name have any savings in a bank or building society account, or any National Savings and Investments such as Children's Bonus Bonds, or any stocks and shares, or other investments?"]
+  v22["CaSvV: Aside from the Child Trust Fund/Junior ISA , what would you say is the current value of the savings and investments held by Child’s name ?"]
+  v23["CaSvB: How much would you estimate is the current value of the savings and investments held by Child’s name aside from the Child Trust Fund/Junior ISA ?"]
+  v24["IHRecnt: In the last two years, have you personally received an inheritance valued at £1,000 or more, that is in money, property, or goods of any kind?"]
+  v25["IHRcNum: How many inheritances of £1,000 or more have you received in the last two years?"]
+  v26["IWat: Thinking of your first/second/third inheritance, what did you receive in your inheritance?"]
+  v27["IWho1: From whom did you receive that inheritance?"]
+  v28["IVal1: Still thinking of your first/second/ third inheritance what was the total value, at that time, of everything you inherited, after tax and other deductions?"]
+  v29["IValB1: About how much would you estimate was the value of the inheritance at that time after tax and other deductions ?"]
+  v30["IHse: What did you do with the property or share in the property that you received?"]
+  v31["IGds: What did you do with the non-property inheritance that you received?"]
+  v32["IHEvE: * And now thinking back further than the last two years, apart from this inheritance IHRcNum = 1 / apart from this these inheritances IHRcNum > 1 have you personally received an inheritance valued at £1,000 or more, that is of money, property or goods?"]
+  v33["IHEvNoE: If IHEvE=1 – one inheritance received before"]
+  v34["IEYrE1: If IHEvNoE >= 1 – loop for up to 3 inheritance received before"]
+  v35["IEValE1: If IHEvNoE >= 1"]
+  v36["IEValBE1: About how much would you estimate was the value of the inheritance at that time after tax and other deductions ?"]
+  v37["TransIntro: I would like to ask you some questions about gifts and loans transferred between family and friends during lifetime – that is, a gift or loan worth more than £500 at any one time."]
+  v38["RGift: First I would like to ask you about gifts. In the last two years have you received either goods or cash gifts worth £500 or more? Please do not include any money received from a trust fund."]
+  v39["RGfFrom: From whom did you receive these gifts?"]
+  v40["IRGfWho1: Who gave you the Highest/Second Highest/Third Highest total value of gifts over the last two years?"]
+  v41["IRGfVal1: What is the total value of the goods and cash gifts you received from response at IRGfWho1 in the last two years?"]
+  v42["IRGfVB1: About how much would you estimate is the value of goods and cash gifts that you received IRGfWho1 in the last two years?"]
+  v43["IRGfUse1: What did you do with any cash gifts that you received from IRGfWho1 ?"]
+  v44["LRGift: And now thinking back further than the last two years apart from this gift/ these gifts have you personally ever received a gift of money, property or goods worth £500 or more?"]
+  v45["LRGiftNo: How many gifts of £500 or more did you receive in this earlier period, that is before DATE 2 YEARS AGO ?"]
+  v3 -->|CoroSav =1| v4
+  v4 -->|IncrCoroSav = 5| v5
+  v3 -->|CoroSav =2| v6
+  v6 -->|DecrCoroSav = 8| v7
+  v9 -.->|SelectAd <> RF AND Birth >= 2002,9,1 AND <= Birth2011,1,2| v10
+  v12 -.->|CaCtV = DK/RF - respondent does not know how much is in their trust fund/junior ISA| v13
+  v10 -.->|CaCTF = 1 AND RCaType = EMPTY OR RCaType=Response - child has a trust fund now but did not have a trust fund at the previous wave| v14
+  v10 -.->|CaCTF = 1 AND RCaType = Empty OR RCaType=Response - child has a trust fund now but did not have a trust fund at the previous wave| v15
+  v11 -->|CaJISA = 1 - child has a Junior ISA| v16
+  v10 -.->|CaCTF = 1 OR CaJISA = 1 - child has a trust fund or a junior ISA| v17
+  v11 -.->|CaCTF = 1 OR CaJISA = 1 - child has a trust fund or a junior ISA| v17
+  v17 -.->|CaContr = 1,2,3,4,5,6 .- someone has contributed to the child’s Trust Fund in the last 2 years| v18
+  v18 -.->|CaContram1 = DK/RF - If respondent does not know the amount contributed| v19
+  v9 -->|SelectAd <> RF - Ask for each child| v21
+  v21 -->|CaSav = 1 - child has other savings| v22
+  v22 -.->|CaSvV = DK/RF - respondent does not know the current value of the savings held by Child’s name| v23
+  v24 -->|IHRecnt = 1 - respondent has received an inheritance| v25
+  v25 -->|IHRcNum >= 1 - respondent has one or more inheritance| v26
+  v25 -->|IHRcNum >= 1 - respondent has one or more inheritance| v27
+  v25 -->|IHRcNum >= 1| v28
+  v28 -.->|IVal1 = DK/RF - respondent does not know the total value inherited| v29
+  v26 -->|IWat = 1 - respondent received property| v30
+  v26 -.->|IWat = 2,3,4,5 - respondent received non-property inheritance| v31
+  v38 -->|RGift = 1 - respondent has received goods or cash gifts| v39
+  v38 -->|RGift = 1 - respondent has received goods or cash gifts| v40
+  v39 -.->|RGfFrom = 1,2,3,4,5,6,7- respondent received cash gifts worth £500 or more in the last two years| v41
+  v41 -.->|IRGfVal1 = DK/RF - respondent does not know value of gift received| v42
+  v39 -.->|RGfFrom = 1,2,3,4,5,6,7- respondent received cash gifts worth £500 or more in the last two years| v43
+  v44 -->|LRGift =1| v45
+  route840_to_page_18["route840 -> go to page_18"]
+  v45 -.->|route840| route840_to_page_18
+  route841_to_page_18["route841 -> go to page_18"]
+  v45 -.->|route841| route841_to_page_18

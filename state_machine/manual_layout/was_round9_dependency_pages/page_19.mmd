@@ -1,0 +1,106 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 19 of 20
+  v1["TAddVl1: Can you tell me the approximate current value of your share of the assets in the trust that have not already been covered in this interview?"]
+  v2["TAddVB1: About how much would you estimate is the net current value of your share of the assets that have not already been covered in this interview?"]
+  v3["TBenef: Are you the beneficiary of a trust? That is, do you currently receive money from a trust, or will you receive money or capital from a trust in the future?"]
+  v4["TBenNum: Can I just check, how many separate trusts are you the beneficiary of?"]
+  v5["TBCap1: At some time in the future, will you receive all, or your share of, the assets held in the first / second most valuable if TBenNum > 1 trust?"]
+  v6["TBCapY1: In which year do you expect to have access to the assets in this trust?"]
+  v7["TBValB1: How much would you estimate is the approximate current value of your share of the assets?"]
+  v8["OthAsCh: Do you have any other assets with financial value that we have not covered in this interview?"]
+  v9["OthAsTy: What sort of assets are they?"]
+  v10["OthAsVl: What is the current value of all of these assets?"]
+  v11["OthAsVb: How much would you estimate is the approximate current value of these assets?"]
+  v12["ORiska: For each of the next four questions, please select the answer which best applies to you – there are no right or wrong answers."]
+  v13["ORiskc: * If you had a choice of receiving a thousand pounds today or one thousand one hundred pounds in 12 months which would you choose?"]
+  v14["OSafeSav: Here are some things some people have said about savings and stock market investments."]
+  v15["ORisks: And how much do you agree or disagree with this statement."]
+  v16["HealthIntro: I would now like to ask you some questions about your health."]
+  v17["QHealth1: "]
+  v18["LSill: Do you have any long-standing illness, disability or infirmity? By long-standing I mean anything that has troubled you over a period of time or that is likely to affect you over a period of time?"]
+  v19["IllLim: Does this illness or disability / these illnesses or disabilities limit your activities in any way?"]
+  v20["DisType: Does this health problem s or disability ies mean that you have substantial difficulties with any of these areas of your life?"]
+  v21["DisEver: Have you ever had a long-term illness, disability or infirmity lasting for a year or more that affected your ability to carry out normal day-to-day activities?"]
+  v22["FBInt: We are interested in how living standards compare across the generations so the following questions are about your family and parents. I’d like you to think back to when you were a young teenager, say between the ages of 12 and 16."]
+  v23["FBSitu: Thinking back to when you were a young teenager, did you live…"]
+  v24["FBSibs: How many brothers and sisters did you have living with you when you were a young teenager?"]
+  v25["FBTen: Thinking back to when you were a young teenager, in which way did your household own or rent their accommodation?"]
+  v26["FBFaEd: Now thinking about your father's educational qualifications, which best describes the highest level of education/qualifications gained by your father or your mother's new partner/ husband ?"]
+  v27["FthEcSt: Which of the following best describes what your father or your mother's new partner or husband mainly did when you were a young teenager, around the age of 14. Were they…"]
+  v28["FthJobT: Ask if FthEcst = 1,2,3 - respondents father or mother’s new partner/ husband was an employee, self-employed or unpaid family worker"]
+  v29["FBMoEd: And thinking about your mother's educational qualifications, which best describes the highest level of education/qualifications gained by your mother or your father's new partner/ wife ?"]
+  v30["MthEcSt: Which of the following best describes what your mother or your father’s new partner or husband mainly did when you were a young teenager, around the age of 14. Were they…"]
+  v31["MthJobT: Ask if MthEcst = 1,2,3 - respondents mother or father’s new partner/ wife was an employee, self-employed or unpaid family worker"]
+  v32["IntroFU: May I just check..."]
+  v33["FollowUp: May I just check..."]
+  v34["FutCond: NOTE QUALIFICATIONS/CONDITIONS OF RECALL"]
+  v35["KiTitle: What is your title?"]
+  v36["KiFiNme: By which name do you prefer to be known?"]
+  v37["KiSuNme: What is your surname?"]
+  v38["STDC1: ENTER THE STD CODE"]
+  v39["NumEnt1: ENTER REMAINING DIGITS OF THE NUMBER."]
+  v40["LandPh: DERIVED: Full landline number."]
+  v41["FivDig1: ENTER FIRST 5 DIGITS OF THE MOBILE NUMBER"]
+  v42["SixDig1: ENTER REMAINING 6 DIGITS OF THE MOBILE NUMBER"]
+  v43["MobPh: DERIVED: Full mobile number."]
+  v44["Email2: We would very much like to share some results from the survey with you in future."]
+  v45["CheckAdd: Is this address correct?"]
+  route877_from_page_18["from page_18 - route877"]
+  route877_from_page_18 -.->|route877| v1
+  v1 -.->|TAddVl1 = DK/RF - respondent does not know the amount not already covered| v2
+  v3 -->|TBenef = 1 - respondent is the beneficiary of a trust| v4
+  v4 -->|TBenNum >= 1 - respondent is beneficiary of one or more trusts| v5
+  v5 -->|TBCap1 = 1 - respondent will receive assets on a specific date in the future| v6
+  v5 -->|TBCap1 = 1 - respondent will receive all of the assets held in the trust at some point in the future| v7
+  v8 -->|OthAsCh = 1 - respondent has other assets with financial value| v9
+  v8 -->|OthAsCh = 1 - respondent has other assets with financial value| v10
+  v10 -.->|OthAsVl = DK/RF - respondent does not know value of these assets| v11
+  route886_from_page_4["from page_4 - route886"]
+  route886_from_page_4 -.->|route886| v11
+  route887_from_page_4["from page_4 - route887"]
+  route887_from_page_4 -.->|route887| v12
+  route888_from_page_4["from page_4 - route888"]
+  route888_from_page_4 -.->|route888| v13
+  route889_from_page_4["from page_4 - route889"]
+  route889_from_page_4 -.->|route889| v14
+  route890_from_page_4["from page_4 - route890"]
+  route890_from_page_4 -.->|route890| v15
+  route891_from_page_4["from page_4 - route891"]
+  route891_from_page_4 -.->|route891| v16
+  route892_from_page_4["from page_4 - route892"]
+  route892_from_page_4 -.->|route892| v17
+  route893_from_page_4["from page_4 - route893"]
+  route893_from_page_4 -.->|route893| v18
+  v18 -->|LSill = 1 - respondent has a disability| v19
+  v18 -->|LSill = 1 - respondent has a disability| v20
+  v18 -->|LSill = 2 - respondent does not have a disability| v21
+  v23 -->|FBSitu <> 7 - respondent did not grow up in a collective house or institution| v24
+  v23 -->|FBSitu <> 6 - respondent did not grow up in a private household or foster home| v25
+  v23 -.->|FBSitu = 1,3,4,5 - respondent lived with both parents, lone father, with mother and her new partner or with father and father’s new partner/ wife| v26
+  v23 -.->|FBSitu = 1,3,4,5 - respondent lived with both parents, lone father, with mother and her new partner or with father and father’s new partner/ wife| v27
+  v27 -.->|FthEcst = 1,2,3 - respondents father or mother’s new partner/ husband was an employee, self-employed or unpaid family worker| v28
+  v23 -.->|FBSitu = 1,2,4,5 - respondent lived with both parents, lone mother, with mother and her new partner or with father and father’s new partner/ wife| v29
+  v23 -.->|FBSitu = 1,2,4,5 - respondent lived with both parents, lone mother, with mother and her new partner or with father and father’s new partner/ wife| v30
+  v30 -.->|MthEcst = 1,2,3 - respondents mother or father’s new partner/ wife was an employee, self-employed or unpaid family worker| v31
+  v33 -->|FollowUp = 2 respondent agrees to be contacted again but with conditions| v34
+  route906_to_page_20["route906 -> go to page_20"]
+  v45 -.->|route906| route906_to_page_20
+  route907_to_page_20["route907 -> go to page_20"]
+  v45 -.->|route907| route907_to_page_20
+  route908_to_page_20["route908 -> go to page_20"]
+  v45 -.->|route908| route908_to_page_20
+  route910_to_page_20["route910 -> go to page_20"]
+  v45 -.->|route910| route910_to_page_20
+  route912_to_page_20["route912 -> go to page_20"]
+  v45 -.->|route912| route912_to_page_20
+  route914_to_page_20["route914 -> go to page_20"]
+  v45 -.->|route914| route914_to_page_20
+  route915_to_page_20["route915 -> go to page_20"]
+  v45 -.->|route915| route915_to_page_20
+  route916_to_page_20["route916 -> go to page_20"]
+  v45 -.->|route916| route916_to_page_20
+  route917_to_page_20["route917 -> go to page_20"]
+  v45 -.->|route917| route917_to_page_20
+  route920_to_page_20["route920 -> go to page_20"]
+  v45 -.->|route920| route920_to_page_20

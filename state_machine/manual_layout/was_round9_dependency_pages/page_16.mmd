@@ -1,0 +1,95 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 16 of 20
+  v1["XIntyp: If respondent has entered some sort of insolvency proceedings"]
+  v2["XInCse: If respondent has entered some sort of insolvency proceedings"]
+  v3["OtIncIntro: Now we are going to ask some more questions about your income."]
+  v4["RentIncPay: Apart from income from your business es you have already told us about, are if any income from business reported >0 ; Are else you currently receiving any rent from property, including business property or subletting?"]
+  v5["RentIncTy: Is this rent from..."]
+  v6["RentIncLdg: How much rent do you receive each month from boarders or lodgers, before deducting income tax but after deducting all allowable expenses?"]
+  v7["RentIncAm: In total how much do you receive each month, before deducting income tax but after deducting allowable expenses? Do not include the rent you have already provided for boarders / lodgers at this address."]
+  v8["RentIncBnd: About how much, on average, would you estimate you received each month?"]
+  v9["OthSrc: Please tell me whether you are receiving any of the following regular payments?"]
+  v10["OiNRrPr: How often do you usually receive regular redundancy payments from former employer s ?"]
+  v11["OiNRrSp: Record details of frequency of payments"]
+  v12["OiNRrAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v13["OiNRB: About how much would you estimate the amount you receive each month from former employer s , after tax is deducted net , to be?"]
+  v14["OiNGTPr: How often do you usually receive regular payments from Government Training Schemes?"]
+  v15["OiNGTSp: Record details of frequency of payments"]
+  v16["OiNGTAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v17["OiNGB: About how much would you estimate the amount you receive each month from Government Training Schemes, after tax is deducted net , to be?"]
+  v18["ReglrPy: Please tell me whether you are receiving any of the following regular payments?"]
+  v19["OiNEGPr: How often do you usually receive payments from the educational grant?"]
+  v20["OiNEGSp: Record details of frequency of payments"]
+  v21["OiNEGAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v22["OiNEGB: About how much would you estimate the amount you receive each year from the educational grant, after tax is deducted, to be?"]
+  v23["OiNFRPr: How often do you usually receive payments from friends or relatives outside the household?"]
+  v24["OiNFRSp: Record details of frequency of payments"]
+  v25["OiNFRAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v26["OiNFrB: About how much do you estimate the amount you receive each month from friends or relatives outside the household, after tax is deducted, to be?"]
+  v27["OiNMAPr: How often do you usually receive payments from maintenance/ alimony/ separation allowance?"]
+  v28["OiNMASp: Record details of frequency of payments"]
+  v29["OiNMAAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v30["OiNMAB: About how much do you estimate the amount you receive each month from maintenance/ alimony/ separation allowance, after tax is deducted, to be?"]
+  v31["OiNRoPr: How often do you usually receive payments from royalties?"]
+  v32["OiNRoSp: Record details of frequency of payments"]
+  v33["OiNRoAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v34["OiNRoB: About how much do you estimate the amount you receive each month from royalties, after tax is deducted, to be?"]
+  v35["OthIncOth: Please describe the other forms of income, not already mentioned, that you receive regular payments from."]
+  v36["OiNOtPr: How often do you usually receive payments from this source / these other sources?"]
+  v37["OiNOtSp: Record details of frequency of payments"]
+  v38["OiNOtAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v39["OiNOTB: About how much do you estimate the amount you receive each month from other income, after tax is deducted, to be?"]
+  v40["CoroInc: Ask 1 person per household"]
+  v41["IncrCoro: What is the main reason for your household income increasing?"]
+  v42["IncrCoOth: Ask if IncrCoro = 5"]
+  v43["DecrCoro: What is the main reason for your household income decreasing?"]
+  v44["DecrCoOth: Ask if DecrCoro = 7"]
+  route765_from_page_15["from page_15 - route765"]
+  route765_from_page_15 -.->|route765| v1
+  route766_from_page_15["from page_15 - route766"]
+  route766_from_page_15 -.->|route766| v2
+  v4 -->|rentIncPay=1 - receives income from rent| v5
+  v5 -.->|RentIncTy = 1,3 - rent received from a border or lodger at this address or both| v6
+  v5 -.->|RentIncTy = 2 or 3| v7
+  v7 -.->|RentIncAm = DK/RF - respondent does not know rent income amount| v8
+  v9 -->|OthSrc = 1 - respondent receives regular redundancy payments from former employer s| v10
+  v10 -->|OiNRrPr = 97 - frequency of payment is ‘neither’ weekly, monthly or annual| v11
+  v10 -.->|OiNRrPr = 1,2, 3 or 97| v12
+  v10 -.->|OiNRrPr OR OiNRrAm= DK/RF| v13
+  v12 -.->|OiNRrPr OR OiNRrAm= DK/RF| v13
+  v9 -->|OthSrc = 2 - respondent receives money from Government Training Schemes, such as Youth Training allowance| v14
+  v14 -->|OiNGTPr = 97 - respondent does not know frequency of payment| v15
+  v14 -.->|OiNGTPr = 1,2,3, 97 - respondent receives payments from Government training schemes weekly, monthly, yearly or other frequency.| v16
+  v14 -.->|OiNGTPr = DK/RF OR OiNGTAm = DK/RF - respondent does not know how much they usually receive each month from Government Training Schemes| v17
+  v16 -.->|OiNGTPr = DK/RF OR OiNGTAm = DK/RF - respondent does not know how much they usually receive each month from Government Training Schemes| v17
+  v18 -->|ReglrPy = 1 - respondent is receiving an educational grant| v19
+  v19 -->|OiNEGPr = 97 - respondent does not know frequency of payment| v20
+  v19 -.->|OiNEGPr = 1,2,3, 97 - respondent receives payments from educational grant weekly, monthly, yearly or other frequency.| v21
+  v19 -.->|OiNEGPr OR OiNEGAm= DK/RF - respondent does not know amount they usually receive each month from the educational grant| v22
+  v21 -.->|OiNEGPr OR OiNEGAm= DK/RF - respondent does not know amount they usually receive each month from the educational grant| v22
+  v18 -->|ReglrPy = 2 - receiving regular payments from friends or relatives outside the household| v23
+  v23 -->|OiNFrPr = 97 - respondent does not know frequency of payment| v24
+  v23 -.->|OiNFrPr = 1,2 or 3, 97| v25
+  v23 -.->|OiNFrPr = DK/RF OR OiNFrAm= DK/RF - If respondent does not know amount they usually receive each month from friends or relatives outside the household| v26
+  v25 -.->|OiNFrPr = DK/RF OR OiNFrAm= DK/RF - If respondent does not know amount they usually receive each month from friends or relatives outside the household| v26
+  v18 -->|ReglrPy = 3 - respondent is receiving maintenance, alimony or separation allowance| v27
+  v27 -->|OiNMAPr = 97 - respondent does not know frequency of payment| v28
+  v27 -.->|OiNMAPr = 1,2,3, 97 - respondent receives maintenance, alimony or separation allowance payments weekly, monthly, yearly or other frequency..| v29
+  v27 -.->|OiNMaPr= DK/RF OR OiNMaAm= DK/RF - respondent does not know amount they receive each month from maintenance/ alimony/ separation allowance| v30
+  v29 -.->|OiNMaPr= DK/RF OR OiNMaAm= DK/RF - respondent does not know amount they receive each month from maintenance/ alimony/ separation allowance| v30
+  v18 -->|ReglrPy = 4 -respondent is receiving royalties e.g. from land, books or performances| v31
+  v31 -->|OiNRoPr = 97 - respondent does not know frequency of payment| v32
+  v31 -.->|OiNRoPr = 1,2,3, 97 - If respondent receives payments from royalties weekly, monthly, yearly or other frequency.| v33
+  v31 -.->|OiNRoPr= DK/RF OR OiNRoAm= DK/RF -does not know amount they usually receive each month from royalties| v34
+  v33 -.->|OiNRoPr= DK/RF OR OiNRoAm= DK/RF -does not know amount they usually receive each month from royalties| v34
+  v18 -->|ReglrPy = 5 -respondent is receiving any other income not already mentioned in the questionnaire| v35
+  v18 -->|ReglrPy = 5 -respondent is receiving any other income not already mentioned in the questionnaire| v36
+  v36 -->|OiNOtPr = 97 - respondent does not know frequency of payment| v37
+  v36 -.->|OiNOtPr = 1,2,3, 97 - If respondent receives payments from any other income weekly, monthly, yearly or other frequency.| v38
+  v36 -.->|OiNOtPr = DK/RF OR OiNOtAm = DK/RF -does not know amount they usually receive each month from other sources of income not already mentioned in the questionnaire| v39
+  v38 -.->|OiNOtPr = DK/RF OR OiNOtAm = DK/RF -does not know amount they usually receive each month from other sources of income not already mentioned in the questionnaire| v39
+  v40 -->|CoroInc =1| v41
+  v41 -->|IncrCoro = 5| v42
+  v40 -->|CoroInc =2| v43
+  v43 -->|DecrCoro = 7| v44

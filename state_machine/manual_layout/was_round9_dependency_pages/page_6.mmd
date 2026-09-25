@@ -1,0 +1,107 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 6 of 20
+  v1["BALand: Does your company own land or buildings for use in the business?"]
+  v2["BVal1: If you sold your if BType= 2,5 / your share in the if BType = 3,4 business today, including any debts or liabilities, about how much would you get?"]
+  v3["BValB1: How much would you estimate you would get for the business?"]
+  v4["BADebtYN: Excluding debts for the purchase of goods for household use, do you have any business debts associated with investments, buildings and land?"]
+  v5["BADebtTerm: Are these debts..."]
+  v6["BADoust: Do you have any outstanding trade debts or credits?"]
+  v7["BADamt: BADoust = 1 respondent answered yes to outstanding trade debts"]
+  v8["BACamt: BADoust = 2 respondent answered yes to outstanding trade credits"]
+  v9["BARed: In the past 2 years, how much was paid in redundancy payments to employees of your firm or business?"]
+  v10["BAShare: What share of the business do you personally own?"]
+  v11["BPast: In the last two years, have you personally received any income from selling all or part of a business?"]
+  v12["BSellYr: In which year did you sell your business, or part of a business?"]
+  v13["BSellAm: How much income did you receive from selling your business, or part of a business?"]
+  v14["BSellAB: How much would you estimate you received from selling your business, or part of a business?"]
+  v15["BSellTx: And was this amount before or after tax?"]
+  v16["BMoreBus: Can I just check, …"]
+  v17["BMoreNum: How many other If BType1 = 2,4 Sole director or Partner in a business OR BOwn1 = yes owns part of business businesses do you own all or part of as an active or sleeping partner?"]
+  v18["BWorth: About how much is your share of this business/these businesses worth after deducting any outstanding debts?"]
+  v19["BWorthB: How much would you estimate your share of this business if BMoreNum = 1 / these businesses if BMoreNum <> 1 is worth in total ?"]
+  v20["IntroIncEm: AND"]
+  v21["IntroIncEm2: AND PenFlag = 0 - respondent is under state pension age"]
+  v22["AnticPay: AND"]
+  v23["PayDat: OR"]
+  v24["NetPay: What was your last take home pay / what will be your take home pay including overtime, bonus, commission, tips or other payments?"]
+  v25["NetPd: How long a period does this cover?"]
+  v26["NetEst: What would you estimate your last take home pay to be, after all deductions?"]
+  v27["GrossPay: How much was your last gross pay from your main job how much will your gross pay from your main job be before all deductions this can be weekly, monthly or any other pay period ?"]
+  v28["GrossPd: How long a period does this cover?"]
+  v29["GrossEst: What would you estimate your last gross earnings to be, before any deductions?"]
+  v30["PayUsl: THIS SHOULD BE CODED 2 IF THE LAST TAKE HOME PAY INCLUDED HOLIDAY PAY, BACK PAY, AN OCCASIONAL BONUS, IRREGULAR OVERTIME OR A TAX REFUND"]
+  v31["WhyNoUsl: Why was your last pay not usual?"]
+  v32["UNett: What do you usually receive AFTER all deductions?"]
+  v33["UGross: What do you usually receive BEFORE all deductions but including other payments?"]
+  v34["UPd: How often are you usually paid?"]
+  v35["BonAm: BONUS number LBEmpPay1"]
+  v36["BoBATax: BONUS number LBEmpPay1"]
+  v37["SEInt: NOT BType1 main job = 2,3 AND BDirNI1 main job = 1 AND"]
+  v38["SEAmt: NOT BType1 main job = 2,3 AND BDirNI1 main job = 1 AND"]
+  v39["SEPer: What period does this cover?"]
+  v40["SEAmK: I am going to ask you to estimate your average income. Would you prefer to give this estimate weekly or monthly?"]
+  v41["SEEsW: What would you estimate your average weekly income to be, after deductions?"]
+  v42["SEEsM: What would you estimate your average monthly income to be, after deductions?"]
+  v43["GrsSEMJB: NOT BType1 main job = 2,3 AND BDirNI1 main job = 1 AND"]
+  v44["GrossPer: What period does this cover?"]
+  route188_from_page_5["from page_5 - route188"]
+  route188_from_page_5 -.->|route188| v1
+  route189_from_page_5["from page_5 - route189"]
+  route189_from_page_5 -.->|route189| v2
+  route190_from_page_5["from page_5 - route190"]
+  route190_from_page_5 -.->|route190| v2
+  v2 -.->|BVal1 = DK/RF respondent does not know value of the business| v3
+  route192_from_page_5["from page_5 - route192"]
+  route192_from_page_5 -.->|route192| v4
+  route193_from_page_5["from page_5 - route193"]
+  route193_from_page_5 -.->|route193| v6
+  route194_from_page_5["from page_5 - route194"]
+  route194_from_page_5 -.->|route194| v10
+  v11 -->|BPast = 1 had income from selling all or part of a business in the last two years| v12
+  v11 -->|BPast = 1 had income from selling all or part of a business in the last two years| v13
+  v13 -.->|BSellAm = DK/RF respondent does not know how much they received from selling all or part of their business| v14
+  v13 -.->|BSellAm OR BSellAB = Response respondent has given a value for amount received from selling all or part of their business| v15
+  v14 -.->|BSellAm OR BSellAB = Response respondent has given a value for amount received from selling all or part of their business| v15
+  v16 -->|BMoreBus = 1 yes| v17
+  v16 -.->|BMoreBus = 1 respondent owns part of an other business es| v18
+  v18 -.->|BWorth = DK/RF respondent does not know value of the other business es| v19
+  route203_from_page_4["from page_4 - route203"]
+  route203_from_page_4 -.->|route203| v20
+  route204_from_page_4["from page_4 - route204"]
+  route204_from_page_4 -.->|route204| v21
+  route205_from_page_4["from page_4 - route205"]
+  route205_from_page_4 -.->|route205| v21
+  route206_from_page_4["from page_4 - route206"]
+  route206_from_page_4 -.->|route206| v22
+  route207_from_page_4["from page_4 - route207"]
+  route207_from_page_4 -.->|route207| v24
+  v23 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v24
+  v24 -.->|NetPay=>0 - respondent has given a value at NetPay| v25
+  v24 -->|NetPay = DK - respondent does not know their Net Pay| v26
+  route211_from_page_4["from page_4 - route211"]
+  route211_from_page_4 -.->|route211| v27
+  v23 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v27
+  v27 -.->|GrossPay=>0 - respondent has given a value at GrossPay| v28
+  v27 -->|GrossPay = DK - respondent does not know their last gross pay from main job| v29
+  route215_from_page_4["from page_4 - route215"]
+  route215_from_page_4 -.->|route215| v30
+  v23 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v30
+  v30 -->|PayUsl = No - respondent last wage/salary was not usual amount receive| v31
+  v30 -->|PayUsl = No - if respondent last wage/salary was not usual amount receive| v32
+  v30 -->|PayUsl = No - respondent last wage/salary was not usual amount receive| v33
+  v33 -->|UGross = response - respondent provided a usual gross amount| v34
+  route221_from_page_4["from page_4 - route221"]
+  route221_from_page_4 -.->|route221| v34
+  v23 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v34
+  v38 -->|SEAmt = response - respondent has given an income/profit figure| v39
+  v38 -.->|SEAmt = DK/RF - respondent does not know income from business| v40
+  v40 -->|SEAmK = 1 - respondent would like to give income weekly| v41
+  v40 -->|SEAmK = 2 - respondent would like to give income monthy| v42
+  v43 -->|GrsSEMJb = response - respondent has given a profit figure| v44
+  route228_to_page_7["route228 -> go to page_7"]
+  v43 -.->|route228| route228_to_page_7
+  route231_to_page_7["route231 -> go to page_7"]
+  v38 -.->|route231| route231_to_page_7
+  route232_to_page_7["route232 -> go to page_7"]
+  v38 -.->|route232| route232_to_page_7

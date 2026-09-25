@@ -1,0 +1,185 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 4 of 20
+  v1["VEsVb: What do you think is the approximate market value of all of your vehicles? Please exclude lease, company or Mobility vehicles and the value of any personalised number plates."]
+  v2["VPers: Do you , or other members of your household , if DMHSize > 1 own any personalised or valuable number plates?"]
+  v3["VPerV: About how much are all the personalised number plates worth?"]
+  v4["VOTyp: Do you , or other members of your household , if DMHSize > 1 own any of the following…"]
+  v5["VOTyO: ENTER DETAILS OF OTHER VEHICLE"]
+  v6["VOVal: "]
+  v7["VOVlB: INDIVIDUAL QUESTIONNAIRE"]
+  v8["ISwitch: <PLEASE PRESS <F2> TO SAVE THE INTERVIEW SO FAR"]
+  v9["PersProx: IS THE INTERVIEW ABOUT NAMES i BEING GIVEN:"]
+  v10["ProxyNum: ENTER PERSON NUMBER OF PERSON GIVING THE INFORMATION"]
+  v11["YNtPart: THIS PERSON HAS A SPOUSE/PARTNER. PLEASE RECORD WHY THEY ARE NOT AVAILABLE TO GIVE A PROXY INTERVIEW FOR THIS PERSON"]
+  v12["YNtHhld: PLEASE RECORD WHY SOMEONE OUTSIDE OF THE HOUSEHOLD IS GIVING A PROXY INTERVIEW FOR THIS PERSON"]
+  v13["YNtPers: PLEASE RECORD REASON WHY ORIGINAL RESPONDENT IS NOT AVAILABLE FOR THIS INDIVIDUAL INTERVIEW"]
+  v14["RelnHH: PLEASE ENTER RELATIONSHIP OF THE PERSON GIVING THE INFORMATION TO THE ORIGINAL RESPONDENT E.G. SON/DAUGHTER/CARER"]
+  v15["EthEa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v16["EthE: Which one best describes your White If EthEa=1 ; Mixed If EthEa=2 ; Asian If EthEa=3 ; Black If EthEa=4 ; Other If EthEa=5 ethnic group or background?"]
+  v17["EthWa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v18["EthW: Which one best describes your White If EthWa=1 ; Mixed If EthWa =2 ; Asian If EthWa =3 ; Black If EthWa =4 ; Other If EthWa =5 ethnic group or background?"]
+  v19["EthSa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v20["EthS: Which one best describes your White If EthSa =1 ; Mixed If EthSa =2 ; Asian If EthSa =3 ; Black If EthSa =4 ; Other If EthSa =5 ethnic group or background?"]
+  v21["EthOth: Please can you describe your ethnic group?"]
+  v22["Eth02: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v23["DVEthnic: Derived variable"]
+  v24["SIDFtFQn: For respondent name please use showcard number ."]
+  v25["SIDTelQn: I will now read out a list of terms people sometimes use to describe how they think of themselves."]
+  v26["ReligE: What is your religion?"]
+  v27["ReligW: What is your religion?"]
+  v28["ReligS: What is your religion?"]
+  v29["ReligSpec: Please describe your Religion."]
+  v30["ReligO: Press <Space bar> to enter the coding frame"]
+  v31["DVRelig: Derived variable using ReligE, ReligS and ReligW"]
+  v32["SubWelpre: Next I would like to ask you five questions about your feelings on aspects"]
+  v33["Subpre2: For each of these questions I'd like you to give an answer on a scale of nought to 10, where nought is 'not at all' and 10 is 'completely'."]
+  v34["TrustOth: On a scale where nought is 'do not trust at all' and 10 is 'trust completely', to what extent would you say that you trust other people?"]
+  v35["SchemeET: Can I just check, were you on a government scheme for employment training?"]
+  v36["JbAway: Even though you were not doing paid work or employment training in the week ending Sunday the DATE , did you have a job or business that you were away from and that you expect to return to ?"]
+  v37["OwnBus: Did you do any unpaid work in that week ending Sunday the DATE for any business that you own?"]
+  v38["RelBus: ....or that a relative owns?"]
+  v39["StartJ: If you had been offered a job in the week ending Sunday the DATE , would you be able to start before Sunday second DATE – 2 weeks later?"]
+  v40["LKTime: How long have you been looking for paid work or a place on a government training scheme or an additional or replacement job ?"]
+  v41["YInAct: What was the main reason you did not seek any work or government training scheme in the week ending Sunday the DATE if Looked=2 ; would not be able to start before second DATE if StartJ=2 ?"]
+  v42["DVILO3a: Whether employed incl unpaid family workers"]
+  v43["DVILO4a: Whether employed incl unpaid family workers"]
+  v44["WkBetw: Can I just check, have you had a paid job either as an employee or self-employed in the last two years?"]
+  v45["MRecJb: When we interviewed you on RStartDat you were working/ about to start work as a ROccT . Is this your most recent job either as an employee or as self-employed?"]
+  route98_from_page_3["from page_3 - route98"]
+  route98_from_page_3 -.->|route98| v1
+  route99_from_page_3["from page_3 - route99"]
+  route99_from_page_3 -.->|route99| v2
+  v2 -->|VPers = 1 respondent owns a personal number plate| v3
+  v4 -->|VOTyp = 5 respondent owns another vehicle type not listed| v5
+  v4 -.->|you sold this if VOTyp = one type - VOTpN = 1 / these if VOTyp = more than one type - VOTpN >1 / the other vehicle s if VOTyp = other type caravan/trailer, boat, plane, bicycle, other type of vehicle fill in only valid VOTyp response s , about how much in total would you get for it/them before paying off any money owing?| v6
+  v6 -.->|VOVal = DK/RF respondent does not know the value of their other vehicles| v7
+  v8 -->|ISwitch = 1| v9
+  v9 -->|PersProx = 2| v10
+  v9 -.->|expected respondent has no partner in household AND If PersProx = 2 and ProxyNum = 17 If proxy is not a household member| v12
+  v10 -.->|expected respondent has no partner in household AND If PersProx = 2 and ProxyNum = 17 If proxy is not a household member| v12
+  v9 -.->|PersProx = 2 and ProxyNum <17 If proxy is a household member| v13
+  v10 -.->|PersProx = 2 and ProxyNum <17 If proxy is a household member| v13
+  v10 -->|ProxyNum = 17 If proxy is not a household member| v14
+  v15 -.->|EthEa = 1,2,3,4,5| v16
+  v17 -.->|EthWa = 1,2,3,4,5| v18
+  v19 -.->|EthSa = 1,2,3,4,5| v20
+  v16 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v21
+  v18 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v21
+  v20 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v21
+  v9 -.->|If Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =FtF| v24
+  route118_from_page_1["from page_1 - route118"]
+  route118_from_page_1 -.->|route118| v24
+  route119_from_page_1["from page_1 - route119"]
+  route119_from_page_1 -.->|route119| v24
+  v9 -.->|Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =Tel.| v25
+  route121_from_page_1["from page_1 - route121"]
+  route121_from_page_1 -.->|route121| v25
+  route122_from_page_1["from page_1 - route122"]
+  route122_from_page_1 -.->|route122| v25
+  v9 -.->|Persprox = 1 AND Status = resident AND Country = England Ask all respondents who live in England except proxies| v26
+  v9 -.->|Persprox = 1 AND Status = resident AND Country = Wales Ask all respondents who live in Wales except proxies| v27
+  v9 -.->|Persprox = 1 AND Status = resident AND Country = Scots all respondents who live in Scotland except proxies| v28
+  v26 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v29
+  v28 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v29
+  v27 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v29
+  v9 -->|Persprox = 1 All respondents except proxies| v32
+  v9 -->|Persprox = 1 All respondents except proxies| v33
+  v9 -->|Persprox = 1 All respondents except proxies| v34
+  v35 -->|SchemeET = 2 respondent not in paid work and not on a government scheme| v36
+  v36 -.->|JbAway = 2,3 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job| v37
+  v36 -.->|JbAway = 2 AND OwnBus = 2 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job and not doing unpaid work in own business| v38
+  v37 -.->|JbAway = 2 AND OwnBus = 2 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job and not doing unpaid work in own business| v38
+  v36 -.->|Looked = 1,3 OR JbAway = 3 respondent looked for work in the last 4 weeks or is waiting to take up a job| v39
+  v36 -.->|Looked = 1,3 OR JbAway = 3 respondent looked for work in the last 4 weeks or is waiting to take up a job| v40
+  v39 -.->|Looked = 2 OR StartJ = 2 respondent has not looked for a job in the last 4 weeks or is not available to start work in the next 2 weeks or waiting to take up a job but is not available to start work in the next 2 weeks| v41
+  route141_to_page_5["route141 -> go to page_5"]
+  v36 -.->|route141| route141_to_page_5
+  route142_to_page_5["route142 -> go to page_5"]
+  v37 -.->|route142| route142_to_page_5
+  route143_to_page_5["route143 -> go to page_5"]
+  v42 -.->|route143| route143_to_page_5
+  route149_to_page_5["route149 -> go to page_5"]
+  v42 -.->|route149| route149_to_page_5
+  route157_to_page_5["route157 -> go to page_5"]
+  v36 -.->|route157| route157_to_page_5
+  route158_to_page_5["route158 -> go to page_5"]
+  v35 -.->|route158| route158_to_page_5
+  route159_to_page_5["route159 -> go to page_5"]
+  v37 -.->|route159| route159_to_page_5
+  route160_to_page_5["route160 -> go to page_5"]
+  v38 -.->|route160| route160_to_page_5
+  route163_to_page_5["route163 -> go to page_5"]
+  v42 -.->|route163| route163_to_page_5
+  route164_to_page_5["route164 -> go to page_5"]
+  v9 -.->|route164| route164_to_page_5
+  route166_to_page_5["route166 -> go to page_5"]
+  v43 -.->|route166| route166_to_page_5
+  route170_to_page_5["route170 -> go to page_5"]
+  v42 -.->|route170| route170_to_page_5
+  route175_to_page_5["route175 -> go to page_5"]
+  v36 -.->|route175| route175_to_page_5
+  route176_to_page_5["route176 -> go to page_5"]
+  v37 -.->|route176| route176_to_page_5
+  route203_to_page_6["route203 -> go to page_6"]
+  v43 -.->|route203| route203_to_page_6
+  route204_to_page_6["route204 -> go to page_6"]
+  v43 -.->|route204| route204_to_page_6
+  route205_to_page_6["route205 -> go to page_6"]
+  v39 -.->|route205| route205_to_page_6
+  route206_to_page_6["route206 -> go to page_6"]
+  v43 -.->|route206| route206_to_page_6
+  route207_to_page_6["route207 -> go to page_6"]
+  v43 -.->|route207| route207_to_page_6
+  route211_to_page_6["route211 -> go to page_6"]
+  v43 -.->|route211| route211_to_page_6
+  route215_to_page_6["route215 -> go to page_6"]
+  v43 -.->|route215| route215_to_page_6
+  route221_to_page_6["route221 -> go to page_6"]
+  v43 -.->|route221| route221_to_page_6
+  route268_to_page_8["route268 -> go to page_8"]
+  v9 -.->|route268| route268_to_page_8
+  route270_to_page_8["route270 -> go to page_8"]
+  v41 -.->|route270| route270_to_page_8
+  route271_to_page_8["route271 -> go to page_8"]
+  v9 -.->|route271| route271_to_page_8
+  route273_to_page_8["route273 -> go to page_8"]
+  v41 -.->|route273| route273_to_page_8
+  route274_to_page_8["route274 -> go to page_8"]
+  v9 -.->|route274| route274_to_page_8
+  route276_to_page_8["route276 -> go to page_8"]
+  v41 -.->|route276| route276_to_page_8
+  route277_to_page_8["route277 -> go to page_8"]
+  v9 -.->|route277| route277_to_page_8
+  route279_to_page_8["route279 -> go to page_8"]
+  v41 -.->|route279| route279_to_page_8
+  route280_to_page_8["route280 -> go to page_8"]
+  v9 -.->|route280| route280_to_page_8
+  route282_to_page_8["route282 -> go to page_8"]
+  v41 -.->|route282| route282_to_page_8
+  route283_to_page_8["route283 -> go to page_8"]
+  v9 -.->|route283| route283_to_page_8
+  route285_to_page_8["route285 -> go to page_8"]
+  v41 -.->|route285| route285_to_page_8
+  route299_to_page_8["route299 -> go to page_8"]
+  v42 -.->|route299| route299_to_page_8
+  route762_to_page_15["route762 -> go to page_15"]
+  v9 -.->|route762| route762_to_page_15
+  route886_to_page_19["route886 -> go to page_19"]
+  v9 -.->|route886| route886_to_page_19
+  route887_to_page_19["route887 -> go to page_19"]
+  v9 -.->|route887| route887_to_page_19
+  route888_to_page_19["route888 -> go to page_19"]
+  v9 -.->|route888| route888_to_page_19
+  route889_to_page_19["route889 -> go to page_19"]
+  v9 -.->|route889| route889_to_page_19
+  route890_to_page_19["route890 -> go to page_19"]
+  v9 -.->|route890| route890_to_page_19
+  route891_to_page_19["route891 -> go to page_19"]
+  v9 -.->|route891| route891_to_page_19
+  route892_to_page_19["route892 -> go to page_19"]
+  v9 -.->|route892| route892_to_page_19
+  route893_to_page_19["route893 -> go to page_19"]
+  v9 -.->|route893| route893_to_page_19
+  route928_to_page_20["route928 -> go to page_20"]
+  v9 -.->|route928| route928_to_page_20

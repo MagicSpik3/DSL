@@ -1,0 +1,198 @@
+flowchart LR
+  %% Page 2 of 12
+  v1["HShare: Can I just check, do you share the ownership of this property with anyone other than a member of this household?"]
+  v2["HShareP: Approximately what percentage do you and other members of this household own?"]
+  v3["HPrice: Respondent lives at a new address or not owner occupier at previous wave; and buying with the help of a mortgage or paying part rent and part mortgage and owns address outright and not inherited property or is buying it with the help of a mortgage or loan or pays part rent and part mortgage"]
+  v4["HPriceB: About how much would you estimate that you and other members of this household paid?"]
+  v5["HCash: When you purchased this property, did you receive money from person to help with the purchase? Do not include loans or mortgages from financial institutions."]
+  v6["HGift: Was the money you received a gift, was it loaned to you, or was it part gift and part loan?"]
+  v7["HGfWho: PROMPT AS NECESSARY - CODE ALL THAT APPLY"]
+  v8["HValue: About how much would you expect to get for your current home if you sold it today , before paying off any outstanding mortgage or loan on the property if Ten1 = 2,3 ?"]
+  v9["HValB: About how much would you estimate that your home would be worth if you sold it today?"]
+  v10["MIntro: The next questions are about any mortgages that you have on this property."]
+  v11["MNumbN: How many mortgages or loans do you currently have outstanding on this property including any extensions or ‘top-ups’ you have taken out ?"]
+  v12["MW2Chk: Last time we interviewed you, we recorded that you had RMNumb mortgage s of the following type s ."]
+  v13["MExtn: In the last two years, have you increased your borrowing by taking out an extension or top-up on an existing mortgage? Please do not include any money received through equity release schemes."]
+  v14["MExtRs: Which of the following items was the extra borrowing for…"]
+  v15["MChge: And in the last two years, have you taken out any new mortgages on this property?"]
+  v16["MChgeNum: How many new mortgages or loans have you taken out on this property?"]
+  v17["MNumbO: Can I just check, how many mortgages or loans do you currently have outstanding on this property?"]
+  v18["MorTID1: MNumbO>0 OR MNumbN>0 - all mortgages"]
+  v19["MorPrev1: MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes AND All of the possible valid options have not already been selected at previous loops - If there is still an existing mortgage that has not been reported on in an earlier mortgage loop"]
+  v20["MName1: Is your largest/second largest/third largest mortgage or loan held in one person’s name or held jointly with someone else?"]
+  v21["MOname1: ASK OR RECORD PERSON NUMBER OF SOLE MORTGAGE OR LOAN HOLDER. ENTER PERSON NUMBER OF HOUSEHOLD MEMBER OR USE CODE 17 FOR PERSON OUTSIDE HOUSEHOLD."]
+  v22["MJname: ASK OR RECORD PERSON NUMBER S OF JOINT MORTGAGE OR LOAN HOLDER S"]
+  v23["MReas: Which of the following items best describe the reasons why you took out this mortgage remortgage or loan…"]
+  v24["MType1: Which of these options best describes this mortgage or loan secured on your property…"]
+  v25["MEndW1: Can I just check are if MType1 = 2,3 ; Are if MType1 <> 2,3 there any endowment policies covering the repayment of this mortgage or loan?"]
+  v26["MEndNum1: How many endowment policies cover the repayment of this mortgage or loan?"]
+  v27["MEndV1: Thinking about your first/second/third/fourth/fifth MChgeNum endowment policy, what is the current value of this endowment?"]
+  v28["MEndVb1: About how much would you estimate the current value of this endowment to be?"]
+  v29["MEndY1: In about how many years time will this endowment pay out?"]
+  v30["MAllTy1: Is your all-in-one account mortgage a current account mortgage – that is it’s combined with current account - or is it an offset mortgage – that is it’s linked to a separate current or savings account?"]
+  v31["MNeg1: What is the amount of the negative balance or overdraft on your current account for this mortgage? This is the balance on your current account once the total debt has been reduced by any savings in the account."]
+  v32["MNegB1: About how much would you estimate the negative balance or overdraft on your current account to be?"]
+  v33["MVal1: What is the amount still outstanding on this mortgage, or loan – that is, how much do you still have to pay off , before deducting the value of your endowment if MEndw1 = 1 OR MType1 <> 1 ?"]
+  v34["MValB1: About how much would you estimate is the amount outstanding on your mortgage or loan?"]
+  v35["MYLft1: For all mortgages that have not been paid off"]
+  v36["MPayM1: How much are your monthly repayments for your share of if MName1=2 this mortgage, including the interest and premiums on your endowments and if MEndW1=1 any insurance premiums?"]
+  v37["MPayB1: About how much would you estimate the monthly repayments on your mortgage to be?"]
+  v38["MIntPaid1: For all mortgages that are not a current account mortgage"]
+  v39["MIntRate1: What is the interest rate on your mortgage at present?"]
+  v40["MArrs1: Still thinking about the repayments on this mortgage, are you currently…"]
+  v41["MArrsV1: How much do you think you owe now on missed or overdue payments?"]
+  v42["MArr2Yr1: In the last two years have you fallen one or more consecutive payments behind on this mortgage or loan?"]
+  v43["DBurdH: To what extent is keeping up with all of the mortgage or loan repayments and interest payments a financial burden to your household? Would you say it was…"]
+  v44["EqOld: At the last interview, you said that you had made an arrangement to raise money using the value of your home. Do you still have this arrangement?"]
+  v45["EqNew: In the last two years, have you made any new arrangements to raise income or capital from the value of your current home?"]
+  v46["EqYes: It is possible to raise money based on the value of your home through an arrangement known as equity release. Have you or your husband / wife if Sex = Female / Male AND if xMarSta =2 / or your partner if xMarSta =6 raised any income or capital from the value of your current home?"]
+  v47["EqReas: What were your reasons for taking out this equity release arrangement…"]
+  v48["EqReasO: Please specify other reason s"]
+  v49["EqLoanV: What was the total value of the loan?"]
+  v50["EqLoanB: How much was the approximate value of the loan?"]
+  v51["GCPream: In order to build up a picture of your household assets, the next questions are about your household goods and any vehicles that you may have."]
+  v52["GCollec: Do you or anyone in your household if DVHsize > 1 own any collectibles or valuables – such as antiques, artworks, stamps etc – including items stored or kept elsewhere?"]
+  v53["GCollV: What is your estimate of the current market value of these items, even if you do not intend to sell them?"]
+  v54["GCollVb: What is the approximate market value of these items?"]
+  v55["GContVb: Thinking about the other items in this property that if GCollec = Yes you own if Household Size = 1 ; are owned by you or other members of your household if Household Size > 1 , what is the approximate replacement value of your household contents?"]
+  v56["VCarN: How many cars, vans or motorbikes, if any, do you or members of your household own? Please exclude lease vehicles, company vehicles and mobility cars."]
+  v57["VType: Thinking about your vehicle s , do they include…"]
+  v58["VEstV: What is the estimated total market value of your vehicle s ? Please exclude the lease, company or mobility vehicles and the value of any personalised number plates."]
+  v59["VEsVb: What do you think is the approximate market value of all of your vehicles? Please exclude lease, company or Mobility vehicles and the value of any personalised number plates."]
+  v60["VPers: Do you , or other members of your household , if DMHSize > 1 own any personalised or valuable number plates?"]
+  v61["VPerV: About how much are all the personalised number plates worth?"]
+  v62["VOTyp: Do you , or other members of your household , if DMHSize > 1 own any of the following…"]
+  v63["VOTyO: ENTER DETAILS OF OTHER VEHICLE"]
+  v64["VOVal: "]
+  v65["VOVlB: INDIVIDUAL QUESTIONNAIRE"]
+  v66["ISwitch: <PLEASE PRESS <F2> TO SAVE THE INTERVIEW SO FAR"]
+  v67["PersProx: IS THE INTERVIEW ABOUT NAMES i BEING GIVEN:"]
+  v68["ProxyNum: ENTER PERSON NUMBER OF PERSON GIVING THE INFORMATION"]
+  v69["YNtPart: THIS PERSON HAS A SPOUSE/PARTNER. PLEASE RECORD WHY THEY ARE NOT AVAILABLE TO GIVE A PROXY INTERVIEW FOR THIS PERSON"]
+  v70["YNtHhld: PLEASE RECORD WHY SOMEONE OUTSIDE OF THE HOUSEHOLD IS GIVING A PROXY INTERVIEW FOR THIS PERSON"]
+  v71["YNtPers: PLEASE RECORD REASON WHY ORIGINAL RESPONDENT IS NOT AVAILABLE FOR THIS INDIVIDUAL INTERVIEW"]
+  v72["RelnHH: PLEASE ENTER RELATIONSHIP OF THE PERSON GIVING THE INFORMATION TO THE ORIGINAL RESPONDENT E.G. SON/DAUGHTER/CARER"]
+  v73["EthEa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v74["EthE: Which one best describes your White If EthEa=1 ; Mixed If EthEa=2 ; Asian If EthEa=3 ; Black If EthEa=4 ; Other If EthEa=5 ethnic group or background?"]
+  v75["EthWa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  route48_from_page_1["from page_1 - route48"]
+  route48_from_page_1 -.->|route48| v1
+  v1 -->|HShare = 1 respondent shares ownership of this property with someone outside the household| v2
+  v3 -.->|HPrice= DK/RF respondent does not know how much they paid| v4
+  v5 -->|HCash = 1 received money to help with the purchase| v6
+  v5 -->|HCash = 1 received money to help with the purchase| v7
+  route53_from_page_1["from page_1 - route53"]
+  route53_from_page_1 -.->|route53| v8
+  v8 -.->|HValue = DK/RF respondent does not know amount to expect if they sold their home today| v9
+  route55_from_page_1["from page_1 - route55"]
+  route55_from_page_1 -.->|route55| v10
+  v12 -.->|RMNumb>0 and MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v13
+  v13 -->|MExtn = 1 respondent has taken out an extension or top-up on an existing mortgage| v14
+  v11 -.->|RMNumb>0 AND MNumbN>0 IF MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v15
+  v12 -.->|RMNumb>0 AND MNumbN>0 IF MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v15
+  v15 -.->|MChge = 1 respondent has taken out new mortgages or loans on the property in last two years| v16
+  v17 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v20
+  v11 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v20
+  v20 -->|MName1 = 1 - mortgage held in one person’s name| v21
+  v20 -->|MName1 = 2 - mortgage held jointly| v22
+  v11 -.->|MNumbN>0 OR MNumbN>0 - all mortgages| v23
+  v17 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v24
+  v11 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v24
+  v24 -->|MType1 <> 1 - mortgage type is not repayment| v25
+  v25 -->|MEndW1 = 1 - respondent has an endowment policy| v26
+  v25 -->|MEndW1 = 1 respondent has an endowment policy| v27
+  v27 -.->|MEndV1= DK/RF respondent does not know the value of the endowment policy| v28
+  v25 -->|MEndW1 = 1 If respondent has an endowment policy| v29
+  v24 -->|MType1 = 4 - mortgage is an all-in-one account| v30
+  v30 -->|MAllTy1 = 1 - respondent has an all-in-one current account mortgage| v31
+  v31 -.->|MNeg1 = DK/RF If respondent does not know negative balance amount| v32
+  v30 -->|MAllTy1 <> 1 - respondent does not have an all-in-one current account mortgage| v33
+  v33 -.->|MVal1 = DK/RF If respondent does not know amount outstanding on the mortgage or loan| v34
+  v30 -->|Mallty1 <> 1 - all mortgages that are not a current account mortgage| v36
+  v36 -.->|MPayM1 = DK/RF| v37
+  v38 -->|MIntpaid1 = yes respondent pays interest on their mortgage| v39
+  v17 -.->|MNumbO>0 OR MNumbN>0 all mortgages| v40
+  v11 -.->|MNumbO>0 OR MNumbN>0 all mortgages| v40
+  v40 -.->|MArrs1 = 3,4 respondent is 2 to 6 months behind or over 6 months behind on mortgage repayments| v41
+  v40 -->|MArrs1 = 1 respondent is up to date with payments| v42
+  v40 -->|MArrs1 = 1 respondent is up to date on mortgage repayments| v43
+  v44 -.->|EqOld = 2,3 respondent did not or did not know about having an equity release scheme in the previous wave| v45
+  v46 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v47
+  v45 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v47
+  v44 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v47
+  v46 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v49
+  v45 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v49
+  v44 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v49
+  v49 -.->|EqLoanV = DK/RF refuses or doesn’t know the value of the loan| v50
+  v52 -->|GCollec = 1 - respondent has collectables| v53
+  v53 -.->|GCollV = DK/RF - respondent does not know current market value of their collectables| v54
+  v56 -->|VCarN >= 1 If respondent has one or more vehicles| v57
+  v56 -->|VCarN >= 1 If respondent has one or more vehicles| v58
+  v58 -.->|VEstV = DK/RF - respondent does not know estimated value of vehicles| v59
+  v56 -.->|VCarN >0 OR VCarN = DK - respondent has some vehicles or does not know how many vehicles| v60
+  v60 -->|VPers = 1 respondent owns a personal number plate| v61
+  v62 -->|VOTyp = 5 respondent owns another vehicle type not listed| v63
+  v62 -.->|you sold this if VOTyp = one type - VOTpN = 1 / these if VOTyp = more than one type - VOTpN >1 / the other vehicle s if VOTyp = other type caravan/trailer, boat, plane, bicycle, other type of vehicle fill in only valid VOTyp response s , about how much in total would you get for it/them before paying off any money owing?| v64
+  v64 -.->|VOVal = DK/RF respondent does not know the value of their other vehicles| v65
+  v66 -->|ISwitch = 1| v67
+  v67 -->|PersProx = 2| v68
+  v67 -.->|expected respondent has no partner in household AND If PersProx = 2 and ProxyNum = 17 If proxy is not a household member| v70
+  v68 -.->|expected respondent has no partner in household AND If PersProx = 2 and ProxyNum = 17 If proxy is not a household member| v70
+  v67 -.->|PersProx = 2 and ProxyNum <17 If proxy is a household member| v71
+  v68 -.->|PersProx = 2 and ProxyNum <17 If proxy is a household member| v71
+  v68 -->|ProxyNum = 17 If proxy is not a household member| v72
+  v73 -.->|EthEa = 1,2,3,4,5| v74
+  route112_to_page_3["route112 -> go to page_3"]
+  v75 -.->|route112| route112_to_page_3
+  route114_to_page_3["route114 -> go to page_3"]
+  v74 -.->|route114| route114_to_page_3
+  route117_to_page_3["route117 -> go to page_3"]
+  v67 -.->|route117| route117_to_page_3
+  route120_to_page_3["route120 -> go to page_3"]
+  v67 -.->|route120| route120_to_page_3
+  route123_to_page_3["route123 -> go to page_3"]
+  v67 -.->|route123| route123_to_page_3
+  route124_to_page_3["route124 -> go to page_3"]
+  v67 -.->|route124| route124_to_page_3
+  route125_to_page_3["route125 -> go to page_3"]
+  v67 -.->|route125| route125_to_page_3
+  route129_to_page_3["route129 -> go to page_3"]
+  v67 -.->|route129| route129_to_page_3
+  route130_to_page_3["route130 -> go to page_3"]
+  v67 -.->|route130| route130_to_page_3
+  route131_to_page_3["route131 -> go to page_3"]
+  v67 -.->|route131| route131_to_page_3
+  route164_to_page_3["route164 -> go to page_3"]
+  v67 -.->|route164| route164_to_page_3
+  route268_to_page_5["route268 -> go to page_5"]
+  v67 -.->|route268| route268_to_page_5
+  route271_to_page_5["route271 -> go to page_5"]
+  v67 -.->|route271| route271_to_page_5
+  route274_to_page_5["route274 -> go to page_5"]
+  v67 -.->|route274| route274_to_page_5
+  route277_to_page_5["route277 -> go to page_5"]
+  v67 -.->|route277| route277_to_page_5
+  route280_to_page_5["route280 -> go to page_5"]
+  v67 -.->|route280| route280_to_page_5
+  route283_to_page_5["route283 -> go to page_5"]
+  v67 -.->|route283| route283_to_page_5
+  route762_to_page_9["route762 -> go to page_9"]
+  v67 -.->|route762| route762_to_page_9
+  route886_to_page_11["route886 -> go to page_11"]
+  v67 -.->|route886| route886_to_page_11
+  route887_to_page_11["route887 -> go to page_11"]
+  v67 -.->|route887| route887_to_page_11
+  route888_to_page_11["route888 -> go to page_11"]
+  v67 -.->|route888| route888_to_page_11
+  route889_to_page_11["route889 -> go to page_11"]
+  v67 -.->|route889| route889_to_page_11
+  route890_to_page_11["route890 -> go to page_11"]
+  v67 -.->|route890| route890_to_page_11
+  route891_to_page_11["route891 -> go to page_11"]
+  v67 -.->|route891| route891_to_page_11
+  route892_to_page_11["route892 -> go to page_11"]
+  v67 -.->|route892| route892_to_page_11
+  route893_to_page_11["route893 -> go to page_11"]
+  v67 -.->|route893| route893_to_page_11
+  route928_to_page_12["route928 -> go to page_12"]
+  v67 -.->|route928| route928_to_page_12

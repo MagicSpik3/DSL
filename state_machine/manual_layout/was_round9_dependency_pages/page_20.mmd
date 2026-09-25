@@ -1,0 +1,94 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 20 of 20
+  v1["Prem1: What is the first line of your address?"]
+  v2["Prem2: What is the second line of your address?"]
+  v3["Prem3: What is the third line of your address?"]
+  v4["Prem4: What is the fourth line of your address?"]
+  v5["KnowPC: Do you know your postcode?"]
+  v6["OutCode: PLEASE ENTER FIRST PART OF POSTCODE IF KNOWN"]
+  v7["PostTown: And in which town is your address?"]
+  v8["InCode: PLEASE ENTER SECOND PART OF POSTCODE"]
+  v9["MovAdd1: What is the first line of your new address, please include the house number or name, and the name of the street or road?"]
+  v10["MovAdd2: What is the second line of your address?"]
+  v11["MovAdd3: What is the third line of your address?"]
+  v12["MovAdd4: What is the fourth line of your address?"]
+  v13["MKnowPC: Do you know the postcode of your new address?"]
+  v14["MOutCode: PLEASE ENTER FIRST PART OF POSTCODE IF KNOWN"]
+  v15["MLetter: CERTAIN E, EC, SW, W AND WC POSTCODES INCLUDE A LETTER AT THE END OF THE FIRST PART."]
+  v16["MovDist: What is the district of your address if there is one ?"]
+  v17["MovTown: And what is the post town of your address?"]
+  v18["MInCode: PLEASE ENTER SECOND PART OF POSTCODE"]
+  v19["MovPostC: If you know it, what is the postcode for this address?"]
+  v20["MEffdat: May I know what date you will be moving into your new address please?"]
+  v21["Vouch1: Would you NAME like to receive the £10 e-voucher by email or the £10 gift voucher by post"]
+  v22["VouvhPostal: The voucher will be posted to you."]
+  v23["SampNam: PLEASE CHECK THAT THE REPONDENT’S NAME IS CORRECT"]
+  v24["PNam: PLEASE ENTER RESPONDENT’S FULL NAME"]
+  v25["Vouch2: May I just check that we have the correct name and address to which to send the gift voucher?"]
+  v26["SampAdd: We will send the voucher to the following address:"]
+  v27["VAdd1: What is the first line of your/ Name’s address, please include the house number or name, and the name of the street or road?"]
+  v28["VAdd2: What is the second line of your/ name's address?"]
+  v29["VAdd3: What is the third line of your/ name's address?"]
+  v30["VAdd4: What is the fourth line of your/ name's address?"]
+  v31["VDstrct: And in which district is your/ name's address?"]
+  v32["VPstTwn: And in which town is your/ name's address?"]
+  v33["VPostCd: If you know it, what is the postcode for this address?"]
+  v34["Vouch3: If Email <> Empty - there was an email entered for the respondent at the KITE block"]
+  v35["Vouch6: If Email <> Empty - there was an email entered for the respondent at the KITE block"]
+  v36["Vouch4: If Email = Empty - there was no email entered for the respondent at the KITE block"]
+  v37["Vouch5: If Email <> Empty AND Vouch6 = 1 OR Email = Empty - there was no email entered for the respondent at the KITE block or is there was no email entered for the respondent at the KITE block and the email address is correct"]
+  v38["AccurOth: PLEASE RECORD ANY FURTHER COMMENTS ABOUT THE ACCURACY OF ANSWERS"]
+  v39["ContAdm: PLEASE ENSURE THAT THE FILTER SCREEN IS COMPLETED BEFORE THE CASE IS CODED AND RETURNED"]
+  v40["IntDone: HAVE YOU COMPLETED ALL POST-INTERVIEW CODING, CHECKING & NOTES?"]
+  v41["IntF2Tri: We will ask you some questions about how this case was carried out. Please make every attempt to answer these questions correctly. You may have to look through your personal notes or any information captured in other systems FWMT or Oracle to help you to answer these questions."]
+  v42["PhoneNo: How was the phone number obtained for this address?"]
+  v43["KTN2: Did you attempt to visit this address as part of KtN?"]
+  v44["F2FTrial: Did you offer a face-to-face/in-person interview at this address?"]
+  v45["InHouse: When offering a face-to-face/in-person interview, which one of the following applied for your visit?"]
+  route906_from_page_19["from page_19 - route906"]
+  route906_from_page_19 -.->|route906| v1
+  route907_from_page_19["from page_19 - route907"]
+  route907_from_page_19 -.->|route907| v2
+  route908_from_page_19["from page_19 - route908"]
+  route908_from_page_19 -.->|route908| v3
+  v2 -.->|CheckAdd = 2 AND Prem2 = Response - address for respondent is incorrect and they have given a second line| v3
+  route910_from_page_19["from page_19 - route910"]
+  route910_from_page_19 -.->|route910| v4
+  v3 -.->|CheckAdd = 2 AND Prem3 = Response - address for respondent is incorrect and they have given a third line| v4
+  route912_from_page_19["from page_19 - route912"]
+  route912_from_page_19 -.->|route912| v5
+  v5 -.->|KnowPc = 1 – respondent knows the postcode| v6
+  route914_from_page_19["from page_19 - route914"]
+  route914_from_page_19 -.->|route914| v6
+  route915_from_page_19["from page_19 - route915"]
+  route915_from_page_19 -.->|route915| v6
+  route916_from_page_19["from page_19 - route916"]
+  route916_from_page_19 -.->|route916| v7
+  route917_from_page_19["from page_19 - route917"]
+  route917_from_page_19 -.->|route917| v8
+  v5 -.->|CheckAdd = 2 AND KnowPC = 1 AND OutCode = Response - address for respondent is incorrect and they know the postcode and outcode derived first part of postcode, from lookup = Response| v8
+  v6 -.->|CheckAdd = 2 AND KnowPC = 1 AND OutCode = Response - address for respondent is incorrect and they know the postcode and outcode derived first part of postcode, from lookup = Response| v8
+  route920_from_page_19["from page_19 - route920"]
+  route920_from_page_19 -.->|route920| v8
+  v13 -.->|MKnowPc = 1 – respondent knows the postcode| v14
+  v13 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v15
+  v14 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v15
+  v6 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v15
+  v13 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v18
+  v14 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v18
+  v6 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v18
+  route928_from_page_4["from page_4 - route928"]
+  route928_from_page_4 -.->|route928| v20
+  v21 -->|Vouch1 = No| v22
+  v23 -.->|SampNam = 2, Empty - respondent’s name is incorrect or blank| v24
+  v21 -->|Vouch1 = 2 - respondent would like to receive the voucher by post| v25
+  v21 -->|Vouch1 = 2 - respondent would like to receive the voucher by post| v26
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v27
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v28
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v29
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v30
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v31
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v32
+  v26 -->|SampAdd = 2 - respondent’s address is incorrect| v33
+  v44 -->|F2FTrial=Yes| v45

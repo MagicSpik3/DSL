@@ -1,0 +1,143 @@
+flowchart LR
+  %% Page 10 of 12
+  v1["RentIncAm: In total how much do you receive each month, before deducting income tax but after deducting allowable expenses? Do not include the rent you have already provided for boarders / lodgers at this address."]
+  v2["RentIncBnd: About how much, on average, would you estimate you received each month?"]
+  v3["OthSrc: Please tell me whether you are receiving any of the following regular payments?"]
+  v4["OiNRrPr: How often do you usually receive regular redundancy payments from former employer s ?"]
+  v5["OiNRrSp: Record details of frequency of payments"]
+  v6["OiNRrAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v7["OiNRB: About how much would you estimate the amount you receive each month from former employer s , after tax is deducted net , to be?"]
+  v8["OiNGTPr: How often do you usually receive regular payments from Government Training Schemes?"]
+  v9["OiNGTSp: Record details of frequency of payments"]
+  v10["OiNGTAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v11["OiNGB: About how much would you estimate the amount you receive each month from Government Training Schemes, after tax is deducted net , to be?"]
+  v12["ReglrPy: Please tell me whether you are receiving any of the following regular payments?"]
+  v13["OiNEGPr: How often do you usually receive payments from the educational grant?"]
+  v14["OiNEGSp: Record details of frequency of payments"]
+  v15["OiNEGAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v16["OiNEGB: About how much would you estimate the amount you receive each year from the educational grant, after tax is deducted, to be?"]
+  v17["OiNFRPr: How often do you usually receive payments from friends or relatives outside the household?"]
+  v18["OiNFRSp: Record details of frequency of payments"]
+  v19["OiNFRAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v20["OiNFrB: About how much do you estimate the amount you receive each month from friends or relatives outside the household, after tax is deducted, to be?"]
+  v21["OiNMAPr: How often do you usually receive payments from maintenance/ alimony/ separation allowance?"]
+  v22["OiNMASp: Record details of frequency of payments"]
+  v23["OiNMAAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v24["OiNMAB: About how much do you estimate the amount you receive each month from maintenance/ alimony/ separation allowance, after tax is deducted, to be?"]
+  v25["OiNRoPr: How often do you usually receive payments from royalties?"]
+  v26["OiNRoSp: Record details of frequency of payments"]
+  v27["OiNRoAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v28["OiNRoB: About how much do you estimate the amount you receive each month from royalties, after tax is deducted, to be?"]
+  v29["OthIncOth: Please describe the other forms of income, not already mentioned, that you receive regular payments from."]
+  v30["OiNOtPr: How often do you usually receive payments from this source / these other sources?"]
+  v31["OiNOtSp: Record details of frequency of payments"]
+  v32["OiNOtAm: And how much do you usually receive after tax is deducted e.g net ?"]
+  v33["OiNOTB: About how much do you estimate the amount you receive each month from other income, after tax is deducted, to be?"]
+  v34["CoroInc: Ask 1 person per household"]
+  v35["IncrCoro: What is the main reason for your household income increasing?"]
+  v36["IncrCoOth: Ask if IncrCoro = 5"]
+  v37["DecrCoro: What is the main reason for your household income decreasing?"]
+  v38["DecrCoOth: Ask if DecrCoro = 7"]
+  v39["CoroExp: Ask 1 person per household"]
+  v40["CoroAbility: Ask 1 person per household"]
+  v41["CoroSav: Ask 1 person per household"]
+  v42["IncrCoroSav: What is the main reason for your household accessible savings increasing?"]
+  v43["IncrOthSav: Ask if IncrCoroSav = 5"]
+  v44["DecrCoroSav: What is the main reason for your household accessible savings decreasing?"]
+  v45["DecrOthSav: Ask if DecrCoroSav = 8"]
+  v46["CoroExpSav: Ask 1 person per household"]
+  v47["SelectAd: Ask for each dependent child"]
+  v48["CaCTF: Ask for each child born on or after 01/09/2002 unless refused at SelectAd"]
+  v49["CaJISA: Now I am going to ask some questions about Junior ISAs. A Junior ISA or Junior Individual Savings Account is a tax efficient account designed for adults to save and invest on behalf of their children. This type of ISA has been available since November 2011. However, it has been possible to transfer your child's Child Trust Fund into a Junior ISA since April 2015."]
+  v50["CaCtV: How much is currently in his/ her Child Trust Fund if CaCTF=1 /Junior ISA CaJISA=1 ?"]
+  v51["CaCTvB: How much would you estimate is currently in his/her Child Trust Fund if CaCTF=1 /Junior ISA CaJISA=1 ?"]
+  v52["CaType1: What type of Child Trust Fund does Child’s name have?"]
+  v53["CaOpen: Was the account opened by…"]
+  v54["CaType2: What type of Junior ISA does Child’s name have?"]
+  v55["CaContr: Apart from Child Trust Fund vouchers received from the Government , during the last 2 years who contributed to the Child Trust Fund/Junior ISA ?"]
+  v56["CaContram1: How much did the parent s inside the household/the parent s outside the household/child’s grandparent s / other relative s /friend s of the family/the other people put into child's name account in the last 2 years?"]
+  v57["CaContramb1: How much would you estimate the parent s inside the household/the parent s outside the household/child’s grandparent s / other relative s /friend s of the family/the other people put into Child’s name account in the last 2 years?"]
+  v58["CaExtra: QRelGrid.QTRelTo.QRelTo SelectAd .RFrom LChInc = StChild AND Cacontr = CAParl - child’s parent is inside of the household"]
+  v59["CaSav: Aside from the Child Trust Fund/Junior ISA , does Child’s name have any savings in a bank or building society account, or any National Savings and Investments such as Children's Bonus Bonds, or any stocks and shares, or other investments?"]
+  v60["CaSvV: Aside from the Child Trust Fund/Junior ISA , what would you say is the current value of the savings and investments held by Child’s name ?"]
+  v61["CaSvB: How much would you estimate is the current value of the savings and investments held by Child’s name aside from the Child Trust Fund/Junior ISA ?"]
+  v62["IHRecnt: In the last two years, have you personally received an inheritance valued at £1,000 or more, that is in money, property, or goods of any kind?"]
+  v63["IHRcNum: How many inheritances of £1,000 or more have you received in the last two years?"]
+  v64["IWat: Thinking of your first/second/third inheritance, what did you receive in your inheritance?"]
+  v65["IWho1: From whom did you receive that inheritance?"]
+  v66["IVal1: Still thinking of your first/second/ third inheritance what was the total value, at that time, of everything you inherited, after tax and other deductions?"]
+  v67["IValB1: About how much would you estimate was the value of the inheritance at that time after tax and other deductions ?"]
+  v68["IHse: What did you do with the property or share in the property that you received?"]
+  v69["IGds: What did you do with the non-property inheritance that you received?"]
+  v70["IHEvE: * And now thinking back further than the last two years, apart from this inheritance IHRcNum = 1 / apart from this these inheritances IHRcNum > 1 have you personally received an inheritance valued at £1,000 or more, that is of money, property or goods?"]
+  v71["IHEvNoE: If IHEvE=1 – one inheritance received before"]
+  v72["IEYrE1: If IHEvNoE >= 1 – loop for up to 3 inheritance received before"]
+  v73["IEValE1: If IHEvNoE >= 1"]
+  v74["IEValBE1: About how much would you estimate was the value of the inheritance at that time after tax and other deductions ?"]
+  v75["TransIntro: I would like to ask you some questions about gifts and loans transferred between family and friends during lifetime – that is, a gift or loan worth more than £500 at any one time."]
+  route769_from_page_9["from page_9 - route769"]
+  route769_from_page_9 -.->|route769| v1
+  v1 -.->|RentIncAm = DK/RF - respondent does not know rent income amount| v2
+  v3 -->|OthSrc = 1 - respondent receives regular redundancy payments from former employer s| v4
+  v4 -->|OiNRrPr = 97 - frequency of payment is ‘neither’ weekly, monthly or annual| v5
+  v4 -.->|OiNRrPr = 1,2, 3 or 97| v6
+  v4 -.->|OiNRrPr OR OiNRrAm= DK/RF| v7
+  v6 -.->|OiNRrPr OR OiNRrAm= DK/RF| v7
+  v3 -->|OthSrc = 2 - respondent receives money from Government Training Schemes, such as Youth Training allowance| v8
+  v8 -->|OiNGTPr = 97 - respondent does not know frequency of payment| v9
+  v8 -.->|OiNGTPr = 1,2,3, 97 - respondent receives payments from Government training schemes weekly, monthly, yearly or other frequency.| v10
+  v8 -.->|OiNGTPr = DK/RF OR OiNGTAm = DK/RF - respondent does not know how much they usually receive each month from Government Training Schemes| v11
+  v10 -.->|OiNGTPr = DK/RF OR OiNGTAm = DK/RF - respondent does not know how much they usually receive each month from Government Training Schemes| v11
+  v12 -->|ReglrPy = 1 - respondent is receiving an educational grant| v13
+  v13 -->|OiNEGPr = 97 - respondent does not know frequency of payment| v14
+  v13 -.->|OiNEGPr = 1,2,3, 97 - respondent receives payments from educational grant weekly, monthly, yearly or other frequency.| v15
+  v13 -.->|OiNEGPr OR OiNEGAm= DK/RF - respondent does not know amount they usually receive each month from the educational grant| v16
+  v15 -.->|OiNEGPr OR OiNEGAm= DK/RF - respondent does not know amount they usually receive each month from the educational grant| v16
+  v12 -->|ReglrPy = 2 - receiving regular payments from friends or relatives outside the household| v17
+  v17 -->|OiNFrPr = 97 - respondent does not know frequency of payment| v18
+  v17 -.->|OiNFrPr = 1,2 or 3, 97| v19
+  v17 -.->|OiNFrPr = DK/RF OR OiNFrAm= DK/RF - If respondent does not know amount they usually receive each month from friends or relatives outside the household| v20
+  v19 -.->|OiNFrPr = DK/RF OR OiNFrAm= DK/RF - If respondent does not know amount they usually receive each month from friends or relatives outside the household| v20
+  v12 -->|ReglrPy = 3 - respondent is receiving maintenance, alimony or separation allowance| v21
+  v21 -->|OiNMAPr = 97 - respondent does not know frequency of payment| v22
+  v21 -.->|OiNMAPr = 1,2,3, 97 - respondent receives maintenance, alimony or separation allowance payments weekly, monthly, yearly or other frequency..| v23
+  v21 -.->|OiNMaPr= DK/RF OR OiNMaAm= DK/RF - respondent does not know amount they receive each month from maintenance/ alimony/ separation allowance| v24
+  v23 -.->|OiNMaPr= DK/RF OR OiNMaAm= DK/RF - respondent does not know amount they receive each month from maintenance/ alimony/ separation allowance| v24
+  v12 -->|ReglrPy = 4 -respondent is receiving royalties e.g. from land, books or performances| v25
+  v25 -->|OiNRoPr = 97 - respondent does not know frequency of payment| v26
+  v25 -.->|OiNRoPr = 1,2,3, 97 - If respondent receives payments from royalties weekly, monthly, yearly or other frequency.| v27
+  v25 -.->|OiNRoPr= DK/RF OR OiNRoAm= DK/RF -does not know amount they usually receive each month from royalties| v28
+  v27 -.->|OiNRoPr= DK/RF OR OiNRoAm= DK/RF -does not know amount they usually receive each month from royalties| v28
+  v12 -->|ReglrPy = 5 -respondent is receiving any other income not already mentioned in the questionnaire| v29
+  v12 -->|ReglrPy = 5 -respondent is receiving any other income not already mentioned in the questionnaire| v30
+  v30 -->|OiNOtPr = 97 - respondent does not know frequency of payment| v31
+  v30 -.->|OiNOtPr = 1,2,3, 97 - If respondent receives payments from any other income weekly, monthly, yearly or other frequency.| v32
+  v30 -.->|OiNOtPr = DK/RF OR OiNOtAm = DK/RF -does not know amount they usually receive each month from other sources of income not already mentioned in the questionnaire| v33
+  v32 -.->|OiNOtPr = DK/RF OR OiNOtAm = DK/RF -does not know amount they usually receive each month from other sources of income not already mentioned in the questionnaire| v33
+  v34 -->|CoroInc =1| v35
+  v35 -->|IncrCoro = 5| v36
+  v34 -->|CoroInc =2| v37
+  v37 -->|DecrCoro = 7| v38
+  v41 -->|CoroSav =1| v42
+  v42 -->|IncrCoroSav = 5| v43
+  v41 -->|CoroSav =2| v44
+  v44 -->|DecrCoroSav = 8| v45
+  v47 -.->|SelectAd <> RF AND Birth >= 2002,9,1 AND <= Birth2011,1,2| v48
+  v50 -.->|CaCtV = DK/RF - respondent does not know how much is in their trust fund/junior ISA| v51
+  v48 -.->|CaCTF = 1 AND RCaType = EMPTY OR RCaType=Response - child has a trust fund now but did not have a trust fund at the previous wave| v52
+  v48 -.->|CaCTF = 1 AND RCaType = Empty OR RCaType=Response - child has a trust fund now but did not have a trust fund at the previous wave| v53
+  v49 -->|CaJISA = 1 - child has a Junior ISA| v54
+  v48 -.->|CaCTF = 1 OR CaJISA = 1 - child has a trust fund or a junior ISA| v55
+  v49 -.->|CaCTF = 1 OR CaJISA = 1 - child has a trust fund or a junior ISA| v55
+  v55 -.->|CaContr = 1,2,3,4,5,6 .- someone has contributed to the child’s Trust Fund in the last 2 years| v56
+  v56 -.->|CaContram1 = DK/RF - If respondent does not know the amount contributed| v57
+  v47 -->|SelectAd <> RF - Ask for each child| v59
+  v59 -->|CaSav = 1 - child has other savings| v60
+  v60 -.->|CaSvV = DK/RF - respondent does not know the current value of the savings held by Child’s name| v61
+  v62 -->|IHRecnt = 1 - respondent has received an inheritance| v63
+  v63 -->|IHRcNum >= 1 - respondent has one or more inheritance| v64
+  v63 -->|IHRcNum >= 1 - respondent has one or more inheritance| v65
+  v63 -->|IHRcNum >= 1| v66
+  v66 -.->|IVal1 = DK/RF - respondent does not know the total value inherited| v67
+  v64 -->|IWat = 1 - respondent received property| v68
+  v64 -.->|IWat = 2,3,4,5 - respondent received non-property inheritance| v69

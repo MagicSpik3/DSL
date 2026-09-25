@@ -1,0 +1,16 @@
+survey: was_round9
+page_size: 75
+pages: 12
+files:
+- page_1: page_1.mmd (75 variables)
+- page_2: page_2.mmd (75 variables)
+- page_3: page_3.mmd (75 variables)
+- page_4: page_4.mmd (75 variables)
+- page_5: page_5.mmd (75 variables)
+- page_6: page_6.mmd (75 variables)
+- page_7: page_7.mmd (75 variables)
+- page_8: page_8.mmd (75 variables)
+- page_9: page_9.mmd (75 variables)
+- page_10: page_10.mmd (75 variables)
+- page_11: page_11.mmd (75 variables)
+- page_12: page_12.mmd (67 variables)

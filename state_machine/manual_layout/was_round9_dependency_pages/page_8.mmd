@@ -1,0 +1,215 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 8 of 20
+  v1["WHReDMob: Who do you receive the mobility component of Disability Living Allowance for?"]
+  v2["WhoRec: Who do you receive Attendance Allowance for?"]
+  v3["GetCA: Is there anyone getting Carer’s Allowance for looking after you?"]
+  v4["PComp: Is there anyone getting Carer’s Allowance for looking after you?"]
+  v5["CBTax: Can I check, do you or someone else in the household pay a high income Child Benefit tax charge on the Child Benefit you receive?"]
+  v6["CBTaxAmt: How much was this last time?"]
+  v7["CBTaxPD: How long a period did this cover?"]
+  v8["ExtBenAmt: How much was the extended payment of Housing Benefit/ rent rebate?"]
+  v9["GovPay: Are the DWP paying directly for any of the following things?"]
+  v10["GovBen: And which benefit has been reduced, as a result?"]
+  v11["GovAmt: How much in total is the DWP paying for this / these things per week?"]
+  v12["GovBefor: Just now, you said you received ^LDWP benefit last time. Was that.."]
+  v13["SFRepay: Are you at present making any repayments on any Budgeting loans / Advances or Local Authority loans?"]
+  v14["RepayAmt: How much in total do you repay, per week?"]
+  v15["SFInc: Just now you said you received list of amounts for each of Income Support, JSA, ESA, Universal Credit, Pension Credit benefit last time. Was that…"]
+  v16["ComBAm: You have stated that you receive some benefits in combination. How much did you get altogether last time?"]
+  v17["LoanNum: You said earlier that you had a budgeting loan or budgeting advance from DWP and a loan or grant from your Local Authority if Country = Wales OR Country = England AND DWPloan IN SocFund AND LAloan IN SocFund / a budgeting loan or budgeting advance from DWP if Country = Wales OR Country = England OR Country = Scotland AND DWPloan IN SocFund / a loan or grant from your Local Authority if Country = Wales OR Country = England AND LAloan IN SocFund / a budgeting loan or budgeting advance from DWP and a loan or grant from your Local Authority, including a Crisis Grant or Community Care Grant from the Scottish Welfare Fund if Country = Scotland AND DWPloan IN SocFund AND LAloan IN SocFund / a loan or grant from your Local Authority, including a Crisis Grant or Community Care Grant from the Scottish Welfare Fund if Country = Scotland AND LAloan IN SocFund"]
+  v18["LoanAmt: About how much did you borrow?"]
+  v19["ComBPd: How long does this cover?"]
+  v20["TtBPrx: If 97 IN WAgeBen OR 97 IN DisBen OR 97 IN PenBen OR 97 IN KidBen OR 97 IN SocFund OR 97 IN OtherBen - respondent selected one of these/ more than one of these, but I don’t know which option for the benefits given."]
+  v21["OPenInt: The next section is about attitudes towards saving for retirement."]
+  v22["OUnder: Remind respondent of the scale if necessary: from 1 'Strongly agree' to 5 'Strongly disagree’"]
+  v23["OAccess: REMIND RESPONDENT OF THE SCALE IF NECESSARY: FROM 1 'STRONGLY AGREE' TO 5 'STRONGLY DISAGREE’"]
+  v24["MorSavRe: Which of these pension saving options would enable you to save more for retirement…"]
+  v25["OSaferet: * Which of these options do you think would be the safest way to save for retirement..."]
+  v26["OMakeMost: * And which one do you think could potentially make the most of your money…"]
+  v27["OTrustN: * Which of these would you trust for advice about saving for retirement…"]
+  v28["SBIntro: Now I'm going to ask some questions about any pension arrangements you have, these may be from employment or personal pension arrangements. Please note that here we are excluding the state retirement pension."]
+  v29["SBActNow: Are you, your employer if DVILO3a= InEmp AND Stat = Employee or anyone else on your behalf currently making regular contributions to any pension schemes?"]
+  v30["SBPUn: Have you, an employer or anyone else contributed to any other if SBActNow = 1 pension schemes in the past that you have not yet received any money from?"]
+  v31["SBPinPNow: Are you currently receiving any regular pension payments? Again do not consider State Pension payments in your response if DVAge >54"]
+  v32["SBPinPPast: Have you ever received any money from a pension scheme? other than the State Pension if PenBen = ‘State Retirement Pension' This could have been in the form of regular payments or as lump sum."]
+  v33["SBPPa: Excluding the pensions you are in receipt of, do if SBPinPNow = 1 OR SBPinPPast = 1 ; Do if SBPinPNow = 2 AND SBPinPPast = 2 you expect to receive a pension from any schemes that someone else has contributed to? This could be from a previous spouse or partner even if they currently live in another household."]
+  v34["SBOutro: Thank you, with this information I can tailor the rest of the section to questions about:"]
+  v35["SBOutroCheck: SIGNAL: If SBOutro = 2 No - Signal text ‘Please go back and change the information, then change SBOutro to Yes’"]
+  v36["SBOutroNo: Thank you - based on your circumstances there is no need to ask any more pension-related questions."]
+  v37["ActIntro: Next I am going to ask you some questions about pension schemes you or someone on your behalf are currently contributing to."]
+  v38["ActTyp: Thinking about the pensions you or someone on your behalf are currently contributing to, do you have..."]
+  v39["ActEPNum: How many employer or workplace pensions are you, an employer or someone on your behalf currently contributing to? if SBActNow = Yes"]
+  v40["ActEPHigh: Now, I'm going to ask you about your two highest value employer pension schemes."]
+  v41["ActEPName: What is the name of your highest / second highest ActEPNum >1 value employer pension scheme?"]
+  v42["ActEPJb: Is your ActEPName pension related to your main job as main job name if occt = response or second job?"]
+  v43["ActEPSec: Is the employer that your ActEPName pension is related to…"]
+  v44["ActEPTyp: Now I am going to ask you which type of employer pension you have. There are two main types:"]
+  route257_from_page_7["from page_7 - route257"]
+  route257_from_page_7 -.->|route257| v2
+  route258_from_page_7["from page_7 - route258"]
+  route258_from_page_7 -.->|route258| v3
+  route259_from_page_7["from page_7 - route259"]
+  route259_from_page_7 -.->|route259| v4
+  route260_from_page_7["from page_7 - route260"]
+  route260_from_page_7 -.->|route260| v5
+  v5 -->|CBTax = 1| v6
+  v6 -->|CBTaxAmt > 0| v7
+  route263_from_page_7["from page_7 - route263"]
+  route263_from_page_7 -.->|route263| v8
+  v13 -->|SFRepay = 1| v14
+  v13 -->|SFRepay = 1 respondent is at present making any repayments on any Budgeting loans/ Advances or Local Authority Loans| v15
+  route266_from_page_7["from page_7 - route266"]
+  route266_from_page_7 -.->|route266| v16
+  route267_from_page_7["from page_7 - route267"]
+  route267_from_page_7 -.->|route267| v19
+  route268_from_page_4["from page_4 - route268"]
+  route268_from_page_4 -.->|route268| v21
+  route269_from_page_1["from page_1 - route269"]
+  route269_from_page_1 -.->|route269| v21
+  route270_from_page_4["from page_4 - route270"]
+  route270_from_page_4 -.->|route270| v21
+  route271_from_page_4["from page_4 - route271"]
+  route271_from_page_4 -.->|route271| v22
+  route272_from_page_1["from page_1 - route272"]
+  route272_from_page_1 -.->|route272| v22
+  route273_from_page_4["from page_4 - route273"]
+  route273_from_page_4 -.->|route273| v22
+  route274_from_page_4["from page_4 - route274"]
+  route274_from_page_4 -.->|route274| v24
+  route275_from_page_1["from page_1 - route275"]
+  route275_from_page_1 -.->|route275| v24
+  route276_from_page_4["from page_4 - route276"]
+  route276_from_page_4 -.->|route276| v24
+  route277_from_page_4["from page_4 - route277"]
+  route277_from_page_4 -.->|route277| v25
+  route278_from_page_1["from page_1 - route278"]
+  route278_from_page_1 -.->|route278| v25
+  route279_from_page_4["from page_4 - route279"]
+  route279_from_page_4 -.->|route279| v25
+  route280_from_page_4["from page_4 - route280"]
+  route280_from_page_4 -.->|route280| v26
+  route281_from_page_1["from page_1 - route281"]
+  route281_from_page_1 -.->|route281| v26
+  route282_from_page_4["from page_4 - route282"]
+  route282_from_page_4 -.->|route282| v26
+  route283_from_page_4["from page_4 - route283"]
+  route283_from_page_4 -.->|route283| v27
+  route284_from_page_1["from page_1 - route284"]
+  route284_from_page_1 -.->|route284| v27
+  route285_from_page_4["from page_4 - route285"]
+  route285_from_page_4 -.->|route285| v27
+  v31 -->|SBPinPNow = No| v32
+  v29 -.->|SBOutro = 1 AND switchboard SBActNow = 1 go to ActIntro Active Pensions section| v34
+  v37 -.->|SBOutro = 1 AND switchboard SBActNow = 1 go to ActIntro Active Pensions section| v34
+  v35 -.->|SBOutro = 2 go to SBOutroCheck| v34
+  v34 -->|SBOutro = 2 No| v35
+  v39 -.->|ActTyp=1, go to ActEPNum| v38
+  route292_from_page_9["from page_9 - route292"]
+  route292_from_page_9 -.->|route292| v38
+  v38 -.->|ActTyp=1,3| v39
+  v41 -.->|ActEPNum =1 or 2, go to ActEPName| v39
+  v40 -.->|ActEPNum > 2, go to ActEPHigh| v39
+  v39 -->|ActEPNum >2| v40
+  v39 -->|ActEPNum >=1| v41
+  v41 -.->|ActEPName = response AND DVilo3a = in employment| v42
+  route299_from_page_4["from page_4 - route299"]
+  route299_from_page_4 -.->|route299| v42
+  v44 -.->|ActEPJb=1, go to ActEPTyp| v42
+  v43 -.->|ActEPJb=2or 3, go to ActEPSec| v42
+  v41 -->|ActEPName = response| v43
+  v39 -->|ActEPNum >=1| v44
+  route304_to_page_9["route304 -> go to page_9"]
+  v39 -.->|route304| route304_to_page_9
+  route305_to_page_9["route305 -> go to page_9"]
+  v44 -.->|route305| route305_to_page_9
+  route306_to_page_9["route306 -> go to page_9"]
+  v43 -.->|route306| route306_to_page_9
+  route309_to_page_9["route309 -> go to page_9"]
+  v42 -.->|route309| route309_to_page_9
+  route311_to_page_9["route311 -> go to page_9"]
+  v44 -.->|route311| route311_to_page_9
+  route312_to_page_9["route312 -> go to page_9"]
+  v43 -.->|route312| route312_to_page_9
+  route313_to_page_9["route313 -> go to page_9"]
+  v44 -.->|route313| route313_to_page_9
+  route314_to_page_9["route314 -> go to page_9"]
+  v43 -.->|route314| route314_to_page_9
+  route315_to_page_9["route315 -> go to page_9"]
+  v44 -.->|route315| route315_to_page_9
+  route316_to_page_9["route316 -> go to page_9"]
+  v43 -.->|route316| route316_to_page_9
+  route317_to_page_9["route317 -> go to page_9"]
+  v42 -.->|route317| route317_to_page_9
+  route321_to_page_9["route321 -> go to page_9"]
+  v44 -.->|route321| route321_to_page_9
+  route322_to_page_9["route322 -> go to page_9"]
+  v43 -.->|route322| route322_to_page_9
+  route326_to_page_9["route326 -> go to page_9"]
+  v44 -.->|route326| route326_to_page_9
+  route327_to_page_9["route327 -> go to page_9"]
+  v43 -.->|route327| route327_to_page_9
+  route328_to_page_9["route328 -> go to page_9"]
+  v39 -.->|route328| route328_to_page_9
+  route329_to_page_9["route329 -> go to page_9"]
+  v41 -.->|route329| route329_to_page_9
+  route330_to_page_9["route330 -> go to page_9"]
+  v38 -.->|route330| route330_to_page_9
+  route335_to_page_9["route335 -> go to page_9"]
+  v39 -.->|route335| route335_to_page_9
+  route336_to_page_9["route336 -> go to page_9"]
+  v41 -.->|route336| route336_to_page_9
+  route337_to_page_9["route337 -> go to page_9"]
+  v38 -.->|route337| route337_to_page_9
+  route340_to_page_9["route340 -> go to page_9"]
+  v44 -.->|route340| route340_to_page_9
+  route341_to_page_9["route341 -> go to page_9"]
+  v43 -.->|route341| route341_to_page_9
+  route345_to_page_9["route345 -> go to page_9"]
+  v44 -.->|route345| route345_to_page_9
+  route346_to_page_9["route346 -> go to page_9"]
+  v43 -.->|route346| route346_to_page_9
+  route348_to_page_9["route348 -> go to page_9"]
+  v39 -.->|route348| route348_to_page_9
+  route349_to_page_9["route349 -> go to page_9"]
+  v41 -.->|route349| route349_to_page_9
+  route350_to_page_9["route350 -> go to page_9"]
+  v38 -.->|route350| route350_to_page_9
+  route354_to_page_9["route354 -> go to page_9"]
+  v39 -.->|route354| route354_to_page_9
+  route355_to_page_9["route355 -> go to page_9"]
+  v41 -.->|route355| route355_to_page_9
+  route356_to_page_9["route356 -> go to page_9"]
+  v38 -.->|route356| route356_to_page_9
+  route359_to_page_9["route359 -> go to page_9"]
+  v38 -.->|route359| route359_to_page_9
+  route383_to_page_9["route383 -> go to page_9"]
+  v30 -.->|route383| route383_to_page_9
+  route385_to_page_9["route385 -> go to page_9"]
+  v30 -.->|route385| route385_to_page_9
+  route407_to_page_10["route407 -> go to page_10"]
+  v31 -.->|route407| route407_to_page_10
+  route408_to_page_10["route408 -> go to page_10"]
+  v32 -.->|route408| route408_to_page_10
+  route409_to_page_10["route409 -> go to page_10"]
+  v31 -.->|route409| route409_to_page_10
+  route410_to_page_10["route410 -> go to page_10"]
+  v32 -.->|route410| route410_to_page_10
+  route411_to_page_10["route411 -> go to page_10"]
+  v31 -.->|route411| route411_to_page_10
+  route412_to_page_10["route412 -> go to page_10"]
+  v32 -.->|route412| route412_to_page_10
+  route513_to_page_10["route513 -> go to page_10"]
+  v31 -.->|route513| route513_to_page_10
+  route514_to_page_10["route514 -> go to page_10"]
+  v32 -.->|route514| route514_to_page_10
+  route515_to_page_10["route515 -> go to page_10"]
+  v33 -.->|route515| route515_to_page_10
+  route517_to_page_10["route517 -> go to page_10"]
+  v33 -.->|route517| route517_to_page_10
+  route536_to_page_11["route536 -> go to page_11"]
+  v33 -.->|route536| route536_to_page_11
+  route537_to_page_11["route537 -> go to page_11"]
+  v31 -.->|route537| route537_to_page_11
+  route538_to_page_11["route538 -> go to page_11"]
+  v32 -.->|route538| route538_to_page_11

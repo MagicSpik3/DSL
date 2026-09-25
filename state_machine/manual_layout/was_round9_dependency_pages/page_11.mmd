@@ -1,0 +1,155 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 11 of 20
+  v1["PPaIncFOt: PLEASE SPECIFY ‘OTHER’ FREQUENCY OF PAYMENT"]
+  v2["PPaIncb: Can you give me an estimate of the amount you expect to receive monthly from this pension scheme when you retire?"]
+  v3["PPaAge: From what age can you expect to receive this money?"]
+  v4["PPaOutro: Thank you. That is the end of the questions about pensions from a previous partner."]
+  v5["PNAdviceUsed: Asked of all who have done something with their pension"]
+  v6["GovAdHow: Did you access guidance from the Government service…"]
+  v7["CaCTFPer: Now I am going to ask some questions about Child Trust Funds. A Child Trust Fund is a savings and investment account for children. Children born on or after 1 September 2002 and on or before 2 January 2011 receive a voucher for £250 from the government to start their account."]
+  v8["CaJISAPer: Now I am going to ask some questions about Junior ISAs. A Junior ISA or Junior Individual Savings Account is a tax efficient account designed for adults to"]
+  v9["CaCtVPer: How much is currently in your Child Trust Fund/Junior ISA?"]
+  v10["CaCTvBPer: How much would you estimate is currently in your Child Trust Fund/Junior ISA?"]
+  v11["FinvTyOut: Please do not include your Child Trust Fund/Junior ISA when you answer the following question."]
+  v12["CTFNewC: A Child Trust Fund is a savings and investment account for children. Children born on or after 1 September 2002 and on or before 2 January 2011 received a voucher for £250 from the government to start their account."]
+  v13["CTFPost18: You have said that you had a Child Trust Fund. Now that you are over 18 you have full access to this account. What have you done with your Child Trust Fund? Have you …"]
+  v14["CTFPost18O: Please describe what you have done with your Child Trust Fund"]
+  v15["FTypeAcc: The next questions ask about current accounts, savings accounts and investments you may have. Please do not include property, collectibles or valuables – only financial investments."]
+  v16["FTypeInv: Secondly, do you currently have any of these investments, including any held jointly or overseas…"]
+  v17["FInvTyO: What are the other financial assets you said you have?"]
+  v18["FCAcShInt: Are any of your CURRENT accounts held jointly with your spouse / Civil Partner / partner ?"]
+  v19["FCAcSh: Is it all or some of your CURRENT accounts that are held jointly with your spouse / Civil Partner / partner ?"]
+  v20["FCNumSh: ASK OR RECORD IF COUPLE BEING INTERVIEWED TOGETHER"]
+  v21["FCNumIn: And if CAcSh = 2 how many of your own if CAcSh = 2 current accounts do you have?"]
+  v22["FCOvDSh: Note that FCSuppr is a Blaise derived variable that is not mentioned anywhere in the paper questionnaire. - respondent has a current account that is held jointly and partner has not already answered questions about a joint account"]
+  v23["FCOvNSh: How many of your joint current accounts are overdrawn? Please ignore any negative balance s on your all-in-one current accounts if NumCurrAccM > 0"]
+  v24["DCOShV1: Thinking of the first… of your JOINT current accounts that is overdrawn. How much is the/this account overdrawn?"]
+  v25["DCOShVb1: About how much would you estimate that the account is overdrawn?"]
+  v26["FCShVal: Leaving aside accounts that are overdrawn how much do you and your partner have IN TOTAL in your JOINT current accounts at present?"]
+  v27["FCShVlb: About how much would you estimate is in your joint account s at present?"]
+  v28["FCOvDIn: Thinking now about your own current accounts, if FCAcSh <> 3 are you currently overdrawn on any of if FCNumIn > 1 your own if FCAcSh <> 3 current account s if FCNumIn > 1 ?"]
+  v29["FCOvNIn: How many of your own current account s are overdrawn?"]
+  v30["DCOInV1: Thinking of the first… of your OWN current accounts that is overdrawn. How much is the/this account overdrawn?"]
+  v31["DCOInVb1: About how much would you estimate that the account is overdrawn?"]
+  v32["FCInVal: How much do you have in total if FCAcSh = 3 in your own if FCAcSh <> 3 current account s at present? Please ignore the account s with an overdraft"]
+  v33["FCInVlb: About how much would you estimate is in your own current account s at present?"]
+  v34["FCOvdif: Are you having any difficulty paying off the overdraft on any of your joint or your own current account s at present? Please ignore any negative balance s on your number all-in-one current account s ."]
+  v35["FSAcShInt: Are any of your SAVINGS or DEPOSIT accounts held jointly with your spouse / Civil Partner / partner ?"]
+  v36["FSAcSh: FSAcShInt = 1 has savings or deposit with partner in household"]
+  v37["FSNumSh: How many JOINT savings or deposit accounts do you have?"]
+  v38["FSNumIn: And how many of your own savings or deposit accounts do you have?"]
+  v39["FSTypSh: Thinking about your JOINT savings or deposit accounts, which of these types of account do you have…"]
+  v40["FSTypIn: And thinking about your OWN savings or deposit accounts, which of these types of account do you have…"]
+  v41["FSTypOt: Please describe the other type of savings or deposit account you mentioned."]
+  v42["FSShVal: How much do you and your partner have in total if FSNumSh = 1 in your joint savings and deposit account s if FSNumSh = 1 at present?"]
+  v43["FSShVlb: About how much would you estimate is in your joint savings or deposit account s at present?"]
+  v44["FSInVal: How much do you have in total if FSAcSh = 3 in your own if FSAcSh = 3 savings and deposit accounts at present?"]
+  route525_to_page_10["route525 -> go to page_10"]
+  v3 -.->|route525| route525_to_page_10
+  route529_to_page_10["route529 -> go to page_10"]
+  v3 -.->|route529| route529_to_page_10
+  route532_to_page_10["route532 -> go to page_10"]
+  v2 -.->|route532| route532_to_page_10
+  route533_to_page_10["route533 -> go to page_10"]
+  v3 -.->|route533| route533_to_page_10
+  route534_from_page_10["from page_10 - route534"]
+  route534_from_page_10 -.->|route534| v1
+  route535_from_page_10["from page_10 - route535"]
+  route535_from_page_10 -.->|route535| v3
+  route536_from_page_8["from page_8 - route536"]
+  route536_from_page_8 -.->|route536| v4
+  route537_from_page_8["from page_8 - route537"]
+  route537_from_page_8 -.->|route537| v5
+  route538_from_page_8["from page_8 - route538"]
+  route538_from_page_8 -.->|route538| v5
+  v5 -->|PNAdviceUsed = 4 received advice from The Government financial guidance service| v6
+  v7 -->|CaCTFPer = 2 does not have a child trust fund| v8
+  v7 -.->|CaCTFPer = 1 OR CaJISAPer =1 has child trust fund or has a junior ISA| v9
+  v8 -.->|CaCTFPer = 1 OR CaJISAPer =1 has child trust fund or has a junior ISA| v9
+  v7 -.->|CaCTFPer = 1 OR CaJISAPer = 1 has a child trust fund or Junior ISA| v11
+  v8 -.->|CaCTFPer = 1 OR CaJISAPer = 1 has a child trust fund or Junior ISA| v11
+  route545_from_page_1["from page_1 - route545"]
+  route545_from_page_1 -.->|route545| v12
+  route546_from_page_1["from page_1 - route546"]
+  route546_from_page_1 -.->|route546| v12
+  v12 -->|CTFNewC =1 had a child trust fund| v13
+  v13 -->|CTFPost18 = 20 Other| v14
+  v16 -->|FTypeInv = 6 respondent has other financial assets not already mentioned above| v17
+  v15 -.->|FTypeAcc = 1 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has a current account AND in a couple with someone, spouse/partner in household| v18
+  route551_from_page_1["from page_1 - route551"]
+  route551_from_page_1 -.->|route551| v18
+  route552_from_page_1["from page_1 - route552"]
+  route552_from_page_1 -.->|route552| v18
+  v18 -->|FCacShInt = 1 - respondent says that they hold current accounts jointly with partner| v19
+  v19 -.->|FCAcSh = 1,2 - all or some accounts held jointly| v20
+  v15 -.->|FTypeAcc = 1 AND FCAcSh <> 1 respondent has a current account in their name only| v21
+  v19 -.->|FTypeAcc = 1 AND FCAcSh <> 1 respondent has a current account in their name only| v21
+  v22 -.->|FCOvDSh = 1 AND FCNumSh >1 - respondent has more than one joint current account and is overdrawn on any of their joint current accounts| v23
+  v20 -.->|FCOvDSh = 1 AND FCNumSh >1 - respondent has more than one joint current account and is overdrawn on any of their joint current accounts| v23
+  v23 -->|FCovNSh > 0| v24
+  v24 -.->|DCOShV1 = DK/RF| v25
+  v26 -.->|FCShVal = DK/RF| v27
+  v19 -.->|FCAcSh <> 1 AND FTypeAcc = 1| v28
+  v15 -.->|FCAcSh <> 1 AND FTypeAcc = 1| v28
+  v28 -.->|FCOvDIn = 1 AND FCNumIn > 1| v29
+  v21 -.->|FCOvDIn = 1 AND FCNumIn > 1| v29
+  v28 -.->|FCOvDIn =1 AND FCOvNin >= 1| v30
+  v29 -.->|FCOvDIn =1 AND FCOvNin >= 1| v30
+  v19 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v32
+  v21 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v32
+  v29 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v32
+  v28 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v32
+  v32 -.->|FCInVal = DK/RF| v33
+  v15 -.->|FTypeAcc = 2 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has savings or deposit account AND is living as a couple with someone, spouse/partner in household| v35
+  route574_from_page_1["from page_1 - route574"]
+  route574_from_page_1 -.->|route574| v35
+  route575_from_page_1["from page_1 - route575"]
+  route575_from_page_1 -.->|route575| v35
+  v36 -.->|FSAcSh = 1,2| v37
+  v36 -.->|FSacSh <> 1 AND FTypeAcc = 2| v38
+  v15 -.->|FSacSh <> 1 AND FTypeAcc = 2| v38
+  v15 -.->|FTypeAcc = 2 AND FSAcSh = 1,2 AND FSSuppr <> 1| v39
+  v36 -.->|FTypeAcc = 2 AND FSAcSh = 1,2 AND FSSuppr <> 1| v39
+  v15 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v40
+  v36 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v40
+  v40 -->|FSTypIn = 5| v41
+  v15 -.->|FTypeAcc = 2 AND FSSuppr <> 1 AND FSAcSh = 1 OR FSAcSh = 2| v42
+  v36 -.->|FTypeAcc = 2 AND FSSuppr <> 1 AND FSAcSh = 1 OR FSAcSh = 2| v42
+  v42 -.->|FSShVal = DK/RF| v43
+  v15 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v44
+  v36 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v44
+  route589_to_page_12["route589 -> go to page_12"]
+  v44 -.->|route589| route589_to_page_12
+  route590_to_page_12["route590 -> go to page_12"]
+  v15 -.->|route590| route590_to_page_12
+  route592_to_page_12["route592 -> go to page_12"]
+  v15 -.->|route592| route592_to_page_12
+  route596_to_page_12["route596 -> go to page_12"]
+  v16 -.->|route596| route596_to_page_12
+  route597_to_page_12["route597 -> go to page_12"]
+  v16 -.->|route597| route597_to_page_12
+  route599_to_page_12["route599 -> go to page_12"]
+  v16 -.->|route599| route599_to_page_12
+  route617_to_page_12["route617 -> go to page_12"]
+  v16 -.->|route617| route617_to_page_12
+  route626_to_page_12["route626 -> go to page_12"]
+  v16 -.->|route626| route626_to_page_12
+  route633_to_page_13["route633 -> go to page_13"]
+  v16 -.->|route633| route633_to_page_13
+  route634_to_page_13["route634 -> go to page_13"]
+  v16 -.->|route634| route634_to_page_13
+  route635_to_page_13["route635 -> go to page_13"]
+  v16 -.->|route635| route635_to_page_13
+  route636_to_page_13["route636 -> go to page_13"]
+  v16 -.->|route636| route636_to_page_13
+  route637_to_page_13["route637 -> go to page_13"]
+  v16 -.->|route637| route637_to_page_13
+  route639_to_page_13["route639 -> go to page_13"]
+  v15 -.->|route639| route639_to_page_13
+  route640_to_page_13["route640 -> go to page_13"]
+  v16 -.->|route640| route640_to_page_13
+  route763_to_page_15["route763 -> go to page_15"]
+  v22 -.->|route763| route763_to_page_15
+  route764_to_page_15["route764 -> go to page_15"]
+  v28 -.->|route764| route764_to_page_15

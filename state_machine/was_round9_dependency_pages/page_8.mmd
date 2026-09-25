@@ -1,0 +1,169 @@
+flowchart LR
+  %% Page 8 of 12
+  v1["FLfSiV: What is the current value of your single premium policy or investment bonds?"]
+  v2["FLfSiVb: How much would you estimate the current value of your single premium policy or investment bonds is?"]
+  v3["FLfFSV: What is the current value of your Friendly Society Tax Exempt Savings Plan?"]
+  v4["FLfFSVb: How much would you estimate the current value of your Friendly Society Tax Exempt Savings Plan is?"]
+  v5["FLfTeV: What is the current value of your insurance policy that will pay a lump sum at a specified date?"]
+  v6["FLfTeVb: How much would you estimate the current value of your insurance policy that will pay a lump sum at a specified date is?"]
+  v7["CashTyp: Now thinking of the currency or cash you mentioned earlier, which of the following do you have…"]
+  v8["CashVal: What is the total value of your UK Pounds held in cash?"]
+  v9["CashValB: How much would you estimate the total value of your UK Pounds held in cash is?"]
+  v10["CurrVal: What is the total value, in pounds sterling, of your foreign currency?"]
+  v11["CurrValB: How much would you estimate the total value of your foreign currency is?"]
+  v12["ECashVal: What is the total value of your e-money and prepaid accounts such as PayPal?"]
+  v13["ECashValB: How much would you estimate the total value of your e-money and prepaid accounts such as PayPal is?"]
+  v14["CryptNum: Now thinking of the cryptocurrency you mentioned earlier, how many different types of cryptocurrency do you have?"]
+  v15["CryptVal: What is the current total value of your cryptocurrency in pounds sterling?"]
+  v16["CryptValB: How much would you estimate the current value of your cryptocurrency is?"]
+  v17["CryptTime: How many years have you held cryptocurrency?"]
+  v18["CryptRet: What returns on investment have you had from cryptocurrency since you first invested in it, in pounds sterling equivalent?"]
+  v19["FInvOtV: Now thinking of the other financial assets that you “have” for those who only have “other financial assets” “mentioned earlier” for those who have other financial assets other than just “Other” , what is the current value of these assets?"]
+  v20["FInvOVb: How much would you estimate the current value of your other financial assets is?"]
+  v21["FIncV: Now thinking of all of the accounts and investments that you have told me about, how much income have you received in total in interest, dividends or return on your investments in the last 12 months , including any winnings on premium bonds for those who have premium bonds at FNSavTyp ?"]
+  v22["FIncVb: How much would you estimate you have received in income from interest, dividends or return on investments in the last 12 months?"]
+  v23["FInfLoan: INDIVIDUAL PROMPT: CODE ALL THAT APPLY"]
+  v24["FInfLV: If respondent has loaned money to someone which will be repaid at some time"]
+  v25["FLoanVB: How much would you estimate the total amount you have loaned to other people is?"]
+  v26["FInfV: How much in total do you have saved in savings and loans clubs and given to someone else to look after if FInfLoan = 1 AND 3 ; have you given to someone else to look after if FInfLoa = 1 ; do you have saved in savings and loans clubs if FInfLoan = 3 ?"]
+  v27["FInfVB: How much would you estimate the total amount do you have saved in savings and loans clubs and/or given to someone else to look after if FInfLoan = 1 AND 3 ; given to someone else to look after if FInfLoan = 1 ; saved in savings and loans clubs if FInfLoan = 3 ?"]
+  v28["UProp: Apart from this accommodation do you own any of the following types of land or property…"]
+  v29["UPropO: Enter details of other real estate"]
+  v30["UNumHs: How many second homes in the UK do you own?"]
+  v31["UBuyLet: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v32["UNumBd: How many other buildings in the UK do you own?"]
+  v33["UNumLa: How many different parcels of land in the UK do you own?"]
+  v34["UNumOv: How many different overseas properties or parcels of land do you own?"]
+  v35["UNumRe: How many other properties do you own?"]
+  v36["UPrSh: If respondent owns any property other than buy-to-let property in the UK residential property which is let for profit"]
+  v37["UBuyToL1: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v38["UPNo1: Which other household members share this ownership with you?"]
+  v39["UValS: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v40["UValBS: What would you estimate is the amount your share of this other houses, flats, holiday homes in the UK is worth?"]
+  v41["UDebtS: And how much is your share of any outstanding mortgages or loans secured on the Other houses/ flats/ holiday homes in the UK ?"]
+  v42["UDebtBS: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v43["UGdVBS: Thinking about the items in this property/these properties that you own/ are owned by you or other members of your household, what is the approximate replacement value of your share of the household contents?"]
+  v44["UValL: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v45["UValBL: What would you estimate is the amount your share of this buy to let property in the UK is worth?"]
+  v46["UDebtL: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v47["UDebtBL: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v48["UGdVBL: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v49["UValO: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v50["UValBO: What would you estimate is the amount your share of this other buildings in the UK is worth?"]
+  v51["UDebtO: And how much is your share of any outstanding mortgages or loans secured on the other buildings in the UK?"]
+  v52["UDebtBO: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v53["UValLU: Apart from any property included in the value of your business es , if you sold it/them other areas of land in the UK , about how much would it / they/ your share be worth?"]
+  v54["UValBLU: What would you estimate the amount your share of this other areas of land in the UK is worth?"]
+  v55["UDebtLU: And how much is your share of any outstanding mortgages or loans secured on the other areas of land in the UK?"]
+  v56["UDebtBLU: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v57["UValOS: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v58["UValBOS: What would you estimate the amount your share of this land or property overseas is worth?"]
+  v59["UDebtOS: And how much is your share of any outstanding mortgages or loans secured on the land or property overseas?"]
+  v60["UDebtBOS: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v61["UGdVBOS: Thinking about the items this property/these properties that you own/ are owned by you or other members of your household, what would you estimate the replacement value of your share of the household contents is?"]
+  v62["UValOR: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v63["UValBOR: What would you estimate the amount your share of this other items of real estate is worth?"]
+  v64["UDebtOR: And how much is your share of any outstanding mortgages or loans secured on the other items of real estate?"]
+  v65["UDebtBOR: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v66["DCIntr: I’d now like to ask you a few questions about any credit commitments you might have."]
+  v67["DCards: Do you have any credit or charge cards for which you are the main cardholder?"]
+  v68["DNumber: How many credit or charge accounts do you have for which you are the main cardholder?"]
+  v69["DWhichCard1: credit card s , or"]
+  v70["DSituationN1: Thinking about the latest statement s for your first/second/x remaining… credit/charge card s …"]
+  v71["DPurchase1: Since you paid the last balance in full, have you used the card s for any purchases, or is the current balance zero?"]
+  v72["DNam1: ALTHOUGH THE ACCOUNT MAY HAVE ADDITIONAL CARDHOLDERS, LEGALLY ANY DEBT IS ONLY HELD BY ONE PERSON THE MAIN CARDHOLDER ."]
+  v73["DAmount1: Can you tell me, what is the current balance on this/these credit/charge card s ?"]
+  v74["DAmtBand1: About how much would you estimate the amount currently on this/these credit/charge card s is?"]
+  v75["DAmSince1: How much have you spent on this/these card s since your last repayment?"]
+  route620_from_page_7["from page_7 - route620"]
+  route620_from_page_7 -.->|route620| v1
+  v1 -.->|FLfSiV = DK/RF| v2
+  route622_from_page_7["from page_7 - route622"]
+  route622_from_page_7 -.->|route622| v3
+  v3 -.->|FLfFSV = DK/RF| v4
+  route624_from_page_7["from page_7 - route624"]
+  route624_from_page_7 -.->|route624| v5
+  v5 -.->|FLfTeV = DK/RF| v6
+  route626_from_page_7["from page_7 - route626"]
+  route626_from_page_7 -.->|route626| v7
+  v7 -->|CashTyp = 1| v8
+  v8 -.->|CashVal = DK/RF| v9
+  v7 -->|CashTyp = 2| v10
+  v10 -.->|CurrVal = DK/RF| v11
+  v7 -->|CashTyp = 3| v12
+  v12 -.->|ECashVal = DK/RF| v13
+  route633_from_page_7["from page_7 - route633"]
+  route633_from_page_7 -.->|route633| v14
+  route634_from_page_7["from page_7 - route634"]
+  route634_from_page_7 -.->|route634| v15
+  route635_from_page_7["from page_7 - route635"]
+  route635_from_page_7 -.->|route635| v17
+  route636_from_page_7["from page_7 - route636"]
+  route636_from_page_7 -.->|route636| v18
+  route637_from_page_7["from page_7 - route637"]
+  route637_from_page_7 -.->|route637| v19
+  v19 -.->|FInvOtV = DK/RF| v20
+  route639_from_page_7["from page_7 - route639"]
+  route639_from_page_7 -.->|route639| v21
+  route640_from_page_7["from page_7 - route640"]
+  route640_from_page_7 -.->|route640| v21
+  v21 -.->|FIncV = DK/RF| v22
+  v23 -->|FInfLoan = 2| v24
+  v24 -.->|FInfLV = DK/RF| v25
+  v23 -.->|FInfLoan = 1, 3| v26
+  v26 -.->|FInfV = DK/RF| v27
+  v28 -->|UProp = 6| v29
+  v28 -->|UProp = 1| v30
+  v28 -->|UProp = 2| v31
+  v28 -->|UProp = 3| v32
+  v28 -->|UProp = 4| v33
+  v28 -->|UProp = 5| v34
+  v28 -->|UProp = 6| v35
+  v28 -.->|UProp = 1,3,4,5,6| v36
+  v28 -->|UProp = 2| v37
+  v28 -.->|respondent owns second homes in the UK, including time-share and holiday homes If UProp = 1| v39
+  v39 -.->|UValS = DK/RF| v40
+  v28 -->|UProp = 1| v41
+  v41 -.->|UDebtS = DK/RF| v42
+  v28 -->|UProp = 1| v43
+  v28 -->|UProp = 2| v44
+  v44 -.->|UValL = DK/RF| v45
+  v28 -->|UProp = 2| v46
+  v46 -.->|UDebtL = DK/RF| v47
+  v28 -->|UProp = 2| v48
+  v28 -->|UProp = 3| v49
+  v49 -.->|UValO = DK/RF| v50
+  v28 -->|UProp = 3| v51
+  v51 -.->|UDebtO = DK/RF| v52
+  v28 -->|UProp = 4| v53
+  v53 -.->|UValLU = DK/RF| v54
+  v28 -->|UProp = 4| v55
+  v55 -.->|UDebtLU = DK/RF| v56
+  v28 -->|UProp = 5| v57
+  v57 -.->|UValOS = DK/RF| v58
+  v28 -->|UProp = 5| v59
+  v59 -.->|UDebtOS = DK/RF| v60
+  v28 -->|UProp = 5| v61
+  v28 -->|UProp = 6| v62
+  v62 -.->|UValOR = DK/RF| v63
+  v28 -->|UProp = 6| v64
+  v64 -.->|UDebtOR = DK/RF| v65
+  v67 -->|DCards = 1 has credit or charge cards| v68
+  v68 -->|DNumber >= 1 respondent currently has credit or charge cards or accounts| v69
+  v68 -->|DNumber >= 1 respondent currently has credit or charge cards or accounts| v70
+  v70 -->|DSituationN1 = 1 full balance was repaid at the latest bill| v71
+  v70 -.->|DSituationN1 = 2,5,DK OR DPurchase = 1 respondent has an amount still outstanding or account not their responsibility| v72
+  v72 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v73
+  v70 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v73
+  v73 -->|DAmount1 = DK| v74
+  v71 -->|DPurchase1 = 1 - Credit or Charge Card Account has been used for additional purchases since repayment| v75
+  route691_to_page_9["route691 -> go to page_9"]
+  v75 -.->|route691| route691_to_page_9
+  route692_to_page_9["route692 -> go to page_9"]
+  v72 -.->|route692| route692_to_page_9
+  route693_to_page_9["route693 -> go to page_9"]
+  v70 -.->|route693| route693_to_page_9
+  route694_to_page_9["route694 -> go to page_9"]
+  v72 -.->|route694| route694_to_page_9
+  route695_to_page_9["route695 -> go to page_9"]
+  v70 -.->|route695| route695_to_page_9

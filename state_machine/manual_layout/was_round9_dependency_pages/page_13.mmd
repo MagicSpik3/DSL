@@ -1,0 +1,109 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 13 of 20
+  v1["CurrValB: How much would you estimate the total value of your foreign currency is?"]
+  v2["ECashVal: What is the total value of your e-money and prepaid accounts such as PayPal?"]
+  v3["ECashValB: How much would you estimate the total value of your e-money and prepaid accounts such as PayPal is?"]
+  v4["CryptNum: Now thinking of the cryptocurrency you mentioned earlier, how many different types of cryptocurrency do you have?"]
+  v5["CryptVal: What is the current total value of your cryptocurrency in pounds sterling?"]
+  v6["CryptValB: How much would you estimate the current value of your cryptocurrency is?"]
+  v7["CryptTime: How many years have you held cryptocurrency?"]
+  v8["CryptRet: What returns on investment have you had from cryptocurrency since you first invested in it, in pounds sterling equivalent?"]
+  v9["FInvOtV: Now thinking of the other financial assets that you “have” for those who only have “other financial assets” “mentioned earlier” for those who have other financial assets other than just “Other” , what is the current value of these assets?"]
+  v10["FInvOVb: How much would you estimate the current value of your other financial assets is?"]
+  v11["FIncV: Now thinking of all of the accounts and investments that you have told me about, how much income have you received in total in interest, dividends or return on your investments in the last 12 months , including any winnings on premium bonds for those who have premium bonds at FNSavTyp ?"]
+  v12["FIncVb: How much would you estimate you have received in income from interest, dividends or return on investments in the last 12 months?"]
+  v13["FInfLoan: INDIVIDUAL PROMPT: CODE ALL THAT APPLY"]
+  v14["FInfLV: If respondent has loaned money to someone which will be repaid at some time"]
+  v15["FLoanVB: How much would you estimate the total amount you have loaned to other people is?"]
+  v16["FInfV: How much in total do you have saved in savings and loans clubs and given to someone else to look after if FInfLoan = 1 AND 3 ; have you given to someone else to look after if FInfLoa = 1 ; do you have saved in savings and loans clubs if FInfLoan = 3 ?"]
+  v17["FInfVB: How much would you estimate the total amount do you have saved in savings and loans clubs and/or given to someone else to look after if FInfLoan = 1 AND 3 ; given to someone else to look after if FInfLoan = 1 ; saved in savings and loans clubs if FInfLoan = 3 ?"]
+  v18["UProp: Apart from this accommodation do you own any of the following types of land or property…"]
+  v19["UPropO: Enter details of other real estate"]
+  v20["UNumHs: How many second homes in the UK do you own?"]
+  v21["UBuyLet: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v22["UNumBd: How many other buildings in the UK do you own?"]
+  v23["UNumLa: How many different parcels of land in the UK do you own?"]
+  v24["UNumOv: How many different overseas properties or parcels of land do you own?"]
+  v25["UNumRe: How many other properties do you own?"]
+  v26["UPrSh: If respondent owns any property other than buy-to-let property in the UK residential property which is let for profit"]
+  v27["UBuyToL1: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v28["UPNo1: Which other household members share this ownership with you?"]
+  v29["UValS: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v30["UValBS: What would you estimate is the amount your share of this other houses, flats, holiday homes in the UK is worth?"]
+  v31["UDebtS: And how much is your share of any outstanding mortgages or loans secured on the Other houses/ flats/ holiday homes in the UK ?"]
+  v32["UDebtBS: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v33["UGdVBS: Thinking about the items in this property/these properties that you own/ are owned by you or other members of your household, what is the approximate replacement value of your share of the household contents?"]
+  v34["UValL: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v35["UValBL: What would you estimate is the amount your share of this buy to let property in the UK is worth?"]
+  v36["UDebtL: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v37["UDebtBL: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v38["UGdVBL: If respondent owns buy-to-let property in the UK residential property which is let for profit"]
+  v39["UValO: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v40["UValBO: What would you estimate is the amount your share of this other buildings in the UK is worth?"]
+  v41["UDebtO: And how much is your share of any outstanding mortgages or loans secured on the other buildings in the UK?"]
+  v42["UDebtBO: What would you estimate is your share of the amount of the outstanding mortgage or loan secured on this property?"]
+  v43["UValLU: Apart from any property included in the value of your business es , if you sold it/them other areas of land in the UK , about how much would it / they/ your share be worth?"]
+  v44["UValBLU: What would you estimate the amount your share of this other areas of land in the UK is worth?"]
+  route630_from_page_12["from page_12 - route630"]
+  route630_from_page_12 -.->|route630| v1
+  route631_from_page_12["from page_12 - route631"]
+  route631_from_page_12 -.->|route631| v2
+  v2 -.->|ECashVal = DK/RF| v3
+  route633_from_page_11["from page_11 - route633"]
+  route633_from_page_11 -.->|route633| v4
+  route634_from_page_11["from page_11 - route634"]
+  route634_from_page_11 -.->|route634| v5
+  route635_from_page_11["from page_11 - route635"]
+  route635_from_page_11 -.->|route635| v7
+  route636_from_page_11["from page_11 - route636"]
+  route636_from_page_11 -.->|route636| v8
+  route637_from_page_11["from page_11 - route637"]
+  route637_from_page_11 -.->|route637| v9
+  v9 -.->|FInvOtV = DK/RF| v10
+  route639_from_page_11["from page_11 - route639"]
+  route639_from_page_11 -.->|route639| v11
+  route640_from_page_11["from page_11 - route640"]
+  route640_from_page_11 -.->|route640| v11
+  v11 -.->|FIncV = DK/RF| v12
+  v13 -->|FInfLoan = 2| v14
+  v14 -.->|FInfLV = DK/RF| v15
+  v13 -.->|FInfLoan = 1, 3| v16
+  v16 -.->|FInfV = DK/RF| v17
+  v18 -->|UProp = 6| v19
+  v18 -->|UProp = 1| v20
+  v18 -->|UProp = 2| v21
+  v18 -->|UProp = 3| v22
+  v18 -->|UProp = 4| v23
+  v18 -->|UProp = 5| v24
+  v18 -->|UProp = 6| v25
+  v18 -.->|UProp = 1,3,4,5,6| v26
+  v18 -->|UProp = 2| v27
+  v18 -.->|respondent owns second homes in the UK, including time-share and holiday homes If UProp = 1| v29
+  v29 -.->|UValS = DK/RF| v30
+  v18 -->|UProp = 1| v31
+  v31 -.->|UDebtS = DK/RF| v32
+  v18 -->|UProp = 1| v33
+  v18 -->|UProp = 2| v34
+  v34 -.->|UValL = DK/RF| v35
+  v18 -->|UProp = 2| v36
+  v36 -.->|UDebtL = DK/RF| v37
+  v18 -->|UProp = 2| v38
+  v18 -->|UProp = 3| v39
+  v39 -.->|UValO = DK/RF| v40
+  v18 -->|UProp = 3| v41
+  v41 -.->|UDebtO = DK/RF| v42
+  v18 -->|UProp = 4| v43
+  v43 -.->|UValLU = DK/RF| v44
+  route671_to_page_14["route671 -> go to page_14"]
+  v18 -.->|route671| route671_to_page_14
+  route673_to_page_14["route673 -> go to page_14"]
+  v18 -.->|route673| route673_to_page_14
+  route675_to_page_14["route675 -> go to page_14"]
+  v18 -.->|route675| route675_to_page_14
+  route677_to_page_14["route677 -> go to page_14"]
+  v18 -.->|route677| route677_to_page_14
+  route678_to_page_14["route678 -> go to page_14"]
+  v18 -.->|route678| route678_to_page_14
+  route680_to_page_14["route680 -> go to page_14"]
+  v18 -.->|route680| route680_to_page_14

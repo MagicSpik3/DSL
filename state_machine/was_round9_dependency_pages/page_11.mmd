@@ -1,0 +1,160 @@
+flowchart LR
+  %% Page 11 of 12
+  v1["RGift: First I would like to ask you about gifts. In the last two years have you received either goods or cash gifts worth £500 or more? Please do not include any money received from a trust fund."]
+  v2["RGfFrom: From whom did you receive these gifts?"]
+  v3["IRGfWho1: Who gave you the Highest/Second Highest/Third Highest total value of gifts over the last two years?"]
+  v4["IRGfVal1: What is the total value of the goods and cash gifts you received from response at IRGfWho1 in the last two years?"]
+  v5["IRGfVB1: About how much would you estimate is the value of goods and cash gifts that you received IRGfWho1 in the last two years?"]
+  v6["IRGfUse1: What did you do with any cash gifts that you received from IRGfWho1 ?"]
+  v7["LRGift: And now thinking back further than the last two years apart from this gift/ these gifts have you personally ever received a gift of money, property or goods worth £500 or more?"]
+  v8["LRGiftNo: How many gifts of £500 or more did you receive in this earlier period, that is before DATE 2 YEARS AGO ?"]
+  v9["LIRGfYr1: In which year did you receive the highest/second highest/third highest value gift?"]
+  v10["LIRGfVal1: And what was the total value, at that time, of the highest/second highest/third highest value gift, after tax and other deductions?"]
+  v11["LIRGfValB1: About how much would you estimate was the value of the highest/second highest/third highest value gift at that time after tax and other deductions ?"]
+  v12["GGift: In the last two years, have you given any goods or any cash GIFTS worth £500 or more? Please do not include money given via a trust fund."]
+  v13["GGfTo: To whom did you give these gifts?"]
+  v14["IGGfWho1: Who did you give the highest/ second highest/ third highest total value of gifts to over the last two years?"]
+  v15["IGGfVal1: What is the total value of the goods and cash gifts that you have given to response at IGGfWho1 in the last two years?"]
+  v16["IGGfVB1: About how much would you estimate is the value of the goods or cash gifts that you have given to response at IGGfWho1 in the last two years?"]
+  v17["IGGfUse1: What was done with any cash gifts you gave to ^LGGSource ?"]
+  v18["LGGift: * And now thinking back further than the last two years, apart from this gift/ these gifts, have you personally ever given a gift of money, property or goods worth £500 or more?"]
+  v19["LGGiftNo: How many gifts worth £500 or more did you give in this earlier period, that is before DATE 2 YEARS AGO ?"]
+  v20["LIGGfYr1: In which year did you give the highest/ second highest/ third highest value gift?"]
+  v21["LIGGfVal1: And what was the total value, at that time, of the highest/ second highest/ third highest value gift you gave, after tax and other deductions?"]
+  v22["LIGGfValB1: About how much would you estimate was the value of the highest/ second highest/ third highest value gift at that time, after tax and other deductions?"]
+  v23["RLoan: Now I would like to ask you about loans from family or friends. In the last two years, have you received a cash loan of £500 or more from family or friends? Please do not include any loans that you reported earlier in the Loans section"]
+  v24["RLnFrom: From whom did you receive these cash loans?"]
+  v25["IRLnWho1: Who gave you the highest/ second highest/ third highest total value of loans over the last two years?"]
+  v26["IRLnVal1: What is the total value of the cash loans you received from ^LRLSource in the last two years?"]
+  v27["IRLnVB1: About how much would you estimate is the value of the cash loans you received from IRLnWho1 in the last two years?"]
+  v28["IRLnUse1: What did you do with the money loaned to you by response at IRLnWho1 ?"]
+  v29["IRLnPyBk1: Do you intend to pay back some or all of the loan s you have received from response at IRLnWho1 ?"]
+  v30["IRLnPBkAm1: How much of the loan/ loans from response at IRLnWho1 do you intend to pay back?"]
+  v31["GLoan: In the last two years, have you given a cash loan of £500 or more to family or friends?"]
+  v32["GLnTo: To whom did you give these cash loans?"]
+  v33["IGLnWho1: Who did you give the Highest/ Second Highest/ Third Highest total value of loans to over the last two years?"]
+  v34["IGLnVal1: What is the total value of the money you loaned to response at IGLnWho1 in the last two years?"]
+  v35["IGLnVB1: About how much would you estimate is the value of the money you loaned to response at IGLnWho1 in the last two years?"]
+  v36["IGLnUse1: What was done with the money you loaned to response at IGLnWho1 ?"]
+  v37["IGLnPyBk1: Do you expect to receive back some or all of the money you loaned to ^LGLSource, IGLnWho1 ?"]
+  v38["IGLnPBkAm1: How much of the money you loaned to ^LGLSource, IGLnWho1 do you expect to receive back?"]
+  v39["TIntro: Earlier we talked about unit trusts, investment trusts and other types of financial products."]
+  v40["TSett: EXCLUDE: TRUSTS SET UP ON BEHALF OF SOMEONE ELSE IF THE RESPONDENT'S OWN ASSETS WERE NOT PUT INTO THE TRUST AT ANY STAGE."]
+  v41["TSNum1: How many separate trusts do you currently have assets in?"]
+  v42["TSNew: In the last two years, have you set up a new trust?"]
+  v43["TSNum2: In total, how many separate trusts do you currently have assets in?"]
+  v44["TCont1: I am going to ask some questions about this trust if TSNum1 = 1 / these trusts if TSNum1 = 2 / the two trusts that you have the most assets in if TSNum1 > 2 ."]
+  v45["TJnt: Thinking of the first / second most valuable trust, if Count1 > 1 can / Can if Count1 = 1 I just check, does the trust contain only your own assets or was it set up jointly with another person in this household or with someone else?"]
+  v46["TPs1: With which other person or people in this household did you set this trust up?"]
+  v47["TAcc1: Would you be able to withdraw these assets for your own use in the future if you wanted to?"]
+  v48["TBen: Who are the beneficiaries of the trust?"]
+  v49["TVal1: Now thinking about the current value of the trust, what is the approximate current value of your share of the assets in the trust after paying off any debts?"]
+  v50["TValB1: How much would you estimate is the current net value of your share of the assets?"]
+  v51["TDup1: Have you already included any of the assets in this trust when answering other questions in this interview?"]
+  v52["TDupA1: Does that include all of the assets in the trust or just some?"]
+  v53["TAddVl1: Can you tell me the approximate current value of your share of the assets in the trust that have not already been covered in this interview?"]
+  v54["TAddVB1: About how much would you estimate is the net current value of your share of the assets that have not already been covered in this interview?"]
+  v55["TBenef: Are you the beneficiary of a trust? That is, do you currently receive money from a trust, or will you receive money or capital from a trust in the future?"]
+  v56["TBenNum: Can I just check, how many separate trusts are you the beneficiary of?"]
+  v57["TBCap1: At some time in the future, will you receive all, or your share of, the assets held in the first / second most valuable if TBenNum > 1 trust?"]
+  v58["TBCapY1: In which year do you expect to have access to the assets in this trust?"]
+  v59["TBValB1: How much would you estimate is the approximate current value of your share of the assets?"]
+  v60["OthAsCh: Do you have any other assets with financial value that we have not covered in this interview?"]
+  v61["OthAsTy: What sort of assets are they?"]
+  v62["OthAsVl: What is the current value of all of these assets?"]
+  v63["OthAsVb: How much would you estimate is the approximate current value of these assets?"]
+  v64["ORiska: For each of the next four questions, please select the answer which best applies to you – there are no right or wrong answers."]
+  v65["ORiskc: * If you had a choice of receiving a thousand pounds today or one thousand one hundred pounds in 12 months which would you choose?"]
+  v66["OSafeSav: Here are some things some people have said about savings and stock market investments."]
+  v67["ORisks: And how much do you agree or disagree with this statement."]
+  v68["HealthIntro: I would now like to ask you some questions about your health."]
+  v69["QHealth1: "]
+  v70["LSill: Do you have any long-standing illness, disability or infirmity? By long-standing I mean anything that has troubled you over a period of time or that is likely to affect you over a period of time?"]
+  v71["IllLim: Does this illness or disability / these illnesses or disabilities limit your activities in any way?"]
+  v72["DisType: Does this health problem s or disability ies mean that you have substantial difficulties with any of these areas of your life?"]
+  v73["DisEver: Have you ever had a long-term illness, disability or infirmity lasting for a year or more that affected your ability to carry out normal day-to-day activities?"]
+  v74["FBInt: We are interested in how living standards compare across the generations so the following questions are about your family and parents. I’d like you to think back to when you were a young teenager, say between the ages of 12 and 16."]
+  v75["FBSitu: Thinking back to when you were a young teenager, did you live…"]
+  v1 -->|RGift = 1 - respondent has received goods or cash gifts| v2
+  v1 -->|RGift = 1 - respondent has received goods or cash gifts| v3
+  v2 -.->|RGfFrom = 1,2,3,4,5,6,7- respondent received cash gifts worth £500 or more in the last two years| v4
+  v4 -.->|IRGfVal1 = DK/RF - respondent does not know value of gift received| v5
+  v2 -.->|RGfFrom = 1,2,3,4,5,6,7- respondent received cash gifts worth £500 or more in the last two years| v6
+  v7 -->|LRGift =1| v8
+  v8 -->|LRGiftNo >= 1| v9
+  v8 -->|LRGiftNo >= 1| v10
+  v12 -->|GGift = 1 - respondent has given any goods or any cash gifts worth £500 or more| v13
+  v12 -->|GGift = 1| v14
+  v13 -.->|GGfTo =1,2,3,4,5,6,7 - respondent gave goods or cash gifts worth £500 or more in the last two years| v15
+  v15 -.->|IGGfVal1 = DK/RF - respondent does not know value of gift given| v16
+  v12 -->|GGift = 1 - respondent given cash gifts worth £500 or more in the last two years| v17
+  v18 -->|LGGift =1| v19
+  v19 -->|LGGiftNo >= 1| v20
+  v19 -->|LGGiftNo >= 1| v21
+  v23 -->|RLoan = 1 - respondent has received loans| v24
+  v23 -->|RLoan = 1 - respondent has received a cash loan of £500 or more| v25
+  v24 -.->|RLnFrom = 1,2,3,4,5,6,7 - has received cash loan from someone| v26
+  v26 -.->|IRLnVal1 = DK/RF - respondent does not know value of the cash loan received| v27
+  v24 -.->|RLnFrom = 1,2,3,4,5,6,7 - respondent has received money for any of the uses shown on the card| v28
+  v24 -.->|RLnFrom = 1,2,3,4,5,6,7 - respondent has a loan| v29
+  v31 -->|GLoan = 1| v32
+  v31 -->|GLoan = 1 - respondent has given a cash loan of £500 or more| v33
+  v32 -.->|GLnTo = 1,2,3,4,5,6,7 - has loaned money to someone| v34
+  v34 -.->|IGLnVal1 = DK/RF - respondent does not know value of the cash loan given| v35
+  v32 -.->|GLnTo =1,2,3,4,5,6,7 - has loaned money to someone| v36
+  v32 -.->|GLnTo =1,2,3,4,5,6,7 - has loaned money to someone| v37
+  v40 -->|TSett = 1 - respondents assets have been put into a trust| v41
+  v40 -.->|TSett = 1 OR RTSett = 1- respondent had assets before or has assets now| v44
+  v41 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v45
+  v43 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v45
+  v45 -->|TJnt = 2 - trust is held jointly with someone in this household| v46
+  v41 -.->|TSNum1 >=1 OR TSNum2 >= 1 - respondent has one or more trusts| v47
+  v43 -.->|TSNum1 >=1 OR TSNum2 >= 1 - respondent has one or more trusts| v47
+  v41 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v48
+  v43 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v48
+  v41 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v49
+  v43 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v49
+  v49 -.->|TVal1 = DK/RF - respondent does not know value of trust| v50
+  v49 -.->|TVal1 OR TValB1 = Response - respondent has given a value| v51
+  v50 -.->|TVal1 OR TValB1 = Response - respondent has given a value| v51
+  v51 -->|TDup1 = 1 - respondent included assets in the trust elsewhere in the interview| v52
+  v52 -->|TDupA1 = 2 - respondent only included some of the assets in the trust elsewhere in the interview| v53
+  v53 -.->|TAddVl1 = DK/RF - respondent does not know the amount not already covered| v54
+  v55 -->|TBenef = 1 - respondent is the beneficiary of a trust| v56
+  v56 -->|TBenNum >= 1 - respondent is beneficiary of one or more trusts| v57
+  v57 -->|TBCap1 = 1 - respondent will receive assets on a specific date in the future| v58
+  v57 -->|TBCap1 = 1 - respondent will receive all of the assets held in the trust at some point in the future| v59
+  v60 -->|OthAsCh = 1 - respondent has other assets with financial value| v61
+  v60 -->|OthAsCh = 1 - respondent has other assets with financial value| v62
+  v62 -.->|OthAsVl = DK/RF - respondent does not know value of these assets| v63
+  route886_from_page_2["from page_2 - route886"]
+  route886_from_page_2 -.->|route886| v63
+  route887_from_page_2["from page_2 - route887"]
+  route887_from_page_2 -.->|route887| v64
+  route888_from_page_2["from page_2 - route888"]
+  route888_from_page_2 -.->|route888| v65
+  route889_from_page_2["from page_2 - route889"]
+  route889_from_page_2 -.->|route889| v66
+  route890_from_page_2["from page_2 - route890"]
+  route890_from_page_2 -.->|route890| v67
+  route891_from_page_2["from page_2 - route891"]
+  route891_from_page_2 -.->|route891| v68
+  route892_from_page_2["from page_2 - route892"]
+  route892_from_page_2 -.->|route892| v69
+  route893_from_page_2["from page_2 - route893"]
+  route893_from_page_2 -.->|route893| v70
+  v70 -->|LSill = 1 - respondent has a disability| v71
+  v70 -->|LSill = 1 - respondent has a disability| v72
+  v70 -->|LSill = 2 - respondent does not have a disability| v73
+  route897_to_page_12["route897 -> go to page_12"]
+  v75 -.->|route897| route897_to_page_12
+  route898_to_page_12["route898 -> go to page_12"]
+  v75 -.->|route898| route898_to_page_12
+  route899_to_page_12["route899 -> go to page_12"]
+  v75 -.->|route899| route899_to_page_12
+  route900_to_page_12["route900 -> go to page_12"]
+  v75 -.->|route900| route900_to_page_12
+  route902_to_page_12["route902 -> go to page_12"]
+  v75 -.->|route902| route902_to_page_12
+  route903_to_page_12["route903 -> go to page_12"]
+  v75 -.->|route903| route903_to_page_12

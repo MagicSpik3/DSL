@@ -1,0 +1,94 @@
+%%{init: {'themeVariables': {'fontSize': '14px'}}}%%
+flowchart LR
+  %% Page 7 of 20
+  v1["GrsAmk: I am going to ask you to estimate your average income. Would you prefer to give this estimate weekly or monthly?"]
+  v2["GrSEEsW: What would you estimate your average weekly income to be, before deductions?"]
+  v3["GrSEEsM: What would you estimate your average monthly income to be, before deductions?"]
+  v4["SEAmL: On average, how much have you been losing weekly or monthly or annually from the business/ your work over the last 12 months, after deducting all business expenses?"]
+  v5["SEPeL: What period does this cover?"]
+  v6["SJob2: Apart from your main job do you earn any money from other jobs, from odd jobs or from work that you do from time to time?"]
+  v7["SjEmp1: In that job/ those jobs do you work as an employee or are you self-employed?"]
+  v8["SjNet: In the last month, how much did you earn from your other/occasional job s as an employee after deductions for tax and National Insurance i.e. net?"]
+  v9["SjGrs: In the last month, how much did you earn from your other/occasional job s as an employee before deductions for tax and National Insurance i.e. gross?"]
+  v10["Sj12N: In the last 12 months, that is since date 1 year ago , how much have you earned per month on average as an employee from your other/occasional job s after deductions for tax and National Insurance i.e. net ?"]
+  v11["Sj12G: In the last 12 months, that is since date 1 year ago , how much have you earned on average per month as an employee from your other/occasional job s before deductions for tax and National Insurance i.e. gross ?"]
+  v12["SjSeG: In the last 12 months, that is since date 1 year ago DMDiLYEAR , how much have you earned from this self-employed work, before deducting income tax, and National Insurance contributions, and money drawn for your own use but after deducting all business expenses?"]
+  v13["SjSeN: And in the last 12 months, how much have you earned from this self-employed work, after deducting income tax and National Insurance contributions?"]
+  v14["WAgeBen: Are you at present receiving any of these state benefits in your own right: that is, where you are the named recipient?"]
+  v15["DisBen: Are you at present receiving any of these state benefits in your own right: that is, where you are the named recipient?"]
+  v16["DisBADP: Is your payment…"]
+  v17["PIPType: Ask if DisBen = 1"]
+  v18["PIPMota: Ask if PIPType = 2,3"]
+  v19["DisBCDP: Is your payment…"]
+  v20["CDPType: There are two types of Child Disability Payment. Is yours…"]
+  v21["CDPMota: Is your Child Disability Payment the car allowance known as Motability?"]
+  v22["DLAType: Ask if DisBen = 2"]
+  v23["DLAMota: Ask if DLAType = 2,3"]
+  v24["PenBen: Are you at present receiving any of these state benefits in your own right: that is, where you are the named recipient?"]
+  v25["BspFirst: Ask if PenBen = 3"]
+  v26["BspFirstAm: Ask if BspFirst = 1"]
+  v27["DefrPen: Ask if NOT 2 IN PenBen AND NOT 3 IN PenBen AND PenFlag = 1"]
+  v28["DefrPEx: Ask if DefrPen = 2"]
+  v29["KidBen: Ask if Intro = 1"]
+  v30["CBChk: Ask if NOT 1 IN KidBen AND NDepC > 0"]
+  v31["SocFund: Ask if Intro = 1"]
+  v32["COLPAmt: Added 2210"]
+  v33["OtherBen: Ask if Intro = 1"]
+  v34["OthName: Ask if OtherBen = 2"]
+  v35["BenLettr: Ask for each benefit reported at WAgeBen, DisBen, PenBen, KidBen, SocFund, OtherBen – not asked if LALType = 1"]
+  v36["BankStmt: Ask if BenLettr = 2"]
+  v37["BenAmt: Ask for each benefit reported at WAgeBen, DisBen, PenBen, KidBen, SocFund, OtherBen – not asked if LALType = 1"]
+  v38["BenAmtDK: Ask if BenAmt = DK"]
+  v39["BenPd: Ask if BenAmt > 0"]
+  v40["JSAType: There are two types of Jobseeker’s Allowance. Is your allowance…"]
+  v41["ESAType: There are two types of Employment Support Allowance. Is your allowance…"]
+  v42["CaPer: Who is the person you care for that qualifies you for the Carer’s Allowance?"]
+  v43["WHRePCar: Who do you receive the daily living component of Personal Independence Payment for?"]
+  v44["WHRePMob: Who do you receive the mobility component of Personal Independence Payment for?"]
+  v45["WHReDCar: Who do you receive the care component of Disability Living Allowance for?"]
+  route228_from_page_6["from page_6 - route228"]
+  route228_from_page_6 -.->|route228| v1
+  v1 -->|GrsAmK = 1 - respondent would like to give income weekly| v2
+  v1 -->|GrsAmK = 2 - respondent would like to give income monthly| v3
+  route231_from_page_6["from page_6 - route231"]
+  route231_from_page_6 -.->|route231| v4
+  route232_from_page_6["from page_6 - route232"]
+  route232_from_page_6 -.->|route232| v5
+  v4 -.->|SEAmt = -1 AND SEAmL = Response - respondent has made a loss and they have given an amount| v5
+  v6 -->|SJob2 = 1 - respondent has other jobs| v7
+  v8 -.->|SjEmp = 1 AND SjNet > 0 respondent is doing other jobs as employee| v9
+  v8 -->|SjNet = 0 respondent did not earn anything in the last month| v10
+  v8 -->|SjNet = 0 respondent did not earn anything in the last month| v11
+  v12 -.->|SjEmp = 2 and SjSeG > 0 respondent is doing other jobs as self-employed| v13
+  v15 -.->|Country = ScotS OR ScotN AND DisBen = 1 Scottish case and receiving Personal Independence Payment or Adult Disability Payment| v16
+  v15 -->|DisBen = 1| v17
+  v15 -.->|Scottish case and DisBen = 2| v19
+  v19 -.->|Scottish case and DisBCDP = 1| v20
+  v20 -.->|Scottish case and CDPType = 2 or 3| v21
+  v15 -->|DisBen = 2| v22
+  v22 -.->|DLAType = 2,3| v23
+  v24 -->|PenBen = 3| v25
+  v25 -->|BspFirst = 1| v26
+  v36 -.->|COLLetter = 1 OR BankStmt = YES OR NO| v31
+  v33 -->|OtherBen = 2| v34
+  v37 -->|BenAmt = DK| v38
+  v37 -->|BenAmt > 0| v39
+  v14 -.->|WageBen = 3 receiving Working Tax Credit| v39
+  v14 -->|WageBen = 3 receiving Working Tax Credit| v39
+  v14 -->|WageBen = 6 benefit being reported is Jobseeker’s Allowance| v40
+  v14 -->|WageBen = 7 benefit being reported is Employment and Support Allowance| v41
+  v14 -->|WageBen = 8 benefit being reported is Carer’s Allowance| v42
+  route257_to_page_8["route257 -> go to page_8"]
+  v15 -.->|route257| route257_to_page_8
+  route258_to_page_8["route258 -> go to page_8"]
+  v15 -.->|route258| route258_to_page_8
+  route259_to_page_8["route259 -> go to page_8"]
+  v15 -.->|route259| route259_to_page_8
+  route260_to_page_8["route260 -> go to page_8"]
+  v29 -.->|route260| route260_to_page_8
+  route263_to_page_8["route263 -> go to page_8"]
+  v33 -.->|route263| route263_to_page_8
+  route266_to_page_8["route266 -> go to page_8"]
+  v38 -.->|route266| route266_to_page_8
+  route267_to_page_8["route267 -> go to page_8"]
+  v38 -.->|route267| route267_to_page_8
