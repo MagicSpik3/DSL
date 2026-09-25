@@ -1,6 +1,6 @@
 flowchart TD
   %% Shorter node ids, long labels preserved for readability
-  S[start]
+  S([start])
   Q1["Are you able to report figures for the period<br>01 Jan 2025 to 31 Dec 2025?"]
   Q2["For the reporting period,<br>what was your business's total turnover?"]
   Q3["Does your business produce goods or services<br>that protect the environment?"]
@@ -16,7 +16,7 @@ flowchart TD
   Q12["For the reporting period,<br>did your business export goods to parties based outside the UK?"]
   Q13["For the reporting period,<br>did your business import goods from parties based outside the UK?"]
   Q14["Did your business carry out any in-house<br>R&D for the reporting period, or intend to in the next period?"]
-  END((END))
+  END([END])
 
   %% Flow
   S --> Q1
