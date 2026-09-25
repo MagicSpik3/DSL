@@ -124,10 +124,17 @@ compile_parsed_survey <- function(parsed, id = slugify(basename(parsed$path))) {
 parsed_question_table <- function(parsed) {
   data.frame(
     id = vapply(parsed$questions, `[[`, character(1), "id"),
+    original_id = vapply(parsed$questions, function(question) {
+      if (is.null(question$original_id)) as.character(question$id) else as.character(question$original_id)
+    }, character(1)),
     type = vapply(parsed$questions, `[[`, character(1), "type"),
-    section = vapply(parsed$questions, `[[`, character(1), "section"),
+    section = vapply(parsed$questions, function(question) {
+      if (is.null(question$section)) "" else as.character(question$section)
+    }, character(1)),
     prompt = vapply(parsed$questions, `[[`, character(1), "prompt"),
-    source_line = vapply(parsed$questions, `[[`, integer(1), "source_line"),
+    source_line = vapply(parsed$questions, function(question) {
+      if (!is.null(question$source_line)) as.integer(question$source_line) else as.integer(question$source_index)
+    }, integer(1)),
     depends_on = vapply(parsed$questions, function(question) {
       if (is.null(question$depends_on)) "" else question$depends_on
     }, character(1)),
@@ -154,15 +161,82 @@ mermaid_state_machine <- function(definition) {
     } else {
       state$id
     }
+    label <- gsub("[[:cntrl:]]+", " ", label)
     label <- gsub("\"", "'", label, fixed = TRUE)
     shape <- if (isTRUE(state$terminal)) sprintf("%s((%s))", state$id, label) else sprintf("%s[\"%s\"]", state$id, label)
     lines <- c(lines, paste0("  ", shape))
   }
   for (state in definition$states) {
     for (transition in state$transitions) {
-      label <- if (identical(transition$when, "TRUE")) "" else paste0("|", transition$when, "|")
+      transition_label <- transition$label
+      if (is.null(transition_label) || !length(transition_label)) {
+        transition_label <- if (identical(transition$when, "TRUE")) "" else transition$when
+      }
+        label <- if (!nzchar(transition_label)) "" else paste0("|", mermaid_edge_label(transition_label), "|")
       lines <- c(lines, sprintf("  %s -->%s %s", state$id, label, transition$target))
     }
+  }
+  paste(lines, collapse = "\n")
+}
+
+mermaid_edge_label <- function(label) {
+  label <- gsub("[[:cntrl:]]+", " ", label)
+  for (delimiter in c("|", "(", ")", "[", "]", "{", "}")) {
+    label <- gsub(delimiter, " ", label, fixed = TRUE)
+  }
+  gsub("[[:space:]]+", " ", trimws(label))
+}
+
+dependency_edges <- function(definition) {
+  variables <- vapply(definition$variables, `[[`, character(1), "id")
+  variable_lookup <- setNames(variables, tolower(variables))
+  rows <- list()
+  for (state in definition$states) {
+    for (transition in state$transitions) {
+      if (identical(transition$when, "TRUE") || !transition$target %in% variables) next
+      expression <- if (identical(transition$supported, FALSE)) transition$raw else transition$when
+      tokens <- unique(regmatches(expression, gregexpr("[A-Za-z][A-Za-z0-9_]*", expression, perl = TRUE))[[1L]])
+      sources <- unname(variable_lookup[tolower(tokens)])
+      sources <- sources[!is.na(sources)]
+      if (!length(sources)) next
+      for (source in sources) {
+        if (identical(source, transition$target)) next
+        rows[[length(rows) + 1L]] <- data.frame(
+          source = source,
+          target = transition$target,
+          predicate = transition$when,
+          label = if (is.null(transition$label)) transition$when else transition$label,
+          supported = !identical(transition$supported, FALSE),
+          raw = if (is.null(transition$raw)) "" else transition$raw,
+          stringsAsFactors = FALSE
+        )
+      }
+    }
+  }
+  if (!length(rows)) {
+    return(data.frame(source = character(), target = character(), predicate = character(),
+      label = character(), supported = logical(), raw = character(), stringsAsFactors = FALSE))
+  }
+  edges <- do.call(rbind, rows)
+  edges[!duplicated(edges[c("source", "target", "predicate")]), , drop = FALSE]
+}
+
+mermaid_variable_dependencies <- function(definition) {
+  variables <- setNames(definition$variables, vapply(definition$variables, `[[`, character(1), "id"))
+  ids <- names(variables)
+  aliases <- setNames(sprintf("v%d", seq_along(ids)), ids)
+  lines <- c("flowchart LR")
+  for (id in ids) {
+    prompt <- gsub("[[:cntrl:]]+", " ", variables[[id]]$prompt)
+    prompt <- gsub("\"", "'", prompt, fixed = TRUE)
+    lines <- c(lines, sprintf("  %s[\"%s: %s\"]", aliases[[id]], id, prompt))
+  }
+  edges <- dependency_edges(definition)
+  for (index in seq_len(nrow(edges))) {
+    edge <- edges[index, ]
+    label <- mermaid_edge_label(edge$label)
+    arrow <- if (isTRUE(edge$supported)) "-->" else "-.->"
+    lines <- c(lines, sprintf("  %s %s|%s| %s", aliases[[edge$source]], arrow, label, aliases[[edge$target]]))
   }
   paste(lines, collapse = "\n")
 }
@@ -172,6 +246,24 @@ write_state_machine <- function(definition, output_dir = "state_machine", name =
   audit <- audit_survey(definition)
   saveRDS(definition, file.path(output_dir, paste0(name, ".rds")))
   writeLines(mermaid_state_machine(definition), file.path(output_dir, paste0(name, ".mmd")), useBytes = TRUE)
+  writeLines(mermaid_variable_dependencies(definition),
+    file.path(output_dir, paste0(name, "_variable_dependencies.mmd")), useBytes = TRUE)
+  write.table(dependency_edges(definition), file.path(output_dir, paste0(name, "_variable_dependencies.tsv")),
+    sep = "\t", row.names = FALSE, quote = TRUE, fileEncoding = "UTF-8")
+  route_rows <- do.call(rbind, lapply(definition$states, function(state) {
+    if (!length(state$transitions)) return(NULL)
+    data.frame(
+      source = state$id,
+      target = vapply(state$transitions, `[[`, character(1), "target"),
+      predicate = vapply(state$transitions, `[[`, character(1), "when"),
+      label = vapply(state$transitions, function(item) if (is.null(item$label)) "" else item$label, character(1)),
+      supported = vapply(state$transitions, function(item) !identical(item$supported, FALSE), logical(1)),
+      raw = vapply(state$transitions, function(item) if (is.null(item$raw)) "" else item$raw, character(1)),
+      stringsAsFactors = FALSE
+    )
+  }))
+  write.table(route_rows, file.path(output_dir, paste0(name, "_routes.tsv")),
+    sep = "\t", row.names = FALSE, quote = TRUE, fileEncoding = "UTF-8")
   audit_lines <- c(
     paste0("survey: ", definition$id),
     paste0("ok: ", audit$ok),

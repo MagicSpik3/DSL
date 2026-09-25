@@ -1,0 +1,1833 @@
+flowchart LR
+  v1["Benefits74: Saving Attitudes and Behaviour89"]
+  v2["Retirement89: Attitudes to saving for retirement89"]
+  v3["ISAs131: National Savings & Investments134"]
+  v4["Insurances142: Currency & Cash145"]
+  v5["Cryptocurrency147: Other financial assets148"]
+  v6["Loans172: Household Bills179"]
+  v7["Bankruptcy180: Other income (exc. Earnings and Benefits)181"]
+  v8["Inheritance197: Inheritances received197"]
+  v9["Trusts209: Questions for settlers (who have put their own assets into a trust)209"]
+  v10["Health215: Status of parents217"]
+  v11["Ten1: How do you own or rent [first line of address]?"]
+  v12["StartDat: ENTER DATE INTERVIEW WITH THIS HOUSEHOLD WAS STARTED"]
+  v13["DateChk: IS THIS:"]
+  v14["IntrType: ENTER WHETHER A TELEPHONE OR FACE TO FACE INTERVIEW"]
+  v15["CurStat: RName or (KITE)Name"]
+  v16["MovedWth: Did this person move to the same new address/household as another person already coded?"]
+  v17["CountRes: ENTER COUNTRY WHERE NOW RESIDENT"]
+  v18["KnowDet: Which details are known of where this person has moved?"]
+  v19["Add1: What is the first line of the new address, please include the house number or name, and the name of the street or road?"]
+  v20["Add2: What is the second line of the new address?"]
+  v21["Add3: If Add2 = Response - entered a second line of address"]
+  v22["Add4: If Add3 = Response - entered a third line of address"]
+  v23["PstTwn: And in which town is the new address?"]
+  v24["PostCd: If you know it, what is the postcode for this new address?"]
+  v25["SurePstC: CODE FOR CERTAINTY OF CORRECT POSTCODE"]
+  v26["TeleNumb: PLEASE ENTER TELEPHONE NUMBER, INCLUDING STD CODE"]
+  v27["EmailAdd: PLEASE ENTER EMAIL ADDRESS"]
+  v28["HldStat: Derived:"]
+  v29["SurNme: Ask if RSurNme OR (KITE) RSurname = empty - i.e. if new cohort"]
+  v30["CorrNam: IS THIS NAME CORRECT?"]
+  v31["UpdatNam: Can I have the correct full name please?"]
+  v32["MoreNme: Is there anyone else who classes this residence as their main residence?"]
+  v33["DteofBth: What is your date of birth?"]
+  v34["June15: Is the 15th of June the actual date or an estimate?"]
+  v35["AgeIf: What was your age last birthday?"]
+  v36["DVage: Derived"]
+  v37["xMarSta: What is your legal marital status?"]
+  v38["MarChk: Is your husband /wife / civil partner a member of the household?"]
+  v39["LivWth12: May I just check, are you living with someone in this household as a couple?"]
+  v40["FtEd: Are you presently in full-time education?"]
+  v41["FtEd19: Are you presently in full-time education?"]
+  v42["QualChk: Which of the following best describes the qualification that you are currently working towards? Is it ..."]
+  v43["HiHNum: You have told me that the following people jointly own or rent the accommodation. Who has the highest income from earnings, benefits, pensions and any other sources?"]
+  v44["JntEldA: ENTER PERSON NUMBER OF THE ELDEST JOINT HOUSEHOLDER FROM THOSE WITH THE SAME HIGHEST INCOME:"]
+  v45["JntEldB: ENTER PERSON NUMBER OF THE ELDEST JOINT HOUSEHOLDER"]
+  v46["DVHRPNum: Derived"]
+  v47["Relate4: End of RELATIONSHIP GRID loop"]
+  v48["HCoBa: In which country were you born?"]
+  v49["HCoBb: What is the other country?"]
+  v50["HCoBc: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v51["HCoB: Derived variable"]
+  v52["CryFth: Ask if DVAge>=16"]
+  v53["CryFSpc: What is the other country?"]
+  v54["CryFFrm: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v55["CryMth: Ask if DVAge>=16"]
+  v56["CryMSpc: What is the other country?"]
+  v57["CryMFrm: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v58["HseType: Is this house or bungalow …"]
+  v59["FltTyp: Is this flat or maisonette …"]
+  v60["Ten1__1: How do you own or rent this accommodation?"]
+  v61["HBedrm: How many bedrooms do you have in this accommodation?"]
+  v62["RentExpAm: How much is your usual household rent? Please give this amount before any housing benefit is deducted."]
+  v63["RentExpPR: How often do you pay this amount?"]
+  v64["RentExpSP: Specify period rent covers"]
+  v65["LLord: Ten1 = 4,5 - respondent rents or lives there rent-free"]
+  v66["RentHol: Do you have a rent holiday?"]
+  v67["RentHoWk: For how many weeks a year do you have a rent holiday?"]
+  v68["HHown: Which of the following best describes how you came to own this property outright? Have you…"]
+  v69["CTAmt: How much Council Tax do you or your household currently pay?"]
+  v70["CTInstal: Was that the payment for the year, or was it an instalment?"]
+  v71["CTTime: How many instalments are there over the whole year?"]
+  v72["CTRG2: Have you received the Council Tax Rebate grant which has been introduced for households due to rising energy bills?"]
+  v73["MethElec: (Added 2210)"]
+  v74["OtherElec: (Added 2210)"]
+  v75["HIntro: The next questions are about the value of your property"]
+  v76["HShare: Can I just check, do you share the ownership of this property with anyone other than a member of this household?"]
+  v77["HShareP: Approximately what percentage do you (and other members of this household) own?"]
+  v78["HPrice: Respondent lives at a new address or not owner occupier at previous wave; and buying with the help of a mortgage or paying part rent and part mortgage and (owns address outright and not inherited property) or is buying it with the help of a mortgage or loan or pays part rent and part mortgage)"]
+  v79["HPriceB: About how much would you estimate that you (and other members of this household) paid?"]
+  v80["HCash: When you purchased this property, did you receive money from person to help with the purchase? Do not include loans or mortgages from financial institutions."]
+  v81["HGift: Was the money you received a gift, was it loaned to you, or was it part gift and part loan?"]
+  v82["HGfWho: PROMPT AS NECESSARY - CODE ALL THAT APPLY"]
+  v83["HValue: About how much would you expect to get for your current home if you sold it today [, before paying off any outstanding mortgage or loan on the property (if Ten1 = 2,3)]?"]
+  v84["HValB: About how much would you estimate that your home would be worth if you sold it today?"]
+  v85["MIntro: The next questions are about any mortgages that you have on this property."]
+  v86["MNumbN: How many mortgages or loans do you currently have outstanding on this property (including any extensions or ‘top-ups’ you have taken out)?"]
+  v87["MW2Chk: Last time we interviewed you, we recorded that you had [RMNumb] mortgage(s) of the following type(s)."]
+  v88["MExtn: In the last two years, have you increased your borrowing by taking out an extension or top-up on an existing mortgage? Please do not include any money received through equity release schemes."]
+  v89["MExtRs: Which of the following items was the extra borrowing for…"]
+  v90["MChge: And in the last two years, have you taken out any new mortgages on this property?"]
+  v91["MChgeNum: How many new mortgages or loans have you taken out on this property?"]
+  v92["MNumbO: Can I just check, how many mortgages or loans do you currently have outstanding on this property?"]
+  v93["MorTID1: MNumbO>0 OR MNumbN>0 - all mortgages"]
+  v94["MorPrev1: (MW2Chk[1] = Yes OR MW2Chk[2] = Yes OR MW2Chk[3] = Yes) AND (All of the possible valid options have not already been selected at previous loops) - If there is still an existing mortgage that has not been reported on in an earlier mortgage loop"]
+  v95["MName1: Is your [largest/second largest/third largest] mortgage or loan held in one person’s name or held jointly with someone else?"]
+  v96["MOname1: ASK OR RECORD PERSON NUMBER OF SOLE MORTGAGE OR LOAN HOLDER. ENTER PERSON NUMBER OF HOUSEHOLD MEMBER OR USE CODE 17 FOR PERSON OUTSIDE HOUSEHOLD."]
+  v97["MJname: ASK OR RECORD PERSON NUMBER(S) OF JOINT MORTGAGE OR LOAN HOLDER(S)"]
+  v98["MReas: Which of the following items best describe the reasons why you took out this mortgage (remortgage) or loan…"]
+  v99["MType1: Which of these options best describes this mortgage or loan secured on your property…"]
+  v100["MEndW1: [Can I just check are (if MType1 = 2,3) ; Are (if MType1 <> 2,3)] there any endowment policies covering the repayment of this mortgage or loan?"]
+  v101["MEndNum1: How many endowment policies cover the repayment of this mortgage or loan?"]
+  v102["MEndV1: Thinking about your [first/second/third/fourth/fifth(MChgeNum)] endowment policy, what is the current value of this endowment?"]
+  v103["MEndVb1: About how much would you estimate the current value of this endowment to be?"]
+  v104["MEndY1: In about how many years time will this endowment pay out?"]
+  v105["MAllTy1: Is your all-in-one account mortgage a current account mortgage – that is it’s combined with current account - or is it an offset mortgage – that is it’s linked to a separate current or savings account?"]
+  v106["MNeg1: What is the amount of the negative balance or overdraft on your current account for this mortgage? This is the balance on your current account once the total debt has been reduced by any savings in the account."]
+  v107["MNegB1: About how much would you estimate the negative balance or overdraft on your current account to be?"]
+  v108["MVal1: What is the amount still outstanding on this mortgage, or loan – that is, how much do you still have to pay off [, (before deducting the value of your endowment) (if MEndw1 = 1 OR MType1 <> 1)]?"]
+  v109["MValB1: About how much would you estimate is the amount outstanding on your mortgage or loan?"]
+  v110["MYLft1: For all mortgages that have not been paid off"]
+  v111["MPayM1: How much are your monthly repayments for [your share of (if MName1=2)] this mortgage, including [the interest and premiums on your endowments and (if MEndW1=1)] any insurance premiums?"]
+  v112["MPayB1: About how much would you estimate the monthly repayments on your mortgage to be?"]
+  v113["MIntPaid1: For all mortgages that are not a current account mortgage"]
+  v114["MIntRate1: What is the interest rate on your mortgage at present?"]
+  v115["MArrs1: Still thinking about the repayments on this mortgage, are you currently…"]
+  v116["MArrsV1: How much do you think you owe now on missed or overdue payments?"]
+  v117["MArr2Yr1: In the last two years have you fallen one or more consecutive payments behind on this mortgage or loan?"]
+  v118["DBurdH: To what extent is keeping up with all of the mortgage or loan repayments and interest payments a financial burden to your household? Would you say it was…"]
+  v119["EqOld: At the last interview, you said that you had made an arrangement to raise money using the value of your home. Do you still have this arrangement?"]
+  v120["EqNew: In the last two years, have you made any new arrangements to raise income or capital from the value of your current home?"]
+  v121["EqYes: It is possible to raise money based on the value of your home through an arrangement known as equity release. Have you [or your [husband / wife (if Sex = Female / Male AND if xMarSta =2)] / or your partner (if xMarSta =6)] raised any income or capital from the value of your current home?"]
+  v122["EqReas: What were your reasons for taking out this equity release arrangement…"]
+  v123["EqReasO: Please specify other reason(s)"]
+  v124["EqLoanV: What was the total value of the loan?"]
+  v125["EqLoanB: How much was the approximate value of the loan?"]
+  v126["GCPream: In order to build up a picture of your household assets, the next questions are about your household goods and any vehicles that you may have."]
+  v127["GCollec: Do you [or anyone in your household (if DVHsize > 1)] own any collectibles or valuables – such as antiques, artworks, stamps etc – including items stored or kept elsewhere?"]
+  v128["GCollV: What is your estimate of the current market value of these items, even if you do not intend to sell them?"]
+  v129["GCollVb: What is the approximate market value of these items?"]
+  v130["GContVb: [Thinking about the other items in this property that (if GCollec = Yes)] [you own (if Household Size = 1) ; are owned by you or other members of your household (if Household Size > 1))], what is the approximate replacement value of your household contents?"]
+  v131["VCarN: How many cars, vans or motorbikes, if any, do you [or members of your household] own? Please exclude lease vehicles, company vehicles and mobility cars."]
+  v132["VType: Thinking about your vehicle(s), do they include…"]
+  v133["VEstV: What is the estimated total market value of your vehicle(s)? Please exclude the lease, company or mobility vehicles and the value of any personalised number plates."]
+  v134["VEsVb: What do you think is the approximate market value of (all) of your vehicles? Please exclude lease, company or Mobility vehicles and the value of any personalised number plates."]
+  v135["VPers: Do you [, (or other members of your household), (if DMHSize > 1)] own any personalised or valuable number plates?"]
+  v136["VPerV: About how much are (all) the personalised number plates worth?"]
+  v137["VOTyp: Do you [, (or other members of your household), (if DMHSize > 1)] own any of the following…"]
+  v138["VOTyO: ENTER DETAILS OF OTHER VEHICLE"]
+  v139["VOVal: "]
+  v140["VOVlB: INDIVIDUAL QUESTIONNAIRE"]
+  v141["ISwitch: <PLEASE PRESS <F2> TO SAVE THE INTERVIEW SO FAR"]
+  v142["PersProx: IS THE INTERVIEW ABOUT NAMES[i] BEING GIVEN:"]
+  v143["ProxyNum: ENTER PERSON NUMBER OF PERSON GIVING THE INFORMATION"]
+  v144["YNtPart: THIS PERSON HAS A SPOUSE/PARTNER. PLEASE RECORD WHY THEY ARE NOT AVAILABLE TO GIVE A PROXY INTERVIEW FOR THIS PERSON"]
+  v145["YNtHhld: PLEASE RECORD WHY SOMEONE OUTSIDE OF THE HOUSEHOLD IS GIVING A PROXY INTERVIEW FOR THIS PERSON"]
+  v146["YNtPers: PLEASE RECORD REASON WHY ORIGINAL RESPONDENT IS NOT AVAILABLE FOR THIS (INDIVIDUAL) INTERVIEW"]
+  v147["RelnHH: PLEASE ENTER RELATIONSHIP OF THE PERSON GIVING THE INFORMATION TO THE ORIGINAL RESPONDENT (E.G. SON/DAUGHTER/CARER)"]
+  v148["EthEa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v149["EthE: Which one best describes your [White (If EthEa=1); Mixed (If EthEa=2); Asian (If EthEa=3); Black (If EthEa=4); Other (If EthEa=5)] ethnic group or background?"]
+  v150["EthWa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v151["EthW: Which one best describes your [White (If EthWa=1); Mixed (If EthWa =2); Asian (If EthWa =3); Black (If EthWa =4); Other (If EthWa =5)] ethnic group or background?"]
+  v152["EthSa: What is your ethnic group? I will read out the options, choose one option that best describes your ethnic group or background."]
+  v153["EthS: Which one best describes your [White (If EthSa =1); Mixed (If EthSa =2); Asian (If EthSa =3); Black (If EthSa =4); Other (If EthSa =5)] ethnic group or background?"]
+  v154["EthOth: Please can you describe your ethnic group?"]
+  v155["Eth02: PRESS <SPACE BAR> TO ENTER THE CODING FRAME"]
+  v156["DVEthnic: Derived variable"]
+  v157["SIDFtFQn: For [respondent name] please use [showcard number]."]
+  v158["SIDTelQn: I will now read out a list of terms people sometimes use to describe how they think of themselves."]
+  v159["ReligE: What is your religion?"]
+  v160["ReligW: What is your religion?"]
+  v161["ReligS: What is your religion?"]
+  v162["ReligSpec: Please describe your Religion."]
+  v163["ReligO: Press <Space bar> to enter the coding frame"]
+  v164["DVRelig: Derived variable using ReligE, ReligS and ReligW"]
+  v165["SubWelpre: Next I would like to ask you five questions about your feelings on aspects"]
+  v166["Subpre2: For each of these questions I'd like you to give an answer on a scale of nought to 10, where nought is 'not at all' and 10 is 'completely'."]
+  v167["TrustOth: On a scale where nought is 'do not trust at all' and 10 is 'trust completely', to what extent would you say that you trust other people?"]
+  v168["SchemeET: Can I just check, were you on a government scheme for employment training?"]
+  v169["JbAway: Even though you were not doing paid work or employment training in the week ending Sunday the [(DATE)], did you have a job or business that you were away from (and that you expect to return to)?"]
+  v170["OwnBus: Did you do any unpaid work in that week (ending Sunday the [(DATE)]) for any business that you own?"]
+  v171["RelBus: ....or that a relative owns?"]
+  v172["StartJ: If you had been offered a job in the week ending Sunday the [(DATE)], would you be able to start before Sunday [second DATE] – 2 weeks later?"]
+  v173["LKTime: How long have you been looking for paid work or a place on a government training scheme (or an additional or replacement job)?"]
+  v174["YInAct: What was the main reason you [did not seek any work or government training scheme in the week ending Sunday the [(DATE)] (if Looked=2); would not be able to start before [(second DATE)] (if StartJ=2)]?"]
+  v175["DVILO3a: Whether employed incl unpaid family workers"]
+  v176["DVILO4a: Whether employed incl unpaid family workers"]
+  v177["WkBetw: Can I just check, have you had a paid job either as an employee or self-employed in the last two years?"]
+  v178["MRecJb: When we interviewed you on [RStartDat] you were working/ about to start work as a [ROccT]. Is this your most recent job either as an employee or as self-employed?"]
+  v179["SamJob: When we interviewed you on [RStartDat] you were working / about to start work as a [ROccT]. Is this still your main job?"]
+  v180["SamEmp: And are you still working for the same employer?"]
+  v181["PerNoWk: In the last two years, have you had any periods of unemployment or reduced pay?"]
+  v182["EverWk: Have you ever had a paid job, apart from casual or holiday work?"]
+  v183["CasWrk: May I just check, have you ever done any casual or holiday work?"]
+  v184["DtJbL: When did you leave your last paid job?"]
+  v185["NumJob: How many jobs, for pay or profit, do you have?"]
+  v186["PreA: The following questions refer to your main job."]
+  v187["PreL: The following questions refer to your most recent main job."]
+  v188["SameJob: I need to check whether your details are the same as at the last time we called. [Thinking of the seven days ending Sunday the (n)/ thinking of your last job,] are these statements (still) correct…"]
+  v189["DVSame: Derived – No difference to job"]
+  v190["IndD: What did the firm/ organisation you worked for mainly make or do (at the place where you worked)?"]
+  v191["Sectr2: What kind of non-private organisation is it?"]
+  v192["OccT: What was your (main) job (in the week ending Sunday the [(DATE)])?"]
+  v193["OccD: What did you mainly do in your job?"]
+  v194["SVise: In your job, did you have formal responsibility for supervising the work of other employees?"]
+  v195["SViseDsc: Please describe the type of responsibility you have for supervising the work of other employees."]
+  v196["EmpN: How many people worked for your employer at the place where you worked?"]
+  v197["SemN: How many people did you employ/are employed in this business?"]
+  v198["OneTen: - 1 to 10 employees in respondents business and is not in the same job as the previous wave"]
+  v199["FtPtWk: In your (main) job were you working..."]
+  v200["WkHrs: How many hours per week do you usually work in your (main) job? Please exclude meal breaks."]
+  v201["WkHrsIr: On average, about how many hours per week do you work, excluding meal breaks?"]
+  v202["SPaReas: Penflag=1 AND DVILO3A=1 AND PersProx=1 (over SPa and working, except proxies)"]
+  v203["SPAReasO: Please specify other reason not mentioned."]
+  v204["WrkRed: Have your working patterns changed in the past year?"]
+  v205["WrkCha: You stated that your work patterns have changed, are you currently using any of the following arrangements?"]
+  v206["WrkUse: Penflag=1 AND DVILO3A=1 AND PersProx=1 (over SPa and working, except proxies)"]
+  v207["EmpStY: In which year did you start working continuously for your current employer?"]
+  v208["SEmpStY: In which year did you [start working continuously as a self-employed person (if DVILO4a = 1 - currently at work AND Stat = 2) ; start your most recent period of self-employment? (DVILO4a <> 1- if not currently at work AND Stat = 2 at last job)]"]
+  v209["PermJb: What type of contract do you hold in your main job?"]
+  v210["PNoWk: Looking back at the time since you finished continuous full-time education, have you had any periods of six months or more when you were not in paid work, either because you could not find a job or were not looking for paid work?"]
+  v211["PNoWkLn: About how many years in total have you been out of paid work since you finished full-time education?"]
+  v212["EdAttn1: Do you have any educational qualifications for which you received a certificate?"]
+  v213["EdAttn2: Do you have any professional, vocational or other work-related qualifications for which you received a certificate?"]
+  v214["EdAttn3: Was your highest qualification..."]
+  v215["BType1: Now, thinking of your [main/second/third (NumJob > 1)] job, which one of these best describes your employment situation in this job …"]
+  v216["BDirNI1: In this job, are your National Insurance contributions deducted at source?"]
+  v217["BOwn1: Do you own part of this business?"]
+  v218["BAccsA1: In this business, are annual accounts prepared?"]
+  v219["BAccsB1: Do you prepare annual business accounts?"]
+  v220["BAccBeg1: What is the most recent period for which accounts have been prepared?"]
+  v221["BAccBegM1: If BaccBeg1 = Response (year has been entered)"]
+  v222["BProfit1: What was [your (if BType= 2,5) / your share in the ((if BType = 3,4))] profit or loss figure shown on these accounts for this period? It would be helpful if you could refer to a document, such as the annual accounts, or the Notice of Tax Assessment from HM Revenue and Customs."]
+  v223["BPrfLoss1: Did the answer in the previous question refer to profit or loss?"]
+  v224["BALand: Does your company own land or buildings for use in the business?"]
+  v225["BVal1: If you sold [your (if BType= 2,5) / your share in the (if BType = 3,4)] business today, including any debts or liabilities, about how much would you get?"]
+  v226["BValB1: How much would you estimate you would get for the business?"]
+  v227["BADebtYN: Excluding debts for the purchase of goods for household use, do you have any business debts associated with investments, buildings and land?"]
+  v228["BADebtTerm: Are these debts..."]
+  v229["BADoust: Do you have any outstanding trade debts or credits?"]
+  v230["BADamt: BADoust = 1 (respondent answered yes to outstanding trade debts)"]
+  v231["BACamt: BADoust = 2 (respondent answered yes to outstanding trade credits)"]
+  v232["BARed: In the past 2 years, how much was paid in redundancy payments to employees of your firm or business?"]
+  v233["BAShare: What share of the business do you personally own?"]
+  v234["BPast: In the last two years, have you personally received any income from selling all or part of a business?"]
+  v235["BSellYr: In which year did you sell your business, or part of a business?"]
+  v236["BSellAm: How much income did you receive from selling your business, or part of a business?"]
+  v237["BSellAB: How much would you estimate you received from selling your business, or part of a business?"]
+  v238["BSellTx: And was this amount before or after tax?"]
+  v239["BMoreBus: Can I just check, …"]
+  v240["BMoreNum: How many [other (If BType1 = 2,4 (Sole director or Partner in a business) OR BOwn1 = yes (owns part of business)] businesses do you own all or part of as an active or sleeping partner?"]
+  v241["BWorth: About how much is your share of [this business/these businesses] worth after deducting any outstanding debts?"]
+  v242["BWorthB: How much would you estimate your share of [this business (if BMoreNum = 1) / these businesses (if BMoreNum <> 1)] is worth [in total]?"]
+  v243["IntroIncEm: AND"]
+  v244["IntroIncEm2: AND PenFlag = 0 - respondent is under state pension age"]
+  v245["AnticPay: AND"]
+  v246["PayDat: OR"]
+  v247["NetPay: [What was your last take home pay / what will be your take home pay] including overtime, bonus, commission, tips or other payments?"]
+  v248["NetPd: How long a period does this cover?"]
+  v249["NetEst: What would you estimate your last take home pay to be, after all deductions?"]
+  v250["GrossPay: How much was your last gross pay from your main job [how much will your gross pay from your main job be] before all deductions (this can be weekly, monthly or any other pay period)?"]
+  v251["GrossPd: How long a period does this cover?"]
+  v252["GrossEst: What would you estimate your last gross earnings to be, before any deductions?"]
+  v253["PayUsl: THIS SHOULD BE CODED 2 IF THE LAST TAKE HOME PAY INCLUDED HOLIDAY PAY, BACK PAY, AN OCCASIONAL BONUS, IRREGULAR OVERTIME OR A TAX REFUND"]
+  v254["WhyNoUsl: Why was your last pay not usual?"]
+  v255["UNett: What do you usually receive AFTER all deductions?"]
+  v256["UGross: What do you usually receive BEFORE all deductions but including other payments?"]
+  v257["UPd: How often are you usually paid?"]
+  v258["BonAm: BONUS [number (LBEmpPay1)]"]
+  v259["BoBATax: BONUS [number (LBEmpPay1)]"]
+  v260["SEInt: NOT(BType1[main job] = 2,3 AND BDirNI1 [main job] = 1) AND"]
+  v261["SEAmt: NOT(BType1[main job] = 2,3 AND BDirNI1 [main job] = 1) AND"]
+  v262["SEPer: What period does this cover?"]
+  v263["SEAmK: I am going to ask you to estimate your average income. Would you prefer to give this estimate weekly or monthly?"]
+  v264["SEEsW: What would you estimate your average weekly income to be, after deductions?"]
+  v265["SEEsM: What would you estimate your average monthly income to be, after deductions?"]
+  v266["GrsSEMJB: NOT(BType1[main job] = 2,3 AND BDirNI1 [main job] = 1) AND"]
+  v267["GrossPer: What period does this cover?"]
+  v268["GrsAmk: I am going to ask you to estimate your average income. Would you prefer to give this estimate weekly or monthly?"]
+  v269["GrSEEsW: What would you estimate your average weekly income to be, before deductions?"]
+  v270["GrSEEsM: What would you estimate your average monthly income to be, before deductions?"]
+  v271["SEAmL: On average, how much have you been losing weekly or monthly (or annually) from the business/ your work over the last 12 months, after deducting all business expenses?"]
+  v272["SEPeL: What period does this cover?"]
+  v273["SJob2: [Apart from your main job] do you earn any money from other jobs, from odd jobs or from work that you do from time to time?"]
+  v274["SjEmp1: In that job/ those jobs do you work as an employee or are you self-employed?"]
+  v275["SjNet: In the last month, how much did you earn from your other/occasional job(s) [as an employee] after deductions for tax and National Insurance i.e. net?"]
+  v276["SjGrs: In the last month, how much did you earn from your other/occasional job(s) [as an employee] before deductions for tax and National Insurance i.e. gross?"]
+  v277["Sj12N: In the last 12 months, that is since [date 1 year ago], how much have you earned per month on average as an employee from your other/occasional job(s) after deductions for tax and National Insurance (i.e. net)?"]
+  v278["Sj12G: In the last 12 months, that is since [date 1 year ago], how much have you earned on average per month as an employee from your other/occasional job(s) before deductions for tax and National Insurance (i.e. gross)?"]
+  v279["SjSeG: In the last 12 months, that is since [date (1 year ago DMDiLYEAR)], how much have you earned from this (self-employed) work, before deducting income tax, and National Insurance contributions, and money drawn for your own use but after deducting all business expenses?"]
+  v280["SjSeN: And in the last 12 months, how much have you earned from this (self-employed) work, after deducting income tax and National Insurance contributions?"]
+  v281["WAgeBen: Are you at present receiving any of these state benefits in your own right: that is, where you are the named recipient?"]
+  v282["DisBen: Are you at present receiving any of these state benefits in your own right: that is, where you are the named recipient?"]
+  v283["DisBADP: Is your payment…"]
+  v284["PIPType: Ask if DisBen = 1"]
+  v285["PIPMota: Ask if (PIPType = 2,3)"]
+  v286["DisBCDP: Is your payment…"]
+  v287["CDPType: There are two types of Child Disability Payment. Is yours…"]
+  v288["CDPMota: Is your Child Disability Payment the car allowance known as Motability?"]
+  v289["DLAType: Ask if DisBen = 2"]
+  v290["DLAMota: Ask if DLAType = 2,3"]
+  v291["PenBen: Are you at present receiving any of these state benefits in your own right: that is, where you are the named recipient?"]
+  v292["BspFirst: Ask if PenBen = 3"]
+  v293["BspFirstAm: Ask if BspFirst = 1"]
+  v294["DefrPen: Ask if (NOT(2 IN PenBen) AND NOT(3 IN PenBen) AND (PenFlag = 1))"]
+  v295["DefrPEx: Ask if (DefrPen = 2)"]
+  v296["KidBen: Ask if Intro = 1"]
+  v297["CBChk: Ask if (NOT(1 IN KidBen) AND (NDepC > 0))"]
+  v298["SocFund: Ask if Intro = 1"]
+  v299["COLPAmt: (Added 2210)"]
+  v300["OtherBen: Ask if Intro = 1"]
+  v301["OthName: Ask if OtherBen = 2"]
+  v302["BenLettr: Ask for each benefit reported at WAgeBen, DisBen, PenBen, KidBen, SocFund, OtherBen – not asked if LALType = 1"]
+  v303["BankStmt: Ask if (BenLettr = 2)"]
+  v304["BenAmt: Ask for each benefit reported at WAgeBen, DisBen, PenBen, KidBen, SocFund, OtherBen – not asked if LALType = 1"]
+  v305["BenAmtDK: Ask if BenAmt = DK"]
+  v306["BenPd: Ask if BenAmt > 0"]
+  v307["JSAType: There are two types of Jobseeker’s Allowance. Is your allowance…"]
+  v308["ESAType: There are two types of Employment Support Allowance. Is your allowance…"]
+  v309["CaPer: Who is the person you care for that qualifies you for the Carer’s Allowance?"]
+  v310["WHRePCar: Who do you receive the daily living component of Personal Independence Payment for?"]
+  v311["WHRePMob: Who do you receive the mobility component of Personal Independence Payment for?"]
+  v312["WHReDCar: Who do you receive the care component of Disability Living Allowance for?"]
+  v313["WHReDMob: Who do you receive the mobility component of Disability Living Allowance for?"]
+  v314["WhoRec: Who do you receive Attendance Allowance for?"]
+  v315["GetCA: Is there anyone getting Carer’s Allowance for looking after you?"]
+  v316["PComp: Is there anyone getting Carer’s Allowance for looking after you?"]
+  v317["CBTax: Can I check, do you or someone else in the household pay a high income Child Benefit tax charge on the Child Benefit you receive?"]
+  v318["CBTaxAmt: How much was this last time?"]
+  v319["CBTaxPD: How long a period did this cover?"]
+  v320["ExtBenAmt: How much was the extended payment of Housing Benefit/ rent rebate?"]
+  v321["GovPay: Are the DWP paying directly for any of the following things?"]
+  v322["GovBen: And which benefit has been reduced, as a result?"]
+  v323["GovAmt: How much in total is the DWP paying for this / these things per week?"]
+  v324["GovBefor: Just now, you said you received ^LDWP benefit last time. Was that.."]
+  v325["SFRepay: Are you at present making any repayments on any Budgeting loans / Advances or Local Authority loans?"]
+  v326["RepayAmt: How much in total do you repay, per week?"]
+  v327["SFInc: Just now you said you received [list of amounts for each of Income Support, JSA, ESA, Universal Credit, Pension Credit] benefit last time. Was that…"]
+  v328["ComBAm: You have stated that you receive some benefits in combination. How much did you get altogether last time?"]
+  v329["LoanNum: You said earlier that you had [a budgeting loan or budgeting advance from DWP and a loan or grant from your Local Authority (if (Country = Wales OR Country = England) AND (DWPloan IN SocFund) AND (LAloan IN SocFund)) / a budgeting loan or budgeting advance from DWP (if (Country = Wales OR Country = England OR Country = Scotland) AND (DWPloan IN SocFund)) / a loan or grant from your Local Authority (if (Country = Wales OR Country = England) AND (LAloan IN SocFund)) / a budgeting loan or budgeting advance from DWP and a loan or grant from your Local Authority, including a Crisis Grant or Community Care Grant from the Scottish Welfare Fund (if (Country = Scotland) AND (DWPloan IN SocFund) AND (LAloan IN SocFund)) / a loan or grant from your Local Authority, including a Crisis Grant or Community Care Grant from the Scottish Welfare Fund (if (Country = Scotland) AND (LAloan IN SocFund))]"]
+  v330["LoanAmt: About how much did you borrow?"]
+  v331["ComBPd: How long does this cover?"]
+  v332["TtBPrx: If ((97 IN WAgeBen) OR (97 IN DisBen) OR (97 IN PenBen) OR (97 IN KidBen) OR (97 IN SocFund) OR (97 IN OtherBen)) - respondent selected one of these/ more than one of these, but I don’t know which option for the benefits given."]
+  v333["OPenInt: The next section is about attitudes towards saving for retirement."]
+  v334["OUnder: Remind respondent of the scale if necessary: from 1 'Strongly agree' to 5 'Strongly disagree’"]
+  v335["OAccess: REMIND RESPONDENT OF THE SCALE IF NECESSARY: FROM 1 'STRONGLY AGREE' TO 5 'STRONGLY DISAGREE’"]
+  v336["MorSavRe: Which of these pension saving options would enable you to save more for retirement…"]
+  v337["OSaferet: [*] Which of these options do you think would be the safest way to save for retirement..."]
+  v338["OMakeMost: [*] And which one do you think could potentially make the most of your money…"]
+  v339["OTrustN: [*] Which of these would you trust for advice about saving for retirement…"]
+  v340["SBIntro: Now I'm going to ask some questions about any pension arrangements you have, these may be from employment or personal pension arrangements. Please note that here we are excluding the state retirement pension."]
+  v341["SBActNow: Are you, [your employer (if DVILO3a= InEmp AND Stat = Employee)] or anyone else on your behalf currently making regular contributions to any pension schemes?"]
+  v342["SBPUn: Have you, an employer or anyone else contributed to any [other (if SBActNow = 1)] pension schemes in the past that you have not yet received any money from?"]
+  v343["SBPinPNow: Are you currently receiving any regular pension payments? [Again do not consider State Pension payments in your response (if DVAge >54)]"]
+  v344["SBPinPPast: Have you ever received any money from a pension scheme? [(other than the State Pension) (if PenBen = ‘State Retirement Pension')] This could have been in the form of regular payments or as lump sum."]
+  v345["SBPPa: [Excluding the pensions you are in receipt of, do (if SBPinPNow = 1 OR SBPinPPast = 1); Do (if SBPinPNow = 2 AND SBPinPPast = 2)] you expect to receive a pension from any schemes that someone else has contributed to? This could be from a previous spouse or partner even if they currently live in another household."]
+  v346["SBOutro: Thank you, with this information I can tailor the rest of the section to questions about:"]
+  v347["SBOutroCheck: SIGNAL: If SBOutro = 2 (No) - Signal text ‘Please go back and change the information, then change SBOutro to Yes’"]
+  v348["SBOutroNo: Thank you - based on your circumstances there is no need to ask any more pension-related questions."]
+  v349["ActIntro: Next I am going to ask you some questions about pension schemes you or someone on your behalf are currently contributing to."]
+  v350["ActTyp: Thinking about the pensions you or someone on your behalf [are currently contributing to, do you have..."]
+  v351["ActEPNum: How many employer or workplace pensions are you, an employer or someone on your behalf currently contributing to? (if SBActNow = Yes)"]
+  v352["ActEPHigh: Now, I'm going to ask you about your two highest value employer pension schemes."]
+  v353["ActEPName: What is the name of your [highest / second highest (ActEPNum >1)] value employer pension scheme?"]
+  v354["ActEPJb: Is your [ActEPName] pension related to your main job [as main job name (if occt = response)] or second job?"]
+  v355["ActEPSec: Is the employer that your [ActEPName] pension is related to…"]
+  v356["ActEPTyp: Now I am going to ask you which type of employer pension you have. There are two main types:"]
+  v357["ActEPIntro: The next questions are about the value of your [ActEPName] pension. It would be helpful to look at a recent pension statement if you have one."]
+  v358["ActEPDBYrSt: What year did you start making contributions to your [ActEPName] pension?"]
+  v359["ActEPAge: From what age can you access your [ActEPName] pension?"]
+  v360["ActEPJbAmt: As the value of your pension is related to your income, I would like to know what is your annual gross income, before deductions, for the job your [ActEPName] pension relates to?"]
+  v361["ActEPJbAmtb: About how much would you estimate your annual gross income is before all deductions, for the job that your [ActEPName] pension relates to?"]
+  v362["ActEPAcFrYN: Do you know the fraction or percentage of your salary that will be added to your final [ActEPName] pension for each year’s service? This can usually be found on your pension statements."]
+  v363["ActEPAcFr: What is the fraction or percentage of your salary that will be added to your final [ActEPName] pension for each year’s service?"]
+  v364["ActEPAcFrOt: ENTER DETAILS OF OTHER FRACTION OR PERCENTAGE"]
+  v365["ActEPInc: How much gross annual income do you expect to get from your [ActEPName] pension when you retire?"]
+  v366["ActEPIncb: About how much do you estimate your annual gross income to be from your [ActEPName] pension when you retire?"]
+  v367["ActEPVal: What is the current value of your [ActEPName] pension?"]
+  v368["ActEPValb: About how much do you estimate the current value of your [ActEPName] pension to be?"]
+  v369["ActEPDCYrSt: What year did you start making contributions into your [ActEPName] pension?"]
+  v370["ActEPAmtPer: The next questions are about your usual monthly contribution to your [ActEPName] pension."]
+  v371["ActEPAmt: How much is your usual monthly contribution to your [ActEPName] pension after tax?"]
+  v372["ActEPPer: What is your usual contribution to your [ActEPName] pension as a percentage of your salary?"]
+  v373["ActPPNum: How many personal pension schemes are you or someone on your behalf currently contributing to?"]
+  v374["ActPPHigh: Now, I'm going to ask you about your two highest value schemes."]
+  v375["ActPPName: What is the name of your [highest / second highest (ActPPNum >1)] value personal pension scheme?"]
+  v376["ActPPYrSt: What year did you start making contributions into your [ActPPName] pension?"]
+  v377["ActPPAmtPer: The next questions are about your usual monthly contribution to your [ActPPName] pension. Would it be easier for you to give this either as..."]
+  v378["ActPPAmt: How much is your usual monthly contribution to your [ActPPName] pension after tax?"]
+  v379["ActPPPer: What is your usual contribution to your [ActPPName] pension as a percentage of your salary?"]
+  v380["ActPPIntro: The next questions are about the value of your [ActPPName] pension. It would be helpful to look at a recent pension statement if you have one."]
+  v381["ActPPVal: What is the current value of your [ActPPName] pension?"]
+  v382["ActPPValb: About how much do you estimate the current value of your [ActPPName] pension to be?"]
+  v383["ActPPValOt: You've told us you've got [ActPPNum] personal pensions."]
+  v384["ActPPValbOt: About how much do you estimate the [total] current value of your remaining personal pension pot[s] to be?"]
+  v385["DVActNum: Derived variable: Number of active pension schemes"]
+  v386["ActOutro: Thank you. That is the end of the questions about pensions that you have been contributing to."]
+  v387["PUnIntro: Next I am going to ask you some questions about pension schemes you have stopped contributing to and haven't withdrawn money from yet."]
+  v388["PUnPrev: At the last interview, we recorded that you had savings in the following scheme(s) that you had stopped contributing to."]
+  v389["PUnNum: Apart from the pensions we've just mentioned, how many more of these pension schemes do you have (If PUnPrev = 1 to 6) / How many of these pension schemes do you have?"]
+  v390["PUnNmSc: Derived variable: Number of preserved pension schemes"]
+  v391["PUnHigh: Now, I'm going to ask you about your four highest value pension schemes. [Please include both the pensions you told me about from the last interview and the other pension scheme(s) you have just told me about in your answers. (If PUnPrev = 1-6 and PUnNum > 0)]"]
+  v392["PunRot: Now I am going to ask you some more details about these pensions."]
+  v393["PUnName: (If 1 rotated pension is chosen at PUnPrev, and PUnNmSc = 1 then PUnName is auto-populated with the pension name from PUnPrev and the question is not asked.)"]
+  v394["PUnYrStop: What year did you stop making payments into your [PUnName] pension?"]
+  v395["PUnTyp: Is your [PUnName] pension…"]
+  v396["PUnEPSec: Was the employer that your [PUnName] pension is related to…"]
+  v397["PUnEPTyp: Now I am going to ask you which type of employer pension you have. There are two main types:"]
+  v398["PUnVal: What is the current value of your [PUnName] pension?"]
+  v399["PUnValb: About how much do you estimate of the current value of the pension pot to be?"]
+  v400["PUnYrSt: What year did you start making payments into your [PUnName] pension?"]
+  v401["PUnInc: How much annual gross income, before deductions, do you expect to get from your [PUnName] pension when you retire?"]
+  v402["PUnIncb: About how much do you estimate the annual gross income, before deductions, from your [PUnName] pension to be when you retire?"]
+  v403["PUnAge: From what age can you access your pension?"]
+  v404["PUnOutro: Thank you. That is the end of the questions about pensions that you have stopped paying into and have not received any money from."]
+  v405["PinPIntro: [Next I am going to ask you some questions about the pensions you receive regular payments from. I would also like to know about any additional pension schemes from which you may have received income in the past. (If SBPInPNow = 1) ;"]
+  v406["PinPNum: How many different pension schemes have you received money from? This can be in the form of a regular income or as lump sums."]
+  v407["PinPWho: [Is this a pension of your own, or one that you receive from a former spouse or partner? (if PinPNum = 1);"]
+  v408["PinPQHigh: Now I'm going to ask you about your 6 highest value pension schemes that you have received money from."]
+  v409["PinPName: What is the name of the [highest / second … sixth highest value (PinPNum >1)] pension scheme that you have received money from?"]
+  v410["PinPOwSp: Is this [PinPName] pension one of your own or one that you receive from a former spouse or partner?"]
+  v411["PinPTyp: Is this [PinPName] pension that you receive…"]
+  v412["PinPEPSec: Was the employer that [your/this] [PinPName] pension is related to…"]
+  v413["PinPEPTyp: Now I am going to ask you which type of employer pension is this. There are two main types:"]
+  v414["PinPReg: Is the money that you receive from this pension...."]
+  v415["PinPHow: In order to receive this regular income, have you…"]
+  v416["PInPAgeStop: At what age did [you/your former spouse or partner] stop paying into this [PinPName] pension?"]
+  v417["PinPAgeRec: And at what age did you first receive money from this pension?"]
+  v418["PinPAccVal: Before any money was received from [your/this] [PinPName] pension, what was the value of this pension pot?"]
+  v419["PinPAccValB: About how much would you estimate the value of [your/this] [PinPName] pension pot to have been, before any money was received from it?"]
+  v420["PinPAmt: How much do you usually receive each month from [your/this] [PinPName] pension after tax is deducted?"]
+  v421["PinPAmtB: About how much would you estimate you receive each month from [your/this] [PinPName] pension after tax?"]
+  v422["PinPLumpNum: You said that you have received lump sum payments from this pension. How many of these have you received?"]
+  v423["PinPSumTot: How much in total have you received in lump sums from [your/this] [PinPName] pension? This should be the net figure, after tax, if tax was paid"]
+  v424["PinPSumTotB: About how much would you estimate you have received in total in lump sums from this pension, after tax (if applicable)?"]
+  v425["PinPSum2Yr: And how much have you received in lump sums from this [PinPName] pension in the last 2 years? This should be the net figure, after tax, if tax was paid"]
+  v426["PinPSum2B: About how much would you estimate you have received in the last 2 years in lump sums from this pension, after tax (if applicable)?"]
+  v427["PinPSumTax: Were any of your withdrawals from [your/this] [PinPName] pension greater than the tax free limit?"]
+  v428["PinPLumpMost: What have you done with the money you received from [your/this] [PInPName] pension lump sum(s)?"]
+  v429["PinPRemVal: What is the current value of the remaining part of [your/this] pension pot?"]
+  v430["PinPRemVB: About how much would you estimate is the value of the remaining part of [your/this] pension pot?"]
+  v431["PinPRemHow: What do you expect to do with the remaining money in this pension pot?"]
+  v432["PinPHowOth: Please give details of how you intend to use this remaining part of [your/this] pension pot."]
+  v433["PinPDBInc: How much annual income do you expect to get from [your/this] [PinPName] pension when you retire?"]
+  v434["PinPDBIncB: About how much do you estimate you will receive in annual income from [your/this] [PinPName] pension when you retire?"]
+  v435["PinPDBAge: At what age do you expect to start receiving this regular income from this pension?"]
+  v436["PinPDBYrs: Approximately how many years did [you/your former spouse or partner] contribue to [your/this] [PinPName] pension?"]
+  v437["PInPEnd: Ask at the end of each loop"]
+  v438["PinPOutro: Thank you. That is the end of the questions about the pensions that you have received money from."]
+  v439["PPaIntro: Next I am going to ask you some questions about pensions that you are expecting from a previous spouse or partner; we would like to know the number of pension schemes and their value."]
+  v440["PPaNum: Thinking about the pensions to which your former spouse or partner contributed, how many pensions of this type do you expect to receive?"]
+  v441["PPaHigh: Now, I'm going to ask you about your three highest value pension schemes from a previous spouse or partner."]
+  v442["PPaPayTyp: Are you expecting lump sum payments or a regular income from your [highest / second highest / third highest value (ActPPNum >1)] previous spouse or partner pension scheme in the future?"]
+  v443["PPaLuSAmt: How much do you expect to get in total as a lump sum? Lump sum payment refers to any sized lump sum, whether it is tax-free or not."]
+  v444["PPaLuSb: Can you give me an estimate of the total lump sum that you expect to receive from this pension?"]
+  v445["PpaInc: How much regular income do you expect to receive from this pension scheme in the future?"]
+  v446["PPaIncF: How often do you expect to receive payments from this pension scheme?"]
+  v447["PPaIncFOt: PLEASE SPECIFY ‘OTHER’ FREQUENCY OF PAYMENT"]
+  v448["PPaIncb: Can you give me an estimate of the amount you expect to receive monthly from this pension scheme when you retire?"]
+  v449["PPaAge: From what age can you expect to receive this money?"]
+  v450["PPaOutro: Thank you. That is the end of the questions about pensions from a previous partner."]
+  v451["PNAdviceUsed: Asked of all who have done something with their pension"]
+  v452["GovAdHow: Did you access guidance from the Government service…"]
+  v453["CaCTFPer: Now I am going to ask some questions about Child Trust Funds. A Child Trust Fund is a savings and investment account for children. Children born on or after 1 September 2002 and on or before 2 January 2011 receive a voucher for £250 from the government to start their account."]
+  v454["CaJISAPer: Now I am going to ask some questions about Junior ISAs. A Junior ISA (or Junior Individual Savings Account) is a tax efficient account designed for adults to"]
+  v455["CaCtVPer: How much is currently in your Child Trust Fund/Junior ISA?"]
+  v456["CaCTvBPer: How much would you estimate is currently in your Child Trust Fund/Junior ISA?"]
+  v457["FinvTyOut: Please do not include your Child Trust Fund/Junior ISA when you answer the following question."]
+  v458["CTFNewC: A Child Trust Fund is a savings and investment account for children. Children born on or after 1 September 2002 and on or before 2 January 2011 received a voucher for £250 from the government to start their account."]
+  v459["CTFPost18: You have said that you had a Child Trust Fund. Now that you are over 18 you have full access to this account. What have you done with your Child Trust Fund? Have you …"]
+  v460["CTFPost18O: Please describe what you have done with your Child Trust Fund"]
+  v461["FTypeAcc: The next questions ask about current accounts, savings accounts and investments you may have. Please do not include property, collectibles or valuables – only financial investments."]
+  v462["FTypeInv: Secondly, do you currently have any of these investments, including any held jointly or overseas…"]
+  v463["FInvTyO: What are the other financial assets you said you have?"]
+  v464["FCAcShInt: Are any of your CURRENT accounts held jointly with your [spouse / Civil Partner / partner]?"]
+  v465["FCAcSh: Is it all or some of your CURRENT accounts that are held jointly with your [spouse / Civil Partner / partner]?"]
+  v466["FCNumSh: ASK OR RECORD IF COUPLE BEING INTERVIEWED TOGETHER"]
+  v467["FCNumIn: [And (if CAcSh = 2)] how many [of your own (if CAcSh = 2)] current accounts do you have?"]
+  v468["FCOvDSh: Note that FCSuppr is a Blaise derived variable that is not mentioned anywhere in the paper questionnaire. - respondent has a current account that is held jointly and partner has not already answered questions about a joint account"]
+  v469["FCOvNSh: How many of your joint current accounts are overdrawn? [Please ignore any negative balance(s) on your all-in-one current accounts (if NumCurrAccM > 0)]"]
+  v470["DCOShV1: [Thinking of the [first…] of your JOINT current accounts that is overdrawn.] How much is [the/this] account overdrawn?"]
+  v471["DCOShVb1: About how much would you estimate that the account is overdrawn?"]
+  v472["FCShVal: [Leaving aside accounts that are overdrawn] how much do you and your partner have [IN TOTAL] in your JOINT current accounts at present?"]
+  v473["FCShVlb: About how much would you estimate is in your joint account(s) at present?"]
+  v474["FCOvDIn: [Thinking now about your own current accounts, (if FCAcSh <> 3)] are you currently overdrawn on [any of (if FCNumIn > 1)] your [own (if FCAcSh <> 3)] current account[s (if FCNumIn > 1)]]?"]
+  v475["FCOvNIn: How many of your [own] current account[s] are overdrawn?"]
+  v476["DCOInV1: [Thinking of the [first…] of your [OWN] current accounts that is overdrawn.] How much is [the/this] account overdrawn?"]
+  v477["DCOInVb1: About how much would you estimate that the account is overdrawn?"]
+  v478["FCInVal: How much do you have [in total (if FCAcSh = 3)] in your [own (if FCAcSh <> 3)] current account[s] at present? Please ignore [the] account[s] with [an] overdraft"]
+  v479["FCInVlb: About how much would you estimate is in your own current account(s) at present?"]
+  v480["FCOvdif: Are you having any difficulty paying off the overdraft on [any of] your [joint] [or] [your own] current account[s] at present? [(Please ignore any negative balance(s) on your [number] all-in-one current account(s).)]"]
+  v481["FSAcShInt: Are any of your SAVINGS or DEPOSIT accounts held jointly with your [spouse / Civil Partner / partner]?"]
+  v482["FSAcSh: FSAcShInt = 1 (has savings or deposit with partner in household)"]
+  v483["FSNumSh: How many JOINT savings or deposit accounts do you have?"]
+  v484["FSNumIn: (And) how many [of your own] savings or deposit accounts do you have?"]
+  v485["FSTypSh: Thinking about your JOINT savings or deposit accounts, which of these types of account do you have…"]
+  v486["FSTypIn: [And] thinking about your [OWN] savings or deposit accounts, which of these types of account do you have…"]
+  v487["FSTypOt: Please describe the other type of savings or deposit account you mentioned."]
+  v488["FSShVal: How much do you and your partner have [in total (if FSNumSh = 1)] in your joint savings and deposit account[s (if FSNumSh = 1)] at present?"]
+  v489["FSShVlb: About how much would you estimate is in your joint savings or deposit account(s) at present?"]
+  v490["FSInVal: How much do you have [in total (if FSAcSh = 3)] in your [own (if FSAcSh = 3)] savings and deposit accounts at present?"]
+  v491["FSInVlb: About how much would you estimate is in your [own] savings or deposit account(s) at present?"]
+  v492["FSOsHav: May I just check, [is your [joint] SAVING or DEPOSIT account held with a bank or other organisation overseas?]/ [are any of your [joint or your own] SAVING or DEPOSIT accounts held with a bank or other organisation overseas?]"]
+  v493["FSOsVlb: About how much would you estimate you currently have in your savings or deposit account(s) held with a bank or other organisation overseas?"]
+  v494["ISAs: FISA"]
+  v495["FCISAv: How much do you have in your cash ISA(s) at present?"]
+  v496["FCISAb: About how much would you estimate you currently have in your cash ISA(s)?"]
+  v497["FIISAv: How much do you have in your investment ISA(s) at present?"]
+  v498["FIISAb: About how much would you estimate you currently have in your investment ISA(s)?"]
+  v499["FKISAv: How much do you have in your ISA(s) at present?"]
+  v500["FKISAb: About how much would you estimate you currently have in your ISA(s)?"]
+  v501["FNSavTyp: Thinking now about your National Savings and Investments, which of these types of product do you have…"]
+  v502["FNSVal: How much do you currently have invested in (all of) these National Savings products?"]
+  v503["FNSVb: How much would you estimate you have invested in (all of) these National Savings products?"]
+  v504["FInvest: Now thinking of your investments, which of these types do you have…"]
+  v505["FundTyp: Are your investment funds managed or self-managed?"]
+  v506["FundVal: What is the total value of all of your investment funds?FOR JOINT INVESTMENTS, SPLIT VALUE BETWEEN RESPONDENTS. CHECK THAT ALL INVESTMENTS OF THIS TYPE HAVE BEEN COVERED BEFORE ENTERING TOTAL IN ANSWER FIELD. ENTER AMOUNT IN £s"]
+  v507["FundValb: How much would you estimate is the total value of your investment funds?"]
+  v508["ShareTyp: Which of the following shares or equities do you have…"]
+  v509["FShUKV: If you chose to sell (all of) your shares in listed or unlisted UK companies, about how much would they be worth?"]
+  v510["FShUKVb: How much would you estimate your shares in listed or unlisted UK companies are worth?"]
+  v511["FShOSV: If you chose to sell your shares in foreign companies, about how much would they be worth?"]
+  v512["FShOSVb: FShOSV = DK/RF"]
+  v513["FEShaV: If you chose to sell your employee shares about how much would they be worth?"]
+  v514["FEShVb: How much would you estimate your employee shares are worth, in total?"]
+  v515["FEOptV: If you chose to exercise your employee share options, what is your estimate of the value of your gain - this is the difference between the option price and the market price times the number of shares involved?"]
+  v516["FEOpVb: How much would you estimate the gain from exercising your employee share options would be?"]
+  v517["FGilts: You said earlier that you had some bonds and gilts. Which of the following types of bonds or gilts do you have…"]
+  v518["FGltUKV: What is the current value of your UK bonds and gilts?"]
+  v519["FGUKVb: How much would you estimate is the current value of your bonds and gilts?"]
+  v520["FGltFoV: What is the current value of your foreign corporate and government bonds?"]
+  v521["FGFoVb: How much would you estimate is the current value of your foreign bonds?"]
+  v522["DKInvest: How much would you estimate is the total value of your investment products?"]
+  v523["FLProd: You said earlier that you have a friendly society or endowment policy or an investment with a life insurance element. Which of the following products do you have…"]
+  v524["FLfEnV: What is the current value of your endowment or regular premium policy?"]
+  v525["FLfEnVb: How much would you estimate the current value of your endowment or regular premium policy is?"]
+  v526["FLfSiV: What is the current value of your single premium policy or investment bonds?"]
+  v527["FLfSiVb: How much would you estimate the current value of your single premium policy or investment bonds is?"]
+  v528["FLfFSV: What is the current value of your Friendly Society Tax Exempt Savings Plan?"]
+  v529["FLfFSVb: How much would you estimate the current value of your Friendly Society Tax Exempt Savings Plan is?"]
+  v530["FLfTeV: What is the current value of your insurance policy that will pay a lump sum at a specified date?"]
+  v531["FLfTeVb: How much would you estimate the current value of your insurance policy that will pay a lump sum at a specified date is?"]
+  v532["CashTyp: Now thinking of the currency or cash you mentioned earlier, which of the following do you have…"]
+  v533["CashVal: What is the total value of your UK Pounds held in cash?"]
+  v534["CashValB: How much would you estimate the total value of your UK Pounds held in cash is?"]
+  v535["CurrVal: What is the total value, in pounds sterling, of your foreign currency?"]
+  v536["CurrValB: How much would you estimate the total value of your foreign currency is?"]
+  v537["ECashVal: What is the total value of your e-money and prepaid accounts such as PayPal?"]
+  v538["ECashValB: How much would you estimate the total value of your e-money and prepaid accounts such as PayPal is?"]
+  v539["CryptNum: Now thinking of the cryptocurrency you mentioned earlier, how many different types of cryptocurrency do you have?"]
+  v540["CryptVal: What is the current total value of your cryptocurrency in pounds sterling?"]
+  v541["CryptValB: How much would you estimate the current value of your cryptocurrency is?"]
+  v542["CryptTime: How many years have you held cryptocurrency?"]
+  v543["CryptRet: What returns on investment have you had from cryptocurrency since you first invested in it, in pounds sterling equivalent?"]
+  v544["FInvOtV: Now thinking of the other financial assets that you [ “have” for those who only have “other financial assets”] [“mentioned earlier” for those who have other financial assets other than just “Other”], what is the current value of these assets?"]
+  v545["FInvOVb: How much would you estimate the current value of your other financial assets is?"]
+  v546["FIncV: Now thinking of all of the accounts and investments that you have told me about, how much income have you received in total in interest, dividends or return on your investments in the last 12 months[, including any winnings on premium bonds for those who have premium bonds at FNSavTyp]?"]
+  v547["FIncVb: How much would you estimate you have received in income from interest, dividends or return on investments in the last 12 months?"]
+  v548["FInfLoan: INDIVIDUAL PROMPT: CODE ALL THAT APPLY"]
+  v549["FInfLV: If respondent has loaned money to someone which will be repaid at some time"]
+  v550["FLoanVB: How much would you estimate the total amount you have loaned to other people is?"]
+  v551["FInfV: How much in total [do you have saved in savings and loans clubs and given to someone else to look after (if FInfLoan = 1 AND 3) ; have you given to someone else to look after (if FInfLoa = 1 ) ; do you have saved in savings and loans clubs (if FInfLoan = 3)]?"]
+  v552["FInfVB: How much would you estimate the total amount do you have [saved in savings and loans clubs and/or given to someone else to look after (if FInfLoan = 1 AND 3) ; given to someone else to look after (if FInfLoan = 1) ; saved in savings and loans clubs (if FInfLoan = 3)]?"]
+  v553["UProp: (Apart from this accommodation) do you own any of the following types of land or property…"]
+  v554["UPropO: Enter details of other real estate"]
+  v555["UNumHs: How many second homes in the UK do you own?"]
+  v556["UBuyLet: If respondent owns buy-to-let property in the UK (residential property which is let for profit)"]
+  v557["UNumBd: How many other buildings in the UK do you own?"]
+  v558["UNumLa: How many different parcels of land in the UK do you own?"]
+  v559["UNumOv: How many different overseas properties or parcels of land do you own?"]
+  v560["UNumRe: How many other properties do you own?"]
+  v561["UPrSh: If respondent owns any property other than buy-to-let property in the UK (residential property which is let for profit)"]
+  v562["UBuyToL1: If respondent owns buy-to-let property in the UK (residential property which is let for profit)"]
+  v563["UPNo1: Which other household members share this ownership with you?"]
+  v564["UValS: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v565["UValBS: What would you estimate is the amount [your share of] this (other houses, flats, holiday homes in the UK) is worth?"]
+  v566["UDebtS: And how much is [your share of] any outstanding mortgages or loans secured on the Other houses/ flats/ holiday homes in the UK) ?"]
+  v567["UDebtBS: What would you estimate is [your share of] the amount of the outstanding mortgage or loan secured on this property?"]
+  v568["UGdVBS: Thinking about the items in [this property/these properties] that you own/ are owned by you or other members of your household, what is the approximate replacement value of [your share of] the household contents?"]
+  v569["UValL: If respondent owns buy-to-let property in the UK (residential property which is let for profit)"]
+  v570["UValBL: What would you estimate is the amount [your share of] this (buy to let property in the UK) is worth?"]
+  v571["UDebtL: If respondent owns buy-to-let property in the UK (residential property which is let for profit)"]
+  v572["UDebtBL: What would you estimate is [your share of] the amount of the outstanding mortgage or loan secured on this property?"]
+  v573["UGdVBL: If respondent owns buy-to-let property in the UK (residential property which is let for profit)"]
+  v574["UValO: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v575["UValBO: What would you estimate is the amount [your share of] this (other buildings in the UK) is worth?"]
+  v576["UDebtO: And how much is [your share of] any outstanding mortgages or loans secured on the other buildings in the UK?"]
+  v577["UDebtBO: What would you estimate is [your share of] the amount of the outstanding mortgage or loan secured on this property?"]
+  v578["UValLU: [Apart from any property included in the value of your business(es), if] you sold [it/them] (other areas of land in the UK), about how much would [it / they/ your share] be worth?"]
+  v579["UValBLU: What would you estimate the amount [your share of] this (other areas of land in the UK) is worth?"]
+  v580["UDebtLU: And how much is [your share of] any outstanding mortgages or loans secured on the other areas of land in the UK?"]
+  v581["UDebtBLU: What would you estimate is [your share of] the amount of the outstanding mortgage or loan secured on this property?"]
+  v582["UValOS: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v583["UValBOS: What would you estimate the amount [your share of] this (land or property overseas) is worth?"]
+  v584["UDebtOS: And how much is [your share of] any outstanding mortgages or loans secured on the land or property overseas?"]
+  v585["UDebtBOS: What would you estimate is [your share of] the amount of the outstanding mortgage or loan secured on this property?"]
+  v586["UGdVBOS: Thinking about the items [this property/these properties] that you own/ are owned by you or other members of your household, what would you estimate the replacement value of [your share of] the household contents is?"]
+  v587["UValOR: LOOP ONLY ONCE FOR EACH PROPERTY TYPE"]
+  v588["UValBOR: What would you estimate the amount [your share of] this (other items of real estate) is worth?"]
+  v589["UDebtOR: And how much is [your share of] any outstanding mortgages or loans secured on the other items of real estate?"]
+  v590["UDebtBOR: What would you estimate is [your share of] the amount of the outstanding mortgage or loan secured on this property?"]
+  v591["DCIntr: I’d now like to ask you a few questions about any credit commitments you might have."]
+  v592["DCards: Do you have any credit or charge cards for which you are the main cardholder?"]
+  v593["DNumber: How many credit or charge accounts do you have for which you are the main cardholder?"]
+  v594["DWhichCard1: credit card[s], or"]
+  v595["DSituationN1: Thinking about the latest statement[s] for your [first/second/x remaining…] [credit/charge] card[s] …"]
+  v596["DPurchase1: Since you paid the last balance in full, have you used the card[s] for any purchases, or is the current balance zero?"]
+  v597["DNam1: ALTHOUGH THE ACCOUNT MAY HAVE ADDITIONAL CARDHOLDERS, LEGALLY ANY DEBT IS ONLY HELD BY ONE PERSON (THE MAIN CARDHOLDER)."]
+  v598["DAmount1: Can you tell me, what is the current balance on [this/these] [credit/charge] card[s]?"]
+  v599["DAmtBand1: About how much would you estimate the amount currently on [this/these] [credit/charge] card[s] is?"]
+  v600["DAmSince1: How much have you spent on [this/these] card[s] since your last repayment?"]
+  v601["DAmSinBand1: About how much would you estimate you have spent on [this/these] card[s] since your last repayment?"]
+  v602["DAmtMth1: About how much would you estimate your typical monthly repayment amount for [this/these] [credit/charge] card[s] is?"]
+  v603["D12beh1: Ccharge or credit card 1/2/3/4/5]"]
+  v604["DMOanyN: Are you currently paying for anything in instalments, including paying later in one lump sum, that you have bought from any of the following mail order or online accounts…"]
+  v605["DMOanyNo: What other purchases are you paying instalments on?"]
+  v606["DMOnum: How many purchases are you paying instalments on?"]
+  v607["DMOins1: (Thinking of your [first/second/remaining] purchase(s)…"]
+  v608["DMOest1: About how much would you estimate of the size of each instalment you pay on [this purchase/these purchases]?"]
+  v609["DMOoft1: How often are the instalments due?"]
+  v610["DMOoftO1: PLEASE ENTER OTHER PERIOD INSTALMENTS ARE DUE"]
+  v611["DMOwhnY1: When do you expect to have paid off the balance on [this purchase/these purchases]?"]
+  v612["DMOwhnM1: ENTER THE MONTH EXPECTS TO PAY OFF PURCHASE BALANCE"]
+  v613["DMOwest1: About how many instalments would you estimate you have left to pay on the balance of [this purchase/these purchases]?"]
+  v614["DMOint1: Are you currently paying interest on some or all of the outstanding balance for [this purchase/these purchases]?"]
+  v615["DMObeh1: Have you been able to keep up with the repayments for the instalments on [this purchase/these purchases] or are you 2 or more consecutive payments behind?"]
+  v616["DMOowe1: How much do you owe on missed or overdue payments on [this purchase/these purchases]?"]
+  v617["DMObal1: What is the total outstanding balance on [this purchase/these purchases]?"]
+  v618["DMoShar1: Are the instalments for this purchase held jointly with anyone else?"]
+  v619["DMoNAM1: May I just check with whom this purchase is shared?"]
+  v620["DHPany: Are you currently paying for any of these items where you arranged with the shop or supplier to pay in instalments…"]
+  v621["DHPnum: Thinking of all of your credit agreements, how many do you have?"]
+  v622["DHPins1: Thinking of your [first/second/ remaining] credit agreement, how much are the standard payments on this agreement?"]
+  v623["DHPest1: How much would you estimate you pay for each instalment as part of [this agreement/these agreements]?"]
+  v624["DHPoft1: How often are the instalments due?"]
+  v625["DHPoftO1: PLEASE ENTER OTHER PERIOD HIRE PURCHASE INSTALMENTS ARE DUE"]
+  v626["DHPwhnY1: When do you expect [this agreement/these agreements] to be repaid?"]
+  v627["DHPwhnM1: ENTER THE MONTH EXPECTS CREDIT AGREEMENT TO BE REPAID"]
+  v628["DHPwest1: How many instalments would you estimate that you have left to pay on the balance of [this agreement/these agreements]?"]
+  v629["DHPint1: Is [this agreement/these agreements]interest free?"]
+  v630["DHPbeh1: Have you been able to keep up with the repayments for this agreement or are you 2 or more consecutive payments behind?"]
+  v631["DHPowe1: How much do you now owe on missed or overdue payments?"]
+  v632["DHPbal1: What is the total outstanding balance on this [this agreement/these agreements]?"]
+  v633["DHPShar1: Is this agreement held jointly with anyone else?"]
+  v634["DHPNAM1: May I just check with whom this agreement is shared?"]
+  v635["DLOld: Last time we interviewed you on [RStartDat], we recorded that you had [RDLnum (1,2…)] loan(s) apart from any mortgage or loans secured on a property."]
+  v636["DLONm: Derived variable : Number of previous wave loans still being active"]
+  v637["DLany: [Excluding the loan you have just told me about (if DLONm > 0) / (And) (if DLONm = 0)] are you currently repaying any other loans of the following types:"]
+  v638["DLNNm: In total, how many of these (new) loans do you have?"]
+  v639["DLNum: Derived variable"]
+  v640["OIntrol: I am now going to ask you some questions about your [1,2…] largest loans."]
+  v641["DLType1: Thinking of your [first/second/third] loan, what type of loan is it?"]
+  v642["DSLamt1: What is the outstanding balance of your student loan?"]
+  v643["DSLest1: About how much would you estimate is the outstanding balance of your student loan?"]
+  v644["DLwhy: Did you take out this loan for any of the following reasons?"]
+  v645["DLSec1: Thinking of [your first, second, third/ [Remaining Number] remaining] loan(s), is this loan secured against the value of your home or other assets?"]
+  v646["DLins1: How much are the standard repayments on this loan? If this is a joint loan, please only confirm your share of the loan."]
+  v647["DLest1: About how much would you estimate is the amount of the instalments you are paying on this loan?"]
+  v648["DLoft1: How often are the instalments due?"]
+  v649["DLoftOt1: PLEASE ENTER OTHER PERIOD INSTALMENTS ARE DUE"]
+  v650["DLwhnY1: When do you expect this loan to be repaid?"]
+  v651["DLwhnM1: If DLwhnY1 = response - year has been entered"]
+  v652["DLwest1: About how much would you estimate is the number of instalments you have left to pay on this loan?"]
+  v653["DLint1: Is this loan interest free at the moment?"]
+  v654["DLbeh1: Have you been able to keep up with the repayments for this loan, or are you 2 or more consecutive payments behind?"]
+  v655["DLowe1: How much do you now owe on missed or overdue payments?"]
+  v656["DLbal1: What is the total outstanding balance on this loan?"]
+  v657["DLShar1: Is this loan held jointly with anyone else?"]
+  v658["NwLn: (And apart from the loans you have already told us about, /And can I just check,) do you have any loans outstanding which you have not yet begun to repay (e.g. loans which you are not yet repaying due to the repayments period having not yet begun)?"]
+  v659["NwLnNo: If NwLn = 1- respondent has loans outstanding which they have not begun to repay"]
+  v660["OIntrom: I am now going to ask you some questions about your [1,2…] (largest) loans for which you have not yet started making repayments."]
+  v661["DnewLType1: Thinking of [your first, second, third/remaining] loan, what type of loan is it?"]
+  v662["DNewLOwe1: How much do you owe in total on this loan?"]
+  v663["DNewLOweB1: About how much would you estimate is the total amount you owe as part of this loan?"]
+  v664["DNewLShar1: Is this loan held jointly with anyone else?"]
+  v665["DHBany: Ask HRP"]
+  v666["DHBamt: Could you tell me how much in total you owe on the missed or overdue payments for [TYPE OF BILL]?"]
+  v667["DHBest: About how much would you estimate you owe on the missed or overdue payments for [TYPE OF BILL]?"]
+  v668["DBurd: [*] Thinking about the [overdraft(s)/credit card(s)/store card(s)/ credit agreement(s)/loan(s)/bill payments] you have just told me about, to what extent is keeping up with the repayment of them and any interest payments a financial burden to you? Would you say it was…"]
+  v669["XInsol: I would now like to ask you whether you have entered into any formal insolvency proceedings or into a Debt Management Plan (DMP) in the last year? By formal insolvency proceedings, I mean bankruptcy, Debt Relief Order (DRO), or an Individual Voluntary Arrangement (IVA)."]
+  v670["XIntyp: If respondent has entered some sort of insolvency proceedings"]
+  v671["XInCse: If respondent has entered some sort of insolvency proceedings"]
+  v672["OtIncIntro: Now we are going to ask some more questions about your income."]
+  v673["RentIncPay: [Apart from income from your business(es) you have already told us about, are (if any income from business reported >0) ; Are (else)] you currently receiving any rent from property, including business property or subletting?"]
+  v674["RentIncTy: Is this rent from..."]
+  v675["RentIncLdg: How much rent do you receive each month from boarders or lodgers, before deducting income tax but after deducting all allowable expenses?"]
+  v676["RentIncAm: In total how much do you receive each month, before deducting income tax but after deducting allowable expenses? [Do not include the rent you have already provided for boarders / lodgers at this address.]"]
+  v677["RentIncBnd: About how much, on average, would you estimate you received each month?"]
+  v678["OthSrc: Please tell me whether you are receiving any of the following regular payments?"]
+  v679["OiNRrPr: How often do you usually receive regular redundancy payments from former employer(s)?"]
+  v680["OiNRrSp: Record details of frequency of payments"]
+  v681["OiNRrAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v682["OiNRB: About how much would you estimate the amount you receive each month from former employer(s), after tax is deducted (net), to be?"]
+  v683["OiNGTPr: How often do you usually receive regular payments from Government Training Schemes?"]
+  v684["OiNGTSp: Record details of frequency of payments"]
+  v685["OiNGTAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v686["OiNGB: About how much would you estimate the amount you receive each month from Government Training Schemes, after tax is deducted (net), to be?"]
+  v687["ReglrPy: Please tell me whether you are receiving any of the following regular payments?"]
+  v688["OiNEGPr: How often do you usually receive payments from the educational grant?"]
+  v689["OiNEGSp: Record details of frequency of payments"]
+  v690["OiNEGAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v691["OiNEGB: About how much would you estimate the amount you receive each year from the educational grant, after tax is deducted, to be?"]
+  v692["OiNFRPr: How often do you usually receive payments from friends or relatives outside the household?"]
+  v693["OiNFRSp: Record details of frequency of payments"]
+  v694["OiNFRAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v695["OiNFrB: About how much do you estimate the amount you receive each month from friends or relatives outside the household, after tax is deducted, to be?"]
+  v696["OiNMAPr: How often do you usually receive payments from maintenance/ alimony/ separation allowance?"]
+  v697["OiNMASp: Record details of frequency of payments"]
+  v698["OiNMAAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v699["OiNMAB: About how much do you estimate the amount you receive each month from maintenance/ alimony/ separation allowance, after tax is deducted, to be?"]
+  v700["OiNRoPr: How often do you usually receive payments from royalties?"]
+  v701["OiNRoSp: Record details of frequency of payments"]
+  v702["OiNRoAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v703["OiNRoB: About how much do you estimate the amount you receive each month from royalties, after tax is deducted, to be?"]
+  v704["OthIncOth: Please describe the other forms of income, not already mentioned, that you receive regular payments from."]
+  v705["OiNOtPr: How often do you usually receive payments from this source / these other sources?"]
+  v706["OiNOtSp: Record details of frequency of payments"]
+  v707["OiNOtAm: And how much do you usually receive after tax is deducted (e.g net)?"]
+  v708["OiNOTB: About how much do you estimate the amount you receive each month from other income, after tax is deducted, to be?"]
+  v709["CoroInc: Ask 1 person per household"]
+  v710["IncrCoro: What is the main reason for your household income increasing?"]
+  v711["IncrCoOth: Ask if IncrCoro = 5"]
+  v712["DecrCoro: What is the main reason for your household income decreasing?"]
+  v713["DecrCoOth: Ask if DecrCoro = 7"]
+  v714["CoroExp: Ask 1 person per household"]
+  v715["CoroAbility: Ask 1 person per household"]
+  v716["CoroSav: Ask 1 person per household"]
+  v717["IncrCoroSav: What is the main reason for your household accessible savings increasing?"]
+  v718["IncrOthSav: Ask if IncrCoroSav = 5"]
+  v719["DecrCoroSav: What is the main reason for your household accessible savings decreasing?"]
+  v720["DecrOthSav: Ask if DecrCoroSav = 8"]
+  v721["CoroExpSav: Ask 1 person per household"]
+  v722["SelectAd: Ask for each dependent child"]
+  v723["CaCTF: Ask for each child born on or after 01/09/2002 unless refused at SelectAd"]
+  v724["CaJISA: Now I am going to ask some questions about Junior ISAs. A Junior ISA (or Junior Individual Savings Account) is a tax efficient account designed for adults to save and invest on behalf of their children. This type of ISA has been available since November 2011. However, it has been possible to transfer your child's Child Trust Fund into a Junior ISA since April 2015."]
+  v725["CaCtV: How much is currently in his/ her [Child Trust Fund (if CaCTF=1) /Junior ISA (CaJISA=1)]?"]
+  v726["CaCTvB: How much would you estimate is currently in his/her [Child Trust Fund (if CaCTF=1) /Junior ISA (CaJISA=1)]?"]
+  v727["CaType1: What type of Child Trust Fund does [Child’s name] have?"]
+  v728["CaOpen: Was the account opened by…"]
+  v729["CaType2: What type of Junior ISA does [Child’s name] have?"]
+  v730["CaContr: [Apart from Child Trust Fund vouchers received from the Government], during the last 2 years who contributed to the [Child Trust Fund/Junior ISA]?"]
+  v731["CaContram1: How much did [the parent(s) inside the household/the parent(s) outside the household/child’s grandparent(s)/ other relative(s)/friend(s) of the family/the other people]put into [child's name] account in the last 2 years?"]
+  v732["CaContramb1: How much would you estimate [the parent(s) inside the household/the parent(s) outside the household/child’s grandparent(s)/ other relative(s)/friend(s) of the family/the other people] put into [Child’s name] account in the last 2 years?"]
+  v733["CaExtra: (QRelGrid.QTRelTo.QRelTo[SelectAd].RFrom[LChInc] = StChild)) AND (Cacontr = CAParl)) - child’s parent is inside of the household"]
+  v734["CaSav: [Aside from the Child Trust Fund/Junior ISA], does [Child’s name] have any savings in a bank or building society account, or any National Savings and Investments such as Children's Bonus Bonds, or any stocks and shares, or other investments?"]
+  v735["CaSvV: [Aside from the Child Trust Fund/Junior ISA], what would you say is the current value of the savings and investments held by [Child’s name]?"]
+  v736["CaSvB: How much would you estimate is the current value of the savings and investments held by [Child’s name] [aside from the Child Trust Fund/Junior ISA]?"]
+  v737["IHRecnt: In the last two years, have you personally received an inheritance valued at £1,000 or more, that is in money, property, or goods of any kind?"]
+  v738["IHRcNum: How many inheritances of £1,000 or more have you received in the last two years?"]
+  v739["IWat: Thinking of your [first/second/third] inheritance, what did you receive in your inheritance?"]
+  v740["IWho1: From whom did you receive that inheritance?"]
+  v741["IVal1: [Still thinking of your [first/second/ third] inheritance] what was the total value, at that time, of everything you inherited, after tax and other deductions?"]
+  v742["IValB1: About how much would you estimate was the value of the inheritance at that time (after tax and other deductions)?"]
+  v743["IHse: What did you do with the property or share in the property that you received?"]
+  v744["IGds: What did you do with the (non-property) inheritance that you received?"]
+  v745["IHEvE: [*] And now thinking back further than the last two years, [apart from this inheritance (IHRcNum = 1) / apart from this these inheritances (IHRcNum > 1)] have you personally received an inheritance valued at £1,000 or more, that is of money, property or goods?"]
+  v746["IHEvNoE: (If IHEvE=1) – one inheritance received before"]
+  v747["IEYrE1: (If IHEvNoE >= 1) – loop for up to 3 inheritance received before"]
+  v748["IEValE1: (If IHEvNoE >= 1)"]
+  v749["IEValBE1: About how much would you estimate was the value of the inheritance at that time (after tax and other deductions)?"]
+  v750["TransIntro: I would like to ask you some questions about gifts and loans transferred between family and friends during lifetime – that is, a gift or loan worth more than £500 at any one time."]
+  v751["RGift: First I would like to ask you about gifts. In the last two years have you received either goods or cash gifts worth £500 or more? Please do not include any money received from a trust fund."]
+  v752["RGfFrom: From whom did you receive these gifts?"]
+  v753["IRGfWho1: Who gave you the Highest/Second Highest/Third Highest total value of gifts over the last two years?"]
+  v754["IRGfVal1: What is the total value of the goods and cash gifts you received from (response at IRGfWho1) in the last two years?"]
+  v755["IRGfVB1: About how much would you estimate is the value of goods and cash gifts that you received [ IRGfWho1] in the last two years?"]
+  v756["IRGfUse1: What did you do with any cash gifts that you received from [IRGfWho1]?"]
+  v757["LRGift: And now thinking back further than the last two years (apart from this gift/ these gifts) have you personally ever received a gift of money, property or goods worth £500 or more?"]
+  v758["LRGiftNo: How many gifts of £500 or more did you receive in this earlier period, that is before (DATE 2 YEARS AGO)?"]
+  v759["LIRGfYr1: In which year did you receive the [highest/second highest/third highest] value gift?"]
+  v760["LIRGfVal1: And what was the total value, at that time, of the [highest/second highest/third highest] value gift, after tax and other deductions?"]
+  v761["LIRGfValB1: About how much would you estimate was the value of the [highest/second highest/third highest] value gift at that time (after tax and other deductions)?"]
+  v762["GGift: In the last two years, have you given any goods or any cash GIFTS worth £500 or more? Please do not include money given via a trust fund."]
+  v763["GGfTo: To whom did you give these gifts?"]
+  v764["IGGfWho1: Who did you give the [highest/ second highest/ third highest] total value of gifts to over the last two years?"]
+  v765["IGGfVal1: What is the total value of the goods and cash gifts that you have given to (response at IGGfWho1) in the last two years?"]
+  v766["IGGfVB1: About how much would you estimate is the value of the goods or cash gifts that you have given to (response at IGGfWho1) in the last two years?"]
+  v767["IGGfUse1: What was done with any cash gifts you gave to (^LGGSource)?"]
+  v768["LGGift: [*] And now thinking back further than the last two years, (apart from this gift/ these gifts,) have you personally ever given a gift of money, property or goods worth £500 or more?"]
+  v769["LGGiftNo: How many gifts worth £500 or more did you give in this earlier period, that is before (DATE 2 YEARS AGO)?"]
+  v770["LIGGfYr1: In which year did you give the [highest/ second highest/ third highest] value gift?"]
+  v771["LIGGfVal1: And what was the total value, at that time, of the [highest/ second highest/ third highest] value gift you gave, after tax and other deductions?"]
+  v772["LIGGfValB1: About how much would you estimate was the value of the [highest/ second highest/ third highest] value gift at that time, after tax and other deductions?"]
+  v773["RLoan: Now I would like to ask you about loans from family or friends. In the last two years, have you received a cash loan of £500 or more from family or friends? Please do not include any loans that you reported earlier in the Loans section"]
+  v774["RLnFrom: From whom did you receive these cash loans?"]
+  v775["IRLnWho1: Who gave you the [highest/ second highest/ third highest] total value of loans over the last two years?"]
+  v776["IRLnVal1: What is the total value of the cash loans you received from [^LRLSource] in the last two years?"]
+  v777["IRLnVB1: About how much would you estimate is the value of the cash loans you received from (IRLnWho1) in the last two years?"]
+  v778["IRLnUse1: What did you do with the money loaned to you by (response at IRLnWho1)?"]
+  v779["IRLnPyBk1: Do you intend to pay back some or all of the loan(s) you have received from (response at IRLnWho1)?"]
+  v780["IRLnPBkAm1: How much of the loan/ loans from (response at IRLnWho1) do you intend to pay back?"]
+  v781["GLoan: In the last two years, have you given a cash loan of £500 or more to family or friends?"]
+  v782["GLnTo: To whom did you give these cash loans?"]
+  v783["IGLnWho1: Who did you give the Highest/ Second Highest/ Third Highest total value of loans to over the last two years?"]
+  v784["IGLnVal1: What is the total value of the money you loaned to (response at IGLnWho1) in the last two years?"]
+  v785["IGLnVB1: About how much would you estimate is the value of the money you loaned to (response at IGLnWho1) in the last two years?"]
+  v786["IGLnUse1: What was done with the money you loaned to (response at IGLnWho1)?"]
+  v787["IGLnPyBk1: Do you expect to receive back some or all of the money you loaned to (^LGLSource, IGLnWho1)?"]
+  v788["IGLnPBkAm1: How much of the money you loaned to (^LGLSource, IGLnWho1) do you expect to receive back?"]
+  v789["TIntro: (Earlier we talked about unit trusts, investment trusts and other types of financial products.)"]
+  v790["TSett: EXCLUDE: TRUSTS SET UP ON BEHALF OF SOMEONE ELSE IF THE RESPONDENT'S OWN ASSETS WERE NOT PUT INTO THE TRUST AT ANY STAGE."]
+  v791["TSNum1: How many separate trusts do you currently have assets in?"]
+  v792["TSNew: In the last two years, have you set up a new trust?"]
+  v793["TSNum2: In total, how many separate trusts do you currently have assets in?"]
+  v794["TCont1: I am going to ask some questions about [this trust (if TSNum1 = 1) / these trusts (if TSNum1 = 2) / the two trusts that you have the most assets in (if TSNum1 > 2)]."]
+  v795["TJnt: [Thinking of the [first / second] (most valuable) trust, (if Count1 > 1) can / Can (if Count1 = 1)] I just check, does the trust contain only your own assets or was it set up jointly with another person in this household or with someone else?"]
+  v796["TPs1: With which other person (or people) in this household did you set this trust up?"]
+  v797["TAcc1: Would you be able to withdraw these assets for your own use in the future if you wanted to?"]
+  v798["TBen: Who are the beneficiaries of the trust?"]
+  v799["TVal1: Now thinking about the current value of the trust, what is the approximate current value of (your share of) the assets in the trust after paying off any debts?"]
+  v800["TValB1: How much would you estimate is the current net value of (your share of) the assets?"]
+  v801["TDup1: Have you already included any of the assets in this trust when answering other questions in this interview?"]
+  v802["TDupA1: Does that include all of the assets in the trust or just some?"]
+  v803["TAddVl1: Can you tell me the approximate current value of (your share of) the assets in the trust that have not already been covered in this interview?"]
+  v804["TAddVB1: About how much would you estimate is the net current value of (your share of) the assets that have not already been covered in this interview?"]
+  v805["TBenef: Are you the beneficiary of a trust? That is, do you currently receive money from a trust, or will you receive money or capital from a trust in the future?"]
+  v806["TBenNum: Can I just check, how many separate trusts are you the beneficiary of?"]
+  v807["TBCap1: At some time in the future, will you receive all, or your share of, the assets held in the [first / second most valuable (if TBenNum > 1)] trust?"]
+  v808["TBCapY1: In which year do you expect to have access to the assets in this trust?"]
+  v809["TBValB1: How much would you estimate is the approximate current value of your share of the assets?"]
+  v810["OthAsCh: Do you have any other assets with financial value that we have not covered in this interview?"]
+  v811["OthAsTy: What sort of assets are they?"]
+  v812["OthAsVl: What is the current value of (all of) these assets?"]
+  v813["OthAsVb: How much would you estimate is the approximate current value of these assets?"]
+  v814["ORiska: For each of the next four questions, please select the answer which best applies to you – there are no right or wrong answers."]
+  v815["ORiskc: [*] If you had a choice of receiving a thousand pounds today or one thousand one hundred pounds in 12 months which would you choose?"]
+  v816["OSafeSav: Here are some things some people have said about savings and stock market investments."]
+  v817["ORisks: And how much do you agree or disagree with this statement."]
+  v818["HealthIntro: I would now like to ask you some questions about your health."]
+  v819["QHealth1: "]
+  v820["LSill: Do you have any long-standing illness, disability or infirmity? By long-standing I mean anything that has troubled you over a period of time or that is likely to affect you over a period of time?"]
+  v821["IllLim: Does this illness or disability / these illnesses or disabilities limit your activities in any way?"]
+  v822["DisType: Does this health problem(s) or disability(ies) mean that you have substantial difficulties with any of these areas of your life?"]
+  v823["DisEver: Have you ever had a long-term illness, disability or infirmity (lasting for a year or more) that affected your ability to carry out normal day-to-day activities?"]
+  v824["FBInt: We are interested in how living standards compare across the generations so the following questions are about your family and parents. I’d like you to think back to when you were a young teenager, say between the ages of 12 and 16."]
+  v825["FBSitu: Thinking back to when you were a young teenager, did you live…"]
+  v826["FBSibs: How many brothers and sisters did you have living with you when you were a young teenager?"]
+  v827["FBTen: Thinking back to when you were a young teenager, in which way did your household own or rent their accommodation?"]
+  v828["FBFaEd: Now thinking about your father's educational qualifications, which best describes the highest level of education/qualifications gained by your father (or your mother's new partner/ husband)?"]
+  v829["FthEcSt: Which of the following best describes what your father (or your mother's new partner or husband) mainly did when you were a young teenager, around the age of 14. Were they…"]
+  v830["FthJobT: Ask if FthEcst = 1,2,3 - respondents father (or mother’s new partner/ husband) was an employee, self-employed or unpaid family worker"]
+  v831["FBMoEd: And thinking about your mother's educational qualifications, which best describes the highest level of education/qualifications gained by your mother (or your father's new partner/ wife)?"]
+  v832["MthEcSt: Which of the following best describes what your mother (or your father’s new partner or husband) mainly did when you were a young teenager, around the age of 14. Were they…"]
+  v833["MthJobT: Ask if MthEcst = 1,2,3 - respondents mother (or father’s new partner/ wife) was an employee, self-employed or unpaid family worker"]
+  v834["IntroFU: May I just check..."]
+  v835["FollowUp: May I just check..."]
+  v836["FutCond: NOTE QUALIFICATIONS/CONDITIONS OF RECALL"]
+  v837["KiTitle: What is your title?"]
+  v838["KiFiNme: By which name do you prefer to be known?"]
+  v839["KiSuNme: What is your surname?"]
+  v840["STDC1: ENTER THE STD CODE"]
+  v841["NumEnt1: ENTER REMAINING DIGITS OF THE NUMBER."]
+  v842["LandPh: DERIVED: Full landline number."]
+  v843["FivDig1: ENTER FIRST 5 DIGITS OF THE MOBILE NUMBER"]
+  v844["SixDig1: ENTER REMAINING 6 DIGITS OF THE MOBILE NUMBER"]
+  v845["MobPh: DERIVED: Full mobile number."]
+  v846["Email2: We would very much like to share some results from the survey with you in future."]
+  v847["CheckAdd: Is this address correct?"]
+  v848["Prem1: What is the first line of your address?"]
+  v849["Prem2: What is the second line of your address?"]
+  v850["Prem3: What is the third line of your address?"]
+  v851["Prem4: What is the fourth line of your address?"]
+  v852["KnowPC: Do you know your postcode?"]
+  v853["OutCode: PLEASE ENTER FIRST PART OF POSTCODE IF KNOWN"]
+  v854["PostTown: And in which town is your address?"]
+  v855["InCode: PLEASE ENTER SECOND PART OF POSTCODE"]
+  v856["MovAdd1: What is the first line of your new address, please include the house number or name, and the name of the street or road?"]
+  v857["MovAdd2: What is the second line of your address?"]
+  v858["MovAdd3: What is the third line of your address?"]
+  v859["MovAdd4: What is the fourth line of your address?"]
+  v860["MKnowPC: Do you know the postcode of your new address?"]
+  v861["MOutCode: PLEASE ENTER FIRST PART OF POSTCODE IF KNOWN"]
+  v862["MLetter: CERTAIN E, EC, SW, W AND WC POSTCODES INCLUDE A LETTER AT THE END OF THE FIRST PART."]
+  v863["MovDist: What is the district of your address (if there is one)?"]
+  v864["MovTown: And what is the post town of your address?"]
+  v865["MInCode: PLEASE ENTER SECOND PART OF POSTCODE"]
+  v866["MovPostC: If you know it, what is the postcode for this address?"]
+  v867["MEffdat: May I know what date you will be moving into your new address please?"]
+  v868["Vouch1: Would you [NAME] like to receive the £10 e-voucher by email or the £10 gift voucher by post"]
+  v869["VouvhPostal: The voucher will be posted to you."]
+  v870["SampNam: PLEASE CHECK THAT THE REPONDENT’S NAME IS CORRECT"]
+  v871["PNam: PLEASE ENTER RESPONDENT’S FULL NAME"]
+  v872["Vouch2: May I just check that we have the correct name and address to which to send the gift voucher?"]
+  v873["SampAdd: We will send the voucher to the following address:"]
+  v874["VAdd1: What is the first line of your/[Name’s] address, please include the house number or name, and the name of the street or road?"]
+  v875["VAdd2: What is the second line of your/[name's] address?"]
+  v876["VAdd3: What is the third line of your/[name's] address?"]
+  v877["VAdd4: What is the fourth line of your/[name's] address?"]
+  v878["VDstrct: And in which district is your/[name's] address?"]
+  v879["VPstTwn: And in which town is your/[name's] address?"]
+  v880["VPostCd: If you know it, what is the postcode for this address?"]
+  v881["Vouch3: If Email <> Empty - there was an email entered for the respondent at the KITE block"]
+  v882["Vouch6: If Email <> Empty - there was an email entered for the respondent at the KITE block"]
+  v883["Vouch4: If Email = Empty - there was no email entered for the respondent at the KITE block"]
+  v884["Vouch5: If (Email <> Empty AND Vouch6 = 1) OR Email = Empty - there was no email entered for the respondent at the KITE block or is there was no email entered for the respondent at the KITE block and the email address is correct"]
+  v885["AccurOth: PLEASE RECORD ANY FURTHER COMMENTS ABOUT THE ACCURACY OF ANSWERS"]
+  v886["ContAdm: PLEASE ENSURE THAT THE FILTER SCREEN IS COMPLETED BEFORE THE CASE IS CODED AND RETURNED"]
+  v887["IntDone: HAVE YOU COMPLETED ALL POST-INTERVIEW CODING, CHECKING & NOTES?"]
+  v888["IntF2Tri: We will ask you some questions about how this case was carried out. Please make every attempt to answer these questions correctly. You may have to look through your personal notes or any information captured in other systems (FWMT or Oracle) to help you to answer these questions."]
+  v889["PhoneNo: How was the phone number obtained for this address?"]
+  v890["KTN2: Did you attempt to visit this address as part of KtN?"]
+  v891["F2FTrial: Did you offer a face-to-face/in-person interview at this address?"]
+  v892["InHouse: When offering a face-to-face/in-person interview, which one of the following applied for your visit?"]
+  v15 -.->|CurStat = 3,4,5 - respondent moved| v16
+  v15 -->|CurStat = 8 - respondent now resident abroad| v17
+  v15 -.->|CurStat = 3,4 - a member of the household has moved within GB and details are known| v18
+  v18 -.->|KnowDet = 1- address of mover known| v19
+  v18 -.->|KnowDet = 1- address of mover known| v20
+  v20 -->|Add2 = Response - entered a second line of address| v21
+  v21 -->|Add3 = Response - entered a third line of address| v22
+  v18 -->|KnowDet = 1 - address of mover known| v22
+  v18 -->|KnowDet = 1 - address of mover known| v23
+  v18 -->|KnowDet = 1 - address of mover known| v24
+  v18 -->|KnowDet = 1 - address of mover known| v25
+  v18 -->|KnowDet = 2 - telephone number of mover known| v26
+  v18 -->|KnowDet = 3 - email address of mover known| v27
+  v15 -.->|Curstat = 2, HldStat = 1| v28
+  v30 -->|CorrNam = 2 - respondent’s name is incorrect| v31
+  v33 -->|DteofBth = 15.06| v34
+  v33 -.->|DteofBth = DK/RF does not know OR refuse date of birth| v35
+  v36 -->|DVAge>=16 respondent is aged 16 or over| v37
+  v37 -.->|XMARSTA = 2,6 respondent is married and living with husband/wife or in a legally recognised Civil Partnership| v38
+  v36 -.->|DVAge >= 16 AND MarSta <> 2,6 more than 1 person in household and respondent is aged 16 or over and not married and living with husband/wife or in a legally recognised Civil Partnership| v39
+  v36 -.->|DVAge>3 AND <19 - aged over 3 and under 19 years| v40
+  v36 -->|DVAge = 19 - respondent is 19 years old| v41
+  v40 -->|FtEd = 1 - in full time education| v42
+  v43 -->|HiHNum = 17 - two or more joint householders have the same income| v44
+  v43 -.->|HiHNum = DK/RF - joint householders do not know or refuse to say who has the greatest income| v45
+  v48 -->|HCoBa = 997 respondent was born in another country not listed above| v49
+  v48 -.->|HCoBa = 997 AND HCoBb <> empty| v50
+  v49 -.->|HCoBa = 997 AND HCoBb <> empty| v50
+  v36 -->|DVAge>=16| v52
+  v52 -->|CryFth = 997 respondent’s father was born in another country not listed above| v53
+  v52 -.->|CryFth = 997 AND CryFSpc <> empty| v54
+  v53 -.->|CryFth = 997 AND CryFSpc <> empty| v54
+  v36 -->|DVAge>=16| v55
+  v55 -->|CryMth = 997 respondent’s mother was born in another country not listed above| v56
+  v55 -.->|CryMth = 997 AND CryMSpc <> empty| v57
+  v56 -.->|CryMth = 997 AND CryMSpc <> empty| v57
+  v11 -.->|Ten1 = 3,4 - respondent has shared ownership or pays rent| v62
+  v11 -.->|Ten1 = 3,4 - respondent has shared ownership or pays rent| v63
+  v63 -->|RentExpPr = 97 rent period is other| v64
+  v65 -.->|LLord=1 or 2 - Respondents rents from LA or HA| v66
+  v66 -->|RentHol = 1 respondent takes a rent holiday| v67
+  v28 -.->|HldStat = 2 AND Ten1 = 1 respondent lives at a new address ONLY and they own the accommodation outright| v68
+  v11 -.->|HldStat = 2 AND Ten1 = 1 respondent lives at a new address ONLY and they own the accommodation outright| v68
+  v69 -->|CTAmt > 0 - respondent has given a council tax amount| v70
+  v70 -->|CTInstal= Instalment respondent pays for their council tax in instalments| v71
+  v73 -->|METHELEC = OTHER| v74
+  v11 -.->|Ten1=1,2 or 3 respondent owns the address outright or is buying it with the help of a mortgage or loan or pays part rent and part mortgage| v75
+  v11 -.->|Ten1 = 1,2 or 3 respondent lives at a new address or is buying it with the help of a mortgage or loan or pays part rent and part mortgage| v76
+  v76 -->|HShare = 1 respondent shares ownership of this property with someone outside the household| v77
+  v78 -.->|HPrice= DK/RF respondent does not know how much they paid| v79
+  v80 -->|HCash = 1 received money to help with the purchase| v81
+  v80 -->|HCash = 1 received money to help with the purchase| v82
+  v11 -.->|Ten1 = 1,2 OR 3 respondent owns address outright or is buying it with the help of a mortgage or loan or pays part rent and part mortgage| v83
+  v83 -.->|HValue = DK/RF respondent does not know amount to expect if they sold their home today| v84
+  v11 -.->|Ten1 = 2 OR 3 respondent is buying main residence with the help of a mortgage or loan or pays part rent and part mortgage| v85
+  v87 -.->|RMNumb>0 and MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v88
+  v88 -->|MExtn = 1 respondent has taken out an extension or top-up on an existing mortgage| v89
+  v86 -.->|RMNumb>0 AND MNumbN>0 IF MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v90
+  v87 -.->|RMNumb>0 AND MNumbN>0 IF MW2Chk 1 = Yes OR MW2Chk 2 = Yes OR MW2Chk 3 = Yes respondent had any mortgages at previous wave and still has any at follow-up| v90
+  v90 -.->|MChge = 1 respondent has taken out new mortgages or loans on the property in last two years| v91
+  v92 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v95
+  v86 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v95
+  v95 -->|MName1 = 1 - mortgage held in one person’s name| v96
+  v95 -->|MName1 = 2 - mortgage held jointly| v97
+  v86 -.->|MNumbN>0 OR MNumbN>0 - all mortgages| v98
+  v92 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v99
+  v86 -.->|MNumbO>0 or MNumbN>0 - all mortgages| v99
+  v99 -->|MType1 <> 1 - mortgage type is not repayment| v100
+  v100 -->|MEndW1 = 1 - respondent has an endowment policy| v101
+  v100 -->|MEndW1 = 1 respondent has an endowment policy| v102
+  v102 -.->|MEndV1= DK/RF respondent does not know the value of the endowment policy| v103
+  v100 -->|MEndW1 = 1 If respondent has an endowment policy| v104
+  v99 -->|MType1 = 4 - mortgage is an all-in-one account| v105
+  v105 -->|MAllTy1 = 1 - respondent has an all-in-one current account mortgage| v106
+  v106 -.->|MNeg1 = DK/RF If respondent does not know negative balance amount| v107
+  v105 -->|MAllTy1 <> 1 - respondent does not have an all-in-one current account mortgage| v108
+  v108 -.->|MVal1 = DK/RF If respondent does not know amount outstanding on the mortgage or loan| v109
+  v105 -->|Mallty1 <> 1 - all mortgages that are not a current account mortgage| v111
+  v111 -.->|MPayM1 = DK/RF| v112
+  v113 -->|MIntpaid1 = yes respondent pays interest on their mortgage| v114
+  v92 -.->|MNumbO>0 OR MNumbN>0 all mortgages| v115
+  v86 -.->|MNumbO>0 OR MNumbN>0 all mortgages| v115
+  v115 -.->|MArrs1 = 3,4 respondent is 2 to 6 months behind or over 6 months behind on mortgage repayments| v116
+  v115 -->|MArrs1 = 1 respondent is up to date with payments| v117
+  v115 -->|MArrs1 = 1 respondent is up to date on mortgage repayments| v118
+  v119 -.->|EqOld = 2,3 respondent did not or did not know about having an equity release scheme in the previous wave| v120
+  v121 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v122
+  v120 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v122
+  v119 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v122
+  v121 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v124
+  v120 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v124
+  v119 -.->|EqYes = 1 OR EqNew = 1 OR EqOld = 1 respondent has an equity release arrangement| v124
+  v124 -.->|EqLoanV = DK/RF refuses or doesn’t know the value of the loan| v125
+  v127 -->|GCollec = 1 - respondent has collectables| v128
+  v128 -.->|GCollV = DK/RF - respondent does not know current market value of their collectables| v129
+  v131 -->|VCarN >= 1 If respondent has one or more vehicles| v132
+  v131 -->|VCarN >= 1 If respondent has one or more vehicles| v133
+  v133 -.->|VEstV = DK/RF - respondent does not know estimated value of vehicles| v134
+  v131 -.->|VCarN >0 OR VCarN = DK - respondent has some vehicles or does not know how many vehicles| v135
+  v135 -->|VPers = 1 respondent owns a personal number plate| v136
+  v137 -->|VOTyp = 5 respondent owns another vehicle type not listed| v138
+  v137 -.->|you sold this if VOTyp = one type - VOTpN = 1 / these if VOTyp = more than one type - VOTpN >1 / the other vehicle s if VOTyp = other type caravan/trailer, boat, plane, bicycle, other type of vehicle fill in only valid VOTyp response s , about how much in total would you get for it/them before paying off any money owing?| v139
+  v139 -.->|VOVal = DK/RF respondent does not know the value of their other vehicles| v140
+  v141 -->|ISwitch = 1| v142
+  v142 -->|PersProx = 2| v143
+  v142 -.->|expected respondent has no partner in household AND If PersProx = 2 and ProxyNum = 17 If proxy is not a household member| v145
+  v143 -.->|expected respondent has no partner in household AND If PersProx = 2 and ProxyNum = 17 If proxy is not a household member| v145
+  v142 -.->|PersProx = 2 and ProxyNum <17 If proxy is a household member| v146
+  v143 -.->|PersProx = 2 and ProxyNum <17 If proxy is a household member| v146
+  v143 -->|ProxyNum = 17 If proxy is not a household member| v147
+  v148 -.->|EthEa = 1,2,3,4,5| v149
+  v150 -.->|EthWa = 1,2,3,4,5| v151
+  v152 -.->|EthSa = 1,2,3,4,5| v153
+  v149 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v154
+  v151 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v154
+  v153 -.->|EthE/EthW = 4,8,13,16,18 OR EthS = 6,7,12,14,17,19 ethnic group is other| v154
+  v142 -.->|If Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =FtF| v157
+  v36 -.->|If Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =FtF| v157
+  v14 -.->|If Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =FtF| v157
+  v142 -.->|Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =Tel.| v158
+  v36 -.->|Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =Tel.| v158
+  v14 -.->|Status = Resident AND Persprox = 1 AND DVage > 16 all respondents aged 16+ except proxies and IntrType =Tel.| v158
+  v142 -.->|Persprox = 1 AND Status = resident AND Country = England Ask all respondents who live in England except proxies| v159
+  v142 -.->|Persprox = 1 AND Status = resident AND Country = Wales Ask all respondents who live in Wales except proxies| v160
+  v142 -.->|Persprox = 1 AND Status = resident AND Country = Scots all respondents who live in Scotland except proxies| v161
+  v159 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v162
+  v161 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v162
+  v160 -.->|ReligE = 8/ReligS = 10/ReligW = 8| v162
+  v142 -->|Persprox = 1 All respondents except proxies| v165
+  v142 -->|Persprox = 1 All respondents except proxies| v166
+  v142 -->|Persprox = 1 All respondents except proxies| v167
+  v168 -->|SchemeET = 2 respondent not in paid work and not on a government scheme| v169
+  v169 -.->|JbAway = 2,3 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job| v170
+  v169 -.->|JbAway = 2 AND OwnBus = 2 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job and not doing unpaid work in own business| v171
+  v170 -.->|JbAway = 2 AND OwnBus = 2 respondent not in paid work and not on a government scheme and not away from job or waiting to start a new job and not doing unpaid work in own business| v171
+  v169 -.->|Looked = 1,3 OR JbAway = 3 respondent looked for work in the last 4 weeks or is waiting to take up a job| v172
+  v169 -.->|Looked = 1,3 OR JbAway = 3 respondent looked for work in the last 4 weeks or is waiting to take up a job| v173
+  v172 -.->|Looked = 2 OR StartJ = 2 respondent has not looked for a job in the last 4 weeks or is not available to start work in the next 2 weeks or waiting to take up a job but is not available to start work in the next 2 weeks| v174
+  v179 -.->|SamJob = 1 AND RStat = 1 If respondent is in the same job and was an employee at previous wave| v180
+  v182 -->|EverWk= No| v183
+  v169 -.->|Wrking = 1 or JbAway = 1 or OwnBus = 1 respondent is currently working| v185
+  v170 -.->|Wrking = 1 or JbAway = 1 or OwnBus = 1 respondent is currently working| v185
+  v175 -.->|DVILO3a = InEmp OR EverWk = yes| v185
+  v182 -.->|DVILO3a = InEmp OR EverWk = yes| v185
+  v185 -->|NumJob > 1 respondent has more than one job| v186
+  v182 -->|EverWk = 1 respondent is not currently working, but has ever worked| v187
+  v182 -.->|RIndD = Response AND RPersProx = 1 OR EverWk = 1 AND DTJbL < 2 years ago - respondent is currently working or has ever worked and answered section at previous wave| v188
+  v184 -.->|RIndD = Response AND RPersProx = 1 OR EverWk = 1 AND DTJbL < 2 years ago - respondent is currently working or has ever worked and answered section at previous wave| v188
+  v175 -.->|DVILO3a = InEmp OR EverWk = yes If currently in employment or has ever worked| v190
+  v182 -.->|DVILO3a = InEmp OR EverWk = yes If currently in employment or has ever worked| v190
+  v188 -.->|same job as at previous wave SameJob = 1 , or currently not working but left job less than 2 years ago feed forward previous wave responses| v190
+  v188 -.->|Stat = 1 AND SameJob <> 5 If respondent is an employee and the supervision status has changed| v194
+  v194 -->|SVise = 1 respondent is a supervisor| v195
+  v188 -.->|Stat = 1 AND SameJob <> 6 respondent is an employee and is not in the same job as the previous wave| v196
+  v188 -.->|Stat = 2 AND SameJob <> 6 AND Solo = 2 If respondent is self employed and not in the same job as the previous wave and does not work alone| v197
+  v182 -.->|Wrking = 1 OR EverWk = 1 respondent is currently working or has ever worked| v199
+  v169 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v200
+  v168 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v200
+  v170 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v200
+  v171 -.->|Wrking = 1 OR JbAway = 1 OR SchemeET = 1 OR OwnBus = 1 OR RelBus = 1 respondent is currently working| v200
+  v200 -->|WkHrs = 96 respondent works variable or irregular hours| v201
+  v36 -.->|DvAge >= 60 AND Penflag=0 AND DVILO3A=1 AND PersProx=1 aged 60+ but under SPa, and still in some form of employment, except proxies| v204
+  v175 -.->|DvAge >= 60 AND Penflag=0 AND DVILO3A=1 AND PersProx=1 aged 60+ but under SPa, and still in some form of employment, except proxies| v204
+  v142 -.->|DvAge >= 60 AND Penflag=0 AND DVILO3A=1 AND PersProx=1 aged 60+ but under SPa, and still in some form of employment, except proxies| v204
+  v204 -->|WrkRed = 1| v205
+  v176 -->|DVILO4a = 1| v206
+  v40 -.->|FtEd <> 1 AND Trainee <> 1 AND RPersProx <> 1 OR RTEA <> Response - respondent is aged 19 or over, or aged 16-18 years and not in FT education and not recorded at previous wave| v209
+  v40 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v210
+  v36 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v210
+  v175 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v210
+  v182 -.->|FtEd <> 1 AND Trainee <> 1 AND DVAge<75 AND DVILO3a = 1 OR EverWk = 1 OR RDVILO3a = 1 OR REverWk = 1 - respondent is aged19 or over, or 16-18 years and not in FT education and less than 75 years and has ever had a paid job| v210
+  v210 -->|PNoWk = 1 respondent has had a period of 6 months or more out of paid work| v211
+  v212 -.->|EdAttn1 = 1 OR EdAttn2 = 1 respondent has qualifications| v214
+  v213 -.->|EdAttn1 = 1 OR EdAttn2 = 1 respondent has qualifications| v214
+  v169 -.->|Wrking = 1 OR JbAway = 1 OR OwnBus = 1 respondent is currently working| v215
+  v170 -.->|Wrking = 1 OR JbAway = 1 OR OwnBus = 1 respondent is currently working| v215
+  v215 -.->|BType1 = 2 OR 3 respondent is a director| v216
+  v215 -->|BType1 = 3 respondent is a director of a company| v217
+  v215 -.->|BType1 =2, 4 or BType1=3 AND BOwn1 =1 respondent is the sole director or a partner or a director who owns part of the business| v218
+  v217 -.->|BType1 =2, 4 or BType1=3 AND BOwn1 =1 respondent is the sole director or a partner or a director who owns part of the business| v218
+  v215 -->|BType1 = 5 respondent has answered with ‘other self-employed’| v219
+  v218 -.->|BAccsA1 = 1 or BAccsB1 = 1 accounts are prepared| v220
+  v219 -.->|BAccsA1 = 1 or BAccsB1 = 1 accounts are prepared| v220
+  v220 -->|BaccBeg1 = Response year has been entered| v221
+  v218 -.->|BAccsA1 = 1 OR BAccsB1 = 1 accounts are prepared| v222
+  v219 -.->|BAccsA1 = 1 OR BAccsB1 = 1 accounts are prepared| v222
+  v222 -->|BProfit1 >0 respondent has given a profit or loss amount| v223
+  v215 -.->|BType1 = 2 or 3 respondent is a director of or has own business| v224
+  v215 -.->|BType1<>1 AND NOT BOwn1 = 2 respondent is self-employed except where do not own any of business| v225
+  v217 -.->|BType1<>1 AND NOT BOwn1 = 2 respondent is self-employed except where do not own any of business| v225
+  v225 -.->|BVal1 = DK/RF respondent does not know value of the business| v226
+  v215 -.->|BType1 = 2,3 Sole director or Director| v227
+  v215 -.->|BType1 = 2 or 3 respondent has own business| v229
+  v215 -.->|Btype1 = 2 or 3 respondent is a director of, or has, their own business| v233
+  v234 -->|BPast = 1 had income from selling all or part of a business in the last two years| v235
+  v234 -->|BPast = 1 had income from selling all or part of a business in the last two years| v236
+  v236 -.->|BSellAm = DK/RF respondent does not know how much they received from selling all or part of their business| v237
+  v236 -.->|BSellAm OR BSellAB = Response respondent has given a value for amount received from selling all or part of their business| v238
+  v237 -.->|BSellAm OR BSellAB = Response respondent has given a value for amount received from selling all or part of their business| v238
+  v239 -->|BMoreBus = 1 yes| v240
+  v239 -.->|BMoreBus = 1 respondent owns part of an other business es| v241
+  v241 -.->|BWorth = DK/RF respondent does not know value of the other business es| v242
+  v176 -->|DVILO4a = 1 - respondent is in employment, excluding family workers derived from Wrking = 1 or JbAway = 1 or Schemeet = 1| v243
+  v176 -.->|DVILO4a = 2 – respondent is unemployed derived from StartJ = Yes| v244
+  v172 -.->|DVILO4a = 2 – respondent is unemployed derived from StartJ = Yes| v244
+  v176 -->|DVILO4a = 1 - respondent is in employment, excluding family workers derived from Wrking = 1 or JbAway = 1 or Schemeet = 1| v245
+  v176 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v247
+  v246 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v247
+  v247 -.->|NetPay=>0 - respondent has given a value at NetPay| v248
+  v247 -->|NetPay = DK - respondent does not know their Net Pay| v249
+  v176 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v250
+  v246 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v250
+  v250 -.->|GrossPay=>0 - respondent has given a value at GrossPay| v251
+  v250 -->|GrossPay = DK - respondent does not know their last gross pay from main job| v252
+  v176 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v253
+  v246 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v253
+  v253 -->|PayUsl = No - respondent last wage/salary was not usual amount receive| v254
+  v253 -->|PayUsl = No - if respondent last wage/salary was not usual amount receive| v255
+  v253 -->|PayUsl = No - respondent last wage/salary was not usual amount receive| v256
+  v256 -->|UGross = response - respondent provided a usual gross amount| v257
+  v176 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v257
+  v246 -.->|DVILO4a = 1 OR PayDat = 0,1,2,3 - respondent is in employment OR will be paid a wage or salary in the future OR was last paid a wage or salary within the last year| v257
+  v261 -->|SEAmt = response - respondent has given an income/profit figure| v262
+  v261 -.->|SEAmt = DK/RF - respondent does not know income from business| v263
+  v263 -->|SEAmK = 1 - respondent would like to give income weekly| v264
+  v263 -->|SEAmK = 2 - respondent would like to give income monthy| v265
+  v266 -->|GrsSEMJb = response - respondent has given a profit figure| v267
+  v266 -.->|GrsSEMjb = DK/RF - respondent does not know profit amount| v268
+  v268 -->|GrsAmK = 1 - respondent would like to give income weekly| v269
+  v268 -->|GrsAmK = 2 - respondent would like to give income monthly| v270
+  v261 -.->|SEAmt = -1 - respondent has made a loss| v271
+  v261 -.->|SEAmt = -1 AND SEAmL = Response - respondent has made a loss and they have given an amount| v272
+  v271 -.->|SEAmt = -1 AND SEAmL = Response - respondent has made a loss and they have given an amount| v272
+  v273 -->|SJob2 = 1 - respondent has other jobs| v274
+  v275 -.->|SjEmp = 1 AND SjNet > 0 respondent is doing other jobs as employee| v276
+  v275 -->|SjNet = 0 respondent did not earn anything in the last month| v277
+  v275 -->|SjNet = 0 respondent did not earn anything in the last month| v278
+  v279 -.->|SjEmp = 2 and SjSeG > 0 respondent is doing other jobs as self-employed| v280
+  v282 -.->|Country = ScotS OR ScotN AND DisBen = 1 Scottish case and receiving Personal Independence Payment or Adult Disability Payment| v283
+  v282 -->|DisBen = 1| v284
+  v282 -.->|Scottish case and DisBen = 2| v286
+  v286 -.->|Scottish case and DisBCDP = 1| v287
+  v287 -.->|Scottish case and CDPType = 2 or 3| v288
+  v282 -->|DisBen = 2| v289
+  v289 -.->|DLAType = 2,3| v290
+  v291 -->|PenBen = 3| v292
+  v292 -->|BspFirst = 1| v293
+  v303 -.->|COLLetter = 1 OR BankStmt = YES OR NO| v298
+  v300 -->|OtherBen = 2| v301
+  v304 -->|BenAmt = DK| v305
+  v304 -->|BenAmt > 0| v306
+  v281 -.->|WageBen = 3 receiving Working Tax Credit| v306
+  v281 -->|WageBen = 3 receiving Working Tax Credit| v306
+  v281 -->|WageBen = 6 benefit being reported is Jobseeker’s Allowance| v307
+  v281 -->|WageBen = 7 benefit being reported is Employment and Support Allowance| v308
+  v281 -->|WageBen = 8 benefit being reported is Carer’s Allowance| v309
+  v282 -->|DisBen = 3 benefit being reported is Attendance Allowance| v314
+  v282 -.->|DisBen = 2 OR DisBen = 3 benefit being reported is Disability Living Allowance or Attendance Allowance| v315
+  v282 -.->|DisBen = 2 OR DisBen = 3 benefit being reported is Disability Living Allowance or Attendance Allowance| v316
+  v296 -->|KidBen = 1 benefit being reported is Child Benefit| v317
+  v317 -->|CBTax = 1| v318
+  v318 -->|CBTaxAmt > 0| v319
+  v300 -.->|OtherBen = 1 benefit being reported is ‘Extended Payment’ of Housing Benefit / rent rebate| v320
+  v325 -->|SFRepay = 1| v326
+  v325 -->|SFRepay = 1 respondent is at present making any repayments on any Budgeting loans/ Advances or Local Authority Loans| v327
+  v305 -.->|any value of BenAmtDK = 1 - Ask if benefit was paid in combination with another and cannot establish a separate amount| v328
+  v305 -.->|any value of BenAmtDK = 1 benefit was paid in combination with another and cannot establish a separate amount| v331
+  v142 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v333
+  v36 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v333
+  v174 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v333
+  v142 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v334
+  v36 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v334
+  v174 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v334
+  v142 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YInAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired| v336
+  v36 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YInAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired| v336
+  v174 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 AND YInAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired| v336
+  v142 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 and YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v337
+  v36 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 and YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v337
+  v174 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 40 and YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v337
+  v142 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 4 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v338
+  v36 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 4 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v338
+  v174 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 4 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v338
+  v142 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 4 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v339
+  v36 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 4 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v339
+  v174 -.->|PersProx = 1 AND DVAge < 40 OR DVAge >= 4 AND YinAct <> 5 - not a proxy interview, and respondent is less than 40 years of age or over 40 years of age but not retired.| v339
+  v343 -->|SBPinPNow = No| v344
+  v341 -.->|SBOutro = 1 AND switchboard SBActNow = 1 go to ActIntro Active Pensions section| v346
+  v349 -.->|SBOutro = 1 AND switchboard SBActNow = 1 go to ActIntro Active Pensions section| v346
+  v347 -.->|SBOutro = 2 go to SBOutroCheck| v346
+  v346 -->|SBOutro = 2 No| v347
+  v351 -.->|ActTyp=1, go to ActEPNum| v350
+  v373 -.->|ActTyp=2, go to ActPPNum| v350
+  v350 -.->|ActTyp=1,3| v351
+  v353 -.->|ActEPNum =1 or 2, go to ActEPName| v351
+  v352 -.->|ActEPNum > 2, go to ActEPHigh| v351
+  v351 -->|ActEPNum >2| v352
+  v351 -->|ActEPNum >=1| v353
+  v353 -.->|ActEPName = response AND DVilo3a = in employment| v354
+  v175 -.->|ActEPName = response AND DVilo3a = in employment| v354
+  v356 -.->|ActEPJb=1, go to ActEPTyp| v354
+  v355 -.->|ActEPJb=2or 3, go to ActEPSec| v354
+  v353 -->|ActEPName = response| v355
+  v351 -->|ActEPNum >=1| v356
+  v351 -.->|ActEPNum >=1 AND ActEPTyp <> 4 or ActEPSec = 1 or ActEPSec= 2| v357
+  v356 -.->|ActEPNum >=1 AND ActEPTyp <> 4 or ActEPSec = 1 or ActEPSec= 2| v357
+  v355 -.->|ActEPNum >=1 AND ActEPTyp <> 4 or ActEPSec = 1 or ActEPSec= 2| v357
+  v367 -.->|ActEPTyp = 1,3,4 go to ActEPVal those who answer 3 here go through all the variables rather than just one set| v357
+  v358 -.->|ActEPTyp = 2 go to ActEPDBYrSt| v357
+  v354 -.->|ActEPTyp = 4 and ActEPJb = 1 and Sectr2 = 2,3,4,6,8 , go to ActEPDBYrSt| v357
+  v191 -.->|ActEPTyp = 4 and ActEPJb = 1 and Sectr2 = 2,3,4,6,8 , go to ActEPDBYrSt| v357
+  v356 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v358
+  v355 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v358
+  v356 -.->|ActEPTyp = 2,3 OR IF ActEPTyp = 4 AND ActEPSec = 2| v359
+  v355 -.->|ActEPTyp = 2,3 OR IF ActEPTyp = 4 AND ActEPSec = 2| v359
+  v356 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2 AND ActEPJb= 3| v360
+  v355 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2 AND ActEPJb= 3| v360
+  v354 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2 AND ActEPJb= 3| v360
+  v362 -.->|ActEPJbAmt = response, go to ActEPAcFrYN| v360
+  v361 -.->|ActEPJbAmt = DK/RF, go to ActEPJbAmtb| v360
+  v371 -.->|ActEPAmt = DK/RF| v361
+  v356 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v362
+  v355 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v362
+  v362 -->|ActEPAcFrYN= 1| v363
+  v364 -.->|ActEPAcFr=6, go to ActEPAcFrOt| v363
+  v363 -->|ActEPAcFr = 6| v364
+  v356 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v365
+  v355 -.->|ActEPTyp = 2,3 OR ActEPTyp = 4 AND ActEPSec = 2| v365
+  v351 -.->|ActEPInc = response and ActEPNum=2, go to ActEPName| v365
+  v353 -.->|ActEPInc = response and ActEPNum=2, go to ActEPName| v365
+  v350 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 3, go to ActPPNum| v365
+  v373 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 3, go to ActPPNum| v365
+  v386 -.->|ActEPInc = response and ActEPNum>2 and ActTyp = 1, go to ActOutro| v365
+  v366 -.->|ActEPInc = DK or RF, go to ActEPIncb| v365
+  v365 -.->|ActEPInc= DK/RF| v366
+  v351 -.->|ActEPNum=2, go to ActEPName| v366
+  v353 -.->|ActEPNum=2, go to ActEPName| v366
+  v350 -.->|ActEPNum>2 and ActTyp = 3, go to ActPPNum| v366
+  v373 -.->|ActEPNum>2 and ActTyp = 3, go to ActPPNum| v366
+  v386 -.->|ActEPNum>2 and ActTyp = 1, go to ActOutro| v366
+  v356 -.->|ActEPTyp= 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v367
+  v355 -.->|ActEPTyp= 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v367
+  v369 -.->|ActEPVal = response, go to ActEPDCYrSt| v367
+  v368 -.->|ActEPVal = DK/RF, go to ActEPValb| v367
+  v367 -.->|ActEPVal = DK/RF| v368
+  v356 -.->|ActEPTyp = 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v370
+  v355 -.->|ActEPTyp = 1,3 OR ActEPTyp = 4 AND ActEpSec = 1| v370
+  v370 -->|ActEPAmtPer = 1| v371
+  v351 -.->|ActEPAmt = response and ActEPNum = 2, go to ActEPName| v371
+  v353 -.->|ActEPAmt = response and ActEPNum = 2, go to ActEPName| v371
+  v350 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v371
+  v373 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v371
+  v386 -.->|ActEPAmt = response and ActEPNum >2 and respondent has answered the questions about thir second employer pension, and ActTyp = 1, go to ActOutro| v371
+  v370 -->|ActEPAmtPer = 2| v372
+  v351 -.->|ActEPPer = response and ActEPNum = 2, go to ActEPName| v372
+  v353 -.->|ActEPPer = response and ActEPNum = 2, go to ActEPName| v372
+  v350 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v372
+  v373 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about their second employer pension, and ActTyp = 3, go to ActPPNum| v372
+  v386 -.->|ActEPPer = response and ActEPNum >2 and respondent has answered the questions about thir second employer pension, and ActTyp = 1, go to ActOutro| v372
+  v350 -.->|ActTyp = 2 or 3| v373
+  v375 -.->|ActPPNum =1 or 2, go to ActPPName| v373
+  v374 -.->|ActPPNum > 2, go to ActPPHigh| v373
+  v373 -->|ActPPNum>2| v374
+  v373 -->|ActPPNum>= 1| v375
+  v373 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v376
+  v373 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v377
+  v377 -->|ActPPAmtPer = 1| v378
+  v377 -->|ActPPAmtPer = 2| v379
+  v373 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v380
+  v373 -->|ActPPNum>= 1 respondent has one or more personal pension schemes| v381
+  v382 -.->|ActPPVal = DK/RF, go to ActPPValb| v381
+  v373 -.->|ActPPVal = response and ActPPNum>=3, go to ActPPValOt| v381
+  v383 -.->|ActPPVal = response and ActPPNum>=3, go to ActPPValOt| v381
+  v386 -.->|ActPPVal = response and ActPPNum = 1 or 2, go to ActOutro| v381
+  v381 -.->|ActPPVal = DK/RF respondent does not know current value of their pension pot| v382
+  v373 -.->|ActPPNum = 1, go to ActOutro| v382
+  v386 -.->|ActPPNum = 1, go to ActOutro| v382
+  v375 -.->|ActPPNum = 2, go to ActPPName| v382
+  v383 -.->|ActPPNum>=3, go to ActPPValOt| v382
+  v373 -->|ActPPNum > 2 respondent has one or more personal pension schemes| v383
+  v386 -.->|ActPPValOt = response, go to ActOutro| v383
+  v384 -.->|ActPPValOt = DK/RF, go to ActPPValbOt| v383
+  v383 -.->|ActPPValOt = DK/RF respondent does not know current value of their remaining pension pots| v384
+  v342 -.->|switchboard SBPUn = 1 go to PUnIntro Preserved untouched section| v386
+  v387 -.->|switchboard SBPUn = 1 go to PUnIntro Preserved untouched section| v386
+  v342 -.->|Switchboard SBPUn= 1 Yes| v389
+  v388 -.->|PUnPrev 1 to 6 PUnNmSc = PUnPrev + PUnNum| v390
+  v389 -.->|PUnPrev 1 to 6 PUnNmSc = PUnPrev + PUnNum| v390
+  v390 -->|PUnNmSc >4| v391
+  v388 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v392
+  v389 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v392
+  v391 -.->|PUnPrev = RESPONSE AND NOT None IN PUnPrev AND PUnNum > 0 AND PUnHigh = EMPTY| v392
+  v390 -->|PUnNmSc >= 1 for each past scheme| v393
+  v390 -->|PUnNmSc >= 1 for each past scheme| v394
+  v390 -->|PUnNmSc >= 1 for each past scheme| v395
+  v399 -.->|PUnVal = DK/RF then go to PUnValb| v398
+  v400 -.->|PUnVal = answer AND PUnEPTyp1 = 3 go to PUnYrSt| v398
+  v403 -.->|PUnVal = answer AND PUnEPTyp1 = 1 go to PUnAge| v398
+  v397 -.->|PUnEPTyp = 2,3 respondent is not receiving a pension from the scheme at the moment, and either type of pension is workplace or pension is a second type defined benefit or hybrid or scheme| v400
+  v397 -.->|PUnEPTyp = 2,3 pension is a Second type defined benefit or hybrid scheme and they are not receiving a pension from the scheme at the moment| v401
+  v403 -.->|PUnInc = answer go to PUnAge| v401
+  v402 -.->|PUnInc = DK/RF go to PUnIncb| v401
+  v401 -.->|PUnInc = DK/RF| v402
+  v390 -->|PUnNmSc >= 1 for each past scheme| v403
+  v390 -.->|no more loops PUnNmSc=1 then PUnOutro| v403
+  v404 -.->|no more loops PUnNmSc=1 then PUnOutro| v403
+  v393 -.->|need more loops PUnNmSc=2 or more then go to PUnName| v403
+  v343 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 - respondent is receiving or has received any pension payments| v405
+  v344 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 - respondent is receiving or has received any pension payments| v405
+  v343 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 respondent is receiving or has received any pension payments| v406
+  v344 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 respondent is receiving or has received any pension payments| v406
+  v343 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 respondent is receiving or has received any pension payments| v407
+  v344 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 respondent is receiving or has received any pension payments| v407
+  v406 -.->|PinPNum <= 6 go to PinPName| v407
+  v409 -.->|PinPNum <= 6 go to PinPName| v407
+  v408 -.->|PinPNum > 6 go to PinPQHigh| v407
+  v406 -->|PinPNum > 6| v408
+  v407 -.->|PinPWho = 1,2 go to PinPTyp| v408
+  v411 -.->|PinPWho = 1,2 go to PinPTyp| v408
+  v410 -.->|PinPWho = 3 go to PinPOwSp| v408
+  v406 -->|PinPNum >= 1| v409
+  v407 -.->|PinPWho = 1,2 go to PinPTyp| v409
+  v411 -.->|PinPWho = 1,2 go to PinPTyp| v409
+  v410 -.->|PinPWho = 3 go to PinPOwSp| v409
+  v407 -->|PinPWho = 3 If respondent has both own and spouse pension| v410
+  v406 -->|PinPNum >=1 For each past scheme| v411
+  v412 -.->|PinPTyp = 1 go to PinPEPSec| v411
+  v414 -.->|PinPTyp = 2 go to PinPReg| v411
+  v411 -->|PinPTyp = 1 employer pension| v412
+  v411 -->|PinPTyp = 1 respondent has an employer pension scheme from their own or spouse employer| v413
+  v406 -->|PinPNum >= 1| v414
+  v413 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v414
+  v411 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v414
+  v407 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v414
+  v410 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v414
+  v415 -.->|PinPReg =1 AND PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 and PinPWho <> 2 and PinPOwSp <> 2 go to PinPHow| v414
+  v416 -.->|PinPReg =1 AND PinPEPTyp = 2 OR PinPEPTyp = 4 or PinPWho = 2 or PinPOwSp = 2 go to PinPAgeStop| v414
+  v406 -->|PinPNum >= 1| v416
+  v406 -->|PinPNum >= 1| v417
+  v414 -.->|PinPAccVal > 0 and PinPReg = 1 or 3 go to PinPAmt.| v418
+  v420 -.->|PinPAccVal > 0 and PinPReg = 1 or 3 go to PinPAmt.| v418
+  v422 -.->|PinPAccVal > 0 and PinPReg = 2 go to PinPLumpNum| v418
+  v419 -.->|PinPAccVal = DK go to PinPAccValB| v418
+  v418 -->|PinPAccVal = DK| v419
+  v414 -.->|PinPReg = 1 or 3 go to PinPAmt.| v419
+  v420 -.->|PinPReg = 1 or 3 go to PinPAmt.| v419
+  v422 -.->|PinPReg = 2 go to PinPLumpNum| v419
+  v414 -.->|PinPReg = 1,3 respondent receives regular pension payment| v420
+  v438 -.->|PinPAmt > 0 and PinPReg = 1 go to PinPOutro| v420
+  v422 -.->|PinPAmt > 0 and PinPReg = 3 go to PinPLumpNum| v420
+  v421 -.->|PinPAmt = DK go to PinPAmtB| v420
+  v420 -->|PinPAmt = DK| v421
+  v414 -.->|PinPReg = 1 go to PinPOutro| v421
+  v438 -.->|PinPReg = 1 go to PinPOutro| v421
+  v422 -.->|PinPReg = 3 go to PinPLumpNum| v421
+  v414 -.->|PinPReg = 2,3 respondent has received a lump sum| v422
+  v414 -.->|PinPReg = 2,3 respondent has received a lump sum| v423
+  v425 -.->|PinPSumTot > 0 go to PinPSum2Yr| v423
+  v424 -.->|PinPSumTot = DK go to PinPSumTotB| v423
+  v423 -->|PinPSumTot = DK total withdrawals are DK| v424
+  v414 -.->|PinPReg = 2,3 respondent has received a lump sum| v425
+  v427 -.->|PinPSum2Yr >= 0 go to PinPSumTax| v425
+  v426 -.->|PinPSum2Yr = DK go to PinPSum2B| v425
+  v425 -->|PinPSum2Yr = DK lump sum amount in last 2 years is DK| v426
+  v414 -.->|PinPReg = 2,3 respondent has received a lump sum| v427
+  v413 -.->|PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 go to PinPLumpMost| v427
+  v411 -.->|PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 go to PinPLumpMost| v427
+  v428 -.->|PinPEPTyp = 1 OR PinPEPTyp = 3 OR PinPTyp = 2 go to PinPLumpMost| v427
+  v433 -.->|PinPReg = 2 AND PinPEPTyp = 2 go to PinPDBInc| v427
+  v438 -.->|PinPReg = 2 AND PinPEPtyp = 4 go to PinPOutro| v427
+  v414 -.->|PinPReg = 2,3 AND PinPEPTyp = 1,3 ORPinPTyp = 2 – respondent has taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme| v428
+  v413 -.->|PinPReg = 2,3 AND PinPEPTyp = 1,3 ORPinPTyp = 2 – respondent has taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme| v428
+  v415 -.->|PinPReg = 2 OR PinPHow = 3,4 go to PinPRemVal| v428
+  v429 -.->|PinPReg = 2 OR PinPHow = 3,4 go to PinPRemVal| v428
+  v438 -.->|PinPReg = 3 and PinPHow <> 3,4 go to PinPOutro| v428
+  v413 -.->|PinPEPtyp = 3 AND PinPRemVal = 0 AND PinPReg = 2 go to PinPDBInc| v429
+  v414 -.->|PinPEPtyp = 3 AND PinPRemVal = 0 AND PinPReg = 2 go to PinPDBInc| v429
+  v433 -.->|PinPEPtyp = 3 AND PinPRemVal = 0 AND PinPReg = 2 go to PinPDBInc| v429
+  v438 -.->|PinPEptyp <> 3 AND PinPRemVal = 0 AND PinPReg = 3 go to PinPOutro| v429
+  v431 -.->|PinPRemVal > 0 and PinPReg = 2 go to PinPRemHow| v429
+  v430 -.->|PinPRemVal = DK go to PinPRemVB| v429
+  v429 -->|PinPRemVal = DK respondent does not know the current value of the retained part of their pension| v430
+  v414 -.->|PinPRemVB > 0 AND PinPReg = 2 go to PinPRemHow| v430
+  v431 -.->|PinPRemVB > 0 AND PinPReg = 2 go to PinPRemHow| v430
+  v438 -.->|PinPRemVB > 0 AND PinPReg <> 2 go to PinPOutro| v430
+  v413 -.->|PinPEPtyp = 3 AND PinPRemVB = 0 AND PinPReg = 2 go to PinPDBInc| v430
+  v433 -.->|PinPEPtyp = 3 AND PinPRemVB = 0 AND PinPReg = 2 go to PinPDBInc| v430
+  v414 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v431
+  v413 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v431
+  v411 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v431
+  v429 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v431
+  v430 -.->|PinPReg = 2 AND PinPEPTyp = 1,3 OR PinPTyp = 2 AND PinPRemVal > 0 or PinPRemVB > 0 – respondent has only taken a lump sum and pension is a first type defined contribution, hybrid or personal scheme and has money left in their pension pot| v431
+  v433 -.->|PinPEPtyp = 3 and PinPRemHow = 1, 2 or 3 go to PinPDBInc| v431
+  v438 -.->|PinPEPTyp <> 3 and PinPRemHow = 1,2 or 3 go to PinPOutro| v431
+  v432 -.->|PinPRemHow = 4 go to PinPHowOth| v431
+  v431 -->|PinPRemHow = 4 respondent intends to use their remaining pension pot another way| v432
+  v413 -.->|PinPEPTyp = 3 go to PinPDBINc| v432
+  v433 -.->|PinPEPTyp = 3 go to PinPDBINc| v432
+  v438 -.->|PinPEPtyp <> 3 go to PinPOutro| v432
+  v414 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v433
+  v413 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v433
+  v434 -.->|PinPDBInc = DK go to PinPDBIncB| v433
+  v433 -->|PinPDBInc = DK respondent does not know expected income| v434
+  v414 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v435
+  v413 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v435
+  v414 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v436
+  v413 -.->|PinPReg = 2 AND PinPEPTyp = 2,3 respondent has a retained DB or hybrid pension that they have withdrawn some money from but not regular income| v436
+  v406 -.->|PinPNum > 1 Go to PinPEnd| v436
+  v437 -.->|PinPNum > 1 Go to PinPEnd| v436
+  v438 -.->|PinPNum = 1 go to PinPOutro| v436
+  v406 -.->|PinPNum > 1 and LOOP number is less than PinPNum go to PinPName| v437
+  v409 -.->|PinPNum > 1 and LOOP number is less than PinPNum go to PinPName| v437
+  v438 -.->|PinPNum > 1 and LOOP number = PinPNum go to PinPOutro| v437
+  v343 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 - Ask all at the end of all questions/loops in the section| v438
+  v344 -.->|Switchboard SBPinPNow = 1 OR SBPinPPast =1 - Ask all at the end of all questions/loops in the section| v438
+  v345 -.->|switchboard SBPPa = 1 go to PPAIntro Previous Spouse or Partner Pensions section| v438
+  v439 -.->|switchboard SBPPa = 1 go to PPAIntro Previous Spouse or Partner Pensions section| v438
+  v345 -.->|switchboard SBPPa = 1| v439
+  v439 -->|PPaIntro = 1| v440
+  v440 -->|PPaNum >3| v441
+  v440 -->|PPaNum >0| v442
+  v443 -.->|PPaPayTyp = 1 go to PPaLuSAmt| v442
+  v445 -.->|PPaPayTyp = 2 go to PPaInc| v442
+  v442 -.->|PPaPayTyp=1,3| v443
+  v445 -.->|PPaLuSAmt > 0 AND PPaPayTyp = 3 go to PPaInc| v443
+  v449 -.->|PPaLuSAmt > 0 AND PPaPayTyp = 1 go to PPaAge| v443
+  v444 -.->|PPaLuSAmt = DK/RF go to PPaLuSb| v443
+  v442 -.->|PPaPayTyp = 3 go to PpaInc| v444
+  v445 -.->|PPaPayTyp = 3 go to PpaInc| v444
+  v449 -.->|PpaPayTyp = 1 go to PpaAge| v444
+  v442 -.->|PpaPayTyp = 2,3| v445
+  v446 -.->|PpaInc > £0 go to PpaIncF| v445
+  v448 -.->|PpaInc = DK/RF go to PpaIncb| v445
+  v449 -.->|PPaIncF = 1,2,3 go to PPaAge| v446
+  v446 -->|PPaIncF = 4 respondent expects other frequency of paymnet| v447
+  v440 -->|PPaNum >= 1| v449
+  v345 -.->|switchboard SBPPa = 1 - Ask all at the end of all questions/loops in the section| v450
+  v343 -.->|SBPinPNow =1 OR SBPinPPast = 1| v451
+  v344 -.->|SBPinPNow =1 OR SBPinPPast = 1| v451
+  v451 -->|PNAdviceUsed = 4 received advice from The Government financial guidance service| v452
+  v453 -->|CaCTFPer = 2 does not have a child trust fund| v454
+  v453 -.->|CaCTFPer = 1 OR CaJISAPer =1 has child trust fund or has a junior ISA| v455
+  v454 -.->|CaCTFPer = 1 OR CaJISAPer =1 has child trust fund or has a junior ISA| v455
+  v453 -.->|CaCTFPer = 1 OR CaJISAPer = 1 has a child trust fund or Junior ISA| v457
+  v454 -.->|CaCTFPer = 1 OR CaJISAPer = 1 has a child trust fund or Junior ISA| v457
+  v36 -.->|DVAge> 18 AND DteOfBth >= 01/09/2002 AND Dteofbth <= 02/01/2011 in the eligible age range| v458
+  v33 -.->|DVAge> 18 AND DteOfBth >= 01/09/2002 AND Dteofbth <= 02/01/2011 in the eligible age range| v458
+  v458 -->|CTFNewC =1 had a child trust fund| v459
+  v459 -->|CTFPost18 = 20 Other| v460
+  v462 -->|FTypeInv = 6 respondent has other financial assets not already mentioned above| v463
+  v461 -.->|FTypeAcc = 1 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has a current account AND in a couple with someone, spouse/partner in household| v464
+  v39 -.->|FTypeAcc = 1 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has a current account AND in a couple with someone, spouse/partner in household| v464
+  v37 -.->|FTypeAcc = 1 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has a current account AND in a couple with someone, spouse/partner in household| v464
+  v464 -->|FCacShInt = 1 - respondent says that they hold current accounts jointly with partner| v465
+  v465 -.->|FCAcSh = 1,2 - all or some accounts held jointly| v466
+  v461 -.->|FTypeAcc = 1 AND FCAcSh <> 1 respondent has a current account in their name only| v467
+  v465 -.->|FTypeAcc = 1 AND FCAcSh <> 1 respondent has a current account in their name only| v467
+  v468 -.->|FCOvDSh = 1 AND FCNumSh >1 - respondent has more than one joint current account and is overdrawn on any of their joint current accounts| v469
+  v466 -.->|FCOvDSh = 1 AND FCNumSh >1 - respondent has more than one joint current account and is overdrawn on any of their joint current accounts| v469
+  v469 -->|FCovNSh > 0| v470
+  v470 -.->|DCOShV1 = DK/RF| v471
+  v472 -.->|FCShVal = DK/RF| v473
+  v465 -.->|FCAcSh <> 1 AND FTypeAcc = 1| v474
+  v461 -.->|FCAcSh <> 1 AND FTypeAcc = 1| v474
+  v474 -.->|FCOvDIn = 1 AND FCNumIn > 1| v475
+  v467 -.->|FCOvDIn = 1 AND FCNumIn > 1| v475
+  v474 -.->|FCOvDIn =1 AND FCOvNin >= 1| v476
+  v475 -.->|FCOvDIn =1 AND FCOvNin >= 1| v476
+  v465 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v478
+  v467 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v478
+  v475 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v478
+  v474 -.->|NOT FCAcSh = 1 AND NOT FCNumIn = FCOvNIn AND NOT FCOvDin = 1 AND FCNumIn = 1| v478
+  v478 -.->|FCInVal = DK/RF| v479
+  v461 -.->|FTypeAcc = 2 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has savings or deposit account AND is living as a couple with someone, spouse/partner in household| v481
+  v39 -.->|FTypeAcc = 2 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has savings or deposit account AND is living as a couple with someone, spouse/partner in household| v481
+  v37 -.->|FTypeAcc = 2 AND LivWth12 = 1 OR xMarSta = 2,6 - respondent has savings or deposit account AND is living as a couple with someone, spouse/partner in household| v481
+  v482 -.->|FSAcSh = 1,2| v483
+  v482 -.->|FSacSh <> 1 AND FTypeAcc = 2| v484
+  v461 -.->|FSacSh <> 1 AND FTypeAcc = 2| v484
+  v461 -.->|FTypeAcc = 2 AND FSAcSh = 1,2 AND FSSuppr <> 1| v485
+  v482 -.->|FTypeAcc = 2 AND FSAcSh = 1,2 AND FSSuppr <> 1| v485
+  v461 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v486
+  v482 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v486
+  v486 -->|FSTypIn = 5| v487
+  v461 -.->|FTypeAcc = 2 AND FSSuppr <> 1 AND FSAcSh = 1 OR FSAcSh = 2| v488
+  v482 -.->|FTypeAcc = 2 AND FSSuppr <> 1 AND FSAcSh = 1 OR FSAcSh = 2| v488
+  v488 -.->|FSShVal = DK/RF| v489
+  v461 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v490
+  v482 -.->|FTypeAcc = 2 AND FSAcSh <> 1| v490
+  v490 -.->|FSInVal = DK/RF| v491
+  v461 -->|FTypeAcc = 2| v492
+  v492 -->|FSOsHav = 1| v493
+  v461 -->|FTypeAcc = 3 respondent has an ISA| v494
+  v495 -.->|FCISAv = DK/RF| v496
+  v497 -.->|FIISAv = DK/RF| v498
+  v499 -.->|FKISAv = DK/RF| v500
+  v462 -->|FTypeInv = 1| v501
+  v462 -->|FTypeInv = 1| v502
+  v502 -.->|FNSVal = DK/RF| v503
+  v462 -->|FTypeInv = 2 respondent has investments such as stocks and shares| v504
+  v504 -->|FInvest = 1| v505
+  v504 -->|FInvest = 1| v506
+  v506 -.->|FundVal = DK/RF| v507
+  v504 -->|FInvest = 2| v508
+  v508 -->|ShareTyp = 1| v509
+  v509 -.->|FShUKV = DK/RF| v510
+  v508 -->|ShareTyp = 2| v511
+  v508 -->|Sharetyp = 3| v513
+  v513 -.->|FEShaV = DK/RF| v514
+  v508 -->|ShareTyp = 4| v515
+  v515 -.->|FEOptV = DK/RF| v516
+  v504 -->|FInvest = 3| v517
+  v517 -.->|FGilts = 1, 3| v518
+  v518 -.->|FGltUKV = DK/RF| v519
+  v517 -.->|FGilts = 2,4| v520
+  v520 -.->|FGltFoV = DK/RF| v521
+  v504 -->|FInvest = 4| v522
+  v462 -->|FTypeInv = 3| v523
+  v523 -->|FLProd = 1| v524
+  v524 -.->|FLfEnV = DK/RF| v525
+  v523 -->|FLProd = 2| v526
+  v526 -.->|FLfSiV = DK/RF| v527
+  v523 -->|FLProd = 3| v528
+  v528 -.->|FLfFSV = DK/RF| v529
+  v523 -->|FLProd = 4| v530
+  v530 -.->|FLfTeV = DK/RF| v531
+  v462 -->|FTypeInv = 4| v532
+  v532 -->|CashTyp = 1| v533
+  v533 -.->|CashVal = DK/RF| v534
+  v532 -->|CashTyp = 2| v535
+  v535 -.->|CurrVal = DK/RF| v536
+  v532 -->|CashTyp = 3| v537
+  v537 -.->|ECashVal = DK/RF| v538
+  v462 -->|FTypeInv = 5| v539
+  v462 -->|FTypeInv = 5| v540
+  v462 -->|FTypeInv = 5| v542
+  v462 -->|FTypeInv = 5| v543
+  v462 -->|FTypeInv = 6| v544
+  v544 -.->|FInvOtV = DK/RF| v545
+  v461 -.->|FTypeAcc= 1,2,3 or FTypeInv = 1,2,3,4,5,6| v546
+  v462 -.->|FTypeAcc= 1,2,3 or FTypeInv = 1,2,3,4,5,6| v546
+  v546 -.->|FIncV = DK/RF| v547
+  v548 -->|FInfLoan = 2| v549
+  v549 -.->|FInfLV = DK/RF| v550
+  v548 -.->|FInfLoan = 1, 3| v551
+  v551 -.->|FInfV = DK/RF| v552
+  v553 -->|UProp = 6| v554
+  v553 -->|UProp = 1| v555
+  v553 -->|UProp = 2| v556
+  v553 -->|UProp = 3| v557
+  v553 -->|UProp = 4| v558
+  v553 -->|UProp = 5| v559
+  v553 -->|UProp = 6| v560
+  v553 -.->|UProp = 1,3,4,5,6| v561
+  v553 -->|UProp = 2| v562
+  v553 -.->|respondent owns second homes in the UK, including time-share and holiday homes If UProp = 1| v564
+  v564 -.->|UValS = DK/RF| v565
+  v553 -->|UProp = 1| v566
+  v566 -.->|UDebtS = DK/RF| v567
+  v553 -->|UProp = 1| v568
+  v553 -->|UProp = 2| v569
+  v569 -.->|UValL = DK/RF| v570
+  v553 -->|UProp = 2| v571
+  v571 -.->|UDebtL = DK/RF| v572
+  v553 -->|UProp = 2| v573
+  v553 -->|UProp = 3| v574
+  v574 -.->|UValO = DK/RF| v575
+  v553 -->|UProp = 3| v576
+  v576 -.->|UDebtO = DK/RF| v577
+  v553 -->|UProp = 4| v578
+  v578 -.->|UValLU = DK/RF| v579
+  v553 -->|UProp = 4| v580
+  v580 -.->|UDebtLU = DK/RF| v581
+  v553 -->|UProp = 5| v582
+  v582 -.->|UValOS = DK/RF| v583
+  v553 -->|UProp = 5| v584
+  v584 -.->|UDebtOS = DK/RF| v585
+  v553 -->|UProp = 5| v586
+  v553 -->|UProp = 6| v587
+  v587 -.->|UValOR = DK/RF| v588
+  v553 -->|UProp = 6| v589
+  v589 -.->|UDebtOR = DK/RF| v590
+  v592 -->|DCards = 1 has credit or charge cards| v593
+  v593 -->|DNumber >= 1 respondent currently has credit or charge cards or accounts| v594
+  v593 -->|DNumber >= 1 respondent currently has credit or charge cards or accounts| v595
+  v595 -->|DSituationN1 = 1 full balance was repaid at the latest bill| v596
+  v595 -.->|DSituationN1 = 2,5,DK OR DPurchase = 1 respondent has an amount still outstanding or account not their responsibility| v597
+  v597 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v598
+  v595 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v598
+  v598 -->|DAmount1 = DK| v599
+  v596 -->|DPurchase1 = 1 - Credit or Charge Card Account has been used for additional purchases since repayment| v600
+  v600 -->|DAmSince1 = DK - respondent does not know the amount outstanding| v601
+  v597 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v602
+  v595 -.->|DNam1 = 1 AND DSituationN1 = 2 or DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v602
+  v597 -.->|DNam1 = 1 AND DSituationN1 = 2 OR DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v603
+  v595 -.->|DNam1 = 1 AND DSituationN1 = 2 OR DPurchase = 1 - Credit or Charge Card account is held in respondent’s name and has an outstanding balance| v603
+  v604 -->|DMOanyN= 3 - respondent reports other instalment purchase| v605
+  v604 -.->|DMOanyN = 1,2,3 - respondent is paying in instalments| v606
+  v606 -->|DMOnum > 0 - respondent is paying instalments on one or more purchase| v607
+  v607 -.->|DMOins1 = DK/RF - respondent does not know the standard repayment amount| v608
+  v606 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v609
+  v609 -->|DMOoft1 = 7 - their instalments are due at other frequency| v610
+  v606 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v611
+  v611 -->|DMOwhnY1 = Response - year has been given| v612
+  v611 -.->|DMOwhnY1 = DK/RF OR DMOwhnM1 = DK/RF - respondent does not know when they will pay off the purchase balance| v613
+  v612 -.->|DMOwhnY1 = DK/RF OR DMOwhnM1 = DK/RF - respondent does not know when they will pay off the purchase balance| v613
+  v606 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v614
+  v606 -->|DMOnum > 0 - respondent is paying instalments on more than one purchase| v615
+  v615 -->|DMObeh1 = 2 - respondent is two or more consecutive payments behind| v616
+  v615 -->|DMObeh1 = 2 - respondent is two or more consecutive payments behind| v617
+  v606 -->|DMOnum > 0 - respondent is paying instalments on one or more purchase| v618
+  v618 -->|DmoShar1 =1 - respondent has a shared purchase| v619
+  v620 -.->|DHPany = 1-7| v621
+  v621 -->|DHPnum > 0 - respondent has an instalment agreement| v622
+  v622 -.->|DHPins1 = DK/RF - respondent does not know how much standard payments are| v623
+  v621 -->|DHPnum > 0 - respondent has an instalment agreement| v624
+  v624 -->|DHPoft1 = 7 - instalments are due at another frequency| v625
+  v624 -.->|NOT DHPoft1 = 7, DK/RF| v626
+  v626 -->|DHPwhnY1 = Response - respondent knows how often instalments are due and they do not have the frequency of ‘other’| v627
+  v626 -.->|DHPOft = 7 OR DHPwhnY1 = DK/RF OR DHPwhnM1 = DK/RF - respondent does not know how often instalments are due or they have the frequency of ‘other’| v628
+  v627 -.->|DHPOft = 7 OR DHPwhnY1 = DK/RF OR DHPwhnM1 = DK/RF - respondent does not know how often instalments are due or they have the frequency of ‘other’| v628
+  v621 -->|DHPnum > 0 - respondent has an instalment agreement| v629
+  v621 -->|DHPnum > 0 - respondent has an instalment agreement| v630
+  v630 -->|DHPbeh1 = 2 - respondent is two or more consecutive payments behind| v631
+  v630 -->|DHPbeh1 = 2 - respondent is two or more consecutive payments behind| v632
+  v621 -->|DHPnum > 0 - respondent has an instalment agreement| v633
+  v633 -.->|DHPShar1 =1 OR DHPShar2 =1 - respondent has a shared purchase| v634
+  v637 -->|DLany = 1 - respondent has another loan| v638
+  v639 -->|DLNum > 0 - respondent has one loan or more| v640
+  v639 -->|DLNum > 0 - respondent has one loan or more| v641
+  v641 -.->|DLType1 = 2, 3 - respondent has a student loan| v642
+  v642 -.->|DSLamt1 = DK/RF - respondent does not know the outstanding balance on their student loan| v643
+  v639 -.->|DLNUm > 0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v644
+  v641 -.->|DLNUm > 0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v644
+  v11 -.->|Ten1 = 1,2,3 AND DLType1 = 1,5,6 - respondent’s home is owned outright or they are buying with the help of a mortgage and they have a personal loan, a cash loan, or another type of loan.| v645
+  v641 -.->|Ten1 = 1,2,3 AND DLType1 = 1,5,6 - respondent’s home is owned outright or they are buying with the help of a mortgage and they have a personal loan, a cash loan, or another type of loan.| v645
+  v639 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v646
+  v641 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v646
+  v639 -.->|DLNum>0 AND DLType1 <> 2,3 AND DLins1 = DK/RF - respondent has a NEW loan but it is NOT a student loan and they do not know the standard repayment amount| v647
+  v641 -.->|DLNum>0 AND DLType1 <> 2,3 AND DLins1 = DK/RF - respondent has a NEW loan but it is NOT a student loan and they do not know the standard repayment amount| v647
+  v646 -.->|DLNum>0 AND DLType1 <> 2,3 AND DLins1 = DK/RF - respondent has a NEW loan but it is NOT a student loan and they do not know the standard repayment amount| v647
+  v639 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v648
+  v641 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v648
+  v648 -->|DLoft1 = 7 - instalments are another frequency| v649
+  v639 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v650
+  v641 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v650
+  v650 -->|DLwhnY1 = response - year has been entered| v651
+  v651 -.->|DLwhnY = DK/RF OR DLwhnM1 = DK/RF - respondent does not know when they expect the loan to be repaid| v652
+  v639 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v653
+  v641 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v653
+  v639 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v654
+  v641 -.->|DLNum>0 AND DLType1 <> 2,3 - respondent has a NEW loan but it is NOT a student loan| v654
+  v654 -->|DLbeh1 = 2 - respondent is getting behind with repayments| v655
+  v654 -->|DLbeh1 = 2 - respondent is getting behind with repayments| v656
+  v639 -->|DLNum > 0 - respondent has one or more loan| v657
+  v658 -.->|NwLn = 1- respondent has loans outstanding which they have not begun to repay| v659
+  v659 -->|NwLnNo > 0 - respondent has a NEW loan| v660
+  v659 -->|NwLnNo > 0 - respondent has a NEW loan| v661
+  v659 -->|NwLnNo > 0 - respondent has a NEW loan| v662
+  v659 -->|NwLnNo > 0| v664
+  v665 -.->|DHBAny = 10-20 - respondent is behind with any bill| v666
+  v666 -.->|DHBamt = DK/RF - respondent does not know how much they are overdue| v667
+  v142 -.->|PersProx = 1 AND FCOvDSh = 1 OR FCOvDin = 1 OR CheckCC = 1 OR CheckST = 1 OR CheckMO = 1 OR CheckHP = 1 OR CheckDL = 1 OR CheckHB = 1 - it is not a proxy interview and the respondent has debt on bank accounts, credit/store cards, mail order catalogues, has any hire purchase agreement or loans, or is behind with bills| v668
+  v468 -.->|PersProx = 1 AND FCOvDSh = 1 OR FCOvDin = 1 OR CheckCC = 1 OR CheckST = 1 OR CheckMO = 1 OR CheckHP = 1 OR CheckDL = 1 OR CheckHB = 1 - it is not a proxy interview and the respondent has debt on bank accounts, credit/store cards, mail order catalogues, has any hire purchase agreement or loans, or is behind with bills| v668
+  v474 -.->|PersProx = 1 AND FCOvDSh = 1 OR FCOvDin = 1 OR CheckCC = 1 OR CheckST = 1 OR CheckMO = 1 OR CheckHP = 1 OR CheckDL = 1 OR CheckHB = 1 - it is not a proxy interview and the respondent has debt on bank accounts, credit/store cards, mail order catalogues, has any hire purchase agreement or loans, or is behind with bills| v668
+  v669 -->|XInsol = 1| v670
+  v669 -->|XInsol = 1| v671
+  v673 -->|rentIncPay=1 - receives income from rent| v674
+  v674 -.->|RentIncTy = 1,3 - rent received from a border or lodger at this address or both| v675
+  v674 -.->|RentIncTy = 2 or 3| v676
+  v676 -.->|RentIncAm = DK/RF - respondent does not know rent income amount| v677
+  v678 -->|OthSrc = 1 - respondent receives regular redundancy payments from former employer s| v679
+  v679 -->|OiNRrPr = 97 - frequency of payment is ‘neither’ weekly, monthly or annual| v680
+  v679 -.->|OiNRrPr = 1,2, 3 or 97| v681
+  v679 -.->|OiNRrPr OR OiNRrAm= DK/RF| v682
+  v681 -.->|OiNRrPr OR OiNRrAm= DK/RF| v682
+  v678 -->|OthSrc = 2 - respondent receives money from Government Training Schemes, such as Youth Training allowance| v683
+  v683 -->|OiNGTPr = 97 - respondent does not know frequency of payment| v684
+  v683 -.->|OiNGTPr = 1,2,3, 97 - respondent receives payments from Government training schemes weekly, monthly, yearly or other frequency.| v685
+  v683 -.->|OiNGTPr = DK/RF OR OiNGTAm = DK/RF - respondent does not know how much they usually receive each month from Government Training Schemes| v686
+  v685 -.->|OiNGTPr = DK/RF OR OiNGTAm = DK/RF - respondent does not know how much they usually receive each month from Government Training Schemes| v686
+  v687 -->|ReglrPy = 1 - respondent is receiving an educational grant| v688
+  v688 -->|OiNEGPr = 97 - respondent does not know frequency of payment| v689
+  v688 -.->|OiNEGPr = 1,2,3, 97 - respondent receives payments from educational grant weekly, monthly, yearly or other frequency.| v690
+  v688 -.->|OiNEGPr OR OiNEGAm= DK/RF - respondent does not know amount they usually receive each month from the educational grant| v691
+  v690 -.->|OiNEGPr OR OiNEGAm= DK/RF - respondent does not know amount they usually receive each month from the educational grant| v691
+  v687 -->|ReglrPy = 2 - receiving regular payments from friends or relatives outside the household| v692
+  v692 -->|OiNFrPr = 97 - respondent does not know frequency of payment| v693
+  v692 -.->|OiNFrPr = 1,2 or 3, 97| v694
+  v692 -.->|OiNFrPr = DK/RF OR OiNFrAm= DK/RF - If respondent does not know amount they usually receive each month from friends or relatives outside the household| v695
+  v694 -.->|OiNFrPr = DK/RF OR OiNFrAm= DK/RF - If respondent does not know amount they usually receive each month from friends or relatives outside the household| v695
+  v687 -->|ReglrPy = 3 - respondent is receiving maintenance, alimony or separation allowance| v696
+  v696 -->|OiNMAPr = 97 - respondent does not know frequency of payment| v697
+  v696 -.->|OiNMAPr = 1,2,3, 97 - respondent receives maintenance, alimony or separation allowance payments weekly, monthly, yearly or other frequency..| v698
+  v696 -.->|OiNMaPr= DK/RF OR OiNMaAm= DK/RF - respondent does not know amount they receive each month from maintenance/ alimony/ separation allowance| v699
+  v698 -.->|OiNMaPr= DK/RF OR OiNMaAm= DK/RF - respondent does not know amount they receive each month from maintenance/ alimony/ separation allowance| v699
+  v687 -->|ReglrPy = 4 -respondent is receiving royalties e.g. from land, books or performances| v700
+  v700 -->|OiNRoPr = 97 - respondent does not know frequency of payment| v701
+  v700 -.->|OiNRoPr = 1,2,3, 97 - If respondent receives payments from royalties weekly, monthly, yearly or other frequency.| v702
+  v700 -.->|OiNRoPr= DK/RF OR OiNRoAm= DK/RF -does not know amount they usually receive each month from royalties| v703
+  v702 -.->|OiNRoPr= DK/RF OR OiNRoAm= DK/RF -does not know amount they usually receive each month from royalties| v703
+  v687 -->|ReglrPy = 5 -respondent is receiving any other income not already mentioned in the questionnaire| v704
+  v687 -->|ReglrPy = 5 -respondent is receiving any other income not already mentioned in the questionnaire| v705
+  v705 -->|OiNOtPr = 97 - respondent does not know frequency of payment| v706
+  v705 -.->|OiNOtPr = 1,2,3, 97 - If respondent receives payments from any other income weekly, monthly, yearly or other frequency.| v707
+  v705 -.->|OiNOtPr = DK/RF OR OiNOtAm = DK/RF -does not know amount they usually receive each month from other sources of income not already mentioned in the questionnaire| v708
+  v707 -.->|OiNOtPr = DK/RF OR OiNOtAm = DK/RF -does not know amount they usually receive each month from other sources of income not already mentioned in the questionnaire| v708
+  v709 -->|CoroInc =1| v710
+  v710 -->|IncrCoro = 5| v711
+  v709 -->|CoroInc =2| v712
+  v712 -->|DecrCoro = 7| v713
+  v716 -->|CoroSav =1| v717
+  v717 -->|IncrCoroSav = 5| v718
+  v716 -->|CoroSav =2| v719
+  v719 -->|DecrCoroSav = 8| v720
+  v722 -.->|SelectAd <> RF AND Birth >= 2002,9,1 AND <= Birth2011,1,2| v723
+  v725 -.->|CaCtV = DK/RF - respondent does not know how much is in their trust fund/junior ISA| v726
+  v723 -.->|CaCTF = 1 AND RCaType = EMPTY OR RCaType=Response - child has a trust fund now but did not have a trust fund at the previous wave| v727
+  v723 -.->|CaCTF = 1 AND RCaType = Empty OR RCaType=Response - child has a trust fund now but did not have a trust fund at the previous wave| v728
+  v724 -->|CaJISA = 1 - child has a Junior ISA| v729
+  v723 -.->|CaCTF = 1 OR CaJISA = 1 - child has a trust fund or a junior ISA| v730
+  v724 -.->|CaCTF = 1 OR CaJISA = 1 - child has a trust fund or a junior ISA| v730
+  v730 -.->|CaContr = 1,2,3,4,5,6 .- someone has contributed to the child’s Trust Fund in the last 2 years| v731
+  v731 -.->|CaContram1 = DK/RF - If respondent does not know the amount contributed| v732
+  v722 -->|SelectAd <> RF - Ask for each child| v734
+  v734 -->|CaSav = 1 - child has other savings| v735
+  v735 -.->|CaSvV = DK/RF - respondent does not know the current value of the savings held by Child’s name| v736
+  v737 -->|IHRecnt = 1 - respondent has received an inheritance| v738
+  v738 -->|IHRcNum >= 1 - respondent has one or more inheritance| v739
+  v738 -->|IHRcNum >= 1 - respondent has one or more inheritance| v740
+  v738 -->|IHRcNum >= 1| v741
+  v741 -.->|IVal1 = DK/RF - respondent does not know the total value inherited| v742
+  v739 -->|IWat = 1 - respondent received property| v743
+  v739 -.->|IWat = 2,3,4,5 - respondent received non-property inheritance| v744
+  v751 -->|RGift = 1 - respondent has received goods or cash gifts| v752
+  v751 -->|RGift = 1 - respondent has received goods or cash gifts| v753
+  v752 -.->|RGfFrom = 1,2,3,4,5,6,7- respondent received cash gifts worth £500 or more in the last two years| v754
+  v754 -.->|IRGfVal1 = DK/RF - respondent does not know value of gift received| v755
+  v752 -.->|RGfFrom = 1,2,3,4,5,6,7- respondent received cash gifts worth £500 or more in the last two years| v756
+  v757 -->|LRGift =1| v758
+  v758 -->|LRGiftNo >= 1| v759
+  v758 -->|LRGiftNo >= 1| v760
+  v762 -->|GGift = 1 - respondent has given any goods or any cash gifts worth £500 or more| v763
+  v762 -->|GGift = 1| v764
+  v763 -.->|GGfTo =1,2,3,4,5,6,7 - respondent gave goods or cash gifts worth £500 or more in the last two years| v765
+  v765 -.->|IGGfVal1 = DK/RF - respondent does not know value of gift given| v766
+  v762 -->|GGift = 1 - respondent given cash gifts worth £500 or more in the last two years| v767
+  v768 -->|LGGift =1| v769
+  v769 -->|LGGiftNo >= 1| v770
+  v769 -->|LGGiftNo >= 1| v771
+  v773 -->|RLoan = 1 - respondent has received loans| v774
+  v773 -->|RLoan = 1 - respondent has received a cash loan of £500 or more| v775
+  v774 -.->|RLnFrom = 1,2,3,4,5,6,7 - has received cash loan from someone| v776
+  v776 -.->|IRLnVal1 = DK/RF - respondent does not know value of the cash loan received| v777
+  v774 -.->|RLnFrom = 1,2,3,4,5,6,7 - respondent has received money for any of the uses shown on the card| v778
+  v774 -.->|RLnFrom = 1,2,3,4,5,6,7 - respondent has a loan| v779
+  v781 -->|GLoan = 1| v782
+  v781 -->|GLoan = 1 - respondent has given a cash loan of £500 or more| v783
+  v782 -.->|GLnTo = 1,2,3,4,5,6,7 - has loaned money to someone| v784
+  v784 -.->|IGLnVal1 = DK/RF - respondent does not know value of the cash loan given| v785
+  v782 -.->|GLnTo =1,2,3,4,5,6,7 - has loaned money to someone| v786
+  v782 -.->|GLnTo =1,2,3,4,5,6,7 - has loaned money to someone| v787
+  v790 -->|TSett = 1 - respondents assets have been put into a trust| v791
+  v790 -.->|TSett = 1 OR RTSett = 1- respondent had assets before or has assets now| v794
+  v791 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v795
+  v793 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v795
+  v795 -->|TJnt = 2 - trust is held jointly with someone in this household| v796
+  v791 -.->|TSNum1 >=1 OR TSNum2 >= 1 - respondent has one or more trusts| v797
+  v793 -.->|TSNum1 >=1 OR TSNum2 >= 1 - respondent has one or more trusts| v797
+  v791 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v798
+  v793 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v798
+  v791 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v799
+  v793 -.->|TSNum1 >= 1 OR TSNum2 >= 1 - respondent has one or more trusts| v799
+  v799 -.->|TVal1 = DK/RF - respondent does not know value of trust| v800
+  v799 -.->|TVal1 OR TValB1 = Response - respondent has given a value| v801
+  v800 -.->|TVal1 OR TValB1 = Response - respondent has given a value| v801
+  v801 -->|TDup1 = 1 - respondent included assets in the trust elsewhere in the interview| v802
+  v802 -->|TDupA1 = 2 - respondent only included some of the assets in the trust elsewhere in the interview| v803
+  v803 -.->|TAddVl1 = DK/RF - respondent does not know the amount not already covered| v804
+  v805 -->|TBenef = 1 - respondent is the beneficiary of a trust| v806
+  v806 -->|TBenNum >= 1 - respondent is beneficiary of one or more trusts| v807
+  v807 -->|TBCap1 = 1 - respondent will receive assets on a specific date in the future| v808
+  v807 -->|TBCap1 = 1 - respondent will receive all of the assets held in the trust at some point in the future| v809
+  v810 -->|OthAsCh = 1 - respondent has other assets with financial value| v811
+  v810 -->|OthAsCh = 1 - respondent has other assets with financial value| v812
+  v812 -.->|OthAsVl = DK/RF - respondent does not know value of these assets| v813
+  v142 -->|Persprox = 1 - Ask all except proxies| v813
+  v142 -->|Persprox = 1 - Ask all except proxies| v814
+  v142 -->|Persprox = 1 - Ask all except proxies| v815
+  v142 -->|Persprox = 1 - Ask all except proxies| v816
+  v142 -->|Persprox = 1 - Ask all except proxies| v817
+  v142 -->|Persprox = 1 - Ask all except proxies| v818
+  v142 -->|Persprox = 1 - Ask all except proxies| v819
+  v142 -->|Persprox = 1 - Ask all except proxies| v820
+  v820 -->|LSill = 1 - respondent has a disability| v821
+  v820 -->|LSill = 1 - respondent has a disability| v822
+  v820 -->|LSill = 2 - respondent does not have a disability| v823
+  v825 -->|FBSitu <> 7 - respondent did not grow up in a collective house or institution| v826
+  v825 -->|FBSitu <> 6 - respondent did not grow up in a private household or foster home| v827
+  v825 -.->|FBSitu = 1,3,4,5 - respondent lived with both parents, lone father, with mother and her new partner or with father and father’s new partner/ wife| v828
+  v825 -.->|FBSitu = 1,3,4,5 - respondent lived with both parents, lone father, with mother and her new partner or with father and father’s new partner/ wife| v829
+  v829 -.->|FthEcst = 1,2,3 - respondents father or mother’s new partner/ husband was an employee, self-employed or unpaid family worker| v830
+  v825 -.->|FBSitu = 1,2,4,5 - respondent lived with both parents, lone mother, with mother and her new partner or with father and father’s new partner/ wife| v831
+  v825 -.->|FBSitu = 1,2,4,5 - respondent lived with both parents, lone mother, with mother and her new partner or with father and father’s new partner/ wife| v832
+  v832 -.->|MthEcst = 1,2,3 - respondents mother or father’s new partner/ wife was an employee, self-employed or unpaid family worker| v833
+  v835 -->|FollowUp = 2 respondent agrees to be contacted again but with conditions| v836
+  v847 -->|CheckAdd = 2 - address for respondent is incorrect| v848
+  v847 -->|CheckAdd = 2 - address for respondent is incorrect| v849
+  v847 -.->|CheckAdd = 2 AND Prem2 = Response - address for respondent is incorrect and they have given a second line| v850
+  v849 -.->|CheckAdd = 2 AND Prem2 = Response - address for respondent is incorrect and they have given a second line| v850
+  v847 -.->|CheckAdd = 2 AND Prem3 = Response - address for respondent is incorrect and they have given a third line| v851
+  v850 -.->|CheckAdd = 2 AND Prem3 = Response - address for respondent is incorrect and they have given a third line| v851
+  v847 -->|CheckAdd = 2 - address for respondent is incorrect| v852
+  v852 -.->|KnowPc = 1 – respondent knows the postcode| v853
+  v847 -.->|CheckAdd = 2 AND KnowPC = 1 AND OutCode = Response - address for respondent is incorrect and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v853
+  v847 -->|CheckAdd = 2 - address for respondent is incorrect| v853
+  v847 -->|CheckAdd = 2 - address for respondent is incorrect| v854
+  v847 -.->|CheckAdd = 2 AND KnowPC = 1 AND OutCode = Response - address for respondent is incorrect and they know the postcode and outcode derived first part of postcode, from lookup = Response| v855
+  v852 -.->|CheckAdd = 2 AND KnowPC = 1 AND OutCode = Response - address for respondent is incorrect and they know the postcode and outcode derived first part of postcode, from lookup = Response| v855
+  v853 -.->|CheckAdd = 2 AND KnowPC = 1 AND OutCode = Response - address for respondent is incorrect and they know the postcode and outcode derived first part of postcode, from lookup = Response| v855
+  v847 -->|CheckAdd = 2 - address for respondent is incorrect| v855
+  v860 -.->|MKnowPc = 1 – respondent knows the postcode| v861
+  v860 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v862
+  v861 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v862
+  v853 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v862
+  v860 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v865
+  v861 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v865
+  v853 -.->|Move = 1 AND MKnowPC = 1 AND MOutCode = Response - respondent will be moving in the next year and the address is known and they know the postcode and outcode derived first part of postcode, from lookup = Response| v865
+  v142 -.->|PersProx = 1,2| v867
+  v868 -->|Vouch1 = No| v869
+  v870 -.->|SampNam = 2, Empty - respondent’s name is incorrect or blank| v871
+  v868 -->|Vouch1 = 2 - respondent would like to receive the voucher by post| v872
+  v868 -->|Vouch1 = 2 - respondent would like to receive the voucher by post| v873
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v874
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v875
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v876
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v877
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v878
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v879
+  v873 -->|SampAdd = 2 - respondent’s address is incorrect| v880
+  v891 -->|F2FTrial=Yes| v892

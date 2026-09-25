@@ -1,0 +1,21 @@
+questions:
+  - variable: Q1
+    question: "Which route should be taken?"
+    response_type: "pre-coded"
+    pre_codes:
+      - code: 1
+        text: "First route"
+      - code: 2
+        text: "Second route"
+  - variable: Q2
+    question: "First route question"
+    routing:
+      - "Ask if Q1 = 1"
+    interviewer_instructions:
+      - "If Q1 = 1 - first route"
+  - variable: Q3
+    question: "Second route question"
+    routing:
+      - "Ask if Q1 = 2"
+    interviewer_instructions:
+      - "If Q1 = 2 - second route"

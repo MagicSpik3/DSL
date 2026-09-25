@@ -12,4 +12,6 @@ Roxygen: list(markdown = TRUE)
 LazyData: true
 Suggests:
     knitr
+Imports:
+    yaml
 Config/roxygen2/version: 8.1.0

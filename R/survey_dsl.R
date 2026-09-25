@@ -11,10 +11,10 @@ survey_state <- function(id, question = NULL, transitions = list(), terminal = F
   list(id = id, question = question, transitions = transitions, terminal = terminal)
 }
 
-survey_transition <- function(target, when = "TRUE", label = NULL) {
+survey_transition <- function(target, when = "TRUE", label = NULL, supported = TRUE, raw = NULL) {
   stopifnot(is.character(target), length(target) == 1L, nzchar(target))
   stopifnot(is.character(when), length(when) == 1L, nzchar(when))
-  list(target = target, when = when, label = label)
+  list(target = target, when = when, label = label, supported = supported, raw = raw)
 }
 
 survey_rule <- function(id, when, message, severity = "error") {
@@ -49,6 +49,7 @@ evaluate_predicate <- function(predicate, context = list()) {
 
 choose_transition <- function(state, context) {
   for (candidate in state$transitions) {
+    if (identical(candidate$supported, FALSE)) next
     if (isTRUE(evaluate_predicate(candidate$when, context))) return(candidate)
   }
   NULL
@@ -72,6 +73,10 @@ audit_survey <- function(definition) {
     errors <- c(errors, paste("Unknown transition target(s):", paste(missing_targets, collapse = ", ")))
   }
   for (state in definition$states) {
+    unsupported <- vapply(state$transitions, function(item) identical(item$supported, FALSE), logical(1))
+    if (any(unsupported)) {
+      warnings <- c(warnings, sprintf("State '%s' has %d unresolved route condition(s).", state$id, sum(unsupported)))
+    }
     if (!state$terminal && !length(state$transitions)) {
       errors <- c(errors, sprintf("Non-terminal state '%s' has no transitions.", state$id))
     }
