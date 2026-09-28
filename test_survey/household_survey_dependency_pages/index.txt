@@ -1,0 +1,7 @@
+survey: household_members_v1
+page_size: 75
+page_count: 1
+font_size: 10px
+pages: 1
+files:
+- page_1: page_1.mmd (39 variables)

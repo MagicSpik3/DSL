@@ -1,0 +1,11 @@
+household_id,OSGRIDREF,AREA,ADDRESS,household_size,reference_person_number,household_address,member_number,name,age,relationship_to_reference,marital_status,parent_person_numbers,dependent
+HH001,1000000001,01,10,6,1,Example Road 10,1,Alice Morgan,52,reference person,married,,FALSE
+HH001,1000000001,01,10,6,1,Example Road 10,2,Bob Morgan,54,partner/spouse,married,,FALSE
+HH001,1000000001,01,10,6,1,Example Road 10,3,Margaret Morgan,79,grandparent,divorced,1,FALSE
+HH001,1000000001,01,10,6,1,Example Road 10,4,Daniel Morgan,23,child,single,1,FALSE
+HH001,1000000001,01,10,6,1,Example Road 10,5,Eva Patel,16,child,single,2,TRUE
+HH001,1000000001,01,10,6,1,Example Road 10,6,Fiona Morgan,12,child,single,"1;2",TRUE
+HH002,1000000002,01,4,4,1,Sample Lane 4,1,George Reed,68,reference person,divorced,,FALSE
+HH002,1000000002,01,4,4,1,Sample Lane 4,2,Helen Reed,65,partner/spouse,widowed,,FALSE
+HH002,1000000002,01,4,4,1,Sample Lane 4,3,Ian Reed,34,child,married,1,FALSE
+HH002,1000000002,01,4,4,1,Sample Lane 4,4,Jade Reed,31,child,single,1,FALSE

@@ -1,0 +1,101 @@
+flowchart TD
+  node_1["start"]
+  node_2["How many people live in this household?"]
+  node_3["Which person number is the household reference person?"]
+  node_4["What is the household address or survey identifier?"]
+  node_5["member_1_start"]
+  node_6["member_2_start"]
+  node_7["member_3_start"]
+  node_8["member_4_start"]
+  node_9["member_5_start"]
+  node_10["member_6_start"]
+  node_11["Member 1: what is this person's name?"]
+  node_12["Member 1: what is this person's age?"]
+  node_13["Member 1: how is this person related to the reference person?"]
+  node_14["Member 1: what is this person's marital status?"]
+  node_15["Member 1: enter the person number(s) of this person's parent(s), if known."]
+  node_16["Member 1: is this person financially dependent on the household?"]
+  node_17["Member 2: what is this person's name?"]
+  node_18["Member 2: what is this person's age?"]
+  node_19["Member 2: how is this person related to the reference person?"]
+  node_20["Member 2: what is this person's marital status?"]
+  node_21["Member 2: enter the person number(s) of this person's parent(s), if known."]
+  node_22["Member 2: is this person financially dependent on the household?"]
+  node_23["Member 3: what is this person's name?"]
+  node_24["Member 3: what is this person's age?"]
+  node_25["Member 3: how is this person related to the reference person?"]
+  node_26["Member 3: what is this person's marital status?"]
+  node_27["Member 3: enter the person number(s) of this person's parent(s), if known."]
+  node_28["Member 3: is this person financially dependent on the household?"]
+  node_29["Member 4: what is this person's name?"]
+  node_30["Member 4: what is this person's age?"]
+  node_31["Member 4: how is this person related to the reference person?"]
+  node_32["Member 4: what is this person's marital status?"]
+  node_33["Member 4: enter the person number(s) of this person's parent(s), if known."]
+  node_34["Member 4: is this person financially dependent on the household?"]
+  node_35["Member 5: what is this person's name?"]
+  node_36["Member 5: what is this person's age?"]
+  node_37["Member 5: how is this person related to the reference person?"]
+  node_38["Member 5: what is this person's marital status?"]
+  node_39["Member 5: enter the person number(s) of this person's parent(s), if known."]
+  node_40["Member 5: is this person financially dependent on the household?"]
+  node_41["Member 6: what is this person's name?"]
+  node_42["Member 6: what is this person's age?"]
+  node_43["Member 6: how is this person related to the reference person?"]
+  node_44["Member 6: what is this person's marital status?"]
+  node_45["Member 6: enter the person number(s) of this person's parent(s), if known."]
+  node_46["Member 6: is this person financially dependent on the household?"]
+  node_47((END))
+  node_1 --> node_2
+  node_2 -->|household_size >= 1 && household_size <= 6| node_3
+  node_2 --> node_47
+  node_3 --> node_4
+  node_4 --> node_5
+  node_5 -->|household_size >= 1| node_11
+  node_5 -->|household_size < 1| node_6
+  node_6 -->|household_size >= 2| node_17
+  node_6 -->|household_size < 2| node_7
+  node_7 -->|household_size >= 3| node_23
+  node_7 -->|household_size < 3| node_8
+  node_8 -->|household_size >= 4| node_29
+  node_8 -->|household_size < 4| node_9
+  node_9 -->|household_size >= 5| node_35
+  node_9 -->|household_size < 5| node_10
+  node_10 -->|household_size >= 6| node_41
+  node_10 -->|household_size < 6| node_47
+  node_11 --> node_12
+  node_12 --> node_13
+  node_13 --> node_14
+  node_14 --> node_15
+  node_15 --> node_16
+  node_16 --> node_6
+  node_17 --> node_18
+  node_18 --> node_19
+  node_19 --> node_20
+  node_20 --> node_21
+  node_21 --> node_22
+  node_22 --> node_7
+  node_23 --> node_24
+  node_24 --> node_25
+  node_25 --> node_26
+  node_26 --> node_27
+  node_27 --> node_28
+  node_28 --> node_8
+  node_29 --> node_30
+  node_30 --> node_31
+  node_31 --> node_32
+  node_32 --> node_33
+  node_33 --> node_34
+  node_34 --> node_9
+  node_35 --> node_36
+  node_36 --> node_37
+  node_37 --> node_38
+  node_38 --> node_39
+  node_39 --> node_40
+  node_40 --> node_10
+  node_41 --> node_42
+  node_42 --> node_43
+  node_43 --> node_44
+  node_44 --> node_45
+  node_45 --> node_46
+  node_46 --> node_47

@@ -1,6 +1,6 @@
 # Survey DSL Prototype
 
-This project contains a small, dependency-free R framework for describing and checking survey logic.
+This project contains a small R framework for describing and checking survey logic. The YAML questionnaire adapter requires the `yaml` package.
 
 ## Project Layout
 
@@ -8,6 +8,27 @@ This project contains a small, dependency-free R framework for describing and ch
 - `structured/`: first-pass parser output (`.rds` and question `.tsv`).
 - `state_machine/`: compiled survey definition, audit report, and Mermaid diagram.
 - `R/`: parser and state-machine implementation.
+
+## Available Tools
+
+The R source files provide the following tools:
+
+- **Define a survey:** `survey_variable()`, `survey_state()`, `survey_transition()`, `survey_rule()`, and `survey()` build variables, question/control-flow states, guarded routes, and response rules.
+- **Inspect and run survey logic:** `audit_survey()` checks state IDs, transition targets, reachability, fallbacks, and unresolved routes. `run_survey()` follows supported routes for an answer context. `check_response()` checks required answers on the path taken and evaluates response rules.
+- **Import survey specifications:** `parse_survey_text()` conservatively extracts questions, sections, choices, and review cues from plain text. `parse_yaml_survey()` reads questionnaire YAML using the `yaml` package. `compile_parsed_survey()` and `compile_yaml_survey()` turn parsed specifications into the common survey model.
+- **Check response data:** `audit_survey_responses()` checks each data-frame row for ambiguous routes and selected row-level count/name contradictions. `audit_csv_against_survey()` reads a CSV for the same checks. `survey_issue_report()` returns a summary, a row-level issue matrix, and flagged rows; `survey_response_issue_matrix()` can also write the matrix to CSV.
+- **Group household rows:** `survey_household_key()` combines available `OSGRIDREF`, `AREA`, and `ADDRESS` columns into a household key. The issue matrix adds that key and a within-household member index to each response row.
+- **Visualize and export:** `mermaid_state_machine()` and `mermaid_variable_dependencies()` create Mermaid diagrams. `write_state_machine()` and `write_dependency_suite()` write compiled artifacts, audit reports, dependency diagrams, and PDF output.
+
+These functions currently live in `R/` and are sourced directly by the examples and tests; the package `NAMESPACE` does not currently declare exported functions. Relevant examples and scripts include `examples/school_activity_survey.R`, `examples/parsed_survey_information.R`, `examples/parsed_was_round9.R`, `examples/check_was_routing_impossibilities.R`, `examples/was_survey_error_matrix.R`, and `scripts/check_business_accounts.R`.
+
+## Multi-Row Surveys and Household Consistency
+
+For a multi-row survey, the household is the group and each person is a separate member record (row). A household with four people therefore has four person rows with the same household key, not one row per household. Household-level answers may be repeated on those rows or stored in a related household record; either way, their meaning and consistency across the group must be explicit.
+
+For example, if a household member reports that they have two children living in the household, the household data should contain two distinct member rows representing those children. A research or validation workflow should compare the reported count with the number of matching child-member records in that same household, using the survey's definition of a child and who is included in the count. More generally, linked answers across member rows should agree with household-level answers and with each other; a mismatch should be reported against the household and the relevant rows.
+
+**Current limitation:** the existing response audit groups rows by household key and assigns member indexes, and it can flag some contradictions within an individual row. It does not yet compare a reported child/dependent count with the number of corresponding member rows, nor does it otherwise enforce general cross-row household consistency. Treat those checks as requirements for future research and implementation, not as existing functionality. The current route evaluator also skips route conditions marked unsupported during YAML compilation; their source text remains available in the audit and route outputs for review.
 
 For poorly structured source material, `R/survey_parser.R` provides a deliberately conservative first stage. It identifies sections, question-shaped lines, answer options, guidance, source line numbers, and review cues before compiling the result into the DSL. It does not pretend that implicit routing or domain meaning can be recovered perfectly; those remain visible for human review.
 

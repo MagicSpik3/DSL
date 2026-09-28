@@ -153,6 +153,8 @@ write_parsed_survey <- function(parsed, output_dir = "structured", name = "surve
 mermaid_state_machine <- function(definition) {
   lines <- c("flowchart TD")
   variables <- setNames(definition$variables, vapply(definition$variables, `[[`, character(1), "id"))
+  state_ids <- vapply(definition$states, `[[`, character(1), "id")
+  node_ids <- setNames(paste0("node_", seq_along(state_ids)), state_ids)
   for (state in definition$states) {
     label <- if (isTRUE(state$terminal)) {
       "END"
@@ -165,7 +167,11 @@ mermaid_state_machine <- function(definition) {
     label <- gsub("\n", " ", label, fixed = TRUE)
     label <- gsub("\t", " ", label, fixed = TRUE)
     label <- gsub("\"", "'", label, fixed = TRUE)
-    shape <- if (isTRUE(state$terminal)) sprintf("%s((%s))", state$id, label) else sprintf("%s[\"%s\"]", state$id, label)
+    shape <- if (isTRUE(state$terminal)) {
+      sprintf("%s((%s))", node_ids[[state$id]], label)
+    } else {
+      sprintf("%s[\"%s\"]", node_ids[[state$id]], label)
+    }
     lines <- c(lines, paste0("  ", shape))
   }
   for (state in definition$states) {
@@ -174,8 +180,8 @@ mermaid_state_machine <- function(definition) {
       if (is.null(transition_label) || !length(transition_label)) {
         transition_label <- if (identical(transition$when, "TRUE")) "" else transition$when
       }
-        label <- if (!nzchar(transition_label)) "" else paste0("|", mermaid_edge_label(transition_label), "|")
-      lines <- c(lines, sprintf("  %s -->%s %s", state$id, label, transition$target))
+      label <- if (!nzchar(transition_label)) "" else paste0("|", mermaid_edge_label(transition_label), "|")
+      lines <- c(lines, sprintf("  %s -->%s %s", node_ids[[state$id]], label, node_ids[[transition$target]]))
     }
   }
   paste(lines, collapse = "\n")

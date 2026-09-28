@@ -1,0 +1,18 @@
+erDiagram
+  HOUSEHOLD ||--|{ MEMBER : contains
+  MEMBER ||--o{ MEMBER : parent_of
+  HOUSEHOLD {
+    string household_id PK
+    integer household_size
+    integer reference_person_number
+  }
+  MEMBER {
+    string household_id FK
+    integer member_number PK
+    string name
+    integer age
+    string relationship_to_reference
+    string marital_status
+    string parent_numbers
+    boolean dependent
+  }

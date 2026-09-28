@@ -1,0 +1,11 @@
+survey: household_members_v1
+ok: TRUE
+reachable_states: 47
+errors: none
+warnings:
+- State 'member_1_start' has no explicit TRUE fallback transition.
+- State 'member_2_start' has no explicit TRUE fallback transition.
+- State 'member_3_start' has no explicit TRUE fallback transition.
+- State 'member_4_start' has no explicit TRUE fallback transition.
+- State 'member_5_start' has no explicit TRUE fallback transition.
+- State 'member_6_start' has no explicit TRUE fallback transition.

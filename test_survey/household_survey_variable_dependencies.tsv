@@ -1,0 +1,8 @@
+"source"	"target"	"predicate"	"label"	"supported"	"raw"
+"household_size"	"reference_person_number"	"household_size >= 1 && household_size <= 6"	"household_size >= 1 && household_size <= 6"	TRUE	""
+"household_size"	"member_1_name"	"household_size >= 1"	"household_size >= 1"	TRUE	""
+"household_size"	"member_2_name"	"household_size >= 2"	"household_size >= 2"	TRUE	""
+"household_size"	"member_3_name"	"household_size >= 3"	"household_size >= 3"	TRUE	""
+"household_size"	"member_4_name"	"household_size >= 4"	"household_size >= 4"	TRUE	""
+"household_size"	"member_5_name"	"household_size >= 5"	"household_size >= 5"	TRUE	""
+"household_size"	"member_6_name"	"household_size >= 6"	"household_size >= 6"	TRUE	""

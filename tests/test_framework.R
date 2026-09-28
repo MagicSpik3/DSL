@@ -55,6 +55,8 @@ stopifnot(!"of_total_turnover_approximately_what_percentage_related_to_the_produ
 diagram <- mermaid_state_machine(compiled)
 stopifnot(grepl("flowchart TD", diagram, fixed = TRUE))
 stopifnot(grepl("Does your business produce goods or services", diagram, fixed = TRUE))
+stopifnot(grepl("node_", diagram, fixed = TRUE))
+stopifnot(!grepl("\\n  end\\(\\(END\\)\\)", diagram))
 temp_structured <- tempfile()
 temp_state_machine <- tempfile()
 write_parsed_survey(parsed, temp_structured, "test_survey")
