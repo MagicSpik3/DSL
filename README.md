@@ -22,6 +22,59 @@ The R source files provide the following tools:
 
 These functions currently live in `R/` and are sourced directly by the examples and tests; the package `NAMESPACE` does not currently declare exported functions. Relevant examples and scripts include `examples/school_activity_survey.R`, `examples/parsed_survey_information.R`, `examples/parsed_was_round9.R`, `examples/check_was_routing_impossibilities.R`, `examples/was_survey_error_matrix.R`, and `scripts/check_business_accounts.R`.
 
+## A tiny tutorial: Boolean algebra for surveys
+
+The core DSL idea is simple: a survey question is a variable, a state is a place in the interview, and a transition is a guarded proposition. In other words, we are building Boolean logic for human responses rather than for numbers alone.
+
+The smallest possible atomic example is a three-way answer set:
+
+```r
+# A = yes
+# B = no
+# D = did not answer
+#
+# Excluding the "did not answer" case makes the answer space incomplete.
+# A, B, and D should be treated as mutually exclusive states.
+```
+
+A minimal R definition looks like this:
+
+```r
+survey_variable("willing_to_answer", "choice",
+  "Are you willing to answer a basic survey?",
+  choices = c("yes", "no", "did_not_answer"))
+
+survey_state("ask_willing", question = "willing_to_answer", transitions = list(
+  survey_transition("next_question", "willing_to_answer == 'yes'"),
+  survey_transition("end", "willing_to_answer == 'no'"),
+  survey_transition("end", "is.na(willing_to_answer) || willing_to_answer == 'did_not_answer'")
+))
+```
+
+This reads as a survey rule system:
+
+- `willing_to_answer == 'yes'` means the proposition A is true.
+- `willing_to_answer == 'no'` means the proposition B is true.
+- `is.na(willing_to_answer) || willing_to_answer == 'did_not_answer'` means the proposition D is true.
+- A and B and D are mutually exclusive; together they cover the valid response space for the question.
+
+That is the survey analogue of Boolean algebra:
+
+- a variable can be set to a state;
+- a guard is a proposition;
+- a transition is implication; and
+- a rule is a constraint that must remain true for the respondent context.
+
+The smallest atomic rules are therefore:
+
+1. `TRUE` guard: continue by default.
+2. `A` guard: route to the yes branch.
+3. `B` guard: route to the no branch.
+4. `D` guard: route to the missing or follow-up branch.
+5. cross-variable rule: if `A` then require a follow-up answer, but if `B` or `D` then skip it.
+
+This is the first layer of the DSL: not a complicated system, but a disciplined way to model logic as state transitions plus validation rules.
+
 ## Multi-Row Surveys and Household Consistency
 
 For a multi-row survey, the household is the group and each person is a separate member record (row). A household with four people therefore has four person rows with the same household key, not one row per household. Household-level answers may be repeated on those rows or stored in a related household record; either way, their meaning and consistency across the group must be explicit.

@@ -1,0 +1,43 @@
+# Basic survey rule tutorial
+# The answer space is not just yes/no. A valid survey response may also be "did not answer".
+
+1) Are you willing to answer a basic survey?
+- Yes
+- No
+- Did not answer
+END
+
+# Atomic rule examples
+# A = respondent said yes
+# B = respondent said no
+# D = respondent did not answer
+#
+# A, B, and D are mutually exclusive states.
+# Together they partition the response space for this question.
+#
+# Transition logic:
+#   if A -> continue to the next question
+#   if B -> stop the interview
+#   if D -> record missingness and stop or route to a follow-up state
+#
+# In the DSL, this is written as guarded transitions.
+# Example:
+#
+# survey_variable("willing_to_answer", "choice",
+#   "Are you willing to answer a basic survey?",
+#   choices = c("yes", "no", "did_not_answer"))
+#
+# survey_state("ask_willing", question = "willing_to_answer", transitions = list(
+#   survey_transition("next_question", "willing_to_answer == 'yes'"),
+#   survey_transition("end", "willing_to_answer == 'no'"),
+#   survey_transition("end", "is.na(willing_to_answer) || willing_to_answer == 'did_not_answer'")
+# ))
+#
+# Boolean-style reading:
+#   A ∨ B ∨ D = complete answer space
+#   A ∧ B = impossible
+#   A ∨ B ∨ D = TRUE for every valid response
+#
+# The key idea is that a survey rule is a statement about the logical state of the respondent,
+# not just a free-text label. Missingness is therefore first-class data, not a hidden omission.
+
