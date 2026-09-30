@@ -75,6 +75,52 @@ The smallest atomic rules are therefore:
 
 This is the first layer of the DSL: not a complicated system, but a disciplined way to model logic as state transitions plus validation rules.
 
+## Routing excluded questions
+
+The next atomic idea is exclusion by routing. When two answer categories are mutually exclusive, the survey should ask only the matching follow-up question and never the opposite one.
+
+Take a fertility example:
+
+- What gender are you? (M / F)
+- If F: Have you given birth?
+- If M: Have you fathered a child?
+
+This is not "two independent yes/no questions". It is one categorical variable with a partitioned outcome space:
+
+```r
+# Partition: gender ∈ {M, F}
+# Exclusion: M and F cannot both be true.
+# Follow-up: F -> asked about childbirth, M -> asked about fathering.
+
+survey_variable("gender", "choice",
+  "What gender are you?",
+  choices = c("M", "F"))
+
+survey_state("gender_question", question = "gender", transitions = list(
+  survey_transition("given_birth_question", "gender == 'F'"),
+  survey_transition("fathered_child_question", "gender == 'M'"),
+  survey_transition("end", "is.na(gender) || gender == 'did_not_answer'")
+))
+
+survey_state("given_birth_question", question = "given_birth", transitions = list(
+  survey_transition("end")
+))
+
+survey_state("fathered_child_question", question = "fathered_child", transitions = list(
+  survey_transition("end")
+))
+```
+
+The rule is conceptual and very small:
+
+- `gender == 'F'` implies the `given_birth` question is relevant.
+- `gender == 'M'` implies the `fathered_child` question is relevant.
+- `gender == 'F'` excludes `fathered_child`.
+- `gender == 'M'` excludes `given_birth`.
+- `M` and `F` are mutually exclusive by design, so the survey never asks both follow-up questions for the same respondent.
+
+This is the survey analogue of exclusive-or logic: the follow-up path is selected by the category that is true, and the other branch is logically excluded. In DSL terms, a routed question is a state whose relevance is defined by a guard, and the guard is an atomic proposition about the answer space.
+
 ## Multi-Row Surveys and Household Consistency
 
 For a multi-row survey, the household is the group and each person is a separate member record (row). A household with four people therefore has four person rows with the same household key, not one row per household. Household-level answers may be repeated on those rows or stored in a related household record; either way, their meaning and consistency across the group must be explicit.

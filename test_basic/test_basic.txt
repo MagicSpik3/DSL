@@ -1,5 +1,12 @@
-# Basic survey rule tutorial
-# The answer space is not just yes/no. A valid survey response may also be "did not answer".
+# Survey DSL Tutorial
+
+This is a small, chaptered tutorial for thinking about survey logic as a kind of Boolean algebra for human responses.
+
+## Chapter 1: Atomic answer states
+
+The answer space for a question is not only yes/no. A valid response may also be "did not answer".
+
+Example question:
 
 1) Are you willing to answer a basic survey?
 - Yes
@@ -7,37 +14,163 @@
 - Did not answer
 END
 
-# Atomic rule examples
-# A = respondent said yes
-# B = respondent said no
-# D = respondent did not answer
-#
-# A, B, and D are mutually exclusive states.
-# Together they partition the response space for this question.
-#
-# Transition logic:
-#   if A -> continue to the next question
-#   if B -> stop the interview
-#   if D -> record missingness and stop or route to a follow-up state
-#
-# In the DSL, this is written as guarded transitions.
-# Example:
-#
-# survey_variable("willing_to_answer", "choice",
-#   "Are you willing to answer a basic survey?",
-#   choices = c("yes", "no", "did_not_answer"))
-#
-# survey_state("ask_willing", question = "willing_to_answer", transitions = list(
-#   survey_transition("next_question", "willing_to_answer == 'yes'"),
-#   survey_transition("end", "willing_to_answer == 'no'"),
-#   survey_transition("end", "is.na(willing_to_answer) || willing_to_answer == 'did_not_answer'")
-# ))
-#
-# Boolean-style reading:
-#   A ∨ B ∨ D = complete answer space
-#   A ∧ B = impossible
-#   A ∨ B ∨ D = TRUE for every valid response
-#
-# The key idea is that a survey rule is a statement about the logical state of the respondent,
-# not just a free-text label. Missingness is therefore first-class data, not a hidden omission.
+Atomic rule example:
+
+- A = respondent said yes
+- B = respondent said no
+- D = respondent did not answer
+
+These states are mutually exclusive. Together they partition the valid response space for the question.
+
+In DSL terms:
+
+```r
+survey_variable("willing_to_answer", "choice",
+  "Are you willing to answer a basic survey?",
+  choices = c("yes", "no", "did_not_answer"))
+
+survey_state("ask_willing", question = "willing_to_answer", transitions = list(
+  survey_transition("next_question", "willing_to_answer == 'yes'"),
+  survey_transition("end", "willing_to_answer == 'no'"),
+  survey_transition("end", "is.na(willing_to_answer) || willing_to_answer == 'did_not_answer'")
+))
+```
+
+Boolean-style reading:
+
+- A ∨ B ∨ D = complete answer space
+- A ∧ B = impossible
+- A, B, and D are exclusive states
+
+The critical point is that missingness is not a hidden omission. It is a first-class logical state.
+
+---
+
+## Chapter 2: Mutually exclusive routing
+
+A common pattern is one question whose categories lead to different follow-up questions.
+
+Example: fertility routing.
+
+- What gender are you? (M / F)
+- If F: Have you given birth?
+- If M: Have you fathered a child?
+
+This is not two independent yes/no questions. It is a single categorical choice whose branches are exclusive.
+
+```r
+survey_variable("gender", "choice", "What gender are you?", choices = c("M", "F"))
+
+survey_state("gender_question", question = "gender", transitions = list(
+  survey_transition("given_birth_question", "gender == 'F'"),
+  survey_transition("fathered_child_question", "gender == 'M'"),
+  survey_transition("end", "is.na(gender) || gender == 'did_not_answer'")
+))
+```
+
+Interpretation:
+
+- `gender == 'F'` implies the female follow-up is relevant
+- `gender == 'M'` implies the male follow-up is relevant
+- the opposite follow-up is excluded because the category is impossible
+- the survey asks only the matching branch
+
+This is the survey analogue of exclusive-or logic: only one branch can hold for a given respondent.
+
+---
+
+## Chapter 3: Bounded loops and child rosters
+
+Now we move from branching to repetition.
+
+Example question:
+
+- How many children do you have? (0 to 10)
+
+Then, for each child, ask:
+
+- What is the age of this child?
+
+This is a roster question. It is not simply ten unrelated questions. It is a bounded loop.
+
+Conceptually:
+
+```r
+survey_variable("n_children", "number", "How many children do you have?", required = TRUE)
+
+# Conceptual future DSL idea:
+# survey_roster_loop(
+#   id = "child_roster",
+#   count_variable = "n_children",
+#   max_items = 10,
+#   item_question = "child_age"
+# )
+```
+
+The logic is:
+
+- if `n_children == 0`, no child-age questions are asked
+- if `n_children == 3`, only 3 child-age items are active
+- if `n_children == 10`, the roster reaches its maximum size
+- `n_children` must stay in the valid range `0..10`
+
+In set notation, the roster is:
+
+- `Child_1, Child_2, ..., Child_10`
+- active child i only if `i <= n_children`
+
+This is the survey equivalent of a finite repetition or bounded quantification.
+
+---
+
+## Chapter 4: How should we store this in a table?
+
+This is the practical design question.
+
+For a CSV or SQL table, it is usually better to store the roster in normalized form rather than pretending there are always 10 fixed child columns.
+
+Preferred storage pattern:
+
+| household_id | child_index | child_age |
+| --- | ---: | ---: |
+| H1 | 1 | 4 |
+| H1 | 2 | 7 |
+| H1 | 3 | 10 |
+
+Then:
+
+- `n_children` is the count of child rows for that household
+- child age entries are only created for active child records
+- missing or unused rows are not necessary
+
+This keeps the logical survey model and the physical storage model separate.
+
+A wide table such as:
+
+- `child_age_1`
+- `child_age_2`
+- ...
+- `child_age_10`
+
+is a compatibility layout, not the cleanest survey abstraction. It is useful when downstream systems demand fixed columns, but it is an export format, not the conceptual logic.
+
+The important conceptual rule is:
+
+- the survey logic is a bounded roster of size up to 10
+- the database may represent that roster as a set of child rows or as a fixed-width table, depending on the target system
+
+---
+
+## Chapter 5: The core tutorial message
+
+Across these examples, the survey DSL is gradually building a simple algebra:
+
+1. A question has an answer space.
+2. A response can be an atomic state like yes/no/did not answer.
+3. A route can select the relevant follow-up path.
+4. A question may be excluded by a mutually exclusive branch.
+5. A repeated question may form a bounded roster.
+6. Storage represents the roster in a table-friendly way, but the logic remains the same.
+
+This is the basic foundation for thinking about survey rules as a kind of finite-state, Boolean-like system for human response data.
 
