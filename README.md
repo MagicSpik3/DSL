@@ -184,3 +184,90 @@ write_dependency_suite(
 The YAML adapter uses stable `variable` codes as state IDs. Duplicate source codes receive deterministic suffixes such as `Ten1__2`, while `original_id` preserves the source value. Complex route expressions are retained in the edge report and Mermaid labels, marked unsupported in the audit, and skipped by runtime execution until a parser for that expression form is added.
 
 Predicates are currently controlled R expressions such as `has_activities == TRUE` or `!has_activities && phone_time_daily_hours >= 4`. This is an intentionally small prototype boundary: a later parser can compile YAML, a visual editor, or legacy survey specifications into the same model without changing the execution and audit engine.
+
+
+
+That balance right there is the exact boundary between computer science as a research discipline and software engineering as a craft. Building a production engine using standard graph tools today gives you immediate value, while laying out a clear, formal model keeps the door open for deep verification later.
+
+To bridge the two, you can design your MVP using graph theory primitives that directly mirror how a formal proof assistant like Lean would model the problem.
+
+---
+
+### The MVP: Mapping Survey Logic to Graph Primitives
+
+In graph theory, a survey flow is simply a **Directed Acyclic Graph (DAG)** with deterministic edge conditions. By framing your domain model strictly around graph primitives, you get instant access to existing, battle-tested algorithms (like NetworkX or `petgraph`) to enforce your three rules.
+
+```
+       [ Start ]
+           |
+       (Q1: Age)
+        /     \
+   [>= 18]   [< 18]
+      /         \
+  (Q2: Work)  (Q3: School)   [Q4: Disconnected] <-- Island Question!
+      \         /
+       [  End  ]
+
+```
+
+Here is how your three determinism requirements map directly to standard graph algorithms:
+
+#### 1. No Island Questions $\rightarrow$ **Reachability (Weak Connectivity / Traversal)**
+
+* **The Graph Condition:** Every node $V$ (except the entry node) must be reachable from $V_{\text{start}}$.
+* **The MVP Implementation:** Run a **Breadth-First Search (BFS)** or **Depth-First Search (DFS)** starting at $V_{\text{start}}$. Any node left unvisited after traversal is an isolated island.
+
+#### 2. No Circular Loops $\rightarrow$ **Acyclicity (Topological Sort / DFS)**
+
+* **The Graph Condition:** The directed graph $G = (V, E)$ contains no back-edges (it must be a DAG).
+* **The MVP Implementation:** Run **Kahn’s Algorithm** or **Tarjan’s Strongly Connected Components (SCC)** algorithm. If Kahn’s algorithm cannot consume all nodes, or if Tarjan finds an SCC with a size $> 1$, a circular loop exists.
+
+#### 3. No Contradictions / Determinism $\rightarrow$ **Edge Guard Mutex & Exhaustiveness**
+
+* **The Graph Condition:** For any node $V_i$ with outgoing edges $E = \{(V_i, V_j, g_1), (V_i, V_k, g_2), \dots\}$ where $g$ represents a predicate guard (e.g., `answer == "Yes"`):
+1. **Mutually Exclusive:** $g_1 \land g_2 \equiv \text{False}$ (no overlapping conditions causing non-deterministic branching).
+2. **Exhaustive:** $g_1 \lor g_2 \lor \dots \equiv \text{True}$ (no "dead ends" where a valid user answer yields no valid outgoing edge before reaching an End node).
+
+
+* **The MVP Implementation:** Evaluate edge predicates against the allowable domain values of the question to verify that every possible answer routes to *exactly one* target node.
+
+---
+
+### The "Hello World" Formal Blueprint (Mental Model for Lean)
+
+If you ever decide to take a slice of this logic and formally prove it in Lean, the code above translates almost 1:1 into formal types:
+
+```lean
+-- 1. Represent questions and transition rules as inductive types
+inductive Node
+| Question (id : Nat)
+| End
+
+structure Edge where
+  fromNode : Node
+  toNode   : Node
+  guard    : String -- Simplified predicate
+
+-- 2. Define what a valid path means recursively
+inductive Reachable (edges : List Edge) : Node → Node → Prop
+| direct (e : Edge) (h : e ∈ edges) : Reachable edges e.fromNode e.toNode
+| step (e : Edge) (h : e ∈ edges) (r : Reachable edges e.toNode target) : 
+    Reachable edges e.fromNode target
+
+-- 3. Define the theorem: "No Island Questions"
+def NoIslands (startNode : Node) (allNodes : List Node) (edges : List Edge) : Prop :=
+  ∀ n ∈ allNodes, n = startNode ∨ Reachable edges startNode n
+
+```
+
+In Lean, you don't just run a loop to *check* if `NoIslands` holds; you construct a proof that proves `NoIslands` **must** hold for every generated graph.
+
+---
+
+### Recommended Evolutionary Path
+
+1. **Phase 1 (The MVP):** Build a domain model in your language of choice where a survey is represented purely as an adjacency list of nodes and guarded edges. Use a standard graph library to run BFS (islands) and Kahn's algorithm (cycles) on save/publish.
+2. **Phase 2 (Property-Based Testing):** Use a tool like **Hypothesis** (Python) or **fast-check** (TypeScript) to randomly generate thousands of survey graphs, testing that your validator reliably catches edge cases and synthetic loops.
+3. **Phase 3 (Formal Methods / Lean Exploration):** Extract the core graph representation into Lean 4 to prove that your graph-validation algorithm is *sound* (it never marks an invalid survey as valid) and *complete* (it never marks a valid survey as invalid).
+
+What language or framework are you planning to use for building this initial MVP?
